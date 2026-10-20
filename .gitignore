@@ -1,0 +1,8 @@
+# Dados reais nunca entram no repositório (ver CLAUDE.md)
+dados/
+raw/
+calls.log
+*.xlsx
+*.csv
+*.json
+__pycache__/

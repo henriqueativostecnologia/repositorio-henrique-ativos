@@ -1,0 +1,31 @@
+Programas da prospecção pela SerpApi (sessão de 15 a 16/10/2026)
+Sem chave e sem dados de lojas. Nomes de redes/lojas reais foram trocados por exemplos (Rede Exemplo A etc.).
+O calls.log da sessão original não foi copiado: o serp.py cria um novo ao rodar. As respostas brutas (raw/) e as planilhas NÃO estão aqui.
+
+Como funciona a chamada (serp.py)
+- POST JSON-RPC em https://mcp.serpapi.com/mcp, método tools/call, ferramenta "search",
+  params = {engine: google_maps, q, ll: "@lat,lon,zoom", hl: pt-br, gl: br, start}.
+- A chave NÃO está no código: no ambiente de nuvem do Claude ela entra como segredo de rede
+  (cabeçalho "Authorization: Bearer" para serpapi.com e *.serpapi.com). A API REST comum
+  (serpapi.com/search.json) recusa esse formato (401); por isso usamos o servidor MCP.
+- Cada resposta é guardada em raw/<hash>.json (cache: não repete busca igual) e registrada em calls.log.
+
+Arquivos
+- serp.py ............ chamada ao MCP + cache + registro
+- grid.py ............ grade de pontos e contorno APROXIMADO de BH (trocar para outra cidade)
+- bh.py .............. bairro -> regional da PBH, critérios de presença fraca, leitura do cache
+- bairros_pbh.txt .... 487 bairros de BH por regional (PDF oficial da PBH, mapaculturalbh.pbh.gov.br)
+- load.py, geo.py .... leitura do cache e distância da Av. Oscar Niemeyer (Nova Lima)
+- run1.py, build.py .. lista da Av. Oscar Niemeyer
+- pilot.py ........... teste: busca juntada x termos separados
+- etapa1.py, rank1.py, build1.py ... ranking das regionais (amostra)
+- etapa2.py, build2.py, fortes.py .. Pampulha + Venda Nova (automotivo)
+- alim.py, alim_build.py ........... alimentação perto do Jaraguá
+- nov.py, nov_build.py ............. setores de 16/10 (revenda, imobiliária, advocacia, doceria, restaurante)
+- fill.py ............ % de preenchimento dos 34 campos do Google Maps
+
+Para Nova Iguaçu
+- Trocar POLY e os limites em grid.py pelo contorno da cidade e bairros_pbh.txt pela lista de bairros de lá.
+- Trocar HOME (ponto de partida das distâncias) nos scripts.
+- Usar o campo unclaimed_listing (ficha não assumida pelo dono): ele vem na própria busca do Maps.
+- Alguns scripts usam caminhos e nomes de arquivos desta sessão: revisar antes de rodar.
