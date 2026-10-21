@@ -14,7 +14,8 @@ Arquivos
 - serp.py ............ chamada ao MCP + cache + registro
 - grid.py ............ grade de pontos e contorno APROXIMADO de BH (trocar para outra cidade)
 - bh.py .............. bairro -> regional da PBH, critérios de presença fraca, leitura do cache
-- bairros_pbh.txt .... 487 bairros de BH por regional (PDF oficial da PBH, mapaculturalbh.pbh.gov.br)
+- bairros_pbh.txt .... EXEMPLO DE FORMATO: exemplo de BH; para cada cidade nova, montar a lista de bairros dela.
+                       Formato: uma linha por bairro, BAIRRO|REGIONAL (487 bairros de BH, PDF oficial da PBH, mapaculturalbh.pbh.gov.br)
 - load.py, geo.py .... leitura do cache e distância da Av. Oscar Niemeyer (Nova Lima)
 - run1.py, build.py .. lista da Av. Oscar Niemeyer
 - pilot.py ........... teste: busca juntada x termos separados
