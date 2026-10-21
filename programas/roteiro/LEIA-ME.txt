@@ -1,0 +1,16 @@
+Programas do mapa e do roteiro de visitas (chat "Central: cofre e skills", 16/10).
+Feitos para os dados da Pampulha: servem de REFERÊNCIA, não rodam direto em outra cidade.
+
+gera_unica.py      junta automotivo e alimentação numa planilha só (uma aba, com filtros)
+gera_kit.py        primeiro kit de visita (planilha + página com cartões por loja)
+gera_alim.py       lista de alimentação perto do Jaraguá
+gera_roteiro17.py  roteiro com mapa: ponto de saída, ordem das paradas (vizinho mais
+                   próximo + 2-opt), blocos de até 10 paradas, filtro por segmento,
+                   mapa Leaflet 1.9.4 embutido com fundo do OpenStreetMap e
+                   site/Instagram/WhatsApp de cada loja.
+
+Para Nova Iguaçu: trocar o arquivo de entrada (lista de lojas com latitude e longitude),
+o ponto de saída e a imagem de fundo do mapa. Peça ao Claude para adaptar.
+Os nomes de lojas reais (lista de exclusão e textos de argumento) foram trocados por
+exemplos (Padaria Exemplo, Lava Jato Exemplo...). Os caminhos apontam para a pasta dados/,
+que fica fora do repositório.
