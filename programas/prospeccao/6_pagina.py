@@ -1,7 +1,12 @@
 # Passo 6: página para o celular (mapa, filtros e cartões com alertas e botões "Ver no Maps").
-# Uso: python3 6_pagina.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.html
-# Tem dados reais: o arquivo gerado nunca entra no repositório. O mapa precisa de internet (Leaflet e OpenStreetMap).
-import json, sys, html, math
+# Uso: python3 6_pagina.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.html --leaflet dados/leaflet
+# Tem dados reais: o arquivo gerado nunca entra no repositório.
+# Funciona offline, aberta como arquivo no celular: o Leaflet vai embutido (pasta com leaflet.js e leaflet.css da versão 1.9.4)
+# e o fundo do mapa é uma imagem embutida (fundo_mapa e limites_fundo na configuração; ver LEIA-ME, "gerar o fundo do mapa").
+# Sem fundo_mapa na configuração, a página usa os quadradinhos do OpenStreetMap, que só carregam com a página publicada na internet.
+import json, sys, html, math, base64, os, argparse
+ap = argparse.ArgumentParser(); ap.add_argument('roteiro'); ap.add_argument('saida'); ap.add_argument('--leaflet', required=True, help='pasta com leaflet.js e leaflet.css (Leaflet 1.9.4)')
+a = ap.parse_args(); sys.argv = [sys.argv[0], a.roteiro, a.saida]
 R = json.load(open(sys.argv[1])); L = R['L']; O = R['O']; OUT = sys.argv[2]; CF = R['config']
 E = html.escape
 def fmt(v): return format(v, '.1f').replace('.', ',')
@@ -24,7 +29,7 @@ segs = sorted({d['s'] for d in D})
 npl = sum(d['pl'] for d in D)
 page = '''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Roteiro __TITULO__</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>__LEAFLET_CSS__</style>
 <style>
 :root{--bg:#F3F5F2;--papel:#fff;--tinta:#1D2B27;--suave:#5A6B66;--linha:#D3DCD8;--com:#2B5F8A;--sem:#2F7A4F;--op:#9AA19E;--alerta-bg:#FFF4DE;--alerta:#7A4B00;--sd:#C2662D}
 @media (prefers-color-scheme:dark){:root{--bg:#141B19;--papel:#1C2522;--tinta:#E6EEEA;--suave:#9AACA6;--linha:#33423D;--com:#7DB3E0;--sem:#72C495;--op:#6E7774;--alerta-bg:#3A2E14;--alerta:#F2C979;--sd:#E8955E;color-scheme:dark}}
@@ -72,14 +77,14 @@ h3{margin:0;font-size:1rem;color:var(--tinta)}.tag{display:inline-block;font-siz
 __BLOCOS__
 <p class="meta" style="margin-top:20px">Fonte: __FONTE__. Distâncias em linha reta; de carro o caminho é maior. Mapa © colaboradores do OpenStreetMap.</p>
 </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>__LEAFLET_JS__</script>
 <script>
 const D=__DADOS__, O=__O__;
 const st={gr:'todos',sg:new Set(),sd:false,op:true};
 let map=null, mk={}, linha=null;
 try{
  map=L.map('mapa',{tap:true}).setView(O,14);
- L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+ __FUNDO__
  L.marker(O,{icon:L.divIcon({className:'',html:'<div class="casa">Saída</div>',iconSize:[50,20],iconAnchor:[25,10]})}).addTo(map);
  linha=L.polyline([],{color:'#1D2B27',weight:2,opacity:.45,dashArray:'5 6'}).addTo(map);
  D.forEach(d=>{
@@ -125,6 +130,16 @@ for r in ROT:
 {f'<ul class="alertas">{al}</ul>' if al else ''}<div class="btns"><a href="{E(d["m"])}" target="_blank" rel="noopener">Ver no Maps</a>{canal}<button type="button" class="vermapa" data-p="{E(d["p"])}">No mapa</button></div></article>''')
     cards.append('</section>')
 segchips = ''.join(f'<button class="chip" data-sg="{E(s)}" aria-pressed="false">{E(s)}</button>' for s in segs)
+if CF.get('fundo_mapa'):
+    lim = CF['limites_fundo']; FB = [lim['sudoeste'], lim['nordeste']]
+    ext = os.path.splitext(CF['fundo_mapa'])[1].lower().lstrip('.').replace('jpg', 'jpeg')
+    img = base64.b64encode(open(CF['fundo_mapa'], 'rb').read()).decode()
+    fundo = (f"const FB={json.dumps(FB)};L.imageOverlay('data:image/{ext};base64,{img}',FB,{{attribution:'&copy; colaboradores do OpenStreetMap'}}).addTo(map);"
+             "map.setMaxBounds(FB);map.setMinZoom(13);map.setMaxZoom(16);")
+else:
+    fundo = "L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);"
 page = (page.replace('__TITULO__', E(CF['titulo'])).replace('__SAIDA__', E(CF['ponto_saida']['nome'])).replace('__FONTE__', E(CF['fonte'])).replace('__NPL__', str(npl)).replace('__NOP__', str(len(D) - npl)).replace('__NB__', str(len(ROT))).replace('__SEGS__', segchips)
         .replace('__BLOCOS__', '\n'.join(cards)).replace('__DADOS__', json.dumps(D, ensure_ascii=False)).replace('__O__', json.dumps(list(O))))
+page = page.replace('__FUNDO__', fundo)
+page = page.replace('__LEAFLET_CSS__', open(os.path.join(a.leaflet, 'leaflet.css')).read()).replace('__LEAFLET_JS__', open(os.path.join(a.leaflet, 'leaflet.js')).read())
 open(OUT, 'w').write(page); print('ok', len(D), len(page) // 1024, 'KB')

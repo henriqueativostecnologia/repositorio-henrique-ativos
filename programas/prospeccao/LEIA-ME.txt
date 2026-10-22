@@ -24,6 +24,23 @@ Passo a passo (cada passo espera a aprovação do Henrique antes do próximo)
                           do mais perto para o mais longe do ponto de saída; opcionais com letra (12a); alertas por extenso.
 5. 5_planilha.py ........ planilha: Lojas (coluna Resultado com lista), Rotas no Maps, Resumo do teste (fórmulas), Como ler.
 6. 6_pagina.py .......... página para o celular: mapa, filtros (segmento, grupo, só ficha sem dono, opcionais) e cartões.
+                          Funciona offline, aberta como arquivo: o Leaflet e o fundo do mapa vão embutidos no HTML.
+                          O Leaflet 1.9.4 vem do npm (uma vez): npm pack leaflet@1.9.4 && tar xzf leaflet-1.9.4.tgz
+                          e use a pasta package/dist em --leaflet.
+
+Gerar o fundo do mapa (antes do passo 6; só dados públicos)
+Por quê: aberta como arquivo no celular, o OpenStreetMap bloqueia os quadradinhos do mapa. Por isso o fundo é uma imagem embutida.
+a) Print do embed do OpenStreetMap com o Firecrawl (formato screenshot), numa janela de 1800 x 1300 px:
+   https://www.openstreetmap.org/export/embed.html?bbox=LON_O,LAT_S,LON_L,LAT_N&layer=mapnik
+   (bbox um pouco maior que a área). Salve como dados/fundo_mapa.jpg.
+b) Veja em que zoom o embed desenhou. Ele escolhe um zoom inteiro, que pode não ser o que o bbox sugere
+   (em Nova Iguaçu, saiu 14). Calcule os limites e copie para a configuração (limites_fundo):
+   python3 programas/prospeccao/fundo_mapa.py limites --bbox LON_O,LAT_S,LON_L,LAT_N --zoom 14 --janela 1800x1300
+c) Confira antes de usar: desenha as lojas sobre a imagem.
+   python3 programas/prospeccao/fundo_mapa.py conferir dados/config.json dados/roteiro.json dados/conferir_fundo.png
+   Abra o PNG: lojas conhecidas (um shopping, uma avenida principal) devem cair no lugar certo. Se caírem deslocadas,
+   o zoom do passo b está errado.
+d) Na página, o mapa fica preso à imagem (setMaxBounds) e o zoom vai de 13 a 16.
 Os arquivos dos passos 5 e 6 têm dados reais: são entregues para baixar e nunca entram no repositório.
 
 Exemplo (de dentro da pasta do repositório, com dados/ ao lado):
@@ -33,7 +50,7 @@ Exemplo (de dentro da pasta do repositório, com dados/ ao lado):
   python3 programas/prospeccao/3_classificar.py dados/config.json dados dados/bairros.geojson dados/lojas.json
   python3 programas/prospeccao/4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json
   python3 programas/prospeccao/5_planilha.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.xlsx
-  python3 programas/prospeccao/6_pagina.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.html
+  python3 programas/prospeccao/6_pagina.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.html --leaflet dados/leaflet/package/dist
 
 Regras de segmento (3_classificar.py, função segmento): são palavras-chave por termo de busca.
 Termo novo que não esteja lá precisa de uma linha nova nessa função.
