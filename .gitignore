@@ -6,3 +6,4 @@ calls.log
 *.csv
 *.json
 __pycache__/
+!programas/**/config_exemplo.json

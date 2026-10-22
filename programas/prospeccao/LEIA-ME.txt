@@ -1,0 +1,41 @@
+Prospecção de comércio local: do mapa ao roteiro de visitas
+Feito na prospecção de Nova Iguaçu (22/10/2026). Sem chave, sem dados de lojas e sem nomes de redes reais:
+tudo o que muda de cidade fica em dados/config.json, fora do repositório.
+
+Pasta de trabalho
+- dados/ fica FORA do repositório (o .gitignore bloqueia). Lá ficam config.json, bairros.geojson,
+  as respostas da SerpApi (raw/), o contador do mês e os arquivos gerados para baixar.
+- config_exemplo.json mostra todos os campos. Copie para dados/config.json e troque os valores.
+
+Passo a passo (cada passo espera a aprovação do Henrique antes do próximo)
+0. Área: lista oficial de bairros da prefeitura + contornos do OpenStreetMap em dados/bairros.geojson
+   (FeatureCollection; cada bairro com properties.nome; opcional o contorno da cidade com nome "MUNICIPIO").
+   Os contornos vêm do Nominatim (nominatim.openstreetmap.org/search?q=BAIRRO, CIDADE&format=geojson&polygon_geojson=1).
+   Confira com o mapa: em Nova Iguaçu, um bairro da lei de 1998 (Juscelino) hoje é de outra cidade.
+   mapa_area.py ......... mapa simples da área para aprovar (só dados públicos)
+1. 1_grade.py ........... pontos de busca dentro da área ou na borda; mostra quantas buscas a página 1 custa. Não busca.
+2. 2_buscar.py .......... buscas na SerpApi pelo servidor MCP, um termo por busca.
+                          Sempre rode antes com --simular: diz quantas buscas são novas (as guardadas não são cobradas).
+                          Página 2 só onde o Henrique decidir: --pagina 2 --termos "termo1,termo2".
+                          Trava: para sozinho quando as usadas no mês chegam a limite_mes - trava.
+3. 3_classificar.py ..... segmento, grupo (com site / sem site), ficha sem dono (unclaimed_listing), rede, gourmet, melhor posição.
+                          "Sem site" inclui site que é só Instagram, Facebook, WhatsApp, iFood, página de links ou link encurtado.
+4. 4_roteiro.py ......... planejada (10+ avaliações e nota >= 4,0, ou ficha sem dono) ou opcional; blocos de até 10 planejadas
+                          do mais perto para o mais longe do ponto de saída; opcionais com letra (12a); alertas por extenso.
+5. 5_planilha.py ........ planilha: Lojas (coluna Resultado com lista), Rotas no Maps, Resumo do teste (fórmulas), Como ler.
+6. 6_pagina.py .......... página para o celular: mapa, filtros (segmento, grupo, só ficha sem dono, opcionais) e cartões.
+Os arquivos dos passos 5 e 6 têm dados reais: são entregues para baixar e nunca entram no repositório.
+
+Exemplo (de dentro da pasta do repositório, com dados/ ao lado):
+  python3 programas/prospeccao/1_grade.py dados/config.json dados/bairros.geojson dados/pontos.json
+  python3 programas/prospeccao/2_buscar.py dados/config.json dados dados/pontos.json --simular
+  python3 programas/prospeccao/2_buscar.py dados/config.json dados dados/pontos.json
+  python3 programas/prospeccao/3_classificar.py dados/config.json dados dados/bairros.geojson dados/lojas.json
+  python3 programas/prospeccao/4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json
+  python3 programas/prospeccao/5_planilha.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.xlsx
+  python3 programas/prospeccao/6_pagina.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.html
+
+Regras de segmento (3_classificar.py, função segmento): são palavras-chave por termo de busca.
+Termo novo que não esteja lá precisa de uma linha nova nessa função.
+
+Os programas antigos (programas/busca e programas/roteiro) ficam como referência da prospecção de BH.
