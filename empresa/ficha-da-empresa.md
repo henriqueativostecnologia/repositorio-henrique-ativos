@@ -42,7 +42,7 @@ Cada sócio tem e-mail corporativo, conta Claude Pro e repositório GitHub próp
 |---|---|
 | Slack | Comunicação (canais por cliente) |
 | Notion | Plano e tabelas de projetos |
-| Todoist | Tarefas |
+| Todoist | Só lista pessoal de cada um (tarefas de projeto ficam no Notion) |
 | Google Drive | Arquivos e dados reais de clientes |
 | GitHub | Programas e documentos sem dados reais (um repositório por sócio) |
 | Claude | Uma conta Pro por sócio |
