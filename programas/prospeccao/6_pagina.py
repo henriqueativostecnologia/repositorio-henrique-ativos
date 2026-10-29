@@ -40,6 +40,7 @@ header h1{margin:0;font-size:1.3rem}header p{margin:4px 0 0;font-size:.85rem;opa
 main{max-width:680px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-right)) 48px max(16px,env(safe-area-inset-left))}
 .filtros{position:sticky;top:0;z-index:1000;background:var(--bg);padding:10px 0 8px;border-bottom:1px solid var(--linha)}
 .linha{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.linha::-webkit-scrollbar{display:none}
+@media (min-width:700px),(pointer:fine){.linha{flex-wrap:wrap;overflow-x:visible}}
 .chip{flex:none;border:1px solid var(--linha);background:var(--papel);color:var(--tinta);border-radius:999px;padding:7px 12px;font:600 .85rem system-ui,sans-serif;min-height:36px;cursor:pointer;white-space:nowrap}
 .chip[aria-pressed="true"]{background:var(--tinta);color:var(--bg);border-color:var(--tinta)}
 .chip i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:0}
