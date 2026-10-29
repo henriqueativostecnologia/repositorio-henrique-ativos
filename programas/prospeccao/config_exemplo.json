@@ -1,0 +1,63 @@
+{
+  "_leia": "Copie este arquivo para dados/config.json (fora do repositório) e troque os valores pela cidade da vez. Os nomes abaixo são exemplos.",
+  "titulo": "Cidade Exemplo, Centro",
+  "cidade_no_endereco": "Cidade Exemplo",
+  "bairros_sem_contorno": [
+    "Bairro Exemplo Pequeno"
+  ],
+  "borda_km": 0.3,
+  "ponto_saida": {
+    "nome": "Av. Exemplo",
+    "lat": -22.7587,
+    "lon": -43.458
+  },
+  "limite_mes": 250,
+  "trava": 10,
+  "grade_km": 2.0,
+  "pontos_raros": 4,
+  "zoom_densos": 15,
+  "zoom_raros": 14,
+  "termos_densos": [
+    "advocacia previdenciária",
+    "advocacia trabalhista",
+    "estética automotiva",
+    "lava-rápido",
+    "imobiliária",
+    "cafeteria",
+    "bar",
+    "restaurante"
+  ],
+  "termos_raros": [
+    "detalhamento automotivo",
+    "compra e venda de veículos",
+    "construtora",
+    "empório"
+  ],
+  "lava_jato_minimo": {
+    "nota": 4.5,
+    "avaliacoes": 10
+  },
+  "redes": [
+    "rede exemplo a",
+    "franquia exemplo b"
+  ],
+  "fora_do_roteiro": [
+    "rede nacional exemplo"
+  ],
+  "conferir_segmento": [
+    "loja exemplo de outro ramo"
+  ],
+  "fonte": "Google Maps via SerpApi, DD/MM/AAAA (N buscas)",
+  "area_descricao": "região central (lista oficial de bairros da prefeitura)",
+  "fundo_mapa": "dados/fundo_mapa.jpg",
+  "limites_fundo": {
+    "sudoeste": [
+      -22.80139,
+      -43.52715
+    ],
+    "nordeste": [
+      -22.69849,
+      -43.37265
+    ]
+  }
+}
