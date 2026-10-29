@@ -41,7 +41,7 @@
 4. Organização do Google Drive (pastas da empresa, internas e de clientes).
 5. Organização dos projetos: Notion (plano e tabelas, conforme a sistemática) e Slack (canais).
 6. Skill pmo-ativos v1, abrindo os projetos do Dr. Felipe e do Lucas.
-7. Levantamento de skills e plugins das demais áreas (3 linhas de serviço e prospecção), do zero. A lista da conta pessoal entra só como conferência no fim.
+7. Levantamento de skills e plugins das demais áreas (3 linhas de serviço e prospecção), do zero, a partir das necessidades da ATIVOS. A lista da conta pessoal serve só para conferir no fim ("deixamos algo de fora?").
 8. Financeiro da ATIVOS, com o método que o Henrique vai trazer da conta pessoal.
 
 ## Prospecção
