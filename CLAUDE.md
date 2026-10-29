@@ -16,7 +16,10 @@
 * Um passo por vez: mostre o passo, espere eu executar e só depois siga.
 * Decisões: em tabela no chat, com recomendação por item.
 * Toda mudança no repositório vai por pull request. Só junte ao `main` quando eu disser "aprovado".
-* Antes de mexer em qualquer coisa, atualize o branch a partir do `main`.
+
+## Regras para todos os chats deste repositório
+1. Antes de começar qualquer trabalho, atualize o seu branch a partir do `main`.
+2. Cada chat mexe só na pasta do seu tema. Se precisar alterar a pasta de outro tema, diga no PR o que muda e quais chats precisam se atualizar.
 
 ## Dados
 * Dados reais de clientes (propostas, valores, contatos) ficam no Google Drive da ATIVOS, nunca no GitHub.
