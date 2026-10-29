@@ -12,16 +12,14 @@ Atualizada em 29/10/2026. Dados reais de clientes (propostas, valores, contatos)
 | Data de abertura | a preencher |
 | Regime tributário | a preencher |
 
-## Sócios e papéis
+## Sócios
 
-| Sócio | Papel |
-|---|---|
-| Igor | Arquiteto de dados (fundador) |
-| Henrique | Financeiro e gestão de projetos (dos clientes e internos) |
-| Hugo | Infraestrutura de dados e design criativo |
-| Bernardo | Infraestrutura de dados e design criativo |
+- Bernardo
+- Henrique
+- Hugo
+- Igor
 
-Landing pages são feitas por outro colaborador, não pelo Henrique.
+A função de cada sócio será registrada a partir de um documento oficial (a inserir).
 
 Cada sócio tem e-mail corporativo, conta Claude Pro e repositório GitHub próprios.
 

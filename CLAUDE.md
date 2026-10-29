@@ -16,6 +16,10 @@
 * Dados reais da prospecção (planilhas e respostas da SerpApi com nomes, telefones e endereços) também não entram no repositório: são entregues como arquivo para eu baixar.
 * Programas (sem dados) ficam em `programas/` e podem ser melhorados e salvos aqui.
 
+## Foco atual
+* Gestão de projetos primeiro: criar as pastas da ATIVOS no Google Drive e iniciar a sistemática organizacional (como organizar projetos, tarefas internas e externas e documentos). O financeiro também é urgente e vem logo depois.
+* A sistemática de gestão de projetos e o checklist de skills ficam em `referencias/`.
+
 ## Ordem de trabalho
 1. Ficha da empresa + este `CLAUDE.md`.
 2. Estrutura do repositório: pastas para financeiro, gestão de projetos, prospecção e referências.
