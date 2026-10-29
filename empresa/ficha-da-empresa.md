@@ -1,0 +1,52 @@
+# Ficha da empresa: ATIVOS Tecnologia
+
+Atualizada em 29/10/2026. Dados reais de clientes (propostas, valores, contatos) **não** ficam aqui: ficam no Google Drive da ATIVOS.
+
+## Dados cadastrais
+
+| Campo | Valor |
+|---|---|
+| Nome | ATIVOS Tecnologia |
+| CNPJ | 60.859.525/0001-09 |
+| Razão social | a preencher |
+| Data de abertura | a preencher |
+| Regime tributário | a preencher |
+
+## Sócios
+
+- Bernardo
+- Henrique
+- Hugo
+- Igor
+
+A função de cada sócio será registrada a partir de um documento oficial (a inserir).
+
+Cada sócio tem e-mail corporativo, conta Claude Pro e repositório GitHub próprios.
+
+## O que a ATIVOS vende (3 linhas de serviço)
+
+| Linha | O que inclui |
+|---|---|
+| Posicionamento digital | Landing page, Google Meu Negócio, sustentação do site |
+| Marketing digital | Anúncios e criativos |
+| Automação comercial | IA no WhatsApp, follow-up, agendamentos |
+
+## Primeiros clientes
+
+- Dr. Felipe Advocacia
+- Lucas Quality Prime
+
+## Ferramentas
+
+| Ferramenta | Uso |
+|---|---|
+| Slack | Comunicação (canais por cliente) |
+| Notion | Plano e tabelas de projetos |
+| Todoist | Só lista pessoal de cada um (tarefas de projeto ficam no Notion) |
+| Google Drive | Arquivos e dados reais de clientes |
+| GitHub | Programas e documentos sem dados reais (um repositório por sócio) |
+| Claude | Uma conta Pro por sócio |
+
+## Situação da prospecção
+
+A prospecção **ainda não foi feita**. Existem buscas e roteiros de visita prontos (BH e Nova Iguaçu); nenhuma visita aconteceu.
