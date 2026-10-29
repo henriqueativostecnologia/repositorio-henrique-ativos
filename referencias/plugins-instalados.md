@@ -34,4 +34,4 @@ Lição da conta pessoal: num pedido genérico o Claude usa só as skills de for
 
 ## Ainda não instalados
 
-- **Small Business:** depois de 30/10/2026, só as skills úteis (ver a lista de skills a instalar).
+- **Small Business:** recomendado no levantamento de 29/10/2026, só com as skills úteis (ver `Levantamento de skills - financeiro e gestao de projetos.md`).

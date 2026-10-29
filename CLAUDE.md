@@ -32,12 +32,14 @@
 * Gestão de projetos primeiro: criar as pastas da ATIVOS no Google Drive e iniciar a sistemática organizacional (como organizar projetos, tarefas internas e externas e documentos). O financeiro também é urgente e vem logo depois.
 
 ## Ordem de trabalho
-1. Ficha da empresa + este `CLAUDE.md`.
-2. Estrutura do repositório: pastas para financeiro, gestão de projetos, prospecção e referências.
-3. Organização do Google Drive (pastas de clientes e projetos), do zero.
-4. Notion (plano e tabelas, conforme a sistemática) e Slack (canais por cliente).
-5. Skill pmo-ativos v1, abrindo os projetos do Dr. Felipe e do Lucas.
-6. Financeiro da ATIVOS, com o método que o Henrique vai trazer da conta pessoal.
+1. Ficha da empresa + este `CLAUDE.md` (feito).
+2. Estrutura do repositório (feito).
+3. Skills, plugins e conectores de financeiro e gestão de projetos, do zero, instalados antes de organizar a empresa (ver `referencias/Levantamento de skills - financeiro e gestao de projetos.md`).
+4. Organização do Google Drive (pastas da empresa, internas e de clientes).
+5. Organização dos projetos: Notion (plano e tabelas, conforme a sistemática) e Slack (canais).
+6. Skill pmo-ativos v1, abrindo os projetos do Dr. Felipe e do Lucas.
+7. Levantamento de skills e plugins das demais áreas (3 linhas de serviço e prospecção), do zero. A lista da conta pessoal entra só como conferência no fim.
+8. Financeiro da ATIVOS, com o método que o Henrique vai trazer da conta pessoal.
 
 ## Prospecção
 * Situação: ainda não foi feita. Existem buscas e roteiros de visita prontos (BH e Nova Iguaçu); nenhuma visita aconteceu.
