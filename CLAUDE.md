@@ -25,6 +25,7 @@
 
 ## Skills e plugins
 * Em finanças e gestão de projetos, chame as skills de método pelo nome (por exemplo `financial-statements`, `variance-analysis`, `status-report`, `change-request`). Usar só as skills de formato (planilha, documento) dá uma análise rasa.
+* Quando houver necessidade, podemos usar skills e plugins de fora, inclusive de repositórios de terceiros no GitHub. Proponha só quando um oficial não resolver bem.
 * Plugin novo ou skill de fora: avaliar antes com `referencias/Checklist - Avaliar skill de fora.md` e, depois de instalar, registrar em `referencias/plugins-instalados.md`.
 
 ## Foco atual
