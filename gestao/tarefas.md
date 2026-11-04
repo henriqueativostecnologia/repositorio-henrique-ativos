@@ -1,6 +1,6 @@
 ---
 tipo: lista de tarefas
-atualizado: 04/11/2026 (T-009 feita)
+atualizado: 04/11/2026 (T-009 e T-010 feitas)
 situacao: provisória; migra para o Notion na T-014
 ---
 
@@ -38,7 +38,7 @@ T-001 a T-006 são **provisórias**: copiadas do documento dos 3 primeiros clien
 | Código | Tarefa | Projeto | Prioridade | Status | Depende de | Prazo |
 |---|---|---|---|---|---|---|
 | T-009 | Criar o Drive compartilhado "ATIVOS" (só administrador do Workspace) | INT | Alta | Feito | — | |
-| T-010 | Aprovar a estrutura do Drive, da biblioteca de processos e de pastas (fase 2) | INT | Alta | Fazendo | Pesquisa do Claude | |
+| T-010 | Aprovar a estrutura do Drive, da biblioteca de processos e de pastas (fase 2) | INT | Alta | Feito | Pesquisa do Claude | |
 | T-011 | Enviar a documentação oficial do Notion e do Slack | INT | Média | A fazer | — | |
 | T-012 | Entrar no Notion e no Slack num chat novo e testar a conexão | INT | Média | A fazer | — | |
 | T-013 | Definir o modelo de projeto e de tarefas da ATIVOS | INT | Alta | A fazer | T-010 | |
