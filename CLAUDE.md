@@ -29,7 +29,7 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 * **Nunca** coloque dados reais no repositório: valores, senhas, acessos, contratos e dados de contato ou documentos (CPF, CNPJ) de clientes. O repositório guarda métodos, regras e modelos.
 * **Clientes no repositório:** só **código e nome curto**, ex.: `CLI-001 Dr. Felipe (advocacia)`. O resto fica no Drive.
-* Documentos e arquivos reais ficam no **Google Drive da ATIVOS** (já conectado).
+* Documentos e arquivos reais ficam no **Drive compartilhado "ATIVOS"** (já conectado). Onde salvar cada coisa, numeração das pastas e nomes de arquivo: `organizacao/manual-drive.md`. Consulte antes de criar ou salvar algo no Drive.
 * Quando eu anexar um arquivo, **pergunte onde guardar**:
   1. no repositório (métodos, regras e modelos, sem dados reais);
   2. no Google Drive da ATIVOS (documentos e arquivos reais);
