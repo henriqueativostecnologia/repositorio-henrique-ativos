@@ -40,7 +40,12 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 * Em 29/10/2026 o repositório foi zerado de propósito. **Não consulte o histórico do git anterior a essa data**; parta só dos arquivos atuais e do que eu disser.
 * `prospeccao/`: programas de busca, com chat próprio. **Não mexa nesta pasta** neste chat.
 * `servicos/`: modelos de cada serviço (fases, portões, prazos, responsáveis). Consulte ao planejar ou acompanhar um projeto de cliente. Hoje: `infraestrutura-de-dados/fluxo-de-implantacao.md` (rascunho).
+* `gestao/tarefas.md`: tarefas e pendências (provisório, até o Notion). Consulte no início de cada tema e atualize por PR.
 * `referencias/Checklist - Avaliar skill de fora.md`: usar sempre que for avaliar uma skill ou um plugin de fora do catálogo oficial.
+
+## Modelo de execução de cada demanda
+
+* Antes de executarmos uma demanda nova, criamos juntos o modelo de execução (POP, checklists, modelos, tarefas padrão), **compilando 3 fontes**: o que a ATIVOS já sabe e decidiu, os cursos e treinamentos que o Henrique enviar e a documentação oficial da plataforma. Cursos comprados ficam só no Drive; no repositório, apenas o que produzirmos a partir deles.
 
 ## Plataformas (Notion, Slack e outras)
 
