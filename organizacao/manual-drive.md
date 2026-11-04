@@ -1,7 +1,7 @@
 ---
 tipo: manual (procedimento padrão)
 atualizado: 04/11/2026
-situacao: versão 1, aguardando aprovação; depois de aprovado, uma cópia vai para o Drive em "00 Geral / 01 Manual de uso"
+situacao: versão 1, aprovada; cópia para consulta no Drive em "00 Geral / 01 Comece por aqui"
 ---
 
 # Manual de uso do Drive ATIVOS
@@ -34,7 +34,7 @@ Isso traz três vantagens:
 2. **Sobra espaço para crescer.** Uma subpasta nova do Comercial vira a 15, e nenhuma outra muda de número.
 3. **A ordem é sempre a mesma.** Sem números, o Drive ordenaria por ordem alfabética e embaralharia as áreas.
 
-O **00** fica no topo porque guarda o que vale para o Drive inteiro: este manual e o contexto para o Claude.
+O **00** fica no topo porque guarda o que vale para o Drive inteiro: este manual (em "01 Comece por aqui") e o contexto para o Claude. Os outros manuais e instruções da empresa ficam na **40 Processos**.
 
 **Limite proposital:** no máximo 10 áreas, e no máximo 9 subpastas em cada uma. Se uma área precisar de mais, ela deve virar duas. Isso mantém tudo simples.
 
@@ -42,7 +42,7 @@ O **00** fica no topo porque guarda o que vale para o Drive inteiro: este manual
 
 | Pasta | O que guarda |
 |---|---|
-| **00 Geral** | 01 Manual de uso (este documento) · 02 Contexto para o Claude (documentos que explicam a ATIVOS, os serviços e as ferramentas, como o que é o MDP) |
+| **00 Geral** | 01 Comece por aqui (este manual: a porta de entrada do Drive) · 02 Contexto para o Claude (documentos que explicam a ATIVOS, os serviços e as ferramentas, como o que é o MDP) |
 | **10 Comercial** | 11 Prospecção · 12 Propostas enviadas · 13 Modelos de proposta e contrato · 14 Material de venda por nicho |
 | **20 Clientes** | Uma pasta por cliente, com código fixo (item 4) · CLI-000 Modelo, para copiar |
 | **30 Projetos internos** | Projetos da própria ATIVOS: marca, Instagram, landing page |
