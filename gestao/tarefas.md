@@ -50,3 +50,5 @@ T-001 a T-006 são **provisórias**: copiadas do documento dos 3 primeiros clien
 | T-019 | Configurar o cofre da ATIVOS no Obsidian | INT | Baixa | A fazer | T-010 | |
 | T-020 | Enviar o curso de SEO / Google Meu Negócio (transcrições e materiais) | INT | Média | A fazer | T-009 (guardar o original no Drive) | |
 | T-021 | Enviar a documentação oficial do Perfil da Empresa no Google | INT | Média | A fazer | — | |
+| T-022 | Decidir se os arquivos do Drive "Conteúdos" passam para o Drive ATIVOS (ou fica só o atalho na 70) | INT | Baixa | A fazer | — | |
+| T-023 | Atualizar o Google Doc do manual com a regra "sempre os 5 blocos" (precisa do conector Google Docs ligado, ou ajuste à mão) | INT | Baixa | A fazer | — | |

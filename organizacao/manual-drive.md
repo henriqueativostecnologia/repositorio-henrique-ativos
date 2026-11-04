@@ -86,7 +86,7 @@ CLI-001 Dr. Felipe (advocacia)
    01 Contrato e cadastro
    02 Briefing e materiais do cliente
    03 Entregas
-      Site · Rankeamento · Tráfego · Automação · Dados   (só os blocos contratados)
+      Site · Rankeamento · Tráfego · Automação · Dados   (sempre os 5; bloco não contratado fica vazio)
    04 Relatórios
    05 Reuniões e atas
 ```
@@ -143,7 +143,7 @@ R = executa · A = responde pelo resultado · C = é consultado · I = é inform
 * **Quando:** contrato assinado.
 1. Pegue o próximo código livre na lista de clientes.
 2. Copie a pasta `CLI-000 Modelo` dentro da 20 e renomeie: `CLI-00X Nome curto (nicho)`.
-3. Dentro de 03 Entregas, apague os blocos que o cliente não contratou.
+3. Não apague nenhuma subpasta: todo cliente tem a mesma estrutura. Bloco não contratado fica vazio.
 4. Avise no Slack o código e o nome do cliente.
 * **Resultado:** pasta pronta, com o mesmo código no Notion e nas tarefas.
 
