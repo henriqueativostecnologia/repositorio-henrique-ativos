@@ -42,3 +42,5 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 * Procure primeiro no **catálogo oficial**. Se faltar, procure em repositórios do GitHub e passe cada candidata pelo checklist de `referencias/`.
 * Apresente as opções em tabela (✅ instalar / ⏸️ adiar / ❌ descartar), um tema por vez.
+* **Depois de cada instalação**, explique no chat o que é cada skill, para que serve e quando usar, e registre isso em `referencias/skills-instaladas.md` (por PR).
+* **Qual skill usar:** consulte `referencias/skills-instaladas.md` (tabela "Qual usar") quando um pedido servir para mais de uma skill.
