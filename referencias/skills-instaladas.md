@@ -99,3 +99,20 @@ Situação: **instaladas em 04/11/2026.** Na lista de skills aparecem com o pref
 | Relatório de situação de projetos | status-report | — |
 | Riscos de um projeto | risk-assessment (até existir a skill própria de projetos) | — |
 | Fechamento do mês | close-management (ela chama as outras quando precisa) | — |
+| Manual, guia de uso, regra de como fazer algo na ATIVOS | process-doc | — |
+| Melhorar um processo que está lento ou confuso | process-optimization | — |
+| Cliente pediu algo fora do escopo | change-request | — |
+| Cabe mais um cliente? Precisa de freelancer? | capacity-plan | — |
+| Escolher ferramenta, sistema ou fornecedor | vendor-review | — |
+| Proposta comercial ou orçamento | proposal-builder | docs |
+| Previsão de caixa | cash-flow-snapshot | — |
+| Cobrança de cliente em atraso | invoice-chase | — |
+| Conciliação bancária | reconciliation | — |
+| DRE, balanço, demonstrações | financial-statements | — |
+| Orçado x realizado, por que gastamos mais | variance-analysis | — |
+| Preparar reunião (pauta, material) | notion-meeting-intelligence (quando o Notion estiver conectado) | — |
+| Registrar uma decisão ou aprendizado | notion-knowledge-capture (quando o Notion estiver conectado); antes disso, arquivo no repositório | — |
+| Criar ou mexer em pasta e arquivo no Drive | google-workspace | — |
+| Planilha para baixar | xlsx | — |
+| Apresentação | pptx | — |
+| Criar ou melhorar uma skill própria da ATIVOS | skill-creator | — |
