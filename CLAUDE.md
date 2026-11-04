@@ -40,7 +40,7 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 ## Plataformas (Notion, Slack e outras)
 
-* **Antes de começarmos a usar uma plataforma ou sistema novo**, peça ao Henrique a **documentação oficial**. Ele baixa e envia; você guarda em `plataformas/<nome>/` e escreve o `resumo.md`, por PR.
+* **Sempre, sem exceção:** antes de começarmos a usar qualquer plataforma, app ou sistema novo, **solicite ao Henrique a documentação oficial**. Não comece a trabalhar com a plataforma sem pedir. Ele baixa e envia; você guarda em `plataformas/<nome>/` e escreve o `resumo.md`, por PR.
 * Antes de trabalhar com uma plataforma, leia o `plataformas/<nome>/resumo.md`. Como funciona: `plataformas/README.md`.
 
 ## Skills e plugins
