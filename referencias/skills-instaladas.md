@@ -5,6 +5,8 @@ atualizado: 04/11/2026
 
 # Skills e plugins instalados na conta do Henrique
 
+Versão para consulta rápida, com busca e ideias de uso: página "Skills da ATIVOS" (https://claude.ai/artifact/EeYqGeKLpXQk1YR9paxPP9, privada da conta do Henrique).
+
 Para cada skill: **o que é**, **para que serve** e **quando usar** (com um exemplo de pedido).
 Regra: toda instalação nova entra aqui no mesmo dia, por PR.
 
@@ -73,7 +75,7 @@ Conectores do plugin: Asana e Atlassian não são usados pela ATIVOS. Não conec
 
 ## 5. Skills avulsas (.zip) — financeiro e comercial
 
-Situação em 04/11/2026: **enviadas ao Henrique, aguardando instalação.**
+Situação: **instaladas em 04/11/2026.** Na lista de skills aparecem com o prefixo `anthropic-skills:`.
 
 | Skill | O que é / para que serve | Quando usar (exemplo) | |
 |---|---|---|---|
