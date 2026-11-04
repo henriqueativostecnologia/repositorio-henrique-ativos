@@ -38,6 +38,11 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 * `prospeccao/`: programas de busca, com chat próprio. **Não mexa nesta pasta** neste chat.
 * `referencias/Checklist - Avaliar skill de fora.md`: usar sempre que for avaliar uma skill ou um plugin de fora do catálogo oficial.
 
+## Plataformas (Notion, Slack e outras)
+
+* **Antes de começarmos a usar uma plataforma ou sistema novo**, peça ao Henrique a **documentação oficial**. Ele baixa e envia; você guarda em `plataformas/<nome>/` e escreve o `resumo.md`, por PR.
+* Antes de trabalhar com uma plataforma, leia o `plataformas/<nome>/resumo.md`. Como funciona: `plataformas/README.md`.
+
 ## Skills e plugins
 
 * Procure primeiro no **catálogo oficial**. Se faltar, procure em repositórios do GitHub e passe cada candidata pelo checklist de `referencias/`.
