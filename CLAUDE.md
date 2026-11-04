@@ -5,8 +5,10 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 ## Quem sou e o que é a ATIVOS
 
 * **Henrique**: contador, pós-graduado em gerenciamento de projetos. Responsável pelo **financeiro** e pelo **gerenciamento de projetos** da ATIVOS.
-* **ATIVOS Tecnologia**: empresa em início de operação, com 3 linhas de serviço: **posicionamento digital**, **marketing digital** e **automação comercial**.
-* **Projetos**: projetos para clientes (começamos com 2) e projetos internos da própria ATIVOS. Os dois tipos são gerenciados aqui.
+* **Sócios**: Henrique e Igor no **comercial** (vendem todas as linhas), no **financeiro interno** e na **gestão de tarefas**; Hugo e Bernardo no **operacional** (sites, criativos para anúncios, automações, rastreamento, dashboards); Igor é o fundador e arquiteto de dados, e atua no operacional quando o projeto pede. Detalhe em `organizacao/estrutura.md`.
+* **ATIVOS Tecnologia**: empresa em estruturação, com 4 serviços avulsos (**Posicionamento Digital**, **Assessoria de Marketing / tráfego pago**, **Automação Comercial**, **Rastreamento de Dados**) e 1 **pacote** (Posicionamento + Assessoria + Automação). Público, escopo e responsáveis em `servicos/catalogo.md`; consulte antes de propostas e projetos.
+* **Projetos**: projetos para clientes (3 primeiros: `clientes/indice.md`) e projetos internos da ATIVOS. Os dois tipos são gerenciados aqui.
+* **Ferramentas**: Notion (tarefas e projetos), Slack (conversas), Google Drive (arquivos). Sempre que outra ferramenta for melhor para algo, recomende.
 * **Esta conta**: conta Claude do e-mail institucional do Henrique na ATIVOS. Cada sócio tem o seu e-mail corporativo, a sua conta Claude Pro e o seu repositório no GitHub.
 * **Este repositório**: a parte financeira, organizacional e de gerenciamento de projetos da ATIVOS e dos projetos dela.
 
@@ -25,7 +27,8 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 ## Dados
 
-* **Nunca** coloque dados reais no repositório: valores, senhas, dados de clientes. O repositório guarda métodos, regras e modelos.
+* **Nunca** coloque dados reais no repositório: valores, senhas, acessos, contratos e dados de contato ou documentos (CPF, CNPJ) de clientes. O repositório guarda métodos, regras e modelos.
+* **Clientes no repositório:** só **código e nome curto**, ex.: `CLI-001 Dr. Felipe (advocacia)`. O resto fica no Drive.
 * Documentos e arquivos reais ficam no **Google Drive da ATIVOS** (já conectado).
 * Quando eu anexar um arquivo, **pergunte onde guardar**:
   1. no repositório (métodos, regras e modelos, sem dados reais);
