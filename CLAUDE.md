@@ -36,11 +36,12 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 * Em 29/10/2026 o repositório foi zerado de propósito. **Não consulte o histórico do git anterior a essa data**; parta só dos arquivos atuais e do que eu disser.
 * `prospeccao/`: programas de busca, com chat próprio. **Não mexa nesta pasta** neste chat.
+* `servicos/`: modelos de cada serviço (fases, portões, prazos, responsáveis). Consulte ao planejar ou acompanhar um projeto de cliente. Hoje: `infraestrutura-de-dados/fluxo-de-implantacao.md` (rascunho).
 * `referencias/Checklist - Avaliar skill de fora.md`: usar sempre que for avaliar uma skill ou um plugin de fora do catálogo oficial.
 
 ## Plataformas (Notion, Slack e outras)
 
-* **Sempre, sem exceção:** antes de começarmos a usar qualquer plataforma, app ou sistema novo, **solicite ao Henrique a documentação oficial**. Não comece a trabalhar com a plataforma sem pedir. Ele baixa e envia; você guarda em `plataformas/<nome>/` e escreve o `resumo.md`, por PR.
+* **Sempre, sem exceção:** antes de começarmos a usar **aqui** qualquer plataforma, app ou sistema novo (gestão, organização, financeiro, comunicação), **solicite ao Henrique a documentação oficial**. Não comece a trabalhar com a plataforma sem pedir. Ferramentas só do operacional (GTM, GA4, BigQuery, Chatwoot etc.) ficam fora: o Henrique não opera essas demandas. Ele baixa e envia; você guarda em `plataformas/<nome>/` e escreve o `resumo.md`, por PR.
 * Antes de trabalhar com uma plataforma, leia o `plataformas/<nome>/resumo.md`. Como funciona: `plataformas/README.md`.
 
 ## Skills e plugins
