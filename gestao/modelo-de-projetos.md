@@ -35,7 +35,7 @@ PORTFÓLIO (todos os projetos)
 | 6 | Tamanho | Uma tarefa cabe em até 1 dia; se for maior, divide |
 | 7 | Estimativa | P (até 2h) · M (até 4h) · G (até 1 dia) |
 | 8 | Portões | **G0:** contrato, acessos e briefing completos · **Aceite:** cliente aprova por escrito. A Infraestrutura de Dados mantém os seus 7 portões |
-| 9 | Códigos | Projeto de cliente `CLI-001-SIGLA` (PAC pacote, POS posicionamento, TRA tráfego, AUT automação, DAD dados) · interno `INT-00X` · tarefa `T-XXX`, nunca reaproveitado |
+| 9 | Códigos | Projeto de cliente `CLI-001-SIGLA Nome` (ex.: `CLI-002-PAC Lucas Melo`) (PAC pacote, POS posicionamento, TRA tráfego, AUT automação, DAD dados) · interno `INT-00X` · tarefa `T-XXX`, nunca reaproveitado |
 
 ## Projetos internos fixos
 
