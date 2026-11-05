@@ -48,5 +48,5 @@ Consulte antes de montar propostas e de abrir projetos.
 ## 5. Pacote: Posicionamento + Assessoria + Automação
 
 * **Público:** construtoras, imobiliárias, advocacia (previdenciária e trabalhista), compra e venda de veículos, estética automotiva; no futuro, clínicas.
-* **Inclui:** os blocos dos serviços 1, 2 e 3, mais site (benchmarking e wireframe; copy com SEO, GEO, AEO e blog; design system, deploy e apontamento) e, conforme o cliente, infraestrutura de dados (Tag Manager, Analytics, BigQuery e GCP; dashboard).
+* **Inclui:** os blocos dos serviços 1, 2 e 3, mais site (benchmarking e wireframe; copy com SEO, GEO, AEO e blog; design system, deploy e apontamento) e infraestrutura de dados (Tag Manager, Analytics, BigQuery e GCP; dashboard). Decidido em 05/11/2026: os 3 primeiros clientes têm Infraestrutura de Dados; qualificação de leads também vale para os 3.
 * **Primeiros clientes:** ver `clientes/indice.md`.

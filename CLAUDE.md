@@ -30,6 +30,7 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 * **Nunca** coloque dados reais no repositório: valores, senhas, acessos, contratos e dados de contato ou documentos (CPF, CNPJ) de clientes. O repositório guarda métodos, regras e modelos.
 * **Clientes no repositório:** só **código e nome curto**, ex.: `CLI-001 Dr. Felipe (advocacia)`. O resto fica no Drive.
+* **Sempre cite o cliente com código e nome** (ex.: "CLI-002 Lucas Melo"), nunca só o número, no chat, na planilha e nos documentos. Projetos de cliente: `CLI-001-PAC Dr. Felipe`.
 * Documentos e arquivos reais ficam no **Drive compartilhado "ATIVOS"** (já conectado; pasta raiz: `0AE6MYs89GYdWUk9PVA`, https://drive.google.com/drive/folders/0AE6MYs89GYdWUk9PVA). Onde salvar cada coisa, numeração das pastas e nomes de arquivo: `organizacao/manual-drive.md`. Consulte antes de criar ou salvar algo no Drive.
 * Quando eu anexar um arquivo, **pergunte onde guardar**:
   1. no repositório (métodos, regras e modelos, sem dados reais);
