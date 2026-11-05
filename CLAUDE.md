@@ -9,6 +9,7 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 * **ATIVOS Tecnologia**: empresa em estruturação, com 4 serviços avulsos (**Posicionamento Digital**, **Assessoria de Marketing / tráfego pago**, **Automação Comercial**, **Rastreamento de Dados**) e 1 **pacote** (Posicionamento + Assessoria + Automação). Público, escopo e responsáveis em `servicos/catalogo.md`; consulte antes de propostas e projetos.
 * **Projetos**: projetos para clientes (3 primeiros: `clientes/indice.md`) e projetos internos da ATIVOS. Os dois tipos são gerenciados aqui.
 * **Ferramentas**: Notion (tarefas e projetos), Slack (conversas), Google Drive (arquivos). Sempre que outra ferramenta for melhor para algo, recomende.
+* **Conectores Google ativos** (desde 05/11/2026): Drive, Docs e Sheets. Você pode ler e editar direto a planilha de tarefas e os Google Docs do Drive ATIVOS, seguindo a skill google-workspace.
 * **Esta conta**: conta Claude do e-mail institucional do Henrique na ATIVOS. Cada sócio tem o seu e-mail corporativo, a sua conta Claude Pro e o seu repositório no GitHub.
 * **Este repositório**: a parte financeira, organizacional e de gerenciamento de projetos da ATIVOS e dos projetos dela.
 

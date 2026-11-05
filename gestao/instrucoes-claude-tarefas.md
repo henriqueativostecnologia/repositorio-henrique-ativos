@@ -1,7 +1,7 @@
 ---
 tipo: instrução para o Claude (de qualquer sócio)
 atualizado: 05/11/2026
-situacao: versão 1; copiar para a aba "Como usar" da planilha Quadro de tarefas ATIVOS (seção "Instruções para o Claude")
+situacao: versão 1; copiada em 05/11/2026 para a aba "Como usar" da planilha (seção "Instruções para o Claude")
 ---
 
 # Instruções para o Claude: cadastrar e atualizar tarefas no Quadro de tarefas ATIVOS
