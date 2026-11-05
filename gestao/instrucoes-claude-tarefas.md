@@ -12,11 +12,32 @@ Estas instruções valem para o Claude de **qualquer sócio** da ATIVOS (Henriqu
 **Link:** https://docs.google.com/spreadsheets/d/1g7cFgksYnu7_YpPCewVUtGThya8i46XQOdmxkVNVbl4/edit
 **Precisa de:** conector Google Sheets ligado na conta Claude do sócio.
 
+## Quem edita o quê (decidido em 05/11/2026)
+
+| Ação | Quem | Como |
+|---|---|---|
+| **Cadastrar tarefa nova** | Só o **Claude do Henrique** | O sócio manda ao Henrique pelo WhatsApp, no modelo abaixo; o Henrique repassa ao Claude |
+| **Atualizar as próprias tarefas** (colunas F a N: Prioridade, Status, Prazo, Estimativa, Semana, Depende de, Observação, Concluída em) | Cada sócio, direto na planilha ou pelo Claude dele | Aba Tarefas › Dados › Modos de filtro › "[nome]: minhas tarefas abertas" |
+| **Mudar Código, Tarefa, Responsável, Projeto ou Área** | Só o Claude do Henrique | A pedido do Henrique |
+
+Se o Claude de outro sócio receber um pedido de tarefa nova, ele não cadastra: orienta o sócio a mandar ao Henrique.
+
+**Modelo para o WhatsApp:**
+
+```
+Tarefa: (o que fazer, começando com verbo)
+Cliente ou projeto: (ex.: CLI-002 Lucas Melo, ou "interno")
+Prioridade: Alta / Média / Baixa
+Prazo: (se tiver)
+```
+
+**Proteções (só aviso, não bloqueiam):** colunas A a E e O a R da aba Tarefas, abas automáticas (pessoas e Visão geral), Projetos e Listas.
+
 ## Como o sócio pede
 
 Basta colar no chat do Claude:
 
-> Leia a aba "Como usar" da planilha Quadro de tarefas ATIVOS (link acima) e siga as "Instruções para o Claude". Quero cadastrar estas tarefas: …
+> Leia a aba "Como usar" da planilha Quadro de tarefas ATIVOS (link acima) e siga as "Instruções para o Claude". Quero atualizar estas tarefas: … (no Claude do Henrique, também cadastrar)
 
 ## O que o Claude deve fazer
 
