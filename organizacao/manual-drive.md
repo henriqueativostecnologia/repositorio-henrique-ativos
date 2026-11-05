@@ -42,7 +42,7 @@ O **00** fica no topo porque guarda o que vale para o Drive inteiro: este manual
 
 | Pasta | O que guarda |
 |---|---|
-| **00 Geral** | 01 Comece por aqui (este manual: a porta de entrada do Drive) · 02 Contexto para o Claude (documentos que explicam a ATIVOS, os serviços e as ferramentas, como o que é o MDP) |
+| **00 Geral** | 01 Comece por aqui (este manual: a porta de entrada do Drive) · 03 Gestão de tarefas (planilha Quadro de tarefas ATIVOS) · 02 Contexto para o Claude (documentos que explicam a ATIVOS, os serviços e as ferramentas, como o que é o MDP) |
 | **10 Comercial** | 11 Prospecção · 12 Propostas enviadas · 13 Modelos de proposta e contrato · 14 Material de venda por nicho |
 | **20 Clientes** | Uma pasta por cliente, com código fixo (item 4) · CLI-000 Modelo, para copiar |
 | **30 Projetos internos** | Projetos da própria ATIVOS: marca, Instagram, landing page |

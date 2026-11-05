@@ -1,7 +1,7 @@
 ---
 tipo: lista de tarefas
 atualizado: 04/11/2026 (T-009 e T-010 feitas)
-situacao: provisória; migra para o Notion na T-014
+situacao: APOSENTADO em 05/11/2026. A lista oficial passou para a planilha "Quadro de tarefas ATIVOS" no Drive (00 Geral › 03 Gestão de tarefas). Este arquivo não é mais atualizado.
 ---
 
 # Tarefas da ATIVOS
