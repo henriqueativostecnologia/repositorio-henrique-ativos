@@ -40,7 +40,7 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 * Em 29/10/2026 o repositório foi zerado de propósito. **Não consulte o histórico do git anterior a essa data**; parta só dos arquivos atuais e do que eu disser.
 * `prospeccao/`: programas de busca, com chat próprio. **Não mexa nesta pasta** neste chat.
 * `servicos/`: modelos de cada serviço (fases, portões, prazos, responsáveis). Consulte ao planejar ou acompanhar um projeto de cliente. Hoje: `infraestrutura-de-dados/fluxo-de-implantacao.md` (rascunho).
-* **Tarefas:** a lista oficial é a planilha **Quadro de tarefas ATIVOS** no Drive (`00 Geral › 03 Gestão de tarefas`, id `1g7cFgksYnu7_YpPCewVUtGThya8i46XQOdmxkVNVbl4`), até a migração para o Notion. Consulte no início de cada tema. Modelo de projetos e de tarefas: `gestao/modelo-de-projetos.md`. O `gestao/tarefas.md` está aposentado.
+* **Tarefas:** a lista oficial é a planilha **Quadro de tarefas ATIVOS** no Drive (`00 Geral › 03 Gestão de tarefas`, id `1g7cFgksYnu7_YpPCewVUtGThya8i46XQOdmxkVNVbl4`), até a migração para o Notion. Consulte no início de cada tema. Modelo de projetos e de tarefas: `gestao/modelo-de-projetos.md`. Regras para qualquer Claude cadastrar ou atualizar tarefas na planilha: `gestao/instrucoes-claude-tarefas.md` (siga sempre). O `gestao/tarefas.md` está aposentado.
 * `referencias/Checklist - Avaliar skill de fora.md`: usar sempre que for avaliar uma skill ou um plugin de fora do catálogo oficial.
 
 ## Modelo de execução de cada demanda
