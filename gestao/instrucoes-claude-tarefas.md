@@ -12,26 +12,36 @@ Estas instruções valem para o Claude de **qualquer sócio** da ATIVOS (Henriqu
 **Link:** https://docs.google.com/spreadsheets/d/1g7cFgksYnu7_YpPCewVUtGThya8i46XQOdmxkVNVbl4/edit
 **Precisa de:** conector Google Sheets ligado na conta Claude do sócio.
 
-## Quem edita o quê (decidido em 05/11/2026)
+## Quem edita o quê (atualizado em 09/11/2026)
 
-| Ação | Quem | Como |
-|---|---|---|
-| **Cadastrar tarefa nova** | Só o **Claude do Henrique** | O sócio manda ao Henrique pelo WhatsApp, no modelo abaixo; o Henrique repassa ao Claude |
-| **Atualizar as próprias tarefas** (colunas F a N: Prioridade, Status, Prazo, Estimativa, Semana, Depende de, Observação, Concluída em) | Cada sócio, direto na planilha ou pelo Claude dele | Aba Tarefas › Dados › Modos de filtro › "[nome]: minhas tarefas abertas" |
-| **Mudar Código, Tarefa, Responsável, Projeto ou Área** | Só o Claude do Henrique | A pedido do Henrique |
+A planilha é o **esboço da central de tarefas** (até o Notion). Para ser prático para todos:
 
-Se o Claude de outro sócio receber um pedido de tarefa nova, ele não cadastra: orienta o sócio a mandar ao Henrique.
+* **Cada sócio cadastra e atualiza as suas tarefas livremente**, do jeito mais prático (texto livre, sem se preocupar com o padrão). As listas de seleção só sugerem valores; não bloqueiam.
+* **O Claude do Henrique padroniza depois**, quando o Henrique pedir, **sem alterar o conteúdo**.
+* Tarefas também podem chegar pelo WhatsApp ao Henrique, que repassa ao Claude.
 
-**Modelo para o WhatsApp:**
+### Como padronizar (Claude do Henrique)
+
+1. Leia a aba Tarefas inteira e encontre as linhas fora do padrão (sem código, valores fora das listas, data em texto, tarefa sem verbo, linha de outro formato).
+2. Para cada uma, proponha a versão padronizada **mantendo o significado**:
+   * código: próximo T-XXX livre;
+   * tarefa: reescrita começando com verbo, com o mesmo conteúdo;
+   * valores equivalentes das listas (ex.: "urgente" → Alta, "feito" → Feito, "Lucas" → CLI-002-PAC Lucas Melo, "Hugo e Bernardo" → duas tarefas, uma para cada);
+   * datas no formato da planilha.
+3. **Nunca apague informação:** o que não couber nas colunas vai para Link ou observação.
+4. Na dúvida sobre o significado, **pergunte** ao Henrique.
+5. Mostre ao Henrique uma tabela **antes → depois** e só grave com o "ok". Depois de gravar, releia e confirme.
+
+**Modelo para o WhatsApp** (opcional):
 
 ```
-Tarefa: (o que fazer, começando com verbo)
+Tarefa: (o que fazer)
 Cliente ou projeto: (ex.: CLI-002 Lucas Melo, ou "interno")
 Prioridade: Alta / Média / Baixa
 Prazo: (se tiver)
 ```
 
-**Proteções (só aviso, não bloqueiam):** colunas A a E e O a R da aba Tarefas, abas automáticas (pessoas e Visão geral), Projetos e Listas.
+**Proteções (só aviso, não bloqueiam):** colunas auxiliares O a R da aba Tarefas, abas automáticas (pessoas e Visão geral), Projetos e Listas. As colunas A a N da aba Tarefas são livres.
 
 ## Como o sócio pede
 
