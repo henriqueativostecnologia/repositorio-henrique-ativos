@@ -135,6 +135,19 @@ SAVE.
 **Resultado esperado:** tarefa aberta mostra os botões só quando faz sentido (tarefa Cancelada ou Feita não mostra Concluir).
 **Position:** Primary = botão flutuante; Prominent = topo da tarefa (o que usamos); Inline = ao lado de uma coluna; Hide = escondido.
 
+### Passo 11: trocar a planilha de TESTE pela oficial
+```
+Data › Tables › cartão Tarefas › Storage › Source Path: escolher "Quadro de tarefas ATIVOS" (a oficial) · Worksheet Name/Qualifier: Tarefas · SAVE.
+NÃO clicar em "Copy Data to New Source" (copia os dados para outro lugar).
+```
+**Resultado esperado:** Source Id muda para o endereço da planilha oficial (DocId=1g7cFgks…). Telas, filtros e botões continuam funcionando, porque a estrutura das duas planilhas é igual (feito em 10/11/2026).
+
+### Passo 12: publicar (deploy)
+```
+Manage › Deploy › Deployment Check › Run deployment check › se estiver tudo OK: Move app to deployed state.
+```
+(artigos 10104495 Deploy: The Essentials e 10104389 Perform a deployment check)
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
