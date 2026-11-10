@@ -67,6 +67,27 @@ Drive › 00 Geral › 03 Gestão de tarefas › cópia da planilha com o nome "
 **Resultado esperado:** a mudança aparece dos dois lados (testado em 10/11/2026 com a T-015: ida e volta OK).
 **Se falhar:** "This entry is required" ao salvar = alguma coluna está com Require ligado sem precisar (desligar em Data › coluna › Data Validity › Require?).
 
+### Passo 6: filtros (slices) das telas
+```
+Data › passe o mouse em Tarefas › + › Create a new slice › Slice Name › Row filter condition › "Create a new expression" (não usar as sugestões em linguagem comum) › colar › conferir o ✓ verde › Save. Nomes sem acento.
+```
+| Slice | Row filter condition |
+|---|---|
+| Atrasadas | `AND(ISNOTBLANK([Prazo]), [Prazo] < TODAY(), NOT(IN([Status], LIST("Feito", "Cancelada"))))` |
+| Hoje | `OR(AND([Prazo] = TODAY(), NOT(IN([Status], LIST("Feito", "Cancelada")))), [Status] = "Fazendo")` |
+| Amanha | `AND([Prazo] = WORKDAY(TODAY(), 1), NOT(IN([Status], LIST("Feito", "Cancelada"))))` |
+| Ontem | `AND([Status] = "Feito", [Concluída em] = WORKDAY(TODAY(), -1))` |
+| Esta semana | `AND([Semana (sprint)] = CONCATENATE(YEAR(TODAY()), "-S", RIGHT(CONCATENATE("0", ISOWEEKNUM(TODAY())), 2)), [Status] <> "Cancelada")` |
+| Proxima semana | `AND([Semana (sprint)] = CONCATENATE(YEAR(TODAY() + 7), "-S", RIGHT(CONCATENATE("0", ISOWEEKNUM(TODAY() + 7)), 2)), [Status] <> "Cancelada")` |
+
+**Resultado esperado:** Preview data mostra só as tarefas do filtro (teste em 10/11/2026: Atrasadas = T-085, T-097, T-113, T-126).
+**Atenção:** na virada do ano, a semana ISO pode pertencer ao ano anterior ou seguinte (ex.: 01/01/2027 é a semana 53 de 2026); conferir o filtro de semana nessa época.
+
+### Passo 7: telas (views)
+```
+Views (ícone de celular) › + ao lado de Primary navigation › Create a new view › View name, For this data (o slice), View type deck, Sort by Prazo Ascending, Group by Responsável › SAVE.
+```
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
