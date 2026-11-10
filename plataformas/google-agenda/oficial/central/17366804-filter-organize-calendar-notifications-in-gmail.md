@@ -1,0 +1,89 @@
+---
+fonte: https://support.google.com/calendar/answer/17366804?hl=en
+baixado: 2026-11-10
+---
+
+# Filter & organize Calendar notifications  in Gmail
+
+To keep your inbox organized, you can use Gmail filters. This helps you manage calendars for other people or a team.
+
+When Google Calendar sends an email, it contains a hidden email header called `X-Google-Calendar-Notification`, which Gmail can read. For example, this includes when a:
+
+- Meeting time changes.
+- Room is removed.
+- Guest adds a note to their reply.
+
+## Step 1: Set up notifications in Calendar
+
+Before you create filters in Gmail, turn on the notifications you want in Google Calendar:
+
+1.  On your computer, open [Google Calendar](https://calendar.google.com/).
+2.  At the top right, click Settings menu and then **Settings**.
+3.  On the left, under "Settings for my calendars," click the name of the calendar.
+4.  Click **Other notifications**.
+5.  Next to each category, such as "Changed events" or "Event responses," click the dropdown menu.
+6.  Select **Email** or **None**.
+
+## Step 2: Create a filter in Gmail
+
+After you set up your notification settings, you can use custom filters in Gmail to search for specific event notifications.
+
+1.  On your computer, open [Gmail](https://mail.google.com/).
+2.  In the search box at the top, enter a query using a value from the table below.
+    - For example, “`header:X-Google-Calendar-Notification:rsvpDeclined`.”
+3.  On the right side of the search box, click Show search options .
+4.  At the bottom of the window, click **Create filter**.
+5.  Choose what you want the filter to do, such as archive, label, or delete the email.
+6.  Click **Create filter**.
+
+### Filter tokens for Calendar notifications
+
+To filter a specific action, combine `header:X-Google-Calendar-Notification:` with one of the search tokens below. For example, to filter new event invitations, use `header:X-Google-Calendar-Notification:eventCreated`.
+
+|                        |                                   |                           |
+|------------------------|-----------------------------------|---------------------------|
+| **Category**           | **Notification action**           | **Search token**          |
+| New & cancelled events | New event invitation sent         | `eventCreated`            |
+| New & cancelled events | Event cancelled                   | `eventCancelled`          |
+| Event updates          | Time or recurrence rules changed  | `timeOrRecurrenceUpdated` |
+| Event updates          | Meeting room added                | `roomAdded`               |
+| Event updates          | Meeting room removed              | `roomRemoved`             |
+| Event updates          | Location changed                  | `locationUpdated`         |
+| Event updates          | Event title changed               | `titleUpdated`            |
+| Event updates          | Description changed               | `descriptionUpdated`      |
+| Event updates          | Document or attachment added      | `attachmentAdded`         |
+| Event updates          | Document or attachment removed    | `attachmentRemoved`       |
+| Event updates          | Video conferencing link updated   | `conferenceUpdated`       |
+| Guest RSVPs            | Guest accepted invitation         | `rsvpAccepted`            |
+| Guest RSVPs            | Guest declined invitation         | `rsvpDeclined`            |
+| Guest RSVPs            | Guest responded “Maybe”           | `rsvpTentative`           |
+| Guest RSVPs            | Guest included a note with RSVP   | `rsvpWithNote`            |
+| Guest RSVPs            | Guest proposed a new meeting time | `rsvpProposeNewTime`      |
+| Room RSVPs             | Meeting room accepted booking     | `roomAccepted`            |
+| Room RSVPs             | Meeting room declined booking     | `roomDeclined`            |
+
+Here are a few ways you can combine these operators to organize your inbox:
+
+- **To keep only RSVP declines with a note, and archive all other RSVPs:**
+  - **To label important notes:**
+    - Create a filter with the query:
+      `header:X-Google-Calendar-Notification:rsvpDeclined`
+      `header:X-Google-Calendar-Notification:rsvpWithNote`.
+    - Set the action to: Apply label “Urgent RSVPs.”
+  - **To archive routine RSVPs:**
+    - Create a filter with the query:
+      `header:X-Google-Calendar-Notification:rsvpAccepted OR`
+      `header:X-Google-Calendar-Notification:rsvpTentative OR`
+      `(header:X-Google-Calendar-Notification:rsvpDeclined`
+      `-header:X-Google-Calendar-Notification:rsvpWithNote).`
+    - Set the action to: “Skip the Inbox (Archive it).”
+- **To find a declined meeting room booking:**
+  - Create a filter with the query:
+    `header:X-Google-Calendar-Notification:roomDeclined`.
+  - Set the action to: Apply label “Room Conflicts” or “Mark as important.”
+
+## Related resources
+
+- [Change Google Calendar notifications](https://support.google.com/calendar/answer/37242)
+- [Refine searches in Gmail](https://support.google.com/mail/answer/7190)
+- [Create rules to filter your emails](https://support.google.com/mail/answer/6579)

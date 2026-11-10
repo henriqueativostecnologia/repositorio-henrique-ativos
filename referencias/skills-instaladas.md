@@ -93,7 +93,7 @@ Situação: **instaladas em 04/11/2026.** Na lista de skills aparecem com o pref
 |---|---|---|
 | Documento para ler, compartilhar ou assinar | docs | docx (só se pedir Word) |
 | Arquivo que fica no Google Drive | google-workspace | docs |
-| Tarefa, quadro, sprint, página de projeto | Notion | planilha |
+| Tarefa, quadro, sprint, página de projeto | Planilha Quadro de tarefas (google-workspace) e app da central (AppSheet) | Notion (opção futura desde 10/11/2026) |
 | Procedimento padrão (POP) ou responsabilidades (RACI) | process-doc | runbook |
 | Passo a passo técnico de uma tarefa repetitiva | runbook | process-doc |
 | Relatório de situação de projetos | status-report | — |
