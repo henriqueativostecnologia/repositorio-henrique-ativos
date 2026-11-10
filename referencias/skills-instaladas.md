@@ -110,8 +110,8 @@ Situação: **instaladas em 04/11/2026.** Na lista de skills aparecem com o pref
 | Conciliação bancária | reconciliation | — |
 | DRE, balanço, demonstrações | financial-statements | — |
 | Orçado x realizado, por que gastamos mais | variance-analysis | — |
-| Preparar reunião (pauta, material) | notion-meeting-intelligence (quando o Notion estiver conectado) | — |
-| Registrar uma decisão ou aprendizado | notion-knowledge-capture (quando o Notion estiver conectado); antes disso, arquivo no repositório | — |
+| Preparar reunião (pauta, material) | docs (pauta em documento); google-workspace se for no Drive | — |
+| Registrar uma decisão ou aprendizado | google-workspace (Registro de decisões, Google Doc no Drive) e, se for regra, arquivo no repositório | Notion (opção futura) |
 | Criar ou mexer em pasta e arquivo no Drive | google-workspace | — |
 | Planilha para baixar | xlsx | — |
 | Apresentação | pptx | — |
