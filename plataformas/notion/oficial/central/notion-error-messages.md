@@ -1,0 +1,193 @@
+---
+fonte: https://www.notion.com/help/notion-error-messages
+baixado: 2026-11-10
+---
+
+# Common Notion errors
+
+In this help doc
+
+## Find the most common Notion error messages, what causes them, and how to fix each one.
+
+------------------------------------------------------------------------
+
+Check our [status page](https://www.notion-status.com/) for live updates on any known issues.
+
+## [General errors](https://www.notion.com/help/notion-error-messages#general-errors)
+
+Some common error messages and issues you might encounter in Notion include:
+
+- “Something’s not right”
+
+- “Something went wrong”
+
+- “Hmm… something’s not right”
+
+- “There was an issue persisting your edits”
+
+- “Cannot save changes”
+
+- "Storage operation did not complete"
+
+- “Notion is damaged”
+
+- “Go online to view this image”
+
+- Not being able to access Notion or specific Notion pages
+
+## [General troubleshooting](https://www.notion.com/help/notion-error-messages#general-troubleshooting) 
+
+The following suggestions may help resolve these errors:
+
+- Allowlist the URL \*.notion.com. You may need to update allow/deny rules in your organization’s network controls, like:
+
+  - Firewall or secure web gateway (URL/category filtering)
+
+  - DNS filtering / protective DNS policies
+
+  - Proxy allow/deny lists
+
+  - Security tools that block newly seen domains
+
+- Log out and log back into your Notion account.
+
+- Restart your device and trying again.
+
+- Access Notion from a different device or browser, or from an incognito tab.
+
+- Clear your local storage and cache on your browser. Here are some resources on how to clear local storage for various platforms:
+
+  - [Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+
+  - [Edge](https://www.microsoft.com/en-us/edge/learning-center/how-to-manage-and-clear-your-cache-and-cookies?form=MA13I2)
+
+  - [Firefox](https://support.mozilla.org/en-US/kb/how-clear-firefox-cache)
+
+  - [Notion desktop app](https://www.notion.so/help/reset-notion)
+
+- Quit and restart your browser.
+
+- Reset your Notion app following the instructions [here](https://notion.so/help/reset-notion), and make sure you’re on the latest version of Notion.
+
+- Make sure you’re using Notion on a supported device and platform.
+
+  - If you’re using a Chromebook or a ChromeOS device, these devices aren’t supported. You should use a web browser like Chrome, Firefox, Safari, or Edge or an Android or iOS mobile device to access all of Notion’s features.
+
+  - If your Apple mobile device is on iOS 15 or earlier, these OS versions aren’t supported. If your device supports an upgrade to iOS 16 or later, upgrade it. If your device doesn’t support iOS 16 or later, you may still be able to use Notion, but the app may not work as expected.
+
+- Disable any VPNs that you may be using and try again.
+
+## ["Offline" or "Connect to the internet"](https://www.notion.com/help/notion-error-messages#offline-or-connect-to-the-internet)
+
+**When this error may occur**
+
+If you see an error that says “Offline” or “Connect to the internet to get started”, it’s possible that you’ve lost your internet connection or that your network, or some privacy or security software installed on your device is blocking access to Notion.
+
+**What you can try to fix the error**
+
+To fix this error:
+
+- Make sure you’re connected to the internet, and that your internet isn’t down or spotty.
+
+- Check if you’re using a proxy, firewall, or VPN software on your computer that may be blocking access to Notion.
+
+- If you’re connected to a network that belongs to a school, corporation, or organization, ask IT to unblock Notion on that network.
+
+- If you’re on a personal network, try changing your DNS to 1.1.1.1 or 8.8.8.8. You can learn more about how to do this [here →](https://developers.google.com/speed/public-dns/docs/using)
+
+## ["Go online to view this image"](https://www.notion.com/help/notion-error-messages#go-online-to-view-this-image)
+
+**When this error may occur**
+
+You might see a broken image icon with the message “Go online to view this image,” even when you’re connected to the internet. You may still be able to open the image by selecting `View original`, but the preview on the page won’t load.
+
+This error usually means something on your network is blocking Notion from loading images. The images themselves aren’t broken. A VPN is the most common cause, especially when several people on the same team see the error at the same time. Firewalls, proxies, DNS filters, ad blockers, and iCloud Private Relay can cause the same problem.
+
+**What you can try to fix the error**
+
+To fix this error:
+
+1.  Check if your device or network uses a VPN, proxy, or DNS filter.
+
+2.  Turn off the VPN temporarily and reload the page. If images load, the VPN was blocking them.
+
+3.  Ask your IT team to allowlist Notion’s domains and IP addresses in your VPN or firewall settings. Share this guide with them: [Allowlist Notion’s IP addresses →](https://www.notion.com/help/allowlist-ip)
+
+4.  Turn off other tools that can block images, like ad blockers or iCloud Private Relay, one at a time to find the cause.
+
+If images still don’t load:
+
+- Clear your browser cache and reload the page.
+
+- Check that the image is a file type Notion supports: HEIC, ICO, JPEG, JPG, PNG, TIF, TIFF, GIF, SVG, PDF, or WEBP.
+
+- Record a HAR file in your browser while the issue is happening and share it with Notion Support.
+
+## ["Your file is over the limit"](https://www.notion.com/help/notion-error-messages#your-file-is-over-the-limit)
+
+**When this error may occur**
+
+You might see an error that says “Your file is over the 5MB limit of the Free Plan”. Remember that on the Free Plan, you have a limit of 5MB for imports.
+
+**What you can try to fix the error**
+
+To fix this error:
+
+- You can remove any imported files that you no longer need.
+
+- You can [upgrade to a paid plan](https://www.notion.so/pricing), which will increase your import limit to 50MB.
+
+## ["Rate limit reached"](https://www.notion.com/help/notion-error-messages#rate-limit-reached)
+
+**When this error may occur**
+
+You might see an error that says “Rate limit reached, please try again later”.
+
+This error usually occurs when you’ve exceeded the number of allowed requests to Notion’s API by trying to duplicate a large amount of content in Notion. Currently, you can duplicate up to 50,000 blocks per hour. This limit is in place to make sure all users have fair access to Notion.
+
+**What you can try to fix the error**
+
+To fix this error:
+
+- Wait an hour and try the duplication again so that you don’t hit the limit.
+
+- Make the content that you’re trying to duplicate smaller. For example, if you’re trying to duplicate a page, you can try removing parts of the page that you don’t need duplicated, or split the page up into multiple pages. Then, try the duplication again.
+
+## ["Request body too large"](https://www.notion.com/help/notion-error-messages#request-body-too-large)
+
+**When this error may occur**
+
+When trying to add text to your page, you might see an error that says “Request body too large”. This error, also known as an HTTP 413 error, can occur when you try to paste a lot of text (over 500kb) into a Notion page.
+
+**What you can try to fix the error**
+
+To fix this error, try splitting up the text you’re trying to copy and paste into smaller chunks.
+
+## ["Unsaved transactions"](https://www.notion.com/help/notion-error-messages#unsaved-transactions)
+
+**When this error may occur**
+
+You might see an error that says “Unsaved transactions: You don’t have access to move this page to the desired location”. This could happen because:
+
+- You’re trying to set up an integration or a bot on a page that you only have guest access to, or that you don’t have full access to.
+
+- Your integration or bot doesn’t have access to the page you’re in.
+
+**What you can try to fix the error**
+
+To fix this error:
+
+- Make sure that you have proper access to the page you’re in.
+
+- Give your integration or bot access to the page you’re in.
+
+## Contents
+
+- [General errors](#general-errors)
+- [General troubleshooting](#general-troubleshooting)
+- ["Offline" or "Connect to the internet"](#offline-or-connect-to-the-internet)
+- ["Go online to view this image"](#go-online-to-view-this-image)
+- ["Your file is over the limit"](#your-file-is-over-the-limit)
+- ["Rate limit reached"](#rate-limit-reached)
+- ["Request body too large"](#request-body-too-large)
+- ["Unsaved transactions"](#unsaved-transactions)

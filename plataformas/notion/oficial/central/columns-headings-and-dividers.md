@@ -1,0 +1,201 @@
+---
+fonte: https://www.notion.com/help/columns-headings-and-dividers
+baixado: 2026-11-10
+---
+
+# Format your page
+
+In this help doc
+
+## Notion is designed to get thoughts out of your head and onto the page. Once they're there, you can rearrange, organize, and structure them to think and write more clearly.
+
+[Jump to FAQs](https://www.notion.com/help/columns-headings-and-dividers#faq)
+
+------------------------------------------------------------------------
+
+## [Columns](https://www.notion.com/help/columns-headings-and-dividers#columns)
+
+Sometimes, it makes sense to put pieces of information next to each other. In these situations, you can format your text into columns (or create side-by-side sections with headings) using drag and drop:
+
+- Click and drag the text you want to put in another column. (The `⋮⋮` symbol in the left margin is your handle for drag and drop.)
+
+- Follow the blue guides that appear.
+
+- Drop it where you want it. You just created a new column!
+
+- You can create as many columns as you want across the width of a page.
+
+**Note:** Columns are available on tablet but not mobile. On your phone, you'll see the content in any right-hand column simply placed under the content in the left column.
+
+### [Remove columns](https://www.notion.com/help/columns-headings-and-dividers#remove-columns)
+
+To remove columns, simply do the reverse of the action you took to create them.
+
+- Click the `⋮⋮` icon and hold to drag the content in your right-hand column back under or above the content in the left-hand column. When you see the blue guide span the width of the page, drop it and the columns should disappear.
+
+- Sometimes, it's possible to have an empty column. In this case, click the `⋮⋮` icon and select `Delete`. This also removes the column format.
+
+**Tip:** You can resize columns by hovering over the edges they share with other content and dragging the gray vertical guides that appear left or right.
+
+## [Simple tables](https://www.notion.com/help/columns-headings-and-dividers#simple-tables)
+
+Need to structure content in a visual matrix? Create a simple table! You can do this by:
+
+- Clicking the `+` in the left margin that appears when you hover over a new line, and select the
+
+  `Table` option.
+
+- Alternatively, use the command `/table`.
+
+You can make the following adjustments to your table:
+
+- To add a row, hover over the bottom of the table and click `+`.
+
+- To add a column, hover over the right side of the table and click `+`.
+
+- Drag the bottom right corner of the table to add or remove rows and columns at the same time!
+
+- Drag the side of a column to make it wider or narrower.
+
+- Hover over the first cell of a row or column and select the six-dot icon to create a header row or header column. This will visually distinguish your header with a shaded background.
+
+- Click into a cell and select the three-dot icon on its right side to change the text and background color or clear the cell’s contents.
+
+- Hover over the table and select `⋮⋮` → `Fit to page width` to snap your table to page or column width.
+
+**Note:** At this time, you can’t paste in multiple simple table cells at once.
+
+### [Merge and unmerge cells](https://www.notion.com/help/columns-headings-and-dividers#merge-and-unmerge-cells)
+
+You can merge cells in a simple table to create spanning headers and visually grouped sections.
+
+**To merge cells:**
+
+1.  Select a rectangular group of cells.
+
+2.  Open the cell menu and click `Merge cells`.
+
+The top-left (anchor) cell keeps all content. Other selected cells are cleared.
+
+**To unmerge cells:**
+
+1.  Select a merged cell.
+
+2.  Open the cell menu and click `Unmerge cells`.
+
+The anchor cell keeps its text. All covered cells are restored as empty individual cells.
+
+### [Convert a simple table to a database](https://www.notion.com/help/columns-headings-and-dividers#convert-a-simple-table-to-a-database)
+
+While a simple table lets you quickly visualize information, you can convert it to a database any time you need database functionality such as filters, sorts, or specific property value types. [Learn more about databases here →](https://www.notion.com/help/category/databases)
+
+- Click the `•••` menu hovering at the top of the simple table. Click `Turn into database`.
+
+**Tip:** Not sure whether a simple table or a database is a better fit for your content? [Check out this helpful guide comparing the two, with best practices on how to use each →](https://www.notion.so/guides/simple-tables-vs-databases)
+
+## [Headings](https://www.notion.com/help/columns-headings-and-dividers#headings)
+
+You can add more structure to your pages with three levels of headings. There are many ways to add a heading to your page:
+
+- Hover over a new line and click the `+` that appears in the left margin. Then, select the size heading you want.
+
+- Type `/` followed by `h1`, `h2`, or `h3` and then `enter`.
+
+- Use Markdown and type `#` for H1, `##` for H2, or `###` for H3, then press `space`.
+
+- Type whatever you want. Then, press `cmd/ctrl` + `/` and choose a heading size to convert the text!
+
+Headings can also be toggles so that you can open and close them. To turn a heading or regular text into a toggle heading:
+
+1.  Hover over the heading or text and select the `⋮⋮` that appears in the left margin.
+
+2.  Select `Turn into`.
+
+3.  Select `Toggle heading 1`, `Toggle heading 2`, or `Toggle heading 3`.
+
+All of the content within those headings will now be collapsible or expandable so that you can keep your page clean. At this time, you’ll need to open and close toggles manually — there’s no way to open and close them all at once, or make them open or closed by default.
+
+## [Table of contents](https://www.notion.com/help/columns-headings-and-dividers#table-of-contents)
+
+If you're working on a long document with lots of headings, you may want to add a table of contents to help your readers and collaborators easily skim the page’s content and easily jump to any section. The table of contents block is a single unit that must be moved, deleted, duplicated, and styled as a unit. **To edit the text** it contains, edit the actual headings on your page.
+
+In a table of contents, you’ll see a list of all the headings used in your page. H2s and H3s will be indented to reflect your page’s structure. Click on any of the headings in your table of contents to go to that heading in the page.
+
+A table of contents can appear in a page in two ways:
+
+- At the top of your page, as a block.
+
+- At the right side of your page as you scroll through it, as a page-level setting.
+
+### [Table of contents block](https://www.notion.com/help/columns-headings-and-dividers#table-of-contents-block)
+
+There are a few ways to add a table of contents block in Notion:
+
+- Hover over a new block on your page and select `+`. In the menu that appears, find and select `Table of contents`.
+
+- Enter `/` in a page and start typing `table of contents`. Select `Table of contents` in the menu that appears.
+
+**Note:** Indented headings will not be included in a table of contents.
+
+### [Table of contents page-level setting](https://www.notion.com/help/columns-headings-and-dividers#table-of-contents-page-level-setting)
+
+You’ll see a table of contents in the right side of your Notion page by default if your page has two or more headings. This table of contents will follow you as you scroll through the page so you can access it at any time. Hover over the table of contents to expand it and see all of the headings in your page.
+
+If you don’t want to see a page-level table of contents:
+
+1.  In the page you want to remove the table of contents from, select `•••` → `Appearance & layout`.
+
+2.  Turn off `Table of contents`.
+
+**Note**: Wiki home pages don't show the `Table of contents` option.
+
+## [Dividers](https://www.notion.com/help/columns-headings-and-dividers#dividers)
+
+Breaking up content on a page can help you separate distinct sections and ideas. Dividers are a good way to distinguish these sections and add some stylistic flair to your page.
+
+- Click the `+` in the left margin that appears when you hover over a new line and select the `Divider` block from the menu.
+
+- Type `/` followed by `div` and then `enter`.
+
+- Type `---` (three hyphens in a row) and a divider will automatically pop up.
+
+- You can drag and drop these dividers just like any other block on your page.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+Why can't I see columns on my phone or tablet?
+
+Unfortunately, our mobile apps don't support multiple columns yet, but it's definitely on our to-do list! 
+
+Will my table of contents show titles of in-line tables on my page?
+
+No. Even if you give your table a name in your document, this won't be reflected in the table of contents. You can, however, add a heading above the database that will appear.
+
+If I turn individual headings a color, will that show in my table of contents?
+
+Your table of contents will always be all one color 🖌You can change this color, and it will will apply to the whole thing. To do this:
+
+- Click the `⋮⋮` icon that appears when you hover over your table of contents. Or select it and hit `cmd/ctrl` + `/`. Or right click.
+
+- Choose `Color` from the menu that pops up and select which color or highlight you want.
+
+Can I edit the text inside my table of contents?
+
+Not directly! In order to change the text it displays, edit the individual heading blocks in your page.
+
+Still have more questions? Message support
+
+## Contents
+
+- [Columns](#columns)
+- [Remove columns](#remove-columns)
+- [Simple tables](#simple-tables)
+- [Merge and unmerge cells](#merge-and-unmerge-cells)
+- [Convert a simple table to a database](#convert-a-simple-table-to-a-database)
+- [Headings](#headings)
+- [Table of contents](#table-of-contents)
+- [Table of contents block](#table-of-contents-block)
+- [Table of contents page-level setting](#table-of-contents-page-level-setting)
+- [Dividers](#dividers)

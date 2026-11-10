@@ -1,0 +1,114 @@
+---
+fonte: https://www.notion.com/help/maps
+baixado: 2026-11-10
+---
+
+# Map view
+
+In this help doc
+
+## Visualize addresses on a map.
+
+[Jump to FAQs](https://www.notion.com/help/maps#faq)
+
+------------------------------------------------------------------------
+
+Map view lets you visualize database items on an interactive map. You can use it to plan a trip, see all the places you’ve visited before, plan field work, and more.
+
+## [Place property](https://www.notion.com/help/maps#place-property)
+
+Place properties can be populated by granting access to your current location, entering the name of a location, or entering an address.
+
+**Note:** To deliver results, address search relies on a third-party provider that processes your query. As a result, data quality and coverage may vary by region.
+
+### [Create a place property](https://www.notion.com/help/maps#create-a-place-property)
+
+To add a place property to a database:
+
+1.  Open a database and select `Add property` or `+` next to the right-most property.
+
+2.  In the menu that appears, select `Place`.
+
+**Note:** If you have addresses stored in a text property and convert the text property to a place property, you may need to clean up those addresses to ensure they properly appear in map view.
+
+## [Create a map view](https://www.notion.com/help/maps#create-a-map-view)
+
+**Note:** To create a map view of a database, your database must have a place property. If you don’t already have a place property, one will be created for you when you create a map view.
+
+To create a map view, type `/map` in a page and press `enter`.
+
+## [Add map view to a database](https://www.notion.com/help/maps#add-map-view-to-a-database)
+
+To add a map view to a database:
+
+1.  Hover over a view name in a database and select `+`.
+
+2.  Select `Map`.
+
+3.  Give your view a name.
+
+4.  Select `Create`.
+
+## [Using map view](https://www.notion.com/help/maps#using-map-view)
+
+**Note:** Up to 100 items can be shown in map view at one time.
+
+When you’re in map view, you can:
+
+- Click a pin on your map to open the corresponding database page.
+
+- Zoom in and out, or drag the map to explore.
+
+## [Filter and sort place properties](https://www.notion.com/help/maps#filter-and-sort-place-properties)
+
+Filtering and sorting for place properties is text-based. You can filter by text contained in the place’s name or address, and sort alphabetically.
+
+## [Switch between place properties](https://www.notion.com/help/maps#switch-between-place-properties)
+
+If your database has multiple place properties, you can switch between them in map view. To do this:
+
+1.  Open the slider menu at the top of your map view.
+
+2.  In the menu that appears, select `Layout`.
+
+3.  Select `Map by`.
+
+4.  Select the place property you want.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+Why am I not seeing the right pins on my map?
+
+It’s possible you have multiple place properties in your database — this can happen if you’ve created a map view in a database without a place property, we create one for you, and then you add your own later. You can switch between place properties by doing the following:
+
+1.  Open the slider menu at the top of your map view.
+
+2.  In the menu that appears, select `Layout`.
+
+3.  Select `Map by`.
+
+4.  Select the place property you want.
+
+Can I calculate the distance between two places?
+
+Not at this time.
+
+What if I have more than 100 places in my database?
+
+Try narrowing down your list using filters, or splitting items across additional views.
+
+Some of my pins aren’t showing up. Why not?
+
+Make sure your addresses properly correspond to a location when you enter them into your database. Additionally, you can check to make sure you’re displaying the right place property in your map by opening the slider menu at the top of your map view and selecting `Layout` → `Map by`.
+
+## Contents
+
+- [Place property](#place-property)
+- [Create a place property](#create-a-place-property)
+- [Create a map view](#create-a-map-view)
+- [Add map view to a database](#add-map-view-to-a-database)
+- [Using map view](#using-map-view)
+- [Filter and sort place properties](#filter-and-sort-place-properties)
+- [Switch between place properties](#switch-between-place-properties)

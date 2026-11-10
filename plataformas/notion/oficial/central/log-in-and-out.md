@@ -1,0 +1,120 @@
+---
+fonte: https://www.notion.com/help/log-in-and-out
+baixado: 2026-11-10
+---
+
+# Log in & out
+
+In this help doc
+
+## Here are all the ways you can log into Notion. You can also log out remotely.
+
+[Jump to FAQs](https://www.notion.com/help/log-in-and-out#faq)
+
+------------------------------------------------------------------------
+
+## [Ways to log in](https://www.notion.com/help/log-in-and-out#ways-to-log-in)
+
+There are a few ways to log into Notion:
+
+- Using your email address and a verification code that’s sent to your email address.
+
+- Using your email address and password.
+
+- Using [SAML SSO](https://www.notion.com/help/saml-sso-configuration) if you're on a Business or Enterprise Plan.
+
+- Using Google or Apple.
+
+- Using a passkey.
+
+## [Manage your email address and password](https://www.notion.com/help/log-in-and-out#manage-your-email-address-and-password)
+
+Learn about[ managing your email address and password via your account settings →](https://www.notion.com/help/account-settings#account-security-settings)
+
+## [Log in with SAML SSO](https://www.notion.com/help/log-in-and-out#log-in-with-saml-sso)
+
+If you're on a Business or Enterprise Plan and your workspace owner has enabled it, you can log in with SAML SSO. Learn more about [SAML SSO →](https://www.notion.com/help/saml-sso-configuration)
+
+Some organizations use more than one sign-in provider. If yours does, and your email domain works with more than one of them, Notion asks which provider you want to use. The one you used last is marked, so you can usually pick it again.
+
+If you don’t know which one to choose, or the one you need isn’t working, ask your IT team. They can tell you which provider your account uses.
+
+You may also be asked to sign in again with a specific provider when you open a workspace. That happens when the workspace requires it.
+
+## [Log in with Google](https://www.notion.com/help/log-in-and-out#log-in-with-google)
+
+You can use `Continue with Google` for a faster login as long as your Notion account email is the same as your Google email.
+
+When you choose `Continue with Google` to login, you'll be asked for your Google password in a pop-up window. If you have two-step verification enabled for your Google account, you'll need to authenticate with a second device.
+
+## [Log in with Apple](https://www.notion.com/help/log-in-and-out#log-in-with-apple)
+
+You can use `Continue with Apple` for a faster login as long as your Notion account email is the same as your Apple ID.
+
+When you choose `Continue with Apple` to login, you'll be asked for your Apple ID password in a pop-up window. If you have two-step verification enabled for your Apple ID, you'll need to authenticate with a second device.
+
+If you're using `Continue with Apple` for the first time, you'll see two options:
+
+- `Share My Email`: Choose this option if you want to link your Apple ID with an existing Notion account. If you're creating a new Notion account, we'll use the email associated with your Apple ID as your Notion account email.
+
+- `Hide My Email`: Choose this option if you want to hide your email from Notion. A brand new account will be created with a unique email such as [\[email protected\]](/cdn-cgi/l/email-protection), which will only work with Notion.
+
+  - You won't be able to link `Continue with Apple` with an existing Notion account if you choose `Hide My Email`.
+
+  - You'll still receive Notion emails forwarded to the email associated with your Apple ID.
+
+To stop using Apple with Notion, or to change your email preferences, go to the Apple ID settings on your device.
+
+**Tip**: `Continue with Apple` allows you to use Face ID or Touch ID to log in to Notion!
+
+## [Log in with Microsoft](https://www.notion.com/help/log-in-and-out#log-in-with-microsoft)
+
+You can use `Continue with Microsoft` for a faster login as long as your Notion account email is the same as your Outlook or Microsoft Office account email.
+
+When you choose `Continue with Microsoft`, you’ll be asked to sign into your Microsoft account in a pop-up window. We may send you a code at your email that you can use to verify your account.
+
+## [Log in with passkeys](https://www.notion.com/help/log-in-and-out#log-in-with-passkeys)
+
+Passkeys are a secure alternative to passwords. Learn how to create and use passkeys with your Notion account [here →](https://www.notion.com/help/passkeys)
+
+## [New login alerts](https://www.notion.com/help/log-in-and-out#new-login-alerts)
+
+You may receive an email alert if you log into Notion from a new device. If you recognize the login, you can ignore the email.
+
+If you don't recognize the login, you can select `This was not me` in the email. This will log out of the device that was used for the new login and direct you to Notion settings, where you can reset your password or enroll in MFA.
+
+The approximate location in the new login alert email is based on the IP address. This is just a best estimate of location and may not reflect the true location of the login.
+
+## [Log out remotely](https://www.notion.com/help/log-in-and-out#log-out-remotely)
+
+For security purposes, you can remotely log out of any active sessions attributed to your Notion account.
+
+- Clicking `Log out of all devices` will keep your current session active but require you to log back into Notion on all other devices and instances.
+
+- To log out of a specific session, locate the device in the table view and click `Log out` next to it.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+How can I link my existing Notion account with Continue with Apple?
+
+You can use `Continue with Apple` for a faster login as long as your Notion account email is the same as your Apple ID.
+
+For example, if your Apple ID is [\[email protected\]](/cdn-cgi/l/email-protection), you can use `Continue with Apple` to login as long as that's the email you see in `Settings` → `{your name}`.
+
+When you use `Continue with Apple` for the first time, you'll see two options: `Share My Email` and `Hide My Email`. Select `Share My Email`, and you should be logged into your Notion account.
+
+If you selected `Hide My Email`, you'll need to unlink `Continue with Apple` from your Notion account and start over. To do that, go to the Apple ID section of your device settings, then `Password & Security`.
+
+## Contents
+
+- [Ways to log in](#ways-to-log-in)
+- [Manage your email address and password](#manage-your-email-address-and-password)
+- [Log in with SAML SSO](#log-in-with-saml-sso)
+- [Log in with Google](#log-in-with-google)
+- [Log in with Apple](#log-in-with-apple)
+- [Log in with Microsoft](#log-in-with-microsoft)
+- [Log in with passkeys](#log-in-with-passkeys)
+- [New login alerts](#new-login-alerts)
+- [Log out remotely](#log-out-remotely)

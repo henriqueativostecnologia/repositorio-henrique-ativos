@@ -1,0 +1,112 @@
+---
+fonte: https://www.notion.com/help/getting-featured-in-the-template-gallery
+baixado: 2026-11-10
+---
+
+# Getting featured in Marketplace
+
+In this help doc
+
+## We’re constantly on the lookout for truly exceptional creators and templates to highlight to the Notion community. Learn how we choose which templates are featured in Marketplace.
+
+------------------------------------------------------------------------
+
+Marketplace is where top Notion builders, makers, and creators from around the world come to showcase the possibilities of Notion. We highlight everything from intricate travel plans and extensive project management tools to job boards and household finance planners.
+
+## [How we choose submissions for Marketplace](https://www.notion.com/help/getting-featured-in-the-template-gallery#how-we-choose-submissions-for-marketplace)
+
+**Value**
+
+- Is this template delivering on what it promises in the title and descriptions?
+
+- How does it compare to the state-of-the-art templates in this category?
+
+- Does this template meet a specific need, or is it too generic to be valuable?
+
+**Build quality**
+
+- Does it take advantage of lots of Notion’s features and capabilities (databases, buttons, AI, embeds, etc.) instead of just text and tables?
+
+- Does it have some well-written example data?
+
+- Does it have instructions where necessary?
+
+**Popularity**
+
+- How many visits and duplications does this template have?
+
+**Price**
+
+- Is the template free or paid?
+
+- Is it fairly priced for the value it offers?
+
+**Novelty**
+
+- Is this use case novel? Is this something that we have never seen somebody build before on Notion?
+
+- Does the template utilize new features in a way that showcases their power or in a way we have not seen before?
+
+- Does the template incorporate useful integrations or embeds?
+
+**Visual design**
+
+- Is the template particularly visually pleasing? Does it feel clean and polished with attention to detail?
+
+- Is the structure simple and intuitive instead of unnecessarily complex?
+
+**Thumbnail**
+
+- Is the homepage thumbnail showcasing the template at its best?
+
+**Seasonality**
+
+- Is the template relevant to this time of the year? For example, travel-relevant templates may be useful during summer or study-relevant templates might line up well with the start of the academic year.
+
+## [Featured templates and creators](https://www.notion.com/help/getting-featured-in-the-template-gallery#featured-templates-and-creators)
+
+Notion has a dedicated editorial team responsible for the curation of what we consider the top templates. These are templates that show Notion at its best.
+
+We want to enhance the discoverability of these exceptional templates by giving them more exposure. We do this in a number of ways:
+
+- **Featured templates** in Marketplace home
+
+- **Featured collections**, curated lists of the best templates for a specific use-case like academic research, freelancer stack, traveling
+
+- **Social posts** of featured templates
+
+- **Priority ranked native language templates**; for example, in the French Marketplace, French templates will rank higher then English ones by default.
+
+We also promote top creators using:
+
+- **Featured creators** in Marketplace home
+
+- **Recommended creator badges**
+
+Featured templates and creators get refreshed for every language at varying timeframes, from weekly to monthly. We only take new submissions into account for each refresh.
+
+### [How we choose featured templates](https://www.notion.com/help/getting-featured-in-the-template-gallery#how-we-choose-featured-templates)
+
+Selections for featured templates are at Notion's discretion. We also aim to amplify as many community creations in this section as possible. Featured templates are chosen based on:
+
+- **Timing:** Major themes in the news, upcoming holidays, trends
+
+- **Quality:** Design excellence, good instructions, clarity of purpose
+
+- **Use case:** Strong, rare, or specific use cases that have a lot of relevance
+
+- **Popularity:** The template is finding a wide audience or trending
+
+- **Audience targeting:** The template solves a core use case for teams, companies, or an important subset of users
+
+**Learn more**
+
+- [Selling on Marketplace](https://notion.so/help/selling-on-marketplace)
+
+- [Marketplace guidelines & terms](https://www.notion.so/help/template-gallery-guidelines-and-terms)
+
+## Contents
+
+- [How we choose submissions for Marketplace](#how-we-choose-submissions-for-marketplace)
+- [Featured templates and creators](#featured-templates-and-creators)
+- [How we choose featured templates](#how-we-choose-featured-templates)

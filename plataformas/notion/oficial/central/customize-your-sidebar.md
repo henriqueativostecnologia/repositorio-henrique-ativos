@@ -1,0 +1,122 @@
+---
+fonte: https://www.notion.com/help/customize-your-sidebar
+baixado: 2026-11-10
+---
+
+# Customize your sidebar
+
+In this help doc
+
+## Your sidebar comes ready to use. If you want it to match the way you work, you can change what's in it, add and remove tabs, and put anything back the way it started.
+
+[Jump to FAQs](https://www.notion.com/help/customize-your-sidebar#faq)
+
+------------------------------------------------------------------------
+
+## [What you can change](https://www.notion.com/help/customize-your-sidebar#what-you-can-change)
+
+Your sidebar is made of tabs. Each tab holds the following things:
+
+- **Shortcuts** that create or open something, like `New page`, `New chat`, `New AI meeting note`, `New database`, `New agent`, `My Tasks`, and `Library`.
+
+- **Sections** that list your content, like Chat history, Upcoming meetings, Recents, Favorites, Teamspaces, Shared, and Private.
+
+You can show, hide, and reorder both, in any tab. Each tab can hold up to 25 shortcuts and 25 sections.
+
+A few parts stay put. Your Inbox is always in the top-right corner, and your workspace switcher is always at the bottom. Everything in between is yours to arrange.
+
+## [Where your tabs come from](https://www.notion.com/help/customize-your-sidebar#where-your-tabs-come-from)
+
+Some tabs you add yourself. Others come from your workspace. An admin can set up ready-made tabs called presets. You get some presets automatically, and you can add others yourself from `Add tab`.
+
+However a tab got there, it's yours to change. You can show or hide what's in it, remove it, or reset it. To learn how your workspace sets these up, see [Manage sidebar presets for your workspace → ](https://www.notion.com/help/manage-sidebar-presets-for-your-workspace)
+
+## [Show, hide, and reorder what's in a tab](https://www.notion.com/help/customize-your-sidebar#show-hide-and-reorder-what's-in-a-tab)
+
+1.  Open the tab you want to change.
+
+2.  Click on the tab again, then select `Customize sidebar`. You can also right click anywhere on the sidebar to enter customization mode.
+
+3.  Turn items on or off to choose what shows up.
+
+4.  Drag an item up or down to change its order.
+
+Hiding a shortcut or a section only changes your sidebar. It doesn't delete anything, and it doesn't change what your teammates see.
+
+## [Add and remove tabs](https://www.notion.com/help/customize-your-sidebar#add-and-remove-tabs)
+
+Add a tab for work you come back to often, like meetings or a project. Remove the tabs you never open.
+
+- To add a tab, select `+` next to your tabs, then pick what the tab should hold. You need to enter customization mode first before the + button appears next to the tabs.
+
+- When you select `+`, you'll also see any optional tabs your workspace offers. Pick one to add it.
+
+- To delete a tab, click it again once it's the open tab, or right-click it, then select `Delete tab`.
+
+Removing a tab doesn't delete any pages. You can add the tab again whenever you want. Your sidebar can have up to six tabs. You can't delete your last tab.
+
+You can remove a tab your workspace added, just like any other tab. If you want it back later, add it again from `Add tab`.
+
+## [Reset a tab to how it started](https://www.notion.com/help/customize-your-sidebar#r)
+
+If you changed a tab and want it back the way it started, you can reset it.
+
+1.  Open the tab.
+
+2.  Click the tab again, then select `Reset tab`.
+
+The tab goes back to the shortcuts and sections it came with. If the tab came from a preset, it goes back to that preset. Your pages and content aren't affected.
+
+## [Pin a database view to your sidebar](https://www.notion.com/help/customize-your-sidebar#pin-a-database-view-to-your-sidebar)
+
+If you check the same database view every day, put it in your sidebar so it's one click away.
+
+1.  Open the database and go to the view you want.
+
+2.  Click on the database view tab.
+
+3.  Select `Add view to sidebar`. The view is added to the tab you have open, so switch to the tab you want before adding it. Each tab can hold up to three pinned database views.
+
+The view keeps its filters and sorting. If someone changes the view later, your sidebar shows the change too.
+
+## [Add a shortcut to a page](https://www.notion.com/help/customize-your-sidebar#add-a-shortcut-to-a-page)
+
+You can keep a page in your sidebar without adding it to Favorites.
+
+1.  Click on the tab you want to add this shortcut to.
+
+2.  Select `Customize sidebar`.
+
+3.  Select `Add shortcut`.
+
+4.  Select the page you want to add a shortcut to.
+
+**Tip:** Use Favorites for the pages that matter most across all of Notion. Use a shortcut when you only need the page handy in one tab, like a doc you're working in this week.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+Does customizing my sidebar change what my team sees?
+
+No. Your sidebar setup is yours alone. Changing your own sidebar never changes anyone else's.
+
+Where did this tab come from, and can I remove it?
+
+Some tabs come from your workspace. An admin can set up tabs for everyone, or offer tabs you can add yourself. You can change or remove a tab from your workspace like any other tab.
+
+I changed a tab. How do I get it back?
+
+Open the tab, click it again, and select `Reset tab`. It goes back to how it started. If it came from a preset, it goes back to that preset.
+
+Still have more questions? Message support
+
+## Contents
+
+- [What you can change](#what-you-can-change)
+- [Where your tabs come from](#where-your-tabs-come-from)
+- [Show, hide, and reorder what's in a tab](#show-hide-and-reorder-what's-in-a-tab)
+- [Add and remove tabs](#add-and-remove-tabs)
+- [R](#r)
+- [Pin a database view to your sidebar](#pin-a-database-view-to-your-sidebar)
+- [Add a shortcut to a page](#add-a-shortcut-to-a-page)

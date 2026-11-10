@@ -1,0 +1,504 @@
+---
+tipo: índice da documentação oficial
+plataforma: Notion
+baixado: 10/11/2026
+artigos: 279 da Central de Ajuda + 204 guias = 483
+---
+
+# Notion: documentação oficial completa
+
+Cópia integral (texto) da Central de Ajuda oficial do Notion, em inglês (versão original e mais completa), baixada em 10/11/2026 de https://www.notion.com/help.
+Cada arquivo traz no topo o link de origem e a data. Imagens e vídeos não foram copiados; os links ficam no texto.
+
+**Como usar:** procure o tema neste índice (Ctrl+F) ou peça ao Claude, que busca dentro dos arquivos. Para atualizar, peça ao Claude para baixar de novo.
+
+Sem resumo, por decisão do Henrique: a fonte é sempre o texto oficial completo.
+
+## Central de Ajuda (279 artigos) · pasta `central/`
+
+- [Add & manage connections in Notion](central/add-and-manage-connections-with-the-api.md) · https://www.notion.com/help/add-and-manage-connections-with-the-api
+- [Add secondary emails to your Notion account](central/secondary-emails.md) · https://www.notion.com/help/secondary-emails
+- [Admin APIs for Enterprise organizations](central/admin-apis-for-enterprise-organizations.md) · https://www.notion.com/help/admin-apis-for-enterprise-organizations
+- [Admin content search in Notion](central/admin-content-search.md) · https://www.notion.com/help/admin-content-search
+- [Allocate Notion credits to workspaces](central/allocate-credits-to-each-workspace.md) · https://www.notion.com/help/allocate-credits-to-each-workspace
+- [Archive pages in Notion](central/archive-pages.md) · https://www.notion.com/help/archive-pages
+- [Back up your Notion data](central/back-up-your-data.md) · https://www.notion.com/help/back-up-your-data
+- [Become a Notion Solutions Partner](central/become-a-notion-partner.md) · https://www.notion.com/help/become-a-notion-partner
+- [Best practices for Notion Custom Agents](central/best-practices-for-creating-and-optimizing-a-custom-agent.md) · https://www.notion.com/help/best-practices-for-creating-and-optimizing-a-custom-agent
+- [Block users in Notion](central/blocking.md) · https://www.notion.com/help/blocking
+- [Board view (Kanban) in Notion](central/boards.md) · https://www.notion.com/help/boards
+- [Build forms in Notion](central/forms.md) · https://www.notion.com/help/forms
+- [Calendar view databases in Notion](central/calendars.md) · https://www.notion.com/help/calendars
+- [Can’t access Notion: troubleshooting](central/cant-access-notion.md) · https://www.notion.com/help/cant-access-notion
+- [Can’t access your own Notion page](central/cant-access-my-own-page.md) · https://www.notion.com/help/cant-access-my-own-page
+- [Can’t log in to Notion](central/cant-log-in.md) · https://www.notion.com/help/cant-log-in
+- [Can’t upgrade to Plus for education](central/cant-upgrade-to-the-plus-plan-for-education.md) · https://www.notion.com/help/cant-upgrade-to-the-plus-plan-for-education
+- [Can’t upload or view a file in Notion](central/cant-upload-or-view-a-file.md) · https://www.notion.com/help/cant-upload-or-view-a-file
+- [Change your language in Notion](central/change-your-language.md) · https://www.notion.com/help/change-your-language
+- [Change your Notion plan](central/upgrade-or-downgrade-your-plan.md) · https://www.notion.com/help/upgrade-or-downgrade-your-plan
+- [Chart view databases in Notion](central/charts.md) · https://www.notion.com/help/charts
+- [Choose how Notion AI asks for your approval](central/choose-how-notion-agent-asks-for-your-approval.md) · https://www.notion.com/help/choose-how-notion-agent-asks-for-your-approval
+- [Code blocks in Notion](central/code-blocks.md) · https://www.notion.com/help/code-blocks
+- [Collaborate in a Notion workspace](central/collaborate-within-a-workspace.md) · https://www.notion.com/help/collaborate-within-a-workspace
+- [Collaborate with people in Notion](central/collaborate-with-people.md) · https://www.notion.com/help/collaborate-with-people
+- [Columns, headings & dividers in Notion](central/columns-headings-and-dividers.md) · https://www.notion.com/help/columns-headings-and-dividers
+- [Comments, mentions & reactions in Notion](central/comments-mentions-and-reminders.md) · https://www.notion.com/help/comments-mentions-and-reminders
+- [Common Notion error messages](central/notion-error-messages.md) · https://www.notion.com/help/notion-error-messages
+- [Connect a custom domain to Notion Sites](central/connect-a-custom-domain-with-notion-sites.md) · https://www.notion.com/help/connect-a-custom-domain-with-notion-sites
+- [Connect AI tools with Notion MCP](central/notion-mcp.md) · https://www.notion.com/help/notion-mcp
+- [Connect Asana to Notion](central/connect-asana.md) · https://www.notion.com/help/connect-asana
+- [Connect Calendar to Notion Custom Agents](central/connect-calendar-to-custom-agents.md) · https://www.notion.com/help/connect-calendar-to-custom-agents
+- [Connect Cursor to Notion](central/connect-cursor-to-notion.md) · https://www.notion.com/help/connect-cursor-to-notion
+- [Connect GitHub to Notion](central/github.md) · https://www.notion.com/help/github
+- [Connect GitLab to Notion](central/connect-gitlab.md) · https://www.notion.com/help/connect-gitlab
+- [Connect Jira to Notion](central/jira.md) · https://www.notion.com/help/jira
+- [Connect Mail to Notion Custom Agents](central/connect-mail-to-custom-agents.md) · https://www.notion.com/help/connect-mail-to-custom-agents
+- [Connect MCP servers to your Notion Agent](central/connect-mcp-servers-to-your-notion-agent.md) · https://www.notion.com/help/connect-mcp-servers-to-your-notion-agent
+- [Connect Notion Agents to Google Drive](central/connect-your-agents-to-google-drive.md) · https://www.notion.com/help/connect-your-agents-to-google-drive
+- [Connect Salesforce to Notion](central/salesforce.md) · https://www.notion.com/help/salesforce
+- [Connect SharePoint and OneDrive to Notion Agents](central/connect-sharepoint-and-onedrive-to-notion-agents.md) · https://www.notion.com/help/connect-sharepoint-and-onedrive-to-notion-agents
+- [Connect Slack to Notion](central/slack.md) · https://www.notion.com/help/slack
+- [Connected properties in Notion databases](central/connected-properties.md) · https://www.notion.com/help/connected-properties
+- [Contact Notion for press & media inquiries](central/contact-notion-for-press-and-media-inquiries.md) · https://www.notion.com/help/contact-notion-for-press-and-media-inquiries
+- [Create & edit images with Notion AI](central/create-and-edit-images-with-notion-ai.md) · https://www.notion.com/help/create-and-edit-images-with-notion-ai
+- [Create & manage groups in Notion](central/create-and-manage-groups.md) · https://www.notion.com/help/create-and-manage-groups
+- [Create & use buttons in Notion](central/buttons.md) · https://www.notion.com/help/buttons
+- [Create a database in Notion](central/create-a-database.md) · https://www.notion.com/help/create-a-database
+- [Create a Notion Calendar account](central/create-a-notion-calendar-account.md) · https://www.notion.com/help/create-a-notion-calendar-account
+- [Create a subpage in Notion](central/create-a-subpage.md) · https://www.notion.com/help/create-a-subpage
+- [Create avatars with Notion Faces](central/notion-faces.md) · https://www.notion.com/help/notion-faces
+- [Create integrations with the Notion API](central/create-integrations-with-the-notion-api.md) · https://www.notion.com/help/create-integrations-with-the-notion-api
+- [Create your first page in Notion](central/create-your-first-page.md) · https://www.notion.com/help/create-your-first-page
+- [Create, join & leave Notion workspaces](central/create-delete-and-switch-workspaces.md) · https://www.notion.com/help/create-delete-and-switch-workspaces
+- [Create, join, & leave teamspaces in Notion](central/browse-join-and-create-teamspaces.md) · https://www.notion.com/help/browse-join-and-create-teamspaces
+- [Custom Agents in Notion](central/custom-agents.md) · https://www.notion.com/help/custom-agents
+- [Custom Agents sharing & permissions](central/custom-agents-sharing-and-permissions.md) · https://www.notion.com/help/custom-agents-sharing-and-permissions
+- [Custom data retention settings in Notion](central/custom-data-retention-settings.md) · https://www.notion.com/help/custom-data-retention-settings
+- [Customize database layouts in Notion](central/layouts.md) · https://www.notion.com/help/layouts
+- [Customize your Notion database settings](central/customize-your-database.md) · https://www.notion.com/help/customize-your-database
+- [Customize your sidebar](central/customize-your-sidebar.md) · https://www.notion.com/help/customize-your-sidebar
+- [Dashboard view databases in Notion](central/dashboards.md) · https://www.notion.com/help/dashboards
+- [Data access consent in Notion](central/data-access-consent.md) · https://www.notion.com/help/data-access-consent
+- [Data residency for Notion](central/data-residency.md) · https://www.notion.com/help/data-residency
+- [Data sources & linked databases in Notion](central/data-sources-and-linked-databases.md) · https://www.notion.com/help/data-sources-and-linked-databases
+- [Data your workspace owner can access](central/data-accessible-by-your-workspace-owner.md) · https://www.notion.com/help/data-accessible-by-your-workspace-owner
+- [Database automations in Notion](central/database-automations.md) · https://www.notion.com/help/database-automations
+- [Database buttons in Notion](central/database-buttons.md) · https://www.notion.com/help/database-buttons
+- [Database properties in Notion](central/database-properties.md) · https://www.notion.com/help/database-properties
+- [Database relations & rollups in Notion](central/relations-and-rollups.md) · https://www.notion.com/help/relations-and-rollups
+- [Database templates in Notion](central/database-templates.md) · https://www.notion.com/help/database-templates
+- [Database views, filters, sorts & groups](central/views-filters-and-sorts.md) · https://www.notion.com/help/views-filters-and-sorts
+- [Delete & restore content in Notion](central/duplicate-delete-and-restore-content.md) · https://www.notion.com/help/duplicate-delete-and-restore-content
+- [Delete a Notion workspace](central/delete-a-workspace.md) · https://www.notion.com/help/delete-a-workspace
+- [Delete your Notion account](central/delete-your-account.md) · https://www.notion.com/help/delete-your-account
+- [Deploy Notion for macOS](central/deploy-notion-for-macos.md) · https://www.notion.com/help/deploy-notion-for-macos
+- [Deploy Notion for Windows](central/deploy-notion-for-windows.md) · https://www.notion.com/help/deploy-notion-for-windows
+- [Domain management in Notion](central/domain-management.md) · https://www.notion.com/help/domain-management
+- [Downgrading your Notion plan](central/plan-downgrade.md) · https://www.notion.com/help/plan-downgrade
+- [Duplicate public Notion pages](central/duplicate-public-pages.md) · https://www.notion.com/help/duplicate-public-pages
+- [Edit & customize your Notion Sites](central/edit-and-customize-your-notion-sites.md) · https://www.notion.com/help/edit-and-customize-your-notion-sites
+- [Embeds, bookmarks & link mentions in Notion](central/embed-and-connect-other-apps.md) · https://www.notion.com/help/embed-and-connect-other-apps
+- [Enterprise connection settings in Notion](central/enterprise-connection-settings.md) · https://www.notion.com/help/enterprise-connection-settings
+- [Enterprise Search in Notion](central/enterprise-search.md) · https://www.notion.com/help/enterprise-search
+- [Export your Notion content](central/export-your-content.md) · https://www.notion.com/help/export-your-content
+- [Feed view databases in Notion](central/feeds.md) · https://www.notion.com/help/feeds
+- [Find services on Notion Marketplace](central/finding-services-on-marketplace.md) · https://www.notion.com/help/finding-services-on-marketplace
+- [Find templates on Notion Marketplace](central/finding-templates-on-marketplace.md) · https://www.notion.com/help/finding-templates-on-marketplace
+- [Find your Notion invoices](central/invoices.md) · https://www.notion.com/help/invoices
+- [Fix common formula errors in Notion](central/common-formula-errors.md) · https://www.notion.com/help/common-formula-errors
+- [Fix common Jira Sync issues in Notion](central/common-jira-sync-issues.md) · https://www.notion.com/help/common-jira-sync-issues
+- [Gallery view databases in Notion](central/galleries.md) · https://www.notion.com/help/galleries
+- [GDPR compliance at Notion](central/gdpr-at-notion.md) · https://www.notion.com/help/gdpr-at-notion
+- [Get featured on Notion Marketplace](central/getting-featured-in-the-template-gallery.md) · https://www.notion.com/help/getting-featured-in-the-template-gallery
+- [Get Notion notifications in Microsoft Teams](central/microsoft-teams-notifications.md) · https://www.notion.com/help/microsoft-teams-notifications
+- [Get speaker labels in Zoom calls](central/get-speaker-labels-in-zoom-calls.md) · https://www.notion.com/help/get-speaker-labels-in-zoom-calls
+- [Get started with Notion Agent](central/notion-agent.md) · https://www.notion.com/help/notion-agent
+- [Get started with the Notion Agents app](central/notion-ai-app-for-ios.md) · https://www.notion.com/help/notion-ai-app-for-ios
+- [Get the best AI model for every task with Auto](central/auto.md) · https://www.notion.com/help/auto
+- [HIPAA configuration in Notion](central/hipaa.md) · https://www.notion.com/help/hipaa
+- [How AI credits work for Custom Agents](central/how-ai-credits-work-for-custom-agents.md) · https://www.notion.com/help/how-ai-credits-work-for-custom-agents
+- [How members impact billing in Notion](central/members-and-billing.md) · https://www.notion.com/help/members-and-billing
+- [How Notion protects against prompt injection](central/how-notion-protects-against-prompt-injection-risks.md) · https://www.notion.com/help/how-notion-protects-against-prompt-injection-risks
+- [Images, files & media in Notion](central/images-files-and-media.md) · https://www.notion.com/help/images-files-and-media
+- [Import data into Notion](central/import-data-into-notion.md) · https://www.notion.com/help/import-data-into-notion
+- [Import from Asana to Notion](central/asana.md) · https://www.notion.com/help/asana
+- [Import from Confluence to Notion](central/import-from-confluence.md) · https://www.notion.com/help/import-from-confluence
+- [Import from Monday.com to Notion](central/monday.md) · https://www.notion.com/help/monday
+- [Import meeting notes from Granola](central/import-meeting-notes-from-granola.md) · https://www.notion.com/help/import-meeting-notes-from-granola
+- [Inbox & notifications in Notion](central/updates-and-notifications.md) · https://www.notion.com/help/updates-and-notifications
+- [Install the Notion Meetings Add-on for Google Meet](central/install-the-notion-meetings-add-on.md) · https://www.notion.com/help/install-the-notion-meetings-add-on
+- [Intro to databases in Notion](central/intro-to-databases.md) · https://www.notion.com/help/intro-to-databases
+- [Intro to formulas in Notion](central/formulas.md) · https://www.notion.com/help/formulas
+- [Intro to teamspaces in Notion](central/intro-to-teamspaces.md) · https://www.notion.com/help/intro-to-teamspaces
+- [Intro to workspaces in Notion](central/intro-to-workspaces.md) · https://www.notion.com/help/intro-to-workspaces
+- [Intro to writing & editing in Notion](central/writing-and-editing-basics.md) · https://www.notion.com/help/writing-and-editing-basics
+- [IP address restrictions in Notion](central/ip-address-restrictions.md) · https://www.notion.com/help/ip-address-restrictions
+- [Legal holds in Notion](central/legal-holds.md) · https://www.notion.com/help/legal-holds
+- [Link previews in Notion](central/link-previews.md) · https://www.notion.com/help/link-previews
+- [Links & backlinks in Notion](central/create-links-and-backlinks.md) · https://www.notion.com/help/create-links-and-backlinks
+- [List view databases in Notion](central/lists.md) · https://www.notion.com/help/lists
+- [Localize templates on Notion Marketplace](central/template-localization-on-marketplace.md) · https://www.notion.com/help/template-localization-on-marketplace
+- [Log in & out of Notion](central/log-in-and-out.md) · https://www.notion.com/help/log-in-and-out
+- [Log in to Notion with passkeys](central/passkeys.md) · https://www.notion.com/help/passkeys
+- [Manage AI models & member credit spend](central/manage-ai-models-and-member-credit-spend.md) · https://www.notion.com/help/manage-ai-models-and-member-credit-spend
+- [Manage billing in Notion](central/billing.md) · https://www.notion.com/help/billing
+- [Manage calendars & events in Notion Calendar](central/manage-your-calendars-and-events.md) · https://www.notion.com/help/manage-your-calendars-and-events
+- [Manage Custom Agents with the Admin API](central/manage-custom-agents-with-the-admin-api.md) · https://www.notion.com/help/manage-custom-agents-with-the-admin-api
+- [Manage database property access](central/database-property-access.md) · https://www.notion.com/help/database-property-access
+- [Manage members, admins & guests in Notion](central/add-members-admins-guests-and-groups.md) · https://www.notion.com/help/add-members-admins-guests-and-groups
+- [Manage Notion Mail & Calendar settings](central/manage-email-and-calendar-settings.md) · https://www.notion.com/help/manage-email-and-calendar-settings
+- [Manage sidebar presets for your workspace](central/manage-sidebar-presets-for-your-workspace.md) · https://www.notion.com/help/manage-sidebar-presets-for-your-workspace
+- [Manage teamspaces in Notion](central/manage-teamspaces.md) · https://www.notion.com/help/manage-teamspaces
+- [Manage who can create database syncs](central/manage-who-can-create-database-syncs.md) · https://www.notion.com/help/manage-who-can-create-database-syncs
+- [Manage your AI credits](central/manage-your-ai-credits.md) · https://www.notion.com/help/manage-your-ai-credits
+- [Manage your inbox with Notion Agent](central/manage-your-inbox-with-notion-agent.md) · https://www.notion.com/help/manage-your-inbox-with-notion-agent
+- [Manage your Library in Notion](central/manage-your-library.md) · https://www.notion.com/help/manage-your-library
+- [Manage your linked Notion Calendar accounts](central/manage-your-google-and-notion-calendar-accounts.md) · https://www.notion.com/help/manage-your-google-and-notion-calendar-accounts
+- [Manage your Notion Enterprise workspace](central/enterprise-admins.md) · https://www.notion.com/help/enterprise-admins
+- [Manage your Notion Sites](central/manage-your-notion-sites.md) · https://www.notion.com/help/manage-your-notion-sites
+- [Managed users dashboard in Notion](central/managed-users-dashboard.md) · https://www.notion.com/help/managed-users-dashboard
+- [Map view databases in Notion](central/maps.md) · https://www.notion.com/help/maps
+- [Math equations in Notion](central/math-equations.md) · https://www.notion.com/help/math-equations
+- [MCP connections for Notion Custom Agents](central/mcp-connections-for-custom-agents.md) · https://www.notion.com/help/mcp-connections-for-custom-agents
+- [MFA enforcement](central/mfa-enforcement.md) · https://www.notion.com/help/mfa-enforcement
+- [Move & duplicate content between workspaces](central/transfer-content-to-another-account.md) · https://www.notion.com/help/transfer-content-to-another-account
+- [Navigate Notion with the sidebar](central/navigate-with-the-sidebar.md) · https://www.notion.com/help/navigate-with-the-sidebar
+- [Network control in Notion](central/network-control.md) · https://www.notion.com/help/network-control
+- [Notification settings in Notion](central/notification-settings.md) · https://www.notion.com/help/notification-settings
+- [Notion account settings & preferences](central/account-settings.md) · https://www.notion.com/help/account-settings
+- [Notion AI autofill for databases](central/autofill.md) · https://www.notion.com/help/autofill
+- [Notion AI connector for Asana](central/asana-ai-connector.md) · https://www.notion.com/help/asana-ai-connector
+- [Notion AI connector for Box](central/box-ai-connector.md) · https://www.notion.com/help/box-ai-connector
+- [Notion AI connector for GitHub](central/notion-ai-connector-for-github.md) · https://www.notion.com/help/notion-ai-connector-for-github
+- [Notion AI connector for Gmail](central/notion-ai-connector-for-gmail.md) · https://www.notion.com/help/notion-ai-connector-for-gmail
+- [Notion AI connector for Google Calendar](central/google-calendar-ai-connector.md) · https://www.notion.com/help/google-calendar-ai-connector
+- [Notion AI connector for Google Drive](central/notion-ai-connectors-for-google-drive.md) · https://www.notion.com/help/notion-ai-connectors-for-google-drive
+- [Notion AI connector for Jira (beta)](central/jira-ai-connector.md) · https://www.notion.com/help/jira-ai-connector
+- [Notion AI connector for Linear](central/notion-ai-connector-for-linear.md) · https://www.notion.com/help/notion-ai-connector-for-linear
+- [Notion AI connector for Microsoft Outlook](central/microsoft-outlook-ai-connector.md) · https://www.notion.com/help/microsoft-outlook-ai-connector
+- [Notion AI connector for Microsoft Teams](central/notion-ai-connector-for-microsoft-teams.md) · https://www.notion.com/help/notion-ai-connector-for-microsoft-teams
+- [Notion AI connector for Notion Calendar](central/notion-calendar-ai-connector.md) · https://www.notion.com/help/notion-calendar-ai-connector
+- [Notion AI connector for Salesforce](central/salesforce-ai-connector.md) · https://www.notion.com/help/salesforce-ai-connector
+- [Notion AI connector for Slack](central/notion-ai-connectors-for-slack.md) · https://www.notion.com/help/notion-ai-connectors-for-slack
+- [Notion AI connector for Slack Enterprise Grid](central/slack-enterprise-grid-ai-connector.md) · https://www.notion.com/help/slack-enterprise-grid-ai-connector
+- [Notion AI Connectors overview](central/notion-ai-connectors.md) · https://www.notion.com/help/notion-ai-connectors
+- [Notion AI security & privacy practices](central/notion-ai-security-practices.md) · https://www.notion.com/help/notion-ai-security-practices
+- [Notion AI settings overview](central/notion-ai-settings-overview.md) · https://www.notion.com/help/notion-ai-settings-overview
+- [Notion AI trial usage](central/complimentary-ai-responses.md) · https://www.notion.com/help/complimentary-ai-responses
+- [Notion badges & certifications](central/badges-and-certifications.md) · https://www.notion.com/help/badges-and-certifications
+- [Notion Calendar connections & API](central/notion-calendar-connections.md) · https://www.notion.com/help/notion-calendar-connections
+- [Notion Calendar desktop & mobile apps](central/notion-calendar-apps.md) · https://www.notion.com/help/notion-calendar-apps
+- [Notion Calendar for teams](central/notion-calendar-for-teams.md) · https://www.notion.com/help/notion-calendar-for-teams
+- [Notion Calendar keyboard shortcuts](central/notion-calendar-keyboard-shortcuts.md) · https://www.notion.com/help/notion-calendar-keyboard-shortcuts
+- [Notion Calendar settings](central/notion-calendar-settings.md) · https://www.notion.com/help/notion-calendar-settings
+- [Notion credits & pricing for Custom Agents](central/buy-and-track-notion-credits-for-custom-agents.md) · https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents
+- [Notion Custom Agents security features](central/custom-agents-security-features.md) · https://www.notion.com/help/custom-agents-security-features
+- [Notion desktop beta: new tabs](central/notion-desktop-beta-new-tabs.md) · https://www.notion.com/help/notion-desktop-beta-new-tabs
+- [Notion dormant account policy](central/dormant-account-policy.md) · https://www.notion.com/help/dormant-account-policy
+- [Notion for desktop (Mac & Windows)](central/notion-for-desktop.md) · https://www.notion.com/help/notion-for-desktop
+- [Notion for mobile (iOS & Android)](central/notion-for-mobile.md) · https://www.notion.com/help/notion-for-mobile
+- [Notion for startups](central/notion-for-startups.md) · https://www.notion.com/help/notion-for-startups
+- [Notion for students & education](central/notion-for-education.md) · https://www.notion.com/help/notion-for-education
+- [Notion formula syntax & functions](central/formula-syntax.md) · https://www.notion.com/help/formula-syntax
+- [Notion IP addresses & domains to allowlist](central/allowlist-ip.md) · https://www.notion.com/help/allowlist-ip
+- [Notion keyboard shortcuts](central/keyboard-shortcuts.md) · https://www.notion.com/help/keyboard-shortcuts
+- [Notion Marketplace guidelines & terms](central/template-gallery-guidelines-and-terms.md) · https://www.notion.com/help/template-gallery-guidelines-and-terms
+- [Notion mobile beta program](central/notion-for-mobile-beta-version.md) · https://www.notion.com/help/notion-for-mobile-beta-version
+- [Notion mobile widgets](central/mobile-widgets.md) · https://www.notion.com/help/mobile-widgets
+- [Notion New Tab browser extension](central/notion-new-tab-extension.md) · https://www.notion.com/help/notion-new-tab-extension
+- [Notion paid plan trials](central/paid-plan-trials.md) · https://www.notion.com/help/paid-plan-trials
+- [Notion refund policy](central/refunds.md) · https://www.notion.com/help/refunds
+- [Notion Sites availability & pricing](central/notion-sites-availability-and-pricing.md) · https://www.notion.com/help/notion-sites-availability-and-pricing
+- [Notion workspaces on mobile](central/workspaces-on-mobile.md) · https://www.notion.com/help/workspaces-on-mobile
+- [Notion’s commitment to AI safety](central/ai-safety.md) · https://www.notion.com/help/ai-safety
+- [Notion’s Shared Responsibilities Model](central/shared-responsibilities-model.md) · https://www.notion.com/help/shared-responsibilities-model
+- [Offer services on Notion Marketplace](central/offering-services-on-marketplace.md) · https://www.notion.com/help/offering-services-on-marketplace
+- [Optimize Notion database performance](central/optimize-database-load-times-and-performance.md) · https://www.notion.com/help/optimize-database-load-times-and-performance
+- [Organization-level controls in Notion](central/organization-level-controls.md) · https://www.notion.com/help/organization-level-controls
+- [Page analytics in Notion](central/page-analytics.md) · https://www.notion.com/help/page-analytics
+- [Payment methods for Notion plans](central/payment-methods.md) · https://www.notion.com/help/payment-methods
+- [People Directory in Notion](central/people-directory.md) · https://www.notion.com/help/people-directory
+- [People profiles in Notion](central/people-profiles.md) · https://www.notion.com/help/people-profiles
+- [Personal Gmail AI Connector](central/notion-mail-ai-connector.md) · https://www.notion.com/help/notion-mail-ai-connector
+- [Presentation mode in Notion](central/presentation-mode.md) · https://www.notion.com/help/presentation-mode
+- [Privacy practices at Notion](central/privacy.md) · https://www.notion.com/help/privacy
+- [Protect yourself from malvertising](central/how-to-protect-yourself-from-malvertising.md) · https://www.notion.com/help/how-to-protect-yourself-from-malvertising
+- [Provision users & groups with SCIM in Notion](central/provision-users-and-groups-with-scim.md) · https://www.notion.com/help/provision-users-and-groups-with-scim
+- [Publish a website with Notion Sites](central/public-pages-and-web-publishing.md) · https://www.notion.com/help/public-pages-and-web-publishing
+- [Purchase Notion credits](central/purchase-notion-credits.md) · https://www.notion.com/help/purchase-notion-credits
+- [Record HAR files for troubleshooting](central/record-har-files-for-troubleshooting.md) · https://www.notion.com/help/record-har-files-for-troubleshooting
+- [Remove a workspace from your organization](central/remove-a-workspace-from-your-organization-or-contract.md) · https://www.notion.com/help/remove-a-workspace-from-your-organization-or-contract
+- [Report inappropriate content in Notion](central/report-inappropriate-content.md) · https://www.notion.com/help/report-inappropriate-content
+- [Reset the Notion app](central/reset-notion.md) · https://www.notion.com/help/reset-notion
+- [Review requests for Notion credits](central/review-requests-for-notion-credits.md) · https://www.notion.com/help/review-requests-for-notion-credits
+- [Run custom code with Workers in Notion](central/run-custom-code-with-workers.md) · https://www.notion.com/help/run-custom-code-with-workers
+- [Sales tax on Notion bills](central/sales-tax.md) · https://www.notion.com/help/sales-tax
+- [SAML SSO configuration in Notion](central/saml-sso-configuration.md) · https://www.notion.com/help/saml-sso-configuration
+- [Save web pages with Notion Web Clipper](central/web-clipper.md) · https://www.notion.com/help/web-clipper
+- [Scheduling & availability in Notion Calendar](central/availability-blocking-and-time-zones.md) · https://www.notion.com/help/availability-blocking-and-time-zones
+- [Search for pages & content in Notion](central/search.md) · https://www.notion.com/help/search
+- [Security & compliance connections in Notion](central/add-security-and-compliance-integrations.md) · https://www.notion.com/help/add-security-and-compliance-integrations
+- [Security best practices for Agent connections](central/security-best-practices-for-agent-connections.md) · https://www.notion.com/help/security-best-practices-for-agent-connections
+- [Sell templates on Notion Marketplace](central/selling-on-marketplace.md) · https://www.notion.com/help/selling-on-marketplace
+- [Set reminders in Notion](central/reminders.md) · https://www.notion.com/help/reminders
+- [Set up Auto Adjust for Notion credits](central/set-up-auto-adjust-for-notion-credits.md) · https://www.notion.com/help/set-up-auto-adjust-for-notion-credits
+- [Set up enterprise-managed connections for Notion MCP](central/set-up-enterprise-managed-connections-for-notion-mcp.md) · https://www.notion.com/help/set-up-enterprise-managed-connections-for-notion-mcp
+- [Set up Microsoft Intune with Notion mobile](central/set-up-microsoft-intune-with-notion-ios-and-android.md) · https://www.notion.com/help/set-up-microsoft-intune-with-notion-ios-and-android
+- [Set up the Snowflake MCP for Notion](central/set-up-the-snowflake-mcp-for-notion.md) · https://www.notion.com/help/set-up-the-snowflake-mcp-for-notion
+- [Set up your IdP for SAML SSO in Notion](central/set-up-identity-provider-for-saml-sso.md) · https://www.notion.com/help/set-up-identity-provider-for-saml-sso
+- [Set up your IdP for SCIM in Notion](central/set-up-identity-provider-for-scim.md) · https://www.notion.com/help/set-up-identity-provider-for-scim
+- [Share a Worker in Notion](central/share-a-worker.md) · https://www.notion.com/help/share-a-worker
+- [Share your Notion pages](central/share-your-work.md) · https://www.notion.com/help/share-your-work
+- [Sharing & permissions settings in Notion](central/sharing-and-permissions.md) · https://www.notion.com/help/sharing-and-permissions
+- [Skills for Notion Agent](central/create-and-manage-skills.md) · https://www.notion.com/help/create-and-manage-skills
+- [Standard, Select & Notion credits: eligible features](central/standard-select-and-notion-credits-eligible-features.md) · https://www.notion.com/help/standard-select-and-notion-credits-eligible-features
+- [Start here: what is Notion?](central/start-here.md) · https://www.notion.com/help/start-here
+- [Start with a Notion template](central/start-with-a-template.md) · https://www.notion.com/help/start-with-a-template
+- [Style & customize your Notion page](central/customize-and-style-your-content.md) · https://www.notion.com/help/customize-and-style-your-content
+- [Sub-items & dependencies in Notion](central/tasks-and-dependencies.md) · https://www.notion.com/help/tasks-and-dependencies
+- [Suggested edits in Notion](central/suggested-edits.md) · https://www.notion.com/help/suggested-edits
+- [Sync data from other tools to Notion](central/sync-data-from-other-tools-to-notion.md) · https://www.notion.com/help/sync-data-from-other-tools-to-notion
+- [Synced blocks in Notion](central/synced-blocks.md) · https://www.notion.com/help/synced-blocks
+- [Synced databases in Notion](central/synced-databases-legacy.md) · https://www.notion.com/help/synced-databases-legacy
+- [System requirements for Notion](central/system-requirements-for-notion.md) · https://www.notion.com/help/system-requirements-for-notion
+- [Table view databases in Notion](central/tables.md) · https://www.notion.com/help/tables
+- [Take AI meeting notes in Notion](central/ai-meeting-notes.md) · https://www.notion.com/help/ai-meeting-notes
+- [Task databases & sprints in Notion](central/sprints.md) · https://www.notion.com/help/sprints
+- [Time zones in Notion Calendar](central/time-zones.md) · https://www.notion.com/help/time-zones
+- [Timeline view databases in Notion](central/timelines.md) · https://www.notion.com/help/timelines
+- [Track usage in the Notion credits dashboard](central/track-notion-credits-usage.md) · https://www.notion.com/help/track-notion-credits-usage
+- [Transfer content from a deprovisioned user](central/transfer-content-deprovisioned-user.md) · https://www.notion.com/help/transfer-content-deprovisioned-user
+- [Turn on Developer Mode to use developer tools in Notion](central/turn-on-developer-mode-to-use-developer-tools-in-notion.md) · https://www.notion.com/help/turn-on-developer-mode-to-use-developer-tools-in-notion
+- [Turn on web browser for Notion Agent](central/turn-on-web-browser-for-notion-agent.md) · https://www.notion.com/help/turn-on-web-browser-for-notion-agent
+- [Two-step verification in Notion](central/two-step-verification.md) · https://www.notion.com/help/two-step-verification
+- [Understand pricing for Workers in Notion](central/understand-pricing-for-workers.md) · https://www.notion.com/help/understand-pricing-for-workers
+- [Understanding block usage in Notion](central/understanding-block-usage.md) · https://www.notion.com/help/understanding-block-usage
+- [Unique ID property in Notion](central/unique-id.md) · https://www.notion.com/help/unique-id
+- [Use Claude agents in Notion](central/use-claude-agents-in-notion.md) · https://www.notion.com/help/use-claude-agents-in-notion
+- [Use Custom Agents on mobile](central/mobile-custom-agents.md) · https://www.notion.com/help/mobile-custom-agents
+- [Use Notion Calendar with Notion](central/use-notion-calendar-with-notion.md) · https://www.notion.com/help/use-notion-calendar-with-notion
+- [Use Notion from your terminal with Notion CLI](central/use-notion-from-your-terminal-with-notion-cli.md) · https://www.notion.com/help/use-notion-from-your-terminal-with-notion-cli
+- [Use Notion in your web browser](central/notion-for-web.md) · https://www.notion.com/help/notion-for-web
+- [Use Notion pages in ChatGPT](central/use-notion-pages-in-chatgpt.md) · https://www.notion.com/help/use-notion-pages-in-chatgpt
+- [Use Notion pages offline](central/use-pages-offline.md) · https://www.notion.com/help/use-pages-offline
+- [Use your ChatGPT plan with Notion Agent](central/use-your-chatgpt-plan-with-notion-agent.md) · https://www.notion.com/help/use-your-chatgpt-plan-with-notion-agent
+- [View your Notion Agent Memories](central/view-your-notion-agent-memories.md) · https://www.notion.com/help/view-your-notion-agent-memories
+- [Webhook actions in Notion automations](central/webhook-actions.md) · https://www.notion.com/help/webhook-actions
+- [What are Notion credits?](central/what-are-notion-credits.md) · https://www.notion.com/help/what-are-notion-credits
+- [What is a block in Notion?](central/what-is-a-block.md) · https://www.notion.com/help/what-is-a-block
+- [What is a database in Notion?](central/what-is-a-database.md) · https://www.notion.com/help/what-is-a-database
+- [What is Notion AI? FAQs](central/notion-ai-faqs.md) · https://www.notion.com/help/notion-ai-faqs
+- [What is the Notion Developer Platform?](central/what-is-the-notion-developer-platform.md) · https://www.notion.com/help/what-is-the-notion-developer-platform
+- [Who’s who in a Notion workspace](central/whos-who-in-a-workspace.md) · https://www.notion.com/help/whos-who-in-a-workspace
+- [Wikis & verified pages in Notion](central/wikis-and-verified-pages.md) · https://www.notion.com/help/wikis-and-verified-pages
+- [Workspace analytics in Notion](central/workspace-analytics.md) · https://www.notion.com/help/workspace-analytics
+- [Workspace audit log in Notion](central/audit-log.md) · https://www.notion.com/help/audit-log
+- [Workspace settings in Notion](central/workspace-settings.md) · https://www.notion.com/help/workspace-settings
+- [Write instructions for Notion Agent](central/instructions-for-notion-agent.md) · https://www.notion.com/help/instructions-for-notion-agent
+
+## Guias (204) · pasta `guias/`
+
+- [10 AI prompts to help marketers write better copy, faster](guias/10-ai-prompts-to-help-marketers-write-better-copy-faster.md) · https://www.notion.com/help/guides/10-ai-prompts-to-help-marketers-write-better-copy-faster
+- [5 AI prompts to surface fresh insights from your databases](guias/5-ai-prompts-to-surface-fresh-insights-from-your-databases.md) · https://www.notion.com/help/guides/5-ai-prompts-to-surface-fresh-insights-from-your-databases
+- [5 steps to adopt Notion for your entire organization](guias/5-steps-to-adopt-notion-for-your-entire-organization.md) · https://www.notion.com/help/guides/5-steps-to-adopt-notion-for-your-entire-organization
+- [5 ways to get more value out of your reading list with Notion AI](guias/5-ways-to-get-more-value-out-of-your-reading-list-with-notion-ai.md) · https://www.notion.com/help/guides/5-ways-to-get-more-value-out-of-your-reading-list-with-notion-ai
+- [A connected workspace for product teams to collaborate, ideate and launch](guias/connected-workspace-for-product-teams-to-collaborate-ideate-and-launch.md) · https://www.notion.com/help/guides/connected-workspace-for-product-teams-to-collaborate-ideate-and-launch
+- [A designer's ultimate guide to using Notion](guias/a-designers-ultimate-guide-to-using-notion.md) · https://www.notion.com/help/guides/a-designers-ultimate-guide-to-using-notion
+- [A documents database tailored for product teams](guias/documents-database-for-product-teams.md) · https://www.notion.com/help/guides/documents-database-for-product-teams
+- [A guide to connecting projects and meeting notes](guias/a-guide-to-connecting-projects-and-meeting-notes.md) · https://www.notion.com/help/guides/a-guide-to-connecting-projects-and-meeting-notes
+- [A Notion guide on switching between work and personal accounts](guias/a-notion-guide-on-switching-between-work-and-personal-accounts.md) · https://www.notion.com/help/guides/a-notion-guide-on-switching-between-work-and-personal-accounts
+- [A project management system for your design team that connects all your work](guias/a-project-management-system-for-your-design-team-that-connects-all-your-work.md) · https://www.notion.com/help/guides/a-project-management-system-for-your-design-team-that-connects-all-your-work
+- [A simple CRM for strengthening client relationships and managing work](guias/simple-crm-for-strengthening-client-relationships-and-managing-work.md) · https://www.notion.com/help/guides/simple-crm-for-strengthening-client-relationships-and-managing-work
+- [A user research database to help product teams take action on feedback](guias/user-research-database-product-teams.md) · https://www.notion.com/help/guides/user-research-database-product-teams
+- [Adding members, admins & guests](guias/adding-members-admins-and-guests.md) · https://www.notion.com/help/guides/adding-members-admins-and-guests
+- [An admin’s guide to getting started with Custom Agents](guias/admin-guide-to-getting-started-with-custom-agents.md) · https://www.notion.com/help/guides/admin-guide-to-getting-started-with-custom-agents
+- [Assign custom database permissions to make your life easier](guias/assign-custom-database-permissions.md) · https://www.notion.com/help/guides/assign-custom-database-permissions
+- [Automate client follow-up emails with Custom Agents](guias/automate-client-follow-up-emails-with-custom-agents.md) · https://www.notion.com/help/guides/automate-client-follow-up-emails-with-custom-agents
+- [Automate project updates and reporting with Custom Agents](guias/automate-project-updates-and-reporting-with-custom-agents.md) · https://www.notion.com/help/guides/automate-project-updates-and-reporting-with-custom-agents
+- [Automate work with repeating database templates](guias/automate-work-repeating-database-templates.md) · https://www.notion.com/help/guides/automate-work-repeating-database-templates
+- [Automatically generate blocks, pages and more with the click of a button](guias/automatically-generate-blocks-pages-with-buttons.md) · https://www.notion.com/help/guides/automatically-generate-blocks-pages-with-buttons
+- [Best practices for improving your Custom Agent](guias/best-practices-for-improving-your-custom-agent.md) · https://www.notion.com/help/guides/best-practices-for-improving-your-custom-agent
+- [Best practices for internal communications on Notion](guias/best-practices-internal-communications-on-notion.md) · https://www.notion.com/help/guides/best-practices-internal-communications-on-notion
+- [Block basics: build the foundation for your team’s pages](guias/block-basics-build-the-foundation-for-your-teams-pages.md) · https://www.notion.com/help/guides/block-basics-build-the-foundation-for-your-teams-pages
+- [Board view databases](guias/board-view-databases.md) · https://www.notion.com/help/guides/board-view-databases
+- [Break tasks into manageable steps with sub-tasks and dependencies](guias/tasks-manageable-steps-sub-tasks-dependencies.md) · https://www.notion.com/help/guides/tasks-manageable-steps-sub-tasks-dependencies
+- [Bring live links into your Notion workspace with link previews](guias/notion-api-link-previews-feature.md) · https://www.notion.com/help/guides/notion-api-link-previews-feature
+- [Bring your codebase into context with Notion's GitHub integration](guias/bring-your-codebase-into-context-with-notions-github-integration.md) · https://www.notion.com/help/guides/bring-your-codebase-into-context-with-notions-github-integration
+- [Build a Custom Agent that delivers weekly market insights](guias/build-a-custom-agent-that-delivers-weekly-market-insights.md) · https://www.notion.com/help/guides/build-a-custom-agent-that-delivers-weekly-market-insights
+- [Build a docs-first culture with a beautiful team wiki, powered by a database](guias/build-a-docs-first-culture-with-a-beautiful-team-wiki-powered-by-a-database.md) · https://www.notion.com/help/guides/build-a-docs-first-culture-with-a-beautiful-team-wiki-powered-by-a-database
+- [Build a journal in Notion](guias/journal.md) · https://www.notion.com/help/guides/journal
+- [Build a multi-agent system that turns customer feedback into a monthly report](guias/build-a-multi-agent-system-that-turns-customer-feedback-into-a-monthly-report.md) · https://www.notion.com/help/guides/build-a-multi-agent-system-that-turns-customer-feedback-into-a-monthly-report
+- [Build a quick notes page in Notion](guias/quick-notes.md) · https://www.notion.com/help/guides/quick-notes
+- [Build a self-improving answer bot](guias/self-improving-answer-bot.md) · https://www.notion.com/help/guides/self-improving-answer-bot
+- [Build a team wiki in Notion](guias/team-wiki.md) · https://www.notion.com/help/guides/team-wiki
+- [Build a website with Notion in seconds, no coding required](guias/build-a-website-with-notion-in-seconds-no-coding-required.md) · https://www.notion.com/help/guides/build-a-website-with-notion-in-seconds-no-coding-required
+- [Build the perfect workflow with customizable layouts](guias/build-the-perfect-workflow-with-customizable-layouts.md) · https://www.notion.com/help/guides/build-the-perfect-workflow-with-customizable-layouts
+- [Build your first Custom Agent](guias/build-your-first-custom-agent.md) · https://www.notion.com/help/guides/build-your-first-custom-agent
+- [Building a comprehensive team notes & docs database](guias/team-notes-and-docs.md) · https://www.notion.com/help/guides/team-notes-and-docs
+- [Building a product requirement document in Notion](guias/building-a-product-requirement-document-in-notion.md) · https://www.notion.com/help/guides/building-a-product-requirement-document-in-notion
+- [Calendar view databases](guias/calendar-view-databases.md) · https://www.notion.com/help/guides/calendar-view-databases
+- [Code blocks](guias/code-blocks.md) · https://www.notion.com/help/guides/code-blocks
+- [Comments & discussions](guias/comments-and-discussions.md) · https://www.notion.com/help/guides/comments-and-discussions
+- [Connect Custom Agents to your tool stack with MCP integrations](guias/connect-custom-agents-to-mcp-integrations.md) · https://www.notion.com/help/guides/connect-custom-agents-to-mcp-integrations
+- [Connect projects and docs to get more done, faster](guias/accomplish-more-with-connected-project-management.md) · https://www.notion.com/help/guides/accomplish-more-with-connected-project-management
+- [Connect your tools to Notion with the API](guias/connect-tools-to-notion-api.md) · https://www.notion.com/help/guides/connect-tools-to-notion-api
+- [Connecting tools to Notion](guias/connecting-tools-to-notion.md) · https://www.notion.com/help/guides/connecting-tools-to-notion
+- [Create a hybrid work hub](guias/create-hybrid-work-hub.md) · https://www.notion.com/help/guides/create-hybrid-work-hub
+- [Create and use an upvote formula for team decisions](guias/create-and-use-an-upvote-formula-for-team-decisions.md) · https://www.notion.com/help/guides/create-and-use-an-upvote-formula-for-team-decisions
+- [Create streamlined project management workflows using database automations](guias/create-streamlined-project-management-workflow-using-database-automations.md) · https://www.notion.com/help/guides/create-streamlined-project-management-workflow-using-database-automations
+- [Creating a database](guias/creating-a-database.md) · https://www.notion.com/help/guides/creating-a-database
+- [Creating a knowledge hub by organizing docs for large teams](guias/creating-a-knowledge-hub-by-organizing-docs-for-large-teams.md) · https://www.notion.com/help/guides/creating-a-knowledge-hub-by-organizing-docs-for-large-teams
+- [Creating a page](guias/creating-a-page.md) · https://www.notion.com/help/guides/creating-a-page
+- [Creating and organizing your reading list using Notion: A step-by-step guide](guias/creating-and-organizing-your-reading-list-using-notion-a-step-by-step-guide.md) · https://www.notion.com/help/guides/creating-and-organizing-your-reading-list-using-notion-a-step-by-step-guide
+- [Creating links & backlinks](guias/creating-links-and-backlinks.md) · https://www.notion.com/help/guides/creating-links-and-backlinks
+- [Database properties help organize your team’s information](guias/database-properties-help-organize-your-teams-information.md) · https://www.notion.com/help/guides/database-properties-help-organize-your-teams-information
+- [Databases reimagined— what’s changed?](guias/databases-reimagined-whats-changed.md) · https://www.notion.com/help/guides/databases-reimagined-whats-changed
+- [Embeds in Notion: A comprehensive guide for teams](guias/embeds-in-notion-a-comprehensive-guide-for-teams.md) · https://www.notion.com/help/guides/embeds-in-notion-a-comprehensive-guide-for-teams
+- [Everything you can do with Notion AI](guias/everything-you-can-do-with-notion-ai.md) · https://www.notion.com/help/guides/everything-you-can-do-with-notion-ai
+- [Everything you need to know about setting up and managing an organization in Notion](guias/everything-about-setting-up-and-managing-an-organization-in-notion.md) · https://www.notion.com/help/guides/everything-about-setting-up-and-managing-an-organization-in-notion
+- [Everything you need to know about working offline in Notion](guias/working-offline-in-notion-everything-you-need-to-know.md) · https://www.notion.com/help/guides/working-offline-in-notion-everything-you-need-to-know
+- [First steps when introducing Notion to a new teammate](guias/first-steps-introduce-notion-teammate.md) · https://www.notion.com/help/guides/first-steps-introduce-notion-teammate
+- [Formulas 2.0: How to use Notion’s new and improved formulas with your existing setups](guias/new-formulas-whats-changed.md) · https://www.notion.com/help/guides/new-formulas-whats-changed
+- [Full page vs. inline databases](guias/full-page-vs-inline-databases.md) · https://www.notion.com/help/guides/full-page-vs-inline-databases
+- [Gallery view databases](guias/gallery-view-databases.md) · https://www.notion.com/help/guides/gallery-view-databases
+- [Get answers about work content faster with Notion Agent](guias/get-answers-about-content-faster-with-q-and-a.md) · https://www.notion.com/help/guides/get-answers-about-content-faster-with-q-and-a
+- [Get organized for a new semester with Notion](guias/get-organized-for-a-new-semester-with-notion.md) · https://www.notion.com/help/guides/get-organized-for-a-new-semester-with-notion
+- [Get started with your Notion Agent](guias/get-started-with-your-personal-agent-in-notion.md) · https://www.notion.com/help/guides/get-started-with-your-personal-agent-in-notion
+- [Get the most out of your Business Plan trial with Notion AI](guias/get-the-most-out-of-your-business-trial-with-notion-ai.md) · https://www.notion.com/help/guides/get-the-most-out-of-your-business-trial-with-notion-ai
+- [Get useful insights with workspace and page analytics](guias/get-insights-with-page-workspace-analytics.md) · https://www.notion.com/help/guides/get-insights-with-page-workspace-analytics
+- [Getting started as a template creator on Marketplace](guias/getting-started-as-a-template-creator-on-marketplace.md) · https://www.notion.com/help/guides/getting-started-as-a-template-creator-on-marketplace
+- [Getting started with Notion Calendar](guias/getting-started-with-notion-calendar.md) · https://www.notion.com/help/guides/getting-started-with-notion-calendar
+- [Getting started with page customization](guias/getting-started-with-page-customization.md) · https://www.notion.com/help/guides/getting-started-with-page-customization
+- [Getting started with projects and tasks](guias/getting-started-with-projects-and-tasks.md) · https://www.notion.com/help/guides/getting-started-with-projects-and-tasks
+- [Getting started with skills in Notion](guias/getting-started-with-skills-in-notion.md) · https://www.notion.com/help/guides/getting-started-with-skills-in-notion
+- [Getting started with templates for your team](guias/getting-started-with-templates-for-your-team.md) · https://www.notion.com/help/guides/getting-started-with-templates-for-your-team
+- [Give your to-dos a home with Task databases](guias/give-your-to-dos-a-home-with-task-databases.md) · https://www.notion.com/help/guides/give-your-to-dos-a-home-with-task-databases
+- [Grant the right level of access with teamspaces and groups](guias/grant-access-teamspaces.md) · https://www.notion.com/help/guides/grant-access-teamspaces
+- [Grow with quality using these systems to track applicants and onboard new hires](guias/grow-with-quality-using-these-systems-to-track-applicants-and-onboard-new-hires.md) · https://www.notion.com/help/guides/grow-with-quality-using-these-systems-to-track-applicants-and-onboard-new-hires
+- [Grow your startup: A Notion guide to applicant tracking systems](guias/grow-your-startup-a-notion-guide-to-applicant-tracking-systems.md) · https://www.notion.com/help/guides/grow-your-startup-a-notion-guide-to-applicant-tracking-systems
+- [Hosting job listings and collecting applications: A Notion guide for startups](guias/hosting-job-listings-and-collecting-applications-a-notion-guide-for-startups.md) · https://www.notion.com/help/guides/hosting-job-listings-and-collecting-applications-a-notion-guide-for-startups
+- [How engineering and product teams use Notion for sprint planning](guias/product-engineering-notion-sprint-planning.md) · https://www.notion.com/help/guides/product-engineering-notion-sprint-planning
+- [How managers get a clear view of what everyone’s working on in Notion](guias/managers-view-what-everyones-working-on.md) · https://www.notion.com/help/guides/managers-view-what-everyones-working-on
+- [How marketing and sales teams can enhance creativity and productivity with Notion AI](guias/how-marketing-and-sales-teams-can-enhance-creativity-and-productivity-with.md) · https://www.notion.com/help/guides/how-marketing-and-sales-teams-can-enhance-creativity-and-productivity-with
+- [How marketing teams can use Notion AI to boost productivity](guias/how-marketing-teams-can-use-notion-ai-to-boost-productivity.md) · https://www.notion.com/help/guides/how-marketing-teams-can-use-notion-ai-to-boost-productivity
+- [How Notion can help your marketing team stay organized and efficient](guias/how-notion-can-help-your-marketing-team-stay-organized-and-efficient.md) · https://www.notion.com/help/guides/how-notion-can-help-your-marketing-team-stay-organized-and-efficient
+- [How product teams boost productivity and spark new ideas with Notion AI](guias/how-product-teams-boost-productivity-and-spark-new-ideas-with-notion-ai.md) · https://www.notion.com/help/guides/how-product-teams-boost-productivity-and-spark-new-ideas-with-notion-ai
+- [How startups conduct user research using Notion](guias/how-startups-conduct-user-research-using-notion.md) · https://www.notion.com/help/guides/how-startups-conduct-user-research-using-notion
+- [How teams can use comments for better collaboration](guias/how-teams-can-use-comments-for-better-collaboration.md) · https://www.notion.com/help/guides/how-teams-can-use-comments-for-better-collaboration
+- [How tech startups build their company operating systems in Notion](guias/how-tech-startups-build-their-company-operating-systems-in-notion.md) · https://www.notion.com/help/guides/how-tech-startups-build-their-company-operating-systems-in-notion
+- [How tech teams can use Notion AI to boost productivity](guias/how-tech-teams-can-use-notion-ai-to-boost-productivity.md) · https://www.notion.com/help/guides/how-tech-teams-can-use-notion-ai-to-boost-productivity
+- [How to automate sales prospecting in Notion with Custom Agents](guias/how-to-automate-sales-prospecting-in-notion-with-custom-agents.md) · https://www.notion.com/help/guides/how-to-automate-sales-prospecting-in-notion-with-custom-agents
+- [How to build a data agent in Notion](guias/how-to-build-a-data-agent-in-notion.md) · https://www.notion.com/help/guides/how-to-build-a-data-agent-in-notion
+- [How to build a help center in Notion](guias/how-to-build-a-help-center-in-notion.md) · https://www.notion.com/help/guides/how-to-build-a-help-center-in-notion
+- [How to build a Meeting Assistant in Notion with Custom Agents](guias/build-ai-meeting-assistant-with-custom-agents.md) · https://www.notion.com/help/guides/build-ai-meeting-assistant-with-custom-agents
+- [How to build a wiki for your company](guias/how-to-build-a-wiki-for-your-company.md) · https://www.notion.com/help/guides/how-to-build-a-wiki-for-your-company
+- [How to build a wiki for your design team](guias/how-to-build-a-wiki-for-your-design-team.md) · https://www.notion.com/help/guides/how-to-build-a-wiki-for-your-design-team
+- [How to build a wiki for your engineering team](guias/how-to-build-a-wiki-for-your-engineering-team.md) · https://www.notion.com/help/guides/how-to-build-a-wiki-for-your-engineering-team
+- [How to build a wiki for your product team](guias/how-to-build-a-wiki-for-your-product-team.md) · https://www.notion.com/help/guides/how-to-build-a-wiki-for-your-product-team
+- [How to build an effective go-to-market (GTM) plan](guias/how-to-build-a-go-to-market-gtm-plan.md) · https://www.notion.com/help/guides/how-to-build-a-go-to-market-gtm-plan
+- [How to create a content calendar for your marketing team](guias/this-content-calendar-drives-high-performance-marketing-teamwork.md) · https://www.notion.com/help/guides/this-content-calendar-drives-high-performance-marketing-teamwork
+- [How to create new pages as you type](guias/how-to-create-new-pages-as-you-type.md) · https://www.notion.com/help/guides/how-to-create-new-pages-as-you-type
+- [How to create OKRs](guias/how-to-create-okrs.md) · https://www.notion.com/help/guides/how-to-create-okrs
+- [How to get better answers from Notion AI](guias/how-to-get-better-answers-from-notion-ai.md) · https://www.notion.com/help/guides/how-to-get-better-answers-from-notion-ai
+- [How to join your team that’s using Notion](guias/how-to-join-your-team-thats-using-notion.md) · https://www.notion.com/help/guides/how-to-join-your-team-thats-using-notion
+- [How to scale skills across your Notion workspace](guias/how-to-scale-skills-across-your-notion-workspace.md) · https://www.notion.com/help/guides/how-to-scale-skills-across-your-notion-workspace
+- [How to set up Claude agents on your team's Notion task board](guias/how-to-set-up-claude-agents-on-your-teams-notion-task-board.md) · https://www.notion.com/help/guides/how-to-set-up-claude-agents-on-your-teams-notion-task-board
+- [How to set up your Notion workspace for your team](guias/how-to-set-up-your-notion-workspace-for-your-team.md) · https://www.notion.com/help/guides/how-to-set-up-your-notion-workspace-for-your-team
+- [How to use and customize the sidebar with teamspaces](guias/how-to-use-and-customize-the-sidebar-with-teamspaces.md) · https://www.notion.com/help/guides/how-to-use-and-customize-the-sidebar-with-teamspaces
+- [How to use Notion for your startup: Templates and more](guias/how-to-use-notion-for-your-startup-templates-and-more.md) · https://www.notion.com/help/guides/how-to-use-notion-for-your-startup-templates-and-more
+- [How to write Notion formulas that extend the capabilities of your databases](guias/write-formulas-that-extend-capabilities-of-databases.md) · https://www.notion.com/help/guides/write-formulas-that-extend-capabilities-of-databases
+- [How visual link previews can streamline team collaboration](guias/visual-link-previews-streamline-collaboration.md) · https://www.notion.com/help/guides/visual-link-previews-streamline-collaboration
+- [How workspace owners can set up teamspaces for their organization](guias/how-workspace-owners-can-set-up-teamspaces-for-their-organization.md) · https://www.notion.com/help/guides/how-workspace-owners-can-set-up-teamspaces-for-their-organization
+- [Import projects from Asana for a connected work experience](guias/import-projects-asana-connected-work.md) · https://www.notion.com/help/guides/import-projects-asana-connected-work
+- [Intro to Timeline view](guias/intro-to-timeline-view.md) · https://www.notion.com/help/guides/intro-to-timeline-view
+- [Is Notion's Business or Enterprise plan right for you?](guias/is-notions-business-or-enterprise-plan-right-for-you.md) · https://www.notion.com/help/guides/is-notions-business-or-enterprise-plan-right-for-you
+- [Make work more efficient with database button properties](guias/make-work-more-efficient-database-button-property.md) · https://www.notion.com/help/guides/make-work-more-efficient-database-button-property
+- [Manage client work in a flexible project tracker](guias/manage-client-work-in-a-flexible-project-tracker.md) · https://www.notion.com/help/guides/manage-client-work-in-a-flexible-project-tracker
+- [Manage your inbox and calendar automatically with Custom Agents](guias/manage-your-inbox-and-calendar-with-custom-agents.md) · https://www.notion.com/help/guides/manage-your-inbox-and-calendar-with-custom-agents
+- [Mastering the RACI model for effective project management](guias/mastering-the-raci-model-for-effective-project-management.md) · https://www.notion.com/help/guides/mastering-the-raci-model-for-effective-project-management
+- [Migrate from Confluence to Notion and transform your wiki into a connected workspace](guias/migrate-from-confluence-to-notion.md) · https://www.notion.com/help/guides/migrate-from-confluence-to-notion
+- [Migrating to Notion for Project Management](guias/migrating-to-notion-for-project-management.md) · https://www.notion.com/help/guides/migrating-to-notion-for-project-management
+- [Navigating with the sidebar](guias/navigating-with-the-sidebar.md) · https://www.notion.com/help/guides/navigating-with-the-sidebar
+- [Notify people instantly — with just a click of a button](guias/notify-people-instantly-with-a-click-of-a-button.md) · https://www.notion.com/help/guides/notify-people-instantly-with-a-click-of-a-button
+- [Notion Enterprise security provisions](guias/notion-enterprise-security-provisions.md) · https://www.notion.com/help/guides/notion-enterprise-security-provisions
+- [Notion for admins of large teams](guias/admins-large-teams.md) · https://www.notion.com/help/guides/admins-large-teams
+- [Notion for creative agencies: managing internal and client work](guias/how-agencies-manage-work.md) · https://www.notion.com/help/guides/how-agencies-manage-work
+- [Notion for engineers: A comprehensive guide to streamlining project management](guias/notion-for-engineers-a-comprehensive-guide-to-streamlining-project.md) · https://www.notion.com/help/guides/notion-for-engineers-a-comprehensive-guide-to-streamlining-project
+- [Organize your everyday life with Notion AI](guias/organize-your-everyday-life-with-notion-ai.md) · https://www.notion.com/help/guides/organize-your-everyday-life-with-notion-ai
+- [Organize, connect, and scale your Notion knowledge management system](guias/organize-connect-and-scale-your-notion-knowledge-management-system.md) · https://www.notion.com/help/guides/organize-connect-and-scale-your-notion-knowledge-management-system
+- [Organize, manage, and track all your work with a personal dashboard](guias/personal-work-dashboard.md) · https://www.notion.com/help/guides/personal-work-dashboard
+- [Page icons & covers](guias/page-icons-and-covers.md) · https://www.notion.com/help/guides/page-icons-and-covers
+- [Personal tasks](guias/personal-tasks.md) · https://www.notion.com/help/guides/personal-tasks
+- [Preserve perfect meeting memory with AI Meeting Notes](guias/preserve-perfect-meeting-memory-with-ai-meeting-notes.md) · https://www.notion.com/help/guides/preserve-perfect-meeting-memory-with-ai-meeting-notes
+- [Product teams nail cross-functional collaboration with these notes and docs templates](guias/product-teams-nail-cross-functional-collaboration-with-these-notes-and-docs.md) · https://www.notion.com/help/guides/product-teams-nail-cross-functional-collaboration-with-these-notes-and-docs
+- [Project management that evolves with your team](guias/project-management-that-evolves-with-your-team.md) · https://www.notion.com/help/guides/project-management-that-evolves-with-your-team
+- [Publish Notion pages to the web](guias/publish-notion-pages-to-the-web.md) · https://www.notion.com/help/guides/publish-notion-pages-to-the-web
+- [Reminders & @mentions](guias/reminders-and-mentions.md) · https://www.notion.com/help/guides/reminders-and-mentions
+- [Setting up Notion for school](guias/setting-up-notion-for-school.md) · https://www.notion.com/help/guides/setting-up-notion-for-school
+- [Share social media posts from Notion with webhook actions](guias/share-social-media-posts-from-notion-with-webhook-actions.md) · https://www.notion.com/help/guides/share-social-media-posts-from-notion-with-webhook-actions
+- [Sharing & permissions](guias/sharing-and-permissions.md) · https://www.notion.com/help/guides/sharing-and-permissions
+- [Show your team how to organize, track and manage work in Notion](guias/teams-organize-track-manage-work-in-notion.md) · https://www.notion.com/help/guides/teams-organize-track-manage-work-in-notion
+- [Solidifying documentation for your startup](guias/solidifying-documentation-for-your-startup.md) · https://www.notion.com/help/guides/solidifying-documentation-for-your-startup
+- [Sprints, simplified with Notion’s sprint tracking system](guias/sprints-simplified-notions-sprint-tracking-system.md) · https://www.notion.com/help/guides/sprints-simplified-notions-sprint-tracking-system
+- [Start fresh and do the thing: How to actually set and hit team goals this year](guias/start-fresh-and-do-the-thing-how-to-actually-set-and-hit-team-goals-this.md) · https://www.notion.com/help/guides/start-fresh-and-do-the-thing-how-to-actually-set-and-hit-team-goals-this
+- [Start with a template](guias/start-with-a-template.md) · https://www.notion.com/help/guides/start-with-a-template
+- [Streamlining HR & people operations](guias/streamlining-hr-and-people-operations.md) · https://www.notion.com/help/guides/streamlining-hr-and-people-operations
+- [Structure your sidebar for more focused work with teamspaces](guias/structure-sidebar-focused-work-teamspaces.md) · https://www.notion.com/help/guides/structure-sidebar-focused-work-teamspaces
+- [Switch from Confluence to Notion with our easy importer](guias/switch-from-confluence-to-notion-with-our-easy-importer.md) · https://www.notion.com/help/guides/switch-from-confluence-to-notion-with-our-easy-importer
+- [Synced Databases bridge the gap between different tools](guias/synced-databases-bridge-different-tools.md) · https://www.notion.com/help/guides/synced-databases-bridge-different-tools
+- [Table view databases](guias/table-view-databases.md) · https://www.notion.com/help/guides/table-view-databases
+- [Take these three steps before onboarding your team to Notion](guias/three-steps-before-onboarding-to-notion.md) · https://www.notion.com/help/guides/three-steps-before-onboarding-to-notion
+- [Teamspaces give every team a home for important work](guias/teamspaces-give-teams-home-for-important-work.md) · https://www.notion.com/help/guides/teamspaces-give-teams-home-for-important-work
+- [The best way to set up your team’s sidebar for clear organization](guias/the-best-way-to-set-up-your-teams-sidebar-for-clear-organization.md) · https://www.notion.com/help/guides/the-best-way-to-set-up-your-teams-sidebar-for-clear-organization
+- [The best ways to use simple tables in your Notion pages (and when not to)](guias/simple-tables-vs-databases.md) · https://www.notion.com/help/guides/simple-tables-vs-databases
+- [The only Notion setup you need for keeping New Year’s resolutions](guias/the-only-notion-setup-you-need-for-keeping-new-years-resolutions.md) · https://www.notion.com/help/guides/the-only-notion-setup-you-need-for-keeping-new-years-resolutions
+- [The status property gives you clarity on task progress](guias/status-property-gives-clarity-on-tasks.md) · https://www.notion.com/help/guides/status-property-gives-clarity-on-tasks
+- [The ultimate guide to AI-powered knowledge hubs in Notion](guias/ultimate-guide-to-ai-powered-knowledge-hubs-in-notion.md) · https://www.notion.com/help/guides/ultimate-guide-to-ai-powered-knowledge-hubs-in-notion
+- [The ultimate guide to Notion templates](guias/the-ultimate-guide-to-notion-templates.md) · https://www.notion.com/help/guides/the-ultimate-guide-to-notion-templates
+- [The ultimate quickstart guide to Notion for Enterprise](guias/the-ultimate-quickstart-guide-to-notion-for-enterprise.md) · https://www.notion.com/help/guides/the-ultimate-quickstart-guide-to-notion-for-enterprise
+- [This notes & docs system makes your design team more efficient](guias/this-notes-and-docs-system-makes-your-design-team-more-efficient.md) · https://www.notion.com/help/guides/this-notes-and-docs-system-makes-your-design-team-more-efficient
+- [This project management system connects the dots for your product team](guias/this-project-management-system-connects-the-dots-for-your-product-team.md) · https://www.notion.com/help/guides/this-project-management-system-connects-the-dots-for-your-product-team
+- [This project management system helps your engineering team track every initiative](guias/this-project-management-system-helps-your-engineering-team-track-every-initiative.md) · https://www.notion.com/help/guides/this-project-management-system-helps-your-engineering-team-track-every-initiative
+- [Three key databases for teams, and how to use them](guias/three-key-databases-for-teams-and-how-to-use-them.md) · https://www.notion.com/help/guides/three-key-databases-for-teams-and-how-to-use-them
+- [Timeline view unlocks high-output planning for your team](guias/timeline-view-unlocks-high-output-planning-for-your-team.md) · https://www.notion.com/help/guides/timeline-view-unlocks-high-output-planning-for-your-team
+- [Tips to keep your team’s Notion pages up to date](guias/tips-to-keep-your-teams-notion-pages-up-to-date.md) · https://www.notion.com/help/guides/tips-to-keep-your-teams-notion-pages-up-to-date
+- [Transforming content blocks in Notion](guias/transforming-content-blocks-in-notion.md) · https://www.notion.com/help/guides/transforming-content-blocks-in-notion
+- [Two note taking systems to make your engineering team more transparent & productive](guias/two-note-taking-systems-to-make-your-engineering-team-more-transparent-and-productive.md) · https://www.notion.com/help/guides/two-note-taking-systems-to-make-your-engineering-team-more-transparent-and-productive
+- [Types of content blocks](guias/types-of-content-blocks.md) · https://www.notion.com/help/guides/types-of-content-blocks
+- [Understanding how Q&A finds answers can help you get better results](guias/understanding-how-q-and-a-finds-answers-can-help-you-get-better-results.md) · https://www.notion.com/help/guides/understanding-how-q-and-a-finds-answers-can-help-you-get-better-results
+- [Understanding Notion’s sharing settings](guias/understanding-notions-sharing-settings.md) · https://www.notion.com/help/guides/understanding-notions-sharing-settings
+- [Unearth fresh insights from your personal knowledge library using Q&A](guias/unearth-fresh-insights-from-your-personal-knowledge-library-using-q-and-a.md) · https://www.notion.com/help/guides/unearth-fresh-insights-from-your-personal-knowledge-library-using-q-and-a
+- [Unleashing collaboration with Notion's Jira connection](guias/unleashing-collaboration-with-notions-jira-connection.md) · https://www.notion.com/help/guides/unleashing-collaboration-with-notions-jira-connection
+- [Unleashing productivity with Notion's Slack integration](guias/unleashing-productivity-with-notions-slack-integration.md) · https://www.notion.com/help/guides/unleashing-productivity-with-notions-slack-integration
+- [Use AI connectors to access more of your team’s knowledge](guias/use-ai-connectors-to-access-more-of-your-teams-knowledge.md) · https://www.notion.com/help/guides/use-ai-connectors-to-access-more-of-your-teams-knowledge
+- [Use Asana link previews to keep your teams on the same page](guias/use-asana-link-previews-to-keep-your-teams-on-the-same-page.md) · https://www.notion.com/help/guides/use-asana-link-previews-to-keep-your-teams-on-the-same-page
+- [Use charts to visualize data and track progress directly in Notion](guias/charts-visualize-data-track-progress-in-notion.md) · https://www.notion.com/help/guides/charts-visualize-data-track-progress-in-notion
+- [Use forms to collect, organize and act on responses right in your Notion workspace](guias/use-forms-to-collect-organize-and-act-on-responses-in-notion.md) · https://www.notion.com/help/guides/use-forms-to-collect-organize-and-act-on-responses-in-notion
+- [Use link previews to collaborate, manage projects, and ship faster](guias/manage-projects-using-link-previews.md) · https://www.notion.com/help/guides/manage-projects-using-link-previews
+- [Use Notion AI to give teams perfect memory, and save time](guias/use-notion-ai-to-give-teams-perfect-memory-and-save-time.md) · https://www.notion.com/help/guides/use-notion-ai-to-give-teams-perfect-memory-and-save-time
+- [Use Notion AI to write better, more efficient notes and docs](guias/notion-ai-for-docs.md) · https://www.notion.com/help/guides/notion-ai-for-docs
+- [Use Notion’s Data Retention settings to keep your team compliant & restore content](guias/notions-data-retention-settings.md) · https://www.notion.com/help/guides/notions-data-retention-settings
+- [Using advanced database filters](guias/using-advanced-database-filters.md) · https://www.notion.com/help/guides/using-advanced-database-filters
+- [Using database templates](guias/using-database-templates.md) · https://www.notion.com/help/guides/using-database-templates
+- [Using database templates to help cement your team's process](guias/using-database-templates-for-teams.md) · https://www.notion.com/help/guides/using-database-templates-for-teams
+- [Using database views](guias/using-database-views.md) · https://www.notion.com/help/guides/using-database-views
+- [Using linked databases](guias/using-linked-databases.md) · https://www.notion.com/help/guides/using-linked-databases
+- [Using Notion AI to extend your impact](guias/using-notion-ai.md) · https://www.notion.com/help/guides/using-notion-ai
+- [Using Notion for issue tracking](guias/using-notion-for-issue-tracking.md) · https://www.notion.com/help/guides/using-notion-for-issue-tracking
+- [Using Notion for marketing campaigns](guias/using-notion-for-marketing-campaigns.md) · https://www.notion.com/help/guides/using-notion-for-marketing-campaigns
+- [Using Notion for Product & Engineering OKRs](guias/using-notion-for-product-and-engineering-okrs.md) · https://www.notion.com/help/guides/using-notion-for-product-and-engineering-okrs
+- [Using Notion for product requirement documents](guias/using-notion-for-product-requirement-documents.md) · https://www.notion.com/help/guides/using-notion-for-product-requirement-documents
+- [Using Notion for product roadmaps](guias/using-notion-for-product-roadmaps.md) · https://www.notion.com/help/guides/using-notion-for-product-roadmaps
+- [Using Notion for remote work](guias/using-notion-for-remote-work.md) · https://www.notion.com/help/guides/using-notion-for-remote-work
+- [Using Notion for tech specs](guias/using-notion-for-tech-specs.md) · https://www.notion.com/help/guides/using-notion-for-tech-specs
+- [Using relation & rollup properties](guias/using-relation-and-rollup-properties.md) · https://www.notion.com/help/guides/using-relation-and-rollup-properties
+- [Using slash commands](guias/using-slash-commands.md) · https://www.notion.com/help/guides/using-slash-commands
+- [Verify knowledge your teammates can trust](guias/verify-knowledge-your-teammates-can-trust-with-page-verification.md) · https://www.notion.com/help/guides/verify-knowledge-your-teammates-can-trust-with-page-verification
+- [What are Teamspaces? A guide for Notion admins](guias/what-are-teamspaces-a-guide-for-notion-admins.md) · https://www.notion.com/help/guides/what-are-teamspaces-a-guide-for-notion-admins
+- [What is Notion?](guias/what-is-notion.md) · https://www.notion.com/help/guides/what-is-notion
+- [When to use each type of database view](guias/when-to-use-each-type-of-database-view.md) · https://www.notion.com/help/guides/when-to-use-each-type-of-database-view
+- [Where does Notion fit into your company’s tool ecosystem?](guias/notion-fit-tool-ecosystem.md) · https://www.notion.com/help/guides/notion-fit-tool-ecosystem
+- [Who should be a workspace member, and who should be a guest?](guias/who-should-be-a-workspace-member-who-should-be-a-guest.md) · https://www.notion.com/help/guides/who-should-be-a-workspace-member-who-should-be-a-guest
+- [Writing & editing basics](guias/writing-and-editing-basics.md) · https://www.notion.com/help/guides/writing-and-editing-basics
+- [Your centralized product development hub in Notion](guias/your-centralized-product-development-hub-in-notion.md) · https://www.notion.com/help/guides/your-centralized-product-development-hub-in-notion
+- [Your ultimate guide to building a personal wiki in Notion](guias/personal-wiki.md) · https://www.notion.com/help/guides/personal-wiki

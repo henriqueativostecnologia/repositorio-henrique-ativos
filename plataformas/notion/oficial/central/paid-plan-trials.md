@@ -1,0 +1,73 @@
+---
+fonte: https://www.notion.com/help/paid-plan-trials
+baixado: 2026-11-10
+---
+
+# Paid plan trials
+
+In this help doc
+
+## Learn how you can trial Notion's paid plans.
+
+------------------------------------------------------------------------
+
+We offer trials of our Business Plan to teams getting started on Notion. New teams signing up for Notion can access the Business Plan trial by [signing up for a Notion workspace](https://www.notion.so/signup).
+
+## [What is the Business Plan trial?](https://www.notion.com/help/paid-plan-trials#what-is-the-business-plan-trial)
+
+For 30 days, the Business Plan trial gives users access to all features in the Business Plan, which include:
+
+- Notion AI, including AI Meeting Notes, Research Mode, Notion AI connectors, and more
+
+- Verified pages
+
+- Private teamspaces
+
+- SAML SSO
+
+- Integrations
+
+For a comprehensive list of what features come with the Business Plan, refer to our [pricing page →](https://www.notion.com/pricing)
+
+## [How do I know if my team is eligible?](https://www.notion.com/help/paid-plan-trials#how-do-i-know-if-my-team-is-eligible)
+
+Business Plan trials are available only to teams who use a professional domain and aren’t already on a Business or Enterprise Plan. If you’re using an educational domain or a personal domain, your team won’t be eligible and will need to set up a new workspace using a professional domain to get access to the offer.
+
+You’ll also need to be using Notion’s **web or desktop app** to start the trial.
+
+## [How can I upgrade my trial early?](https://www.notion.com/help/paid-plan-trials#how-can-i-upgrade-my-trial-early)
+
+You can upgrade at any time during your trial:
+
+1.  Go to `Settings` → `Billing`.
+
+2.  Select `Manage trial`, then choose to upgrade.
+
+If you haven't added payment details yet, you'll be asked to add them when you upgrade.
+
+## [What if I want to cancel my trial?](https://www.notion.com/help/paid-plan-trials#what-if-i-want-to-cancel-my-trial)
+
+You're able to cancel your trial at any point. If you cancel, you will be placed onto our Free Plan at the end of your trial period. Additionally, you’ll have limited or no access to certain features only available on the Business Plan. Learn more about what happens when you [downgrade your plan →](https://www.notion.com/help/plan-downgrade)
+
+If you started your trial on the Plus Plan and then cancel, you'll return to the Plus Plan immediately.
+
+## [How can I cancel my trial?](https://www.notion.com/help/paid-plan-trials#how-can-i-cancel-my-trial)
+
+Go to `Settings` in your sidebar and select `Explore plans` to cancel your trial.
+
+## [What happens at the end of my trial?](https://www.notion.com/help/paid-plan-trials#what-happens-at-the-end-of-my-trial)
+
+If you entered your payment information to begin your trial, we’ll auto-renew your Business Plan subscription at the end of your trial period.
+
+This also applies to trials started while on the Plus Plan. When your trial ends, your workspace will automatically continue on the Business Plan. You agree to this before your trial starts, so there are no surprise charges. If you don’t want to continue, cancel before your trial ends.
+
+If you didn’t enter your payment information to begin your trial, you’ll be prompted to confirm your upgrade to the Business Plan at the end of your trial period.
+
+## Contents
+
+- [What is the Business Plan trial?](#what-is-the-business-plan-trial)
+- [How do I know if my team is eligible?](#how-do-i-know-if-my-team-is-eligible)
+- [How can I upgrade my trial early?](#how-can-i-upgrade-my-trial-early)
+- [What if I want to cancel my trial?](#what-if-i-want-to-cancel-my-trial)
+- [How can I cancel my trial?](#how-can-i-cancel-my-trial)
+- [What happens at the end of my trial?](#what-happens-at-the-end-of-my-trial)

@@ -1,0 +1,114 @@
+---
+fonte: https://www.notion.com/help/notification-settings
+baixado: 2026-11-10
+---
+
+# Notification settings
+
+In this help doc
+
+## Notion is set up to notify you if you're mentioned in a page or database, for reminders, and when updates have been made to a page you care about. Below, we describe how notifications work, and how you can modify them.
+
+[Jump to FAQs](https://www.notion.com/help/notification-settings#faq)
+
+------------------------------------------------------------------------
+
+## [How notifications work](https://www.notion.com/help/notification-settings#how-notifications-work)
+
+Here's when you will get a notification:
+
+- Someone @-mentions you or replies to your comment.
+
+  - Or you have notifications set to `All comments` for a page.
+
+- You're added to a `Person` property in a database.
+
+- You set a reminder for yourself to show up at a certain time.
+
+Want fewer notifications in your inbox without turning any off? You can filter your inbox by notification type so it shows only the kinds you care about. [See how to filter your inbox →](https://www.notion.com/help/updates-and-notifications)
+
+### [Types and timing](https://www.notion.com/help/notification-settings#types-and-timing)
+
+There are several ways these notifications will reach you:
+
+- You'll see a red badge with the number of notifications waiting for you next to `Inbox` at the top of your sidebar. [Learn more about updates here →](https://www.notion.com/help/updates-and-notifications)
+
+- **Desktop comments and mentions** show up if you have the app installed and open.
+
+- **Desktop meeting detection** sends a notification prompt to start meeting notes when it detects audio activity and finds a matching event on your calendar.
+
+- **Email notifications** are sent if you don't have Notion open at the time of the notification, or if you have mobile notifications turned off and you haven't seen a notification within five minutes.
+
+  - Unless you have `Always send email notifications` turned on, you'll only receive an email notification if you're **not** active on the app.
+
+  - You can also receive email notifications about what’s happening in your workspace, like what pages you might want to check out or what pages are trending.
+
+**Note:** If you're actively viewing a page that the notification trigger was created on (i.e. the @-mention or reminder), you won't see any notifications.
+
+## [Notification settings](https://www.notion.com/help/notification-settings#notification-settings)
+
+Go to `Settings` → `Notifications` to adjust your settings for:
+
+- Mobile push notifications
+
+- Desktop push notifications and badge icons (if you’re using the desktop app)
+
+- Slack notifications
+
+- Microsoft Teams notifications
+
+- Email notifications. You can receive notifications for activity in your workspace, page updates, and workspace digests.
+
+**On mobile**, tap `•••` near the top of your home page → `Settings` → `My notifications`. You can manage Microsoft Teams notifications here too.
+
+### [Connect Microsoft Teams](https://www.notion.com/help/notification-settings#connect-microsoft-teams)
+
+You can send your Notion notifications to Microsoft Teams. A Notion bot will message you in Teams when there is activity you follow.
+
+1.  Go to the workspace switcher → `Settings` → `Notifications` → `Connected apps`.
+
+2.  Find `Microsoft Teams` and select `Connect`.
+
+3.  Approve the connection in your browser.
+
+4.  In Microsoft Teams, open the Notion bot and type the 6-digit code shown in Notion.
+
+5.  Once the code is accepted, you're connected.
+
+You can also connect from the Notion mobile app. For the full walkthrough, see [Get Notion notifications in Microsoft Teams](https://www.notion.com/help/microsoft-teams-notifications).
+
+### [Turn Microsoft Teams notifications off](https://www.notion.com/help/notification-settings#turn-microsoft-teams-notifications-off)
+
+1.  Go to `Settings` → `Notifications` → `Connected apps`.
+
+2.  Select the dropdown next to `Microsoft Teams` and select `Off`.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+I'm not receiving any mobile or email notifications, but I have them enabled.
+
+If you have Notion open on a mobile device or computer, you won't receive push or email notifications for reminders — you'll only see the badge next to `Inbox`.
+
+If Notion is not open on your mobile device or computer, then you will receive a push or email notification.
+
+To always receive email updates regardless of whether or not you have the app open, you can enable `Always send email notifications` in the `Notifications` section of `Settings`.
+
+Is there a way for the notifications to make a sound or vibration?
+
+Not at the moment, unfortunately 😓 On our to-do list though!
+
+I don’t want to be notified when I get mentioned in a person property in a database. How can I turn this kind of notification off?
+
+You can't unsubscribe from these, but you can hide them from view by filtering your inbox by notification type. Filtering changes what your inbox shows, it doesn't stop the notifications from being sent. [Learn about inbox filters →](https://www.notion.com/help/updates-and-notifications)
+
+Still have more questions? Message support
+
+## Contents
+
+- [How notifications work](#how-notifications-work)
+- [Types and timing](#types-and-timing)
+- [Notification settings](#notification-settings)
+- [Connect Microsoft Teams](#connect-microsoft-teams)
+- [Turn Microsoft Teams notifications off](#turn-microsoft-teams-notifications-off)

@@ -1,0 +1,260 @@
+---
+fonte: https://www.notion.com/help/relations-and-rollups
+baixado: 2026-11-10
+---
+
+# Relations & rollups
+
+Vídeo: https://www.youtube.com/watch?v=mWQyAkOFA_A
+
+In this help doc
+
+## Have you ever wanted to connect the data between two tables? You're in luck! Notion's relation property is designed to help you express useful relationships between items in different databases.
+
+[Jump to FAQs](https://www.notion.com/help/relations-and-rollups#faq)
+
+------------------------------------------------------------------------
+
+Want to see multiple sets of data within the same database? Add a new data source or link an existing one to a database you’re already using. Learn more [here →](https://www.notion.com/help/data-sources-and-linked-databases)
+
+## [What is a database relation?](https://www.notion.com/help/relations-and-rollups#what-is-a-database-relation)
+
+Let's say you have two databases for your theoretical business 😉
+
+- One that tracks customers
+
+- One that tracks items purchased
+
+You want to know both which customers bought which items, as well as which items were purchased by which customers. This is a job for relations!
+
+- In the two tables above, the columns labeled `↗ Items Purchased` and `↗ Customers` are relation properties, which can be added like any other database property.
+
+- Here, when you add an item bought into the **Customers** database, the customers who bought them automatically appear in the `↗ Customers` column in the **Items** database.
+
+### [Example use cases](https://www.notion.com/help/relations-and-rollups#example-use-cases)
+
+- Connect your **database of restaurants** with your **database of neighborhoods** so you can see which restaurants are in which neighborhoods at a glance.
+
+- Connect your **database of meeting notes** with your **database of clients** to provide quick access to the notes relevant to each client.
+
+- Connect your **database of tasks** with your **database of bigger projects** to understand how projects are broken down into tasks, and how tasks contribute to projects.
+
+- Connect your **database of candidates** with your **database of interviewers** to keep track of who interviewed whom.
+
+## [Create a relation](https://www.notion.com/help/relations-and-rollups#create-a-relation)
+
+To relate two databases, you need two databases. So let's assume you've made the **Customers** and **Items** databases above for the purpose of this walkthrough.
+
+1.  Add a new column/property to your **Customers** database and give it a name, like **Items Purchased**.
+
+2.  Search for `Relation`.
+
+3.  Then, search for the database you want to create the relation with.
+
+4.  You'll see a preview of the relation. In this case, we've created a relation from the Customer database to the Items database.
+
+5.  Click the blue `Add relation` button to finalize the creation of the new relation property.
+
+6.  Now when you click in a cell in this relation column, you'll bring up a menu where you can search for and choose items from the other database to add.
+
+    - For example, this is how you can add which clothes each customer bought.
+
+    - To add an item, click the name in the list. To delete an item, hover over and then click the `–` button on the right.
+
+**Tip:** To change the database you're connecting to, re-select `Relation` as the property type for that particularly property. You'll be prompted to choose a new database.
+
+## [Two-way relations](https://www.notion.com/help/relations-and-rollups#two-way-relations)
+
+Relations between two different databases are created as one-way by default. But you can easily toggle on a corresponding relation in the destination database. A relation from a database to itself works a little differently.
+
+With two-way relations, the edits work both ways! So if you add a customer to the **Items** database in the relation column, the change pops up in your **Customers** database.
+
+1.  Follow the above instructions to create a new relation property.
+
+2.  Click the toggle that says `Show on [name of related database]`. In our example, this says `Show on Items DB`.
+
+3.  Give this corresponding relation a name.
+
+4.  Below, you'll see a preview of the two-way relation. In this case, we've created a relation from the Customer database to the Items database, *and* a relation from the Items database to the Customer database.
+
+5.  Click the blue `Add relation` button to finalize the creation of these two new relation properties.
+
+## [View and remove related pages](https://www.notion.com/help/relations-and-rollups#view-and-remove-related-pages)
+
+When you create a relation, you're essentially adding Notion pages stored in one database into the property field of another.
+
+- These pages can be opened and edited like any other! Click on the page in the relation column. Then click on it again in the window that pops up.
+
+- You can also remove any related page by hovering over and clicking the `–` at the right.
+
+- You can choose to limit the number of pages that can be included in your relations property – with the option to select `1 page` or to have `No limit`.
+
+- If you select the option to limit it to `1 page`, people using your database will only be able to select 1 page in the relation. This is especially useful for situations where only one page should be related to one another, for example - if only one order number should be associated with each purchase.
+
+## [Display options for relations](https://www.notion.com/help/relations-and-rollups#display-options-for-relations)
+
+To change how relations are displayed in a database page:
+
+1.  While in a database page, click on the relation.
+
+2.  Click `Property visibility` and select `Always show`, `Hide when empty`, or `Always hide`.
+
+### [Customize displayed properties for relations](https://www.notion.com/help/relations-and-rollups#customize-displayed-properties-for-relations)
+
+When you set up a relation in your database, you can also choose to display certain properties of linked pages. For example, let’s say you have a database of frequently asked questions at your company. Each FAQ has a relation to a page that further explains the answer to the question. You might want people to also be able to see the owner of each page, so they know who to reach out to with more questions. You can set your FAQ database up so that the owner is visible along with the relevant page!
+
+To do this:
+
+1.  Open a page in a database that has a relation property.
+
+2.  Click the field next to that property to link a page → click `•••`.
+
+3.  In the menu that appears, drag the properties of the related database into or out of `Shown in relation` or `Hidden in relation`.
+
+4.  Once you’re done, you’ll see your desired properties appear in the relation field. This will apply to all of the pages in your current database.
+
+## [Relate a database to itself](https://www.notion.com/help/relations-and-rollups#relate-a-database-to-itself)
+
+Let's say you want items in the same database to have relationships with each other. For example, you have a tasks database and you want each task to relate to other tasks.
+
+1.  Start off by creating a new relation.
+
+2.  Then search for and choose the database you're currently working in.
+
+3.  You'll now see that the database is related to `This database`.
+
+    - You can keep `Two-way relation` turned off to use one property, or turn it on to create two separate properties.
+
+A relation from a database to itself works a little differently than a relation between two databases:
+
+- With one property, the relation can work in both directions. If you add Task B to Task A, Task A can also show up on Task B.
+
+- If you want each direction to have its own property, like Next and Previous, turn on `Two-way relation`. This creates two separate properties instead of one.
+
+For example, to put tasks in order with a Next task and a Previous task:
+
+1.  Create a new relation and choose `This database`.
+
+2.  Turn on `Two-way relation`.
+
+3.  Name the two properties, one for each direction. For example, **Next task** and **Previous task**.
+
+4.  Add pages to one property, and the other property updates on its own. If you add Task B to Task A's **Next task**, Task A appears in Task B's **Previous task**.
+
+5.  If you don't want to see one of these properties, you can hide it. Click the property name in your database, then select `Hide in view`.
+
+**Tip:** A self-relation with one property isn't fully one-way. To keep each direction separate, turn on `Two-way relation` and hide the property you don't need.
+
+## [Rollups](https://www.notion.com/help/relations-and-rollups#rollups)
+
+Rollups help you aggregate data in your databases based on relations. Going back to our customers and items example above, let's say you wanted to know how much each customer spent based on what they bought.
+
+1.  First, create the relation so you know who bought what.
+
+2.  Add a new column/property and choose `Rollup` from the `Property type` menu. Give it a descriptive name.
+
+- Clicking on any cell in the rollup column will bring up a new menu asking you for:
+
+  - The relation property you want to roll up.
+
+  - The property of those related pages you want to roll up.
+
+  - The calculation you want to apply to them.
+
+  - The number formatting you want to display.
+
+  - The decimal point placement you want to set.
+
+- So, for our example, you'd choose to roll up the relation property `Items Purchased` and the `Price` property within those pages. Then you'd choose `Sum` as the calculation, the `Number format`, and lastly where to place your decimal point.
+
+  - Doing this adds up the prices of each item related to a customer's name, giving you the total dollars they spent in your rollup column.
+
+### [Rollup types](https://www.notion.com/help/relations-and-rollups#rollup-types)
+
+There are different calculations you can apply as a rollup. Here are all of them:
+
+- `Show original`: This just shows all related pages in the same cell. It's the same as the relation property itself.
+
+- `Show unique values`: This shows each unique value in the selected property for all related pages.
+
+- `Count all`: Counts the total number of values in the selected property for all related pages.
+
+- `Count values`: Counts the number of non-empty values in the selected property for all related pages.
+
+- `Count unique values`: Counts the number of unique values in the selected property for all related pages.
+
+- `Count empty`: Counts the number of related pages with an empty value for the property selected. So, if one item a customer bought didn't have a price and that was the property selected, the rollup column would say 1.
+
+- `Count not empty`: Counts the number of related pages with assigned values for the property you selected.
+
+- `Percent empty`: Shows the percentage of related pages with no value in the property you selected.
+
+- `Percent not empty`: Shows the percentage of related pages with a value in the property you selected.
+
+**Note:** Rollups can only be sorted when they output a numeric value.
+
+**These rollup calculations are only available for `Number` properties:**
+
+- `Sum`: Computes the sum of the numeric properties for related pages (like above).
+
+- `Average`: Computes the average of the numeric properties for related pages.
+
+- `Median`: Finds the median of the numeric properties for related pages.
+
+- `Min`: Finds the lowest number in the numeric property for related pages.
+
+- `Max`: Finds the highest number in the numeric property for related pages.
+
+- `Range`: Computes the range between the highest and lowest numbers in the numeric property for related pages (`Max` - `Min`).
+
+**These rollup calculations are only available for `Date` properties:**
+
+- `Earliest date`: Finds the earliest date/time in the date property for all related pages.
+
+- `Latest date`: Finds the latest date/time in the date property for all related pages.
+
+- `Date range`: Computes the span of time between the latest and earliest dates in the date property for related pages.
+
+### [Aggregate rollups](https://www.notion.com/help/relations-and-rollups#aggregate-rollups)
+
+In both tables and boards, you can apply calculations to your rollup column to get a sense of sums, ranges, averages, etc. for your entire database.
+
+- Let's say you want to find the total money spent by all customers in our example.
+
+- Click the `Order Total` property in your customers table.
+
+- In the menu that appears, hover over `Calculate` → `More options`.
+
+- Select `Sum`.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+Can I export or import relations?
+
+When you export a relational database as a CSV file, the relation properties will export as plain text URLs. For now, you can't re-import that CSV back into Notion to re-establish the relations with other databases.
+
+Can I duplicate a database with a relation?
+
+Yes. In the example above, if you duplicate the Customers database, the duplicate database, Customers (1), will not show as a relation in the Items database. That’s because upon duplicating the Customers database, we convert the relation from a 2-way sync to a 1-way sync. If you'd like, you can always convert the relation back to a 2-way sync.
+
+Can I rollup a rollup?
+
+Unfortunately not, as this could create unintended loops. We recommend sticking to rolling up other properties 😊
+
+Still have more questions? Message support
+
+## Contents
+
+- [What is a database relation?](#what-is-a-database-relation)
+- [Example use cases](#example-use-cases)
+- [Create a relation](#create-a-relation)
+- [Two-way relations](#two-way-relations)
+- [View and remove related pages](#view-and-remove-related-pages)
+- [Display options for relations](#display-options-for-relations)
+- [Customize displayed properties for relations](#customize-displayed-properties-for-relations)
+- [Relate a database to itself](#relate-a-database-to-itself)
+- [Rollups](#rollups)
+- [Rollup types](#rollup-types)
+- [Aggregate rollups](#aggregate-rollups)
