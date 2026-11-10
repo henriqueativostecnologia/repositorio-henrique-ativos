@@ -47,6 +47,17 @@ Drive › 00 Geral › 03 Gestão de tarefas › cópia da planilha com o nome "
 **Resultado esperado:** Data mostra só "Tarefas"; o app abre a lista agrupada por status (ex.: "A fazer 41"). O AppSheet reconhece sozinho Código como chave (Key) e as colunas com lista como Enum.
 **Se falhar:** erro "The data for this view Como usar cannot be found" = faltou apagar a view "Como usar" (item 4). O círculo vermelho no topo mostra a mensagem do erro; enquanto houver erro, o SAVE fica bloqueado.
 
+### Passo 4: conferir as colunas (Data › Tarefas)
+```
+1. Tipos esperados: Código Text (Key ✓); Tarefa, Semana, Depende de Text; Responsável, Projeto, Entrega ou área, Prioridade, Status, Estimativa Enum; Prazo, Criada em, Concluída em Date; Link ou observação LongText; Tempo real (h) Decimal.
+2. Status (lápis › Values): o AppSheet só traz os valores já usados nas tarefas. Deixar exatamente: Backlog, A fazer, Fazendo, Aguardando, Revisão, Feito, Cancelada (nesta ordem).
+3. Entrega ou área: conferir as 11 opções da aba Listas (Site, Rankeamento, Tráfego, Automação, Dados, Comercial, Financeiro, Organização, Marca e conteúdo, Administrativo, Escopo).
+4. Prazo (lápis): apagar Initial value TODAY() e desligar Require (regra: nunca inventar prazo).
+5. SAVE.
+```
+**Resultado esperado:** sem erros (sinal verde no topo).
+**Se falhar:** opção faltando numa lista = adicionar em Values, escrita igual à aba Listas.
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
