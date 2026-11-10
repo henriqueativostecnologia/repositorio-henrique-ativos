@@ -166,6 +166,22 @@ UX › Format Rules › New Format Rule:
 Highlight color: deixar sem cor (fundo colorido polui o quadro).
 ```
 
+### Passo 14e: prazo à direita nos cartões
+```
+UX › Views › A fazer, Fazendo, Aguardando, Revisão › Summary column = Prazo
+Calendário › Description = Tarefa (sem isso o calendário mostra só o código)
+```
+
+### Passo 14f: cor por pessoa no calendário
+```
+Data › Tarefas › Add Virtual Column:
+- Nome: Cor · Type: Color
+- App formula: SWITCH([Responsável], "Henrique", "Green", "Igor", "Blue", "Hugo", "Orange", "Bernardo", "Purple", "Black")
+- Type Details › Values: Green, Blue, Orange, Purple, Black (obrigatório: sem a lista o app não roda)
+UX › Views › Calendário › Category = Cor
+```
+**Resultado esperado:** Henrique verde, Igor azul, Hugo laranja, Bernardo roxo, sem responsável preto.
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
@@ -179,6 +195,8 @@ A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, t
 |---|---|---|
 | Error "app did not load" no celular simulado | Erro de configuração pendente | Clicar no círculo vermelho do topo, ler a mensagem e corrigir |
 | App mostra o texto da aba "Como usar" | O AppSheet pegou a 1ª aba da planilha | Passo 3 |
+| "version ... is not runnable" e erro "Column Type 'Color' must have a list of allowed values" | Coluna Cor sem a lista de cores | Passo 14f: preencher Values |
+| Cores das pessoas trocadas no calendário | Fórmula da coluna Cor desatualizada | Colar de novo a fórmula do passo 14f |
 | Lixeiras aparecendo nas tarefas | Deletes ficou marcado | Data › Tarefas › configurações da tabela: desmarcar Deletes |
 
 ## Como desfazer
