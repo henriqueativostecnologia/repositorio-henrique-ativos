@@ -148,6 +148,24 @@ Manage › Deploy › Deployment Check › Run deployment check › se estiver t
 ```
 (artigos 10104495 Deploy: The Essentials e 10104389 Perform a deployment check)
 
+### Passo 13: painel "Quadro" (colunas lado a lado)
+```
+1. Data › Slices: Col A fazer, Col Fazendo, Col Aguardando, Col Revisao
+   AND([Status] = "<status>", OR(USERSETTINGS("Pessoa") = "Todos", [Responsável] = USERSETTINGS("Pessoa")))
+2. UX › Views › New View (uma por coluna): A fazer, Fazendo, Aguardando, Revisão · For this data = slice da coluna · deck · Position ref · Sort Prazo · Group Responsável.
+3. Tela "Por status" › Position menu (para caber o Quadro na barra de baixo).
+4. New View: Quadro · dashboard · Position last · View entries: A fazer, Fazendo, Aguardando, Revisão, todas em Tall · Use tabs in mobile view ligado.
+```
+**Resultado esperado:** no computador, 4 colunas lado a lado; no celular, 4 abas no topo (artigo 10106384 Dashboard view type: tamanhos Large, Small, Tall, Wide; no celular o tamanho é ignorado).
+
+### Passo 14: cores nos cartões (Format Rules)
+```
+UX › Format Rules › New Format Rule:
+- Atrasada: For this data Tarefas · condição AND(ISNOTBLANK([Prazo]), [Prazo] < TODAY(), NOT(IN([Status], LIST("Feito", "Cancelada")))) · colunas Código e Tarefa · ícone exclamation (⚠) · texto vermelho
+- Alta: For this data Tarefas · condição [Prioridade] = "Alta" · coluna Código · ícone flag · texto laranja · Bold
+Highlight color: deixar sem cor (fundo colorido polui o quadro).
+```
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
