@@ -192,6 +192,19 @@ Settings › Theme & Brand (ou UX › Brand):
 ```
 Fonte: artigo 10106612 (Style: The Essentials). O arquivo do logo não fica no repositório.
 
+### Passo 16: ícones do menu
+```
+Views › cada tela › Display › Icon (só ícones da lista do AppSheet; ícone próprio não é aceito):
+Hoje calendar-day · Atrasadas exclamation-triangle · Amanhã sun · Esta semana calendar-week · Quadro columns ·
+Calendário calendar-alt · Ontem history · Por status tasks · Próxima semana forward
+```
+
+### Passo 17: calendário com início e fim
+```
+Views › Calendário: Start date = Prazo · End date = Prazo · Start time e End time vazios · Default view = Month
+```
+**Resultado esperado:** as tarefas aparecem na faixa de dia inteiro, no topo, em Day, Week e Month. A grade de horas fica vazia de propósito, porque tarefa não tem hora.
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
@@ -207,6 +220,8 @@ A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, t
 | App mostra o texto da aba "Como usar" | O AppSheet pegou a 1ª aba da planilha | Passo 3 |
 | "version ... is not runnable" e erro "Column Type 'Color' must have a list of allowed values" | Coluna Cor sem a lista de cores | Passo 14f: preencher Values |
 | Cores das pessoas trocadas no calendário | Fórmula da coluna Cor desatualizada | Colar de novo a fórmula do passo 14f |
+| Calendário vazio no modo Day | End date não preenchido | Passo 17 |
+| Aviso amarelo "Changes to user settings will require immediate sync" | Normal com User Settings | Ignorar (é aviso, não erro) |
 | Lixeiras aparecendo nas tarefas | Deletes ficou marcado | Data › Tarefas › configurações da tabela: desmarcar Deletes |
 
 ## Como desfazer
