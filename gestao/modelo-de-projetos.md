@@ -41,7 +41,7 @@ PORTFÓLIO (todos os projetos)
 
 | Código | Projeto |
 |---|---|
-| INT-000 | Rotina e administrativo (o que não pertence a nenhum projeto) |
+| INT-000 | Rotina e administrativo: o que não pertence a nenhum projeto, incluindo as demandas avulsas de cada sócio (quem é dono diz o campo Responsável; não criar projeto por pessoa) |
 | INT-001 | Estruturação da ATIVOS (organização, Drive, processos, ferramentas, gestão) |
 | INT-002 | Posicionamento digital da ATIVOS (marca, design system, Instagram, landing page) |
 
