@@ -30,7 +30,7 @@ PORTFÓLIO (todos os projetos)
 | 1 | Modelo | Híbrido: fases e portões no macro, sprints no micro |
 | 2 | Sprint | 1 semana, de segunda a sexta. Código da semana: `2026-S45` |
 | 3 | Rituais | Planejamento na segunda (30 min) · atualização diária por escrito no Google Chat · revisão e retrospectiva na sexta (30 min) |
-| 4 | Status | Backlog · A fazer · Fazendo · Aguardando (cliente ou terceiro) · Revisão · Feito |
+| 4 | Status | Backlog · A fazer · Fazendo · Aguardando (cliente ou terceiro) · Revisão · Feito · Cancelada (não será feita ou foi substituída; incluída em 10/11/2026) |
 | 5 | Limite | No máximo 3 tarefas em "Fazendo" por pessoa |
 | 6 | Tamanho | Uma tarefa cabe em até 1 dia; se for maior, divide |
 | 7 | Estimativa | P (até 2h) · M (até 4h) · G (até 1 dia) |

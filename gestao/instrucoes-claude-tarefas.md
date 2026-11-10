@@ -1,7 +1,7 @@
 ---
 tipo: instrução para o Claude (de qualquer sócio)
 atualizado: 10/11/2026
-situacao: versão 2; copiada em 10/11/2026 para a aba "Como usar" da planilha (seção "Instruções para o Claude")
+situacao: versão 2.1; copiada em 10/11/2026 para a aba "Como usar" da planilha (seção "Instruções para o Claude")
 ---
 
 # Instruções para o Claude: cadastrar e atualizar tarefas no Quadro de tarefas ATIVOS
@@ -26,7 +26,7 @@ A planilha é a **central de tarefas oficial** (decisão de 10/11/2026: ferramen
 2. Para cada uma, proponha a versão padronizada **mantendo o significado**:
    * código: próximo T-XXX livre;
    * tarefa: reescrita começando com verbo, com o mesmo conteúdo;
-   * valores equivalentes das listas (ex.: "urgente" → Alta, "feito" → Feito, "Lucas" → CLI-002-PAC Lucas Melo, "Hugo e Bernardo" → duas tarefas, uma para cada);
+   * valores equivalentes das listas (ex.: "urgente" → Alta, "feito" → Feito, "cancelar" → Cancelada, "Lucas" → CLI-002-PAC Lucas Melo, "Hugo e Bernardo" → duas tarefas, uma para cada);
    * datas no formato da planilha.
 3. **Nunca apague informação:** o que não couber nas colunas vai para Link ou observação.
 4. Na dúvida sobre o significado, **pergunte** ao Henrique.
@@ -43,7 +43,7 @@ Prazo: (se tiver)
 
 **Proteções (só aviso, não bloqueiam):** abas automáticas (pessoas e Visão geral), Projetos e Listas. Todas as colunas da aba Tarefas (A a O) são livres.
 
-**Capacidade e visual (10/11/2026):** aba Tarefas com 2.000 linhas (formatada como Tabela), Status e Prioridade em etiquetas coloridas, abas pessoais sem limite de linhas e Visão geral com 2 gráficos (pessoa × status e % concluído por projeto). Nunca use o funil do cabeçalho: ele muda a visão de todos; use os modos de filtro (links na aba Como usar).
+**Capacidade e visual (10/11/2026):** aba Tarefas com 2.000 linhas, **sem** o formato "Tabela" do Google (ele bloqueia o texto livre e atrapalha o app AppSheet, que pede cabeçalho na 1ª linha e nada por cima dos dados), Status e Prioridade em etiquetas coloridas e Visão geral com 2 gráficos. **Filtrar:** (1) aba de consulta de cada sócio (campos amarelos da linha 3: Responsável, Status, Projeto, Prazo até, Busca) ou (2) o modo de filtro geral de cada sócio na aba Tarefas (links na aba Como usar). Nunca use o funil sem estar num modo de filtro: ele muda a visão de todos.
 
 ## Como o sócio pede
 
@@ -55,7 +55,7 @@ Basta colar no chat do Claude:
 
 1. **Ler antes de escrever.** Leia as abas Como usar, Listas e Projetos, e a coluna A da aba Tarefas.
 2. **Escrever só na aba Tarefas, colunas A a O.** Nunca altere as abas com nome de pessoa, a Visão geral, a Projetos nem a Listas.
-3. **Nunca apagar linhas nem mudar o código de uma tarefa existente.** Tarefa cancelada: Status = Feito e "Cancelada: motivo" em Link ou observação.
+3. **Nunca apagar linhas nem mudar o código de uma tarefa existente.** Tarefa cancelada ou substituída (decisão de 10/11/2026): Status = **Cancelada**, "Cancelada: motivo" ou "Substituída por T-XXX" em Link ou observação e a data em Concluída em. Cancelada aparece cinza e riscada e não conta como aberta nem como feita.
 4. **Código:** o próximo número livre depois do maior código da coluna A (ex.: se o maior é T-066, a próxima é T-067). Nunca reaproveitar.
 5. **Linha:** a primeira linha vazia da aba Tarefas (coluna B vazia).
 6. **Preencher cada coluna assim:**
@@ -68,14 +68,14 @@ Basta colar no chat do Claude:
 | D Projeto | Exatamente um valor da aba Projetos (cliente com código e nome, ex.: CLI-002-PAC Lucas Melo). Sem projeto: INT-000 |
 | E Entrega ou área | Exatamente um valor da coluna "Entrega ou área" da aba Listas |
 | F Prioridade | Alta (trava cliente ou outras tarefas), Média ou Baixa |
-| G Status | Backlog, A fazer, Fazendo, Aguardando, Revisão ou Feito. Tarefa nova: A fazer (se for para esta semana) ou Backlog |
+| G Status | Backlog, A fazer, Fazendo, Aguardando, Revisão, Feito ou Cancelada. Tarefa nova: A fazer (se for para esta semana) ou Backlog |
 | H Prazo | Data DD/MM/AAAA, se houver. Não invente prazo |
 | I Estimativa | P (até 2h), M (até 4h) ou G (até 1 dia), exatamente como na lista |
 | J Semana (sprint) | AAAA-SNN (semana do ano, ex.: 2026-S45) quando entrar na semana; senão, vazio |
 | K Depende de | Códigos de outras tarefas, separados por vírgula |
 | L Link ou observação | Link do Drive ou observação curta. Status Aguardando: diga de quem |
 | M Criada em | Data de hoje (DD/MM/AAAA) |
-| N Concluída em | Só quando Status = Feito |
+| N Concluída em | Só quando Status = Feito ou Cancelada |
 | O Tempo real (h) | Horas gastas de verdade, ao concluir (ex.: 1,5). Só com a informação do sócio; não invente |
 
 7. **Tamanho:** cada tarefa cabe em até 1 dia. Se o pedido for maior, proponha dividir em tarefas menores antes de cadastrar.
