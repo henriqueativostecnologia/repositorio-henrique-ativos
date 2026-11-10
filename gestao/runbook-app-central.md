@@ -182,6 +182,16 @@ UX › Views › Calendário › Category = Cor
 ```
 **Resultado esperado:** Henrique verde, Igor azul, Hugo laranja, Bernardo roxo, sem responsável preto.
 
+### Passo 15: marca da ATIVOS (Theme & Brand)
+```
+Settings › Theme & Brand (ou UX › Brand):
+- Theme: Light
+- Primary color: Custom #1F2329 (grafite da marca; alternativa: azul do brilho #2F6FDE)
+- App logo: símbolo "A" quadrado, até 196 x 196 px e 500 KB
+- Launch image: símbolo grande, mínimo 600 x 600 px
+```
+Fonte: artigo 10106612 (Style: The Essentials). O arquivo do logo não fica no repositório.
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
