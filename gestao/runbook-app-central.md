@@ -88,6 +88,17 @@ Data › passe o mouse em Tarefas › + › Create a new slice › Slice Name �
 Views (ícone de celular) › + ao lado de Primary navigation › Create a new view › View name, For this data (o slice), View type deck, Sort by Prazo Ascending, Group by Responsável › SAVE.
 ```
 
+### Passo 8: cada sócio ver as próprias tarefas (User Settings)
+```
+1. Data › User Settings › Option 1 (lápis): Name Pessoa · Type Enum · Values Todos, Henrique, Igor, Hugo, Bernardo · Show? ligado · Initial value:
+   SWITCH(USEREMAIL(), "<e-mail do Henrique>", "Henrique", "<e-mail do Igor>", "Igor", "<e-mail do Hugo>", "Hugo", "<e-mail do Bernardo>", "Bernardo", "Todos")
+   (os e-mails institucionais estão no app; não guardamos e-mails aqui)
+2. Em cada slice, acrescentar ao AND: OR(USERSETTINGS("Pessoa") = "Todos", [Responsável] = USERSETTINGS("Pessoa"))
+3. Slice novo "Da pessoa": AND([Status] <> "Cancelada", OR(USERSETTINGS("Pessoa") = "Todos", [Responsável] = USERSETTINGS("Pessoa")))
+4. Views "Por status" e "Calendário": For this data = Da pessoa. SAVE.
+```
+**Resultado esperado:** quem abre vê só as suas tarefas; menu ☰ › Settings › Pessoa = Todos mostra a equipe (testado em 10/11/2026: Atrasadas do Henrique = T-097; Todos = 4 tarefas; Por status sem o bloco Cancelada).
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
