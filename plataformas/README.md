@@ -38,4 +38,10 @@ plataformas/
 | Plataforma | Pasta | Situação |
 |---|---|---|
 | Notion | `notion/oficial/` | ✅ Completa: 279 artigos da Central de Ajuda + 204 guias (10/11/2026) |
-| Slack | — | Pendente (baixar quando formos configurar) |
+| AppSheet | `appsheet/oficial/` | ✅ Completa: 659 artigos (10/11/2026) |
+| Google Chat | `google-chat/oficial/` | ✅ Completa: 119 artigos (10/11/2026) |
+| Google Sheets | `google-sheets/oficial/` | ✅ Completa: 599 artigos, incluindo a lista de funções (10/11/2026) |
+| Google Docs | `google-docs/oficial/` | ✅ Completa: 126 artigos (10/11/2026) |
+| Google Drive | `google-drive/oficial/` | ✅ Completa: 124 artigos (10/11/2026) |
+| Google Agenda | `google-agenda/oficial/` | ✅ Completa: 112 artigos (10/11/2026) |
+| Slack | — | Opção futura (decisão de 10/11/2026: conversas no Google Chat) |

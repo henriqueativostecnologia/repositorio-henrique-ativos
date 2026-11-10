@@ -1,13 +1,13 @@
 ---
 tipo: índice da documentação oficial
-plataforma: Google Agenda
+plataforma: Google Agenda (Google Calendar)
 baixado: 10/11/2026
 artigos: 112
 ---
 
-# Google Agenda: documentação oficial completa
+# Google Agenda (Google Calendar): documentação oficial completa
 
-Cópia integral (texto) da Central de Ajuda oficial do Google Agenda, em inglês (versão original e mais completa), baixada em 10/11/2026 de https://support.google.com/calendar.
+Cópia integral (texto) da Central de Ajuda oficial do Google Agenda (Google Calendar), em inglês (versão original e mais completa), baixada em 10/11/2026 de https://support.google.com/calendar.
 Cada arquivo traz no topo o link de origem e a data. Imagens e vídeos não foram copiados; os links ficam no texto (ícones viram o texto alternativo, ex.: "and then").
 Quando o artigo tem abas por plataforma (Computador, Android, iPhone), todas as versões foram copiadas no mesmo arquivo, em seções "Version: ...".
 
