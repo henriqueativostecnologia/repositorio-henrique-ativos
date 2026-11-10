@@ -44,4 +44,5 @@ plataformas/
 | Google Docs | `google-docs/oficial/` | ✅ Completa: 126 artigos (10/11/2026) |
 | Google Drive | `google-drive/oficial/` | ✅ Completa: 124 artigos (10/11/2026) |
 | Google Agenda | `google-agenda/oficial/` | ✅ Completa: 112 artigos (10/11/2026) |
+| Google Sites | `google-sites/oficial/` | ✅ Completa: 23 artigos (10/11/2026) |
 | Slack | — | Opção futura (decisão de 10/11/2026: conversas no Google Chat) |

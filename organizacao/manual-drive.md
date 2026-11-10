@@ -1,6 +1,6 @@
 ---
 tipo: manual (procedimento padrão)
-atualizado: 04/11/2026
+atualizado: 10/11/2026
 situacao: versão 1, aprovada; cópia para consulta no Drive em "00 Geral / 01 Comece por aqui"
 ---
 
@@ -116,6 +116,8 @@ Algumas pastas podem ter regra própria (por exemplo, extratos por mês). Quando
 
 **Nunca guarde senhas em documentos, planilhas ou mensagens**, nem no Drive, nem no Slack, nem no Notion.
 Senhas da ATIVOS e acessos de clientes ficam num **gerenciador de senhas** (a definir: Bitwarden ou 1Password), compartilhado só com quem precisa.
+
+**Conta de backup (decisão de 10/11/2026):** a conta institucional **maestro** da ATIVOS é Gerente do Drive ATIVOS e serve de backup: se um sócio sair ou perder o acesso, a empresa não perde o Drive. Nunca remova essa conta nem rebaixe o papel dela. Ela deve ter senha forte e verificação em 2 etapas, com acesso no gerenciador de senhas para mais de um sócio. O e-mail está no manual do Drive (Google Doc); aqui não guardamos dados de acesso.
 
 ## 7. Quem faz o quê (matriz de responsabilidades)
 
