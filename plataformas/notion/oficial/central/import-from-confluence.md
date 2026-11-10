@@ -1,0 +1,239 @@
+---
+fonte: https://www.notion.com/help/import-from-confluence
+baixado: 2026-11-10
+---
+
+# Import from Confluence
+
+In this help doc
+
+## Import your Confluence data right into Notion.
+
+------------------------------------------------------------------------
+
+It's important to have all your data in one spot. Here's a helpful tutorial for importing your Confluence space into Notion. Depending on your needs, there are two ways you can import from Confluence into Notion.
+
+- **Zip-file importer:** Can be used to import only part of your workspace. Can only import smaller workspaces of up to 5GB (or 15GB upon request).
+
+- **API importer:** Can only import the entire workspace. Can import workspaces of up to 30GB. Retains comments and user-mapping.
+
+- **URL/ID**: If you only need a handful of pages, you can bring in specific Confluence pages directly by pasting their links or IDs.
+
+**Multi-space imports:** Up to 10 Confluence spaces can be imported at once directly through the UI. Each selected Confluence space generates its own log page and imports as a separate top-level private page (into different Notion teamspaces as needed). This feature is only available to Business and Enterprise plans.
+
+## [What imports (and what doesn't)](https://www.notion.com/help/import-from-confluence#what-imports-(and-what-doesn't))
+
+[TABLE]
+
+## [Confluence → Notion mapping](https://www.notion.com/help/import-from-confluence#confluence-%E2%86%92-notion-mapping)
+
+- Confluence site → Notion organization
+
+- Confluence space → Notion workspace
+
+- Confluence page → Notion page
+
+- Macros → flattened content or closest Notion block type (e.g., Confluence Expand → Notion Toggle)
+
+## [Size limits & timing](https://www.notion.com/help/import-from-confluence#size-limits-&-timing)
+
+- Import up to **~50k pages** or **30GB** in size. Larger imports may fail.
+
+  - **Tip:** For large spaces, split exports by subspace or sections and use the ZIP importer. If workspace size is \>100GB, contact your account manager.
+
+- Once the import begins, you can safely close your browser — we'll send you an email when it's complete.
+
+- Review the progress of your import in **`Settings`** → **`Import`**. There you can see the status of your import and completed imports.
+
+## [Import from Confluence into Notion](https://www.notion.com/help/import-from-confluence#import-from-confluence-into-notion)
+
+### [Import with .zip files](https://www.notion.com/help/import-from-confluence#import-with-.zip-files)
+
+**Export your Confluence space to HTML**
+
+1.  From your Confluence workspace, go to **`Space Settings`** in the top-right sidebar.
+
+2.  Select **`Content Tools`** in the top toolbar, then **`Export`**. If you don't see either of these options, you may need to request permission to export from a Workspace admin.
+
+3.  Select **`HTML `**from the list of formats.
+
+4.  Select **`Custom Export`** and uncheck the **`Include comments`** box.
+
+5.  Select which pages you want to export. Note that pages containing large attachments can significantly increase the export size and complexity.
+
+6.  Allow your export to finish processing. This can take a while for large workspaces.
+
+7.  Once complete, click **`Download`** to save the export to your computer. The file will be titled something like **`Confluence-space-export-XXXXXX.html.zip`**.
+
+**Import into Notion**
+
+1.  Navigate to the Notion workspace you'd like to import your Confluence content into.
+
+2.  Go to **`Settings`** in your sidebar → **`Import`** → **`Third party imports`** → **`Confluence`**.
+
+3.  Navigate to the **`.zip`** file exported from Confluence and select it for upload. You do not need to unzip the file - upload the entire archive.
+
+4.  You'll see an "Uploading..." message as the browser uploads your file, then a status message as the import progresses.
+
+5.  When your import completes, you'll be taken to your newly imported content.
+
+### [Import with Confluence API](https://www.notion.com/help/import-from-confluence#import-with-confluence-api)
+
+**Connect Confluence and Notion**
+
+1.  Go to `Settings` in your sidebar → `Import` → `Confluence`.
+
+2.  Choose `Import via API`.
+
+3.  Select your Confluence instance type: cloud or server. To find your instance type, open Confluence, click `Help` → `?` next to your profile → `About Confluence`. Notion only supports cloud and server instances.
+
+**Authenticate with Confluence Cloud**
+
+1.  Enter your Confluence email and site.
+
+2.  Create an API token from your Atlassian account and enter it into the field. [Read more](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) about creating tokens in Confluence.
+
+3.  Click `Authenticate`.
+
+**Authenticate with Confluence Server**
+
+1.  Find and select your Confluence [version](https://confluence.atlassian.com/confkb/how-do-i-know-what-version-of-confluence-is-running-179441565.html).
+
+2.  Enter your Confluence email and site.
+
+3.  If you're running Confluence 7.9 or later, create a `Personal Access Token `and paste it. If you're using an earlier version, enter your Confluence username and password.
+
+4.  Click `Authenticate`.
+
+**Import**
+
+1.  Click `Confluence` from the Import menu.
+
+2.  Monitor the progress of your import — this step may take several hours for large spaces.
+
+    - Once you see `Importing pages…`, you can safely close your browser window. We will send you an email once the import is complete.
+
+3.  Repeat this section if you want to import more than one Confluence space.
+
+### [Import by URL or ID](https://www.notion.com/help/import-from-confluence#import-by-url-or-id)
+
+**Connect Confluence and Notion**
+
+1.  Go to `Settings` in your sidebar → `Import` → `Third party imports` → `Confluence`.
+
+2.  Choose `Import via API`.
+
+3.  Connect your Confluence account.
+
+**Choose how to import**
+
+1.  On the `Configure import` screen, select `Import individual pages` (the option subtitled `Upload a CSV of page IDs or hyperlinks`). The `Import spaces` option above it is recommended for full-space imports — use that instead if you're bringing in an entire space.
+
+2.  Select `Continue`.
+
+**Add your pages**
+
+1.  On the `Customize your import` screen, choose a tab:
+
+    - `Upload CSV`: Select `Choose file` and upload a single-column `.csv` file with one page URL or numeric page ID per row.
+
+    - `Manually enter`: Paste your Confluence page links or page IDs into the text box (comma or line-break separated).
+
+2.  Turn on `Include all subpages` if you want each page's subpages brought in too.
+
+3.  Under `Import location`, choose where the pages should land — your private section, a teamspace, or (if available) a specific page.
+
+4.  Select `Continue`. Notion will validate and resolve your pages before starting the import.
+
+## [What to expect after import](https://www.notion.com/help/import-from-confluence#what-to-expect-after-import)
+
+- Notion imports everything into a single root/parent in the private section, or into a selected teamspace of the person doing the import.
+
+- Users are expected to clean up and set up the workspace architecture before inviting others.
+
+- Permissions must be reapplied in Notion — plan a post-import pass to map Confluence groups and restrictions to Notion groups, teamspaces, and page-level permissions.
+
+- If there are files or attachments in a Confluence table, it will become a Notion database; otherwise it becomes a simple table.
+
+## [Limitations](https://www.notion.com/help/import-from-confluence#limitations)
+
+- Table styling and macros/plugins often degrade (e.g., ui-steps, callouts, image captions).
+
+- Most macros are unsupported. Notion tries to map data to the nearest Notion block.
+
+- Transient failures due to Confluence API unreliability can cause the overall import or certain pages to fail. You may need to retry the entire import.
+
+- For multiple spaces, you can run up to three concurrent single-space imports concurrently at a time per workspace, unless using multi-space import (Business/Enterprise only).
+
+- If a multi-space import is already running, all new Confluence imports are blocked (single- or multi-space) until it finishes.
+
+- Import failures can occur with complicated Confluence data (e.g., merged cells, tables within tables).
+
+- Notion only supports user-scoped API tokens (not scoped tokens). Use the personal API token option when authenticating.
+
+- Attachments and media not referenced on pages will not be imported.
+
+- Hierarchy sometimes isn't fully preserved — validate with a pilot import.
+
+## [Troubleshooting](https://www.notion.com/help/import-from-confluence#troubleshooting)
+
+- **LaTeX Math blocks import incorrectly**
+
+  - **Why this happens:** The Confluence LaTeX plugin's block macro format differs from inline math. Notion supports inline LaTeX macros but not the block macro variant.
+
+  - **To fix:** Convert LaTeX block macros to inline macros in Confluence before re-importing, or place the LaTeX in a code block and convert to a math block manually after import.
+
+- **Unable to import Gliffy content**
+
+  - **Why this happens:** Notion doesn't support Gliffy images via the file importer.
+
+  - **To fix:** Modify the HTML to replace the Gliffy block with an image block referencing the correct file before importing.
+
+- **Import is failing**
+
+  - **Why this happens:** Very large spaces, malformed exports, rate limits, or timeouts.
+
+  - **To fix:** Import one space at a time, split large spaces into sections, re-export a clean ZIP, or use the API importer with scoped runs.
+
+- **Import is missing images or attachments**
+
+  - **Why this happens:** Assets may not be bundled in the export or not reachable by the API token.
+
+  - **To fix:** Ensure "Include attachments" is selected on export, keep relative paths intact in the ZIP, or re-upload key assets after import.
+
+- **Jira link previews are broken after import**
+
+  - **Why this happens:** Jira link previews only work if the user is authenticated before starting the migration.
+
+  - **To fix:** Authenticate with Jira before running the migration.
+
+- **Hierarchy of files is not preserved as expected**
+
+  - **Why this happens:** Edge cases in export structure or deep nesting.
+
+  - **To fix:** Test with a representative subset first; reorganize in Notion post-import.
+
+- **Confluence macros and/or special formatting is lost**:
+
+  - **Why this happens:** Unsupported macros or app content.
+
+  - **To fix:** Map to Notion-native blocks: Expand → Toggle, Action items → To-do. Simplify complex tables or export to CSV and import into a Notion database.
+
+- **Confluence permissions are not replicated in Notion**:
+
+  - **Why this happens:** This is expected with self-serve imports.
+
+  - **To fix:** Plan and execute a permissions mapping after content lands in Notion, using Notion groups, teamspaces, and page-level permissions.
+
+## Contents
+
+- [What imports (and what doesn't)](#what-imports-(and-what-doesn't))
+- [Confluence → Notion mapping](#confluence-→-notion-mapping)
+- [Size limits & timing](#size-limits-&-timing)
+- [Import from Confluence into Notion](#import-from-confluence-into-notion)
+- [Import with .zip files](#import-with-.zip-files)
+- [Import with Confluence API](#import-with-confluence-api)
+- [Import by URL or ID](#import-by-url-or-id)
+- [What to expect after import](#what-to-expect-after-import)
+- [Limitations](#limitations)
+- [Troubleshooting](#troubleshooting)

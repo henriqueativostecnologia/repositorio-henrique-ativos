@@ -1,0 +1,168 @@
+---
+fonte: https://www.notion.com/help/manage-who-can-create-database-syncs
+baixado: 2026-11-10
+---
+
+# Set up and manage database syncs
+
+In this help doc
+
+## Any workspace member can create database syncs with providers like Jira, GitHub, and Salesforce. Workspace owners manage connection permissions and can review or remove any sync.
+
+[Jump to FAQs](https://www.notion.com/help/manage-who-can-create-database-syncs#faq)
+
+------------------------------------------------------------------------
+
+Workspace owners can control who is allowed to create connections from the workspace’s connection settings. Any workspace member (other than guests) can create a database sync for a supported provider, as long as the workspace’s plan includes that provider’s sync. Members can sign in with their own accounts and sync data from source accounts they can access.
+
+**Note**: This setting controls who can create internal connections, like the ones your team builds with Workers. It doesn't change who can create database syncs. Existing syncs are managed from the relevant provider’s connection page.
+
+## [Who can manage this setting](https://www.notion.com/help/manage-who-can-create-database-syncs#who-can-manage-this-setting)
+
+Only workspace owners can see the **Manage** tab in **Settings → Connections** and change connection permissions.
+
+## [Open connection management settings](https://www.notion.com/help/manage-who-can-create-database-syncs#open-connection-management-settings)
+
+1.  Open **Settings**.
+
+2.  Select **Connections**.
+
+3.  Open the **Manage** tab.
+
+The **Manage** tab has two sections:
+
+- **Manage connections and tokens:** Open **All connections** to review connections added by workspace members, or **All personal access tokens** to review tokens created by members.
+
+- **Manage permissions:** Configure connection installation permissions, custom MCP server access, and who can create internal connections.
+
+## [Choose who can create internal connections](https://www.notion.com/help/manage-who-can-create-database-syncs#choose-who-can-create-internal-connections)
+
+This setting doesn't limit who can create database syncs. Right now, any workspace member can create a database sync for a supported provider.
+
+1.  In **Settings → Connections → Manage**, scroll to **Manage permissions**.
+
+2.  Find **Limit who can create internal connections**.
+
+3.  Open the dropdown and choose one of the following:
+
+    - **All workspace members:** Any workspace member can create a database sync.
+
+    - **Workspace owners only:** Only workspace owners can create a database sync.
+
+    - **Workspace owners & selected groups:** Workspace owners and members of selected groups can create a database sync.
+
+4.  If you choose **Workspace owners & selected groups**, select the groups that should have access.
+
+This control is separate from **Limit which connections members can install**, which determines which connections members are allowed to install.
+
+## [Find providers that support database syncs](https://www.notion.com/help/manage-who-can-create-database-syncs#find-providers-that-support-database-syncs)
+
+1.  In **Settings → Connections**, open **Browse Connections**.
+
+2.  Use **Search connections** to find a provider, or narrow the catalog using **All categories** and **All types**.
+
+3.  Open **All types** and select **Database sync** to find providers that support database syncs.
+
+4.  Choose a supported provider, such as Atlassian, GitHub, or Salesforce.
+
+## [Review existing workspace connections](https://www.notion.com/help/manage-who-can-create-database-syncs#review-existing-workspace-connections)
+
+1.  In **Settings → Connections**, open **Connected**.
+
+2.  Use **Search connections**, **All categories**, or **All types** to find a connection.
+
+3.  Check the label next to its name:
+
+    - **Built by Notion:** A connection built by Notion.
+
+    - **Internal:** A connection built by your team, including connections created using Workers.
+
+4.  Use the action shown next to the connection, such as **Finish setup**, **Add services**, or **Manage**, to continue setup or open its settings.
+
+The **Connected** tab lists connections, not individual database syncs. To review the syncs for a provider, open that provider’s **Database sync** settings and select **Your syncs**.
+
+## [Connect a provider](https://www.notion.com/help/manage-who-can-create-database-syncs#connect-a-provider)
+
+After selecting a provider:
+
+1.  Select **Database sync** from the provider’s connection types.
+
+2.  Open **Overview**.
+
+3.  Select the connection button, such as **Connect Jira**.
+
+4.  Follow the provider’s steps to sign in and approve access.
+
+## [Create a sync](https://www.notion.com/help/manage-who-can-create-database-syncs#create-a-sync)
+
+The available configuration depends on the provider. For Jira, you can:
+
+1.  Choose a connected Jira site.
+
+2.  Select the Jira Spaces to include.
+
+3.  Choose how much Work Item history to sync.
+
+4.  Select custom properties, or turn on **Sync all current and future custom properties**.
+
+5.  Select **Create sync**.
+
+## [Review and edit your syncs](https://www.notion.com/help/manage-who-can-create-database-syncs#review-and-edit-your-syncs)
+
+Open the provider’s **Database sync** settings and select **Your syncs**. Each sync shows:
+
+- The connected source account
+
+- The selected resources
+
+- The databases created by the sync
+
+- The current status of each database
+
+- The latest synced-through time
+
+Select **Edit** to change the sync’s configuration.
+
+During the first import, one database may be **Healthy** while another is still **Backfilling**.
+
+## [Check sync health from a database](https://www.notion.com/help/manage-who-can-create-database-syncs#check-sync-health-from-a-database)
+
+1.  Open the synced database.
+
+2.  Select **Synced** at the top of the database.
+
+3.  Review the current status and **Synced through** time.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+Does changing this permission affect existing syncs?
+
+No. Connection permission settings never affect existing syncs, and they don't restrict new database sync creation. Existing syncs are managed from the provider's connection page.
+
+Does this setting control who can create database syncs?
+
+No. Right now, any workspace member can create a database sync for a supported provider, as long as your plan includes it. This setting controls who can create internal connections, like the ones your team builds with Workers.
+
+Can workspace owners edit or delete a sync created by another member?
+
+Yes, workspace owners can edit or delete any sync created by another member.
+
+Which plans support database syncs?
+
+- **Enterprise:** Salesforce
+
+- **Business:** Jira & GitHub
+
+## Contents
+
+- [Who can manage this setting](#who-can-manage-this-setting)
+- [Open connection management settings](#open-connection-management-settings)
+- [Choose who can create internal connections](#choose-who-can-create-internal-connections)
+- [Find providers that support database syncs](#find-providers-that-support-database-syncs)
+- [Review existing workspace connections](#review-existing-workspace-connections)
+- [Connect a provider](#connect-a-provider)
+- [Create a sync](#create-a-sync)
+- [Review and edit your syncs](#review-and-edit-your-syncs)
+- [Check sync health from a database](#check-sync-health-from-a-database)

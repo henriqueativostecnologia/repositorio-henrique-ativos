@@ -51,8 +51,9 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 ## Plataformas (Notion, Slack e outras)
 
-* **Sempre, sem exceção:** antes de começarmos a usar **aqui** qualquer plataforma, app ou sistema novo (gestão, organização, financeiro, comunicação), **solicite ao Henrique a documentação oficial**. Não comece a trabalhar com a plataforma sem pedir. Ferramentas só do operacional (GTM, GA4, BigQuery, Chatwoot etc.) ficam fora: o Henrique não opera essas demandas. Ele baixa e envia; você guarda em `plataformas/<nome>/` e escreve o `resumo.md`, por PR.
-* Antes de trabalhar com uma plataforma, leia o `plataformas/<nome>/resumo.md`. Como funciona: `plataformas/README.md`.
+* **Sempre, sem exceção:** antes de começarmos a usar **aqui** qualquer plataforma, app ou sistema novo (gestão, organização, financeiro, comunicação), garanta a **documentação oficial completa**. Ferramentas só do operacional (GTM, GA4, BigQuery, Chatwoot etc.) ficam fora: o Henrique não opera essas demandas.
+* **Documentação pública:** você mesmo busca no site oficial e guarda **completa** em `plataformas/<nome>/oficial/`, com um **índice** (título, link e data de cada artigo), por PR. **Nunca resumo.** Se o site estiver bloqueado na rede do ambiente, peça ao Henrique para liberar o domínio. **Documentação com login ou material pago:** peça ao Henrique para enviar.
+* Antes de trabalhar com uma plataforma, **busque dentro** de `plataformas/<nome>/oficial/` (índice no `README.md` da pasta) o trecho necessário. Como funciona: `plataformas/README.md`. Notion: documentação completa baixada em 10/11/2026.
 
 ## Skills e plugins
 

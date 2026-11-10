@@ -1,0 +1,335 @@
+---
+fonte: https://www.notion.com/help/navigate-with-the-sidebar
+baixado: 2026-11-10
+---
+
+# Navigate with the sidebar
+
+Vídeo: https://www.youtube.com/watch?v=lSmgY5OsZmU
+
+In this help doc
+
+## Notion's sidebar makes it easy to structure all the content in your workspace. Here's everything you need to know on how to organize, rearrange, and find your pages within the sidebar.
+
+[Jump to FAQs](https://www.notion.com/help/navigate-with-the-sidebar#faq)
+
+------------------------------------------------------------------------
+
+## [Sidebar basics](https://www.notion.com/help/navigate-with-the-sidebar#sidebar-basics)
+
+The Notion sidebar allows you to:
+
+- Organize your work on infinite levels — you can nest pages inside other pages with no limit.
+
+- See where everything is and how it’s organized with toggles you can open and close.
+
+- Drag and drop pages to reorganize them.
+
+**Tip:** Open and close your sidebar by clicking the `>>` and `<<` buttons. Or, use the keyboard shortcut `cmd`/`ctrl` + `\`!
+
+Your sidebar is made of tabs. Each tab holds:
+
+- **Shortcuts** that make or open something, like `New page` or `My Tasks` .
+
+- **Sections** that list your content, like Recents, Favorites, and Teamspaces.
+
+Every tab comes set up for you. Some tabs are set up by Notion, and your workspace can set up tabs for you too. These are called presets. To learn how your workspace sets these up, see [Manage sidebar presets for your workspace → ](https://www.notion.com/help/manage-sidebar-presets-for-your-workspace)
+
+If you want a different setup, you can show, hide, and reorder what's in a tab, add and remove tabs, and put any tab back the way it started. [Learn how to customize your sidebar →](https://www.notion.com/help/customize-your-sidebar)
+
+Two things stay in one spot. Your inbox sits in the top-right corner, and your workspace name sits at the bottom. Everything in between is yours to arrange.
+
+In your sidebar, you'll see several features and menu options. Here's an overview of each of these.
+
+- **Search:** Click to open Notion's search window, where you can either type what you're looking for or jump to a recently visited page. The shortcut `cmd/ctrl` + `K` also brings it up. 
+
+- **Home:** Click to see the pages and tasks that need your attention. [Learn more about Home here →](https://www.notion.so/help/home-and-my-tasks)
+
+- **Chats with Notion AI:** Click to search and research with Notion AI. [Learn more about Notion AI here →](https://www.notion.com/help/notion-ai-faqs)
+
+- **Meetings:** Click to see upcoming meetings and notes so you can quickly prep for a meeting, or review what happened after.
+
+- **Inbox**: Click the inbox icon in the top-right corner of your sidebar to see all your notifications in one place. This menu combines revisions that were made on pages you have created, new mentions of you across your workspace, and new work assignments. A red notification badge will appear here when you have unread notifications. The Inbox always stays in this corner, so you can't hide it or move it. [Learn more about inbox notifications →](https://www.notion.com/help/updates-and-notifications)
+
+- **New item menu**: Next to the Inbox in the top-right corner, use this menu to start something new, like a page, a chat with Notion AI, or an AI meeting note.
+
+- **Library:** Click to browse and manage all content across your workspace. [Learn more about Library here →](https://www.notion.com/help/manage-your-library)
+
+- **Workspace switcher:** Click on your current workspace's name to switch between the workspaces you belong to, create a new one, add another account, or log out. You can also access your settings from inside the workspace switcher.
+
+## [Navigating the sidebar](https://www.notion.com/help/navigate-with-the-sidebar#navigating-the-sidebar)
+
+### [Top-level tabs](https://www.notion.com/help/navigate-with-the-sidebar#top-level-tabs)
+
+The sidebar is organized into top-level tabs. Each tab has its own icon, contents, and purpose.
+
+You can also add and remove tabs. Add a tab for work you come back to often, and remove a tab you never open. If you remove one, you can add it again later. [Learn how to customize your sidebar →](https://www.notion.com/help/customize-your-sidebar)
+
+### [Home](https://www.notion.com/help/navigate-with-the-sidebar#home)
+
+Your Home tab is organized in sections, including Upcoming events, Recents, Favorites, Agents, Teamspaces, Shared pages, Private pages, and Notion apps.
+
+My Tasks, Library, Marketplace, Help, and Trash sections are always accessible at the bottom of the Home tab.
+
+**Customize Home**
+
+To customize Home, click `•••` on the side of any section or the Home tab icon.
+
+- Show allows you to determine the number of items each section shows.
+
+- Move up or Move down adjusts where a section is displayed in Home.
+
+- Hide section hides a section from Home.
+
+- Customize sidebar allows you to hide multiple row items and sections at once.
+
+The same menu lets you reorder the buttons at the top of the tab, add a section such as a database view, and reset the tab to the setup it came with. [See all the ways to customize a tab →](https://www.notion.com/help/customize-your-sidebar)
+
+**Open in Library**
+
+Next to each section, click the book icon to Open in Library. From Library, you can browse and navigate the full list of workspace content within that section. Learn more about Library [in this article](https://www.notion.com/help/manage-your-library).
+
+### [Chats with Notion AI](https://www.notion.com/help/navigate-with-the-sidebar#chats-with-notion-ai)
+
+Access Custom Agents and your Notion AI conversations to browse recent threads or pick up where you left off.
+
+**Agents**
+
+View Custom Agents you’ve created, sorted by recency of use. Click `•••` on the side of any Custom Agent and choose Remove from favorites or Add to favorites to adjust how it appears in your sidebar. You can also jump to the agent’s settings, copy the link to an agent, or delete an agent.
+
+**Chat history**
+
+Access previous chats with Notion AI, sorted by recency. A blue dot next to a chat means there is an unread response in the chat.
+
+Click `•••` on the side of any chat to customize how they appear in the sidebar: Rename, Change icon, Delete, or Open chats.
+
+### [Meetings](https://www.notion.com/help/navigate-with-the-sidebar#meetings)
+
+**Upcoming events**
+
+View and join any upcoming events. Click `•••` on the side of any event to view the Call ID, Workspace participants, or Open in calendar.
+
+**Meeting history**
+
+Access meeting notes from previous meetings, sorted by recency. Click `•••` on the side of any meeting note to Copy link to block, Duplicate, or Move to to add the meeting note to a page.
+
+### [Inbox](https://www.notion.com/help/navigate-with-the-sidebar#inbox)
+
+View all your notifications in one place, including mentions, comments, page updates, and reminders. Click a notification to go directly to the source page.
+
+Your Inbox is in the top-right corner of the sidebar, next to the menu for making something new.
+
+Icons at the top of your inbox can bulk take actions like Mark all as read, Archive all, Archive read, or apply filters to the notification list. Filters include filtering by notification type, so your inbox shows only the kinds you care about.
+
+Click `•••` on the side of any notification to change page notification settings, mark a notification as read, or archive a notification.
+
+### [Search](https://www.notion.com/help/navigate-with-the-sidebar#search)
+
+Open the search modal to search content inside your workspace.
+
+### [Quick entry points](https://www.notion.com/help/navigate-with-the-sidebar#quick-entry-points)
+
+Each tab has buttons for the things you make most often, like a new page, a chat with Notion AI, an AI meeting note, a database, or an agent. You can also add buttons that take you somewhere, like `My Tasks` or `Library`. Show, hide, and reorder these buttons so the ones you use are the ones you see. [Learn how to customize your sidebar →](https://www.notion.com/help/customize-your-sidebar)
+
+## [Sidebar sections](https://www.notion.com/help/navigate-with-the-sidebar#sidebar-sections)
+
+**Tip:**
+
+- Click on the name of a sidebar section — `Teamspaces`, `Shared`, or `Private` — to collapse it and keep your sidebar nice and clean.
+
+- Click and drag your sidebar sections to rearrange them.
+
+### [Private pages](https://www.notion.com/help/navigate-with-the-sidebar#private-pages)
+
+Every user's workspace comes with a `Private` section. Anything you add here is only visible to you, and can't be seen by the people in your workspace. This section is where you might store your own tasks or notes, or pages you want to work on individually before sharing with others.
+
+You can customize this section of your sidebar to display your pages in specific ways. To customize the private section of your sidebar:
+
+1.  Hover over `Private` in your sidebar and select `•••`.
+
+2.  Select `Sort`, then `Manual` or `Last edited`. A `Manual` sort will allow you to manually drag your private pages to order them, while a `Last edited` sort will order your private pages based on how recently you edited them.
+
+3.  Select `Show` to choose how many pages you want displayed in the sidebar, ranging from 5 pages to all of your pages. Let’s say you choose to show `10 items` — if you have more than 10 total private pages, you can click on `More` at the bottom of your private section to see all of your private pages.
+
+4.  Select `Move section`, then `Move up` or `Move down` if you want your private pages to sit higher or lower in your sidebar.
+
+**Private pane**
+
+If you’ve chosen not to display all your private pages in your sidebar, you’ll be able to select `More` at the bottom of your last displayed private page to open up a pane that will show you all of your private pages. From here, you can:
+
+- Search for a page.
+
+- Select `⇅` at the top to change how the pages are sorted. This will also change how the pages are displayed in your sidebar.
+
+- Select `>>`, which will appear on hover at the top to keep the private pane open.
+
+- Select the new page icon at the top to create a new private page.
+
+**Note:** If you drag a page from `Workspace` into `Private` in your sidebar, everyone else will lose access.
+
+### [Shared pages](https://www.notion.com/help/navigate-with-the-sidebar#shared-pages)
+
+Any pages that you've shared with select individuals in your workspace will appear under your sidebar's `Shared` section. You'll see this category in your sidebar as soon as you invite someone to a shared page.
+
+Other members of your workspace who haven't been invited can't view these pages. This section might store one-on-one meeting notes or pages where you’re brainstorming with a couple of other people.
+
+You can customize this section of your sidebar to display your pages in specific ways. To customize the shared section of your sidebar:
+
+1.  Hover over `Shared` in your sidebar and select `•••`.
+
+2.  Select `Sort`, then `Manual` or `Last edited`. A `Manual` sort will allow you to manually drag your shared pages to order them, while a `Last edited` sort will order your shared pages based on how recently you edited them.
+
+3.  Select `Show` to choose how many pages you want displayed in the sidebar, ranging from 5 pages to all of your pages. Let’s say you choose to show `10 items` — if you have more than 10 total shared pages, you can click on `More` at the bottom of your shared section to see all of your shared pages.
+
+4.  Select `Move section`, then `Move up `or `Move down` if you want your shared pages to sit higher or lower in your sidebar.
+
+**Shared pane**
+
+If you’ve chosen not to display all your shared pages in your sidebar, you’ll be able to select More at the bottom of your last displayed shared page to open up a pane that will show you all of your shared pages. From here, you can:
+
+- Search for a page.
+
+- Select `⇅` at the top to change how the pages are sorted. This will also change how the pages are displayed in your sidebar.
+
+- Select `>>` at the top to keep the shared pane open.
+
+### [Teamspace pages](https://www.notion.com/help/navigate-with-the-sidebar#teamspace-pages)
+
+If you're on a Plus, Business, or Enterprise Plan, you'll see a sidebar section called `Teamspaces`. Teamspaces can be used by and tailored for every team within your organization or company. [Learn more about teamspaces →](https://www.notion.so/help/intro-to-teamspaces)
+
+Every workspace has at least one default teamspace, which all members will see in their sidebar. Any of the pages in default teamspaces in your sidebar can be seen and shared by the other members of the workspace.
+
+In the `Teamspaces` section, you'll also see any other teamspaces that you are a member of. Click the name of any teamspace to reveal or hide its nested pages.
+
+Keep your sidebar clean by leaving any teamspaces you don't need to access. Hover over the teamspace name and click `•••` → `Leave teamspace`.
+
+### [Favorites](https://www.notion.com/help/navigate-with-the-sidebar#favorites)
+
+`Favorites` is where you can easily access all of the pages most important to you. This section will appear in your sidebar once you favorite your first page.
+
+To add a page to your favorites, navigate to it, then click `⭐` at the top of it. You'll see it appear under `Favorites` in your sidebar.
+
+To remove a page from your favorites, open it and unclick `⭐` at the top. You can also hover over the page in your sidebar and click `•••`. You'll see the option to `Remove from Favorites`.
+
+Favorites aren't the only way to keep a page close. You can also add a shortcut to any page in a tab, without adding it to Favorites. [Learn how to add a page shortcut →](https://www.notion.com/help/customize-your-sidebar)
+
+## [Nested pages](https://www.notion.com/help/navigate-with-the-sidebar#nested-pages)
+
+You can open up each toggle in your sidebar to reveal pages nested inside other pages. All pages have the same functionality, even if they're nested as sub-pages.
+
+For database pages, you can open the toggle to see all the different views you've created of that database. These are represented with a `•` next to them.
+
+You can also pin a database view to your sidebar, so a view you check often is one click away no matter where the database lives. [Learn how to pin a database view →](https://www.notion.com/help/customize-your-sidebar)
+
+## [Settings, templates, and trash](https://www.notion.com/help/navigate-with-the-sidebar#settings-templates-and-trash)
+
+At the bottom of the sidebar, there are a couple more workspace essentials.
+
+- **Settings:** Adjust Notion to your preference. Learn more about settings [here →](https://www.notion.so/help/category/account-settings-and-privacy)
+
+- **Templates:** This opens our template picker, where you can create a new page using starter content to help you accomplish any one of 50+ jobs.
+
+- **Trash:** The `Trash` contains all the pages you delete. You can drag and drop them in here. You can also click on trash to search, view and restore these pages. **Note that you won’t be able to edit a page that’s in the trash unless you restore it.**
+
+**Note:** By default, pages will remain in Trash for 30 days before they are automatically removed from Trash. Enterprise plan workspace owners may customize these settings. [Learn more here →](https://notion.so/help/custom-data-retention-settings)
+
+## [Create pages in your sidebar](https://www.notion.com/help/navigate-with-the-sidebar#create-pages-in-your-sidebar)
+
+There are several ways to create new pages using Notion's sidebar:
+
+- On hover, you'll see a `+` sign appear next to every teamspace name.
+
+  - Click to add a page within that teamspace.
+
+  - If you don't see this, then a teamspace owner has disabled editing of the teamspace sidebar. You'll need to contact that teamspace owner to change this setting.
+
+- You'll also see a `+` sign next to the `Private` section. Click to add a new page that only you can access.
+
+- There's also a 📝 button in your tab, and a menu in the top-right corner of the sidebar for making something new. Both create a new page in preview mode, letting you start a new page and then choose where to put it in your workspace (or one of your other workspaces) using a dropdown menu. If you don't choose, it will default to your `Private` section.
+
+- Lastly, if you hover over any existing page in your sidebar, you'll see a `+` appear. Click that to add a page nested inside that page.
+
+## [Edit your sidebar](https://www.notion.com/help/navigate-with-the-sidebar#edit-your-sidebar)
+
+It doesn't take much to move pages around your sidebar. Just drag and drop!
+
+- Nest pages by dragging one into another. You'll see the selected page highlight blue.
+
+- You can also drag pages out of pages they were once nested inside.
+
+- If you drag a page from a shared section (`Teamspaces` or `Shared`) into `Private`, others will lose access.
+
+## [Resize or hide your sidebar](https://www.notion.com/help/navigate-with-the-sidebar#resize-or-hide-your-sidebar)
+
+Your sidebar is flexible. You can configure it however is most helpful for you.
+
+- Just click and drag the right edge to resize it.
+
+- Click the **\<\<** icon to collapse or expand your sidebar.
+
+- You can also collapse or hide the `Favorites`, `Workspace`, `Shared`, or `Private` sections of your sidebar. Just click on those headings to hide or reveal them.
+
+## [Delete pages](https://www.notion.com/help/navigate-with-the-sidebar#delete-pages)
+
+There are a few ways to delete pages from your sidebar:
+
+- Click on the `•••` icon that appears when you hover over a page and select `Delete`.
+
+- Drag a page from your workspace into the `Trash`. This will delete all the sub-pages nested within that page, including database items.
+
+- Go to `Library` and select the section name. Then, click `Remove from sidebar`.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+How do I log out of my Notion account?
+
+Click your workspace name at the very top of your sidebar. Scroll to the bottom of the menu, and you'll see the option to `Log out` next to your email address.
+
+My sidebar doesn't have any sections. How do I turn those on?
+
+The sidebar sections reflect the sharing settings of your account. If you have more than one person in your workspace, a `Teamspaces` section appears in the sidebar for your collaborative work with that person, and the `Private` section is there for your personal pages that are only visible to you.
+
+Why don't I see a full-page Home anymore? Did you change the sidebar?
+
+Home changed from a full-page experience to a part of your sidebar, organized into sections like Recents, Favorites, Teamspaces, Agents, and more, that can be shaped to fit your workflow. This puts your workspace navigation, AI threads, and notifications in one consistent, customizable place.
+
+  
+
+  
+
+What will I see if I'm on a Free or Plus plan, or if AI is turned off for my workspace?
+
+**Free and Plus plans**: You'll see the full sidebar layout, including the AI chat tab. You can use Notion AI with your available free AI credits.
+
+**AI turned off (Enterprise/Business)**: The AI chat tab will not appear. Instead, you'll see a `New` button in its place to create pages and other content.
+
+How do I get my sidebar back the way it was?
+
+Open the tab you changed and reset it. The tab goes back to the buttons and sections it came with. Your pages and content aren't affected.
+
+Still have more questions? Message support
+
+## Contents
+
+- [Sidebar basics](#sidebar-basics)
+- [Navigating the sidebar](#navigating-the-sidebar)
+- [Top-level tabs](#top-level-tabs)
+- [Home](#home)
+- [Chats with Notion AI](#chats-with-notion-ai)
+- [Meetings](#meetings)
+- [Inbox](#inbox)
+- [Search](#search)
+- [Quick entry points](#quick-entry-points)
+- [Sidebar sections](#sidebar-sections)
+- [Private pages](#private-pages)
+- [Shared pages](#shared-pages)
+- [Teamspace pages](#teamspace-pages)
+- [Favorites](#favorites)
+- [Nested pages](#nested-pages)
+- [Settings, templates, and trash](#settings-templates-and-trash)
+- [Create pages in your sidebar](#create-pages-in-your-sidebar)
+- [Edit your sidebar](#edit-your-sidebar)
+- [Resize or hide your sidebar](#resize-or-hide-your-sidebar)
+- [Delete pages](#delete-pages)

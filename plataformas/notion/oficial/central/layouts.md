@@ -1,0 +1,180 @@
+---
+fonte: https://www.notion.com/help/layouts
+baixado: 2026-11-10
+---
+
+# Layouts
+
+In this help doc
+
+## Create an organized layout for your tasks, goals, journal, or anything else you might track in a Notion database.
+
+------------------------------------------------------------------------
+
+Layouts let you customize the way properties are organized in your database pages. With layouts, you can make pages in one database look distinct from pages in another database, depending on their use. For example, pages in your database for weekly marketing reports can be built to look very different from your database for team tasks.
+
+Layouts also help you keep your database pages clean and easy to navigate, especially when you’re working with lots of properties. You can bring certain properties to the forefront while keeping others out of sight, all depending on what’s most important to you and your team.
+
+**Note:**
+
+- To build a database page layout, you must have at least `Can edit` access to the database.
+
+- A page layout will apply to all pages in the database. Layouts can’t be applied only to specific pages or specific views.
+
+## [Build a layout](https://www.notion.com/help/layouts#build-a-layout)
+
+**Note:** While you can view layouts on mobile, you’ll only get the full layout builder experience on desktop or web.
+
+To build a layout on desktop or web:
+
+1.  Open the database as a [full page (not inline)](https://www.notion.so/help/intro-to-databases#full-page-vs.-inline-databases) and select `•••` at the top.
+
+2.  Open `Appearance & layout` and select `Customize layout`. Use the page preview toggle under the database name to see how your layout changes will look for any page in the database.
+
+To build a layout on a smartphone or tablet:
+
+- Open a database page, tap `···`→ `Customize layout`.
+
+  - Alternatively, open database settings → `Customize layout`.
+
+- On a tablet, you can also tap the layout button that appears above the page title.
+
+You’ll see a few components in this layout builder:
+
+- A `Heading` with the name of your page and room to pin specific properties
+
+- A main page area containing a `Property group` with your database properties
+
+- A details panel on the right side
+
+- Some `Page settings`
+
+## [Heading & pinned properties](https://www.notion.com/help/layouts#heading-&-pinned-properties)
+
+To customize your `Heading`:
+
+1.  Click on the `Heading`. You’ll see a list of your database properties to the right of the screen.
+
+2.  Under `Unpinned properties`, click `📌` next to a property to pin it. You can pin up to **15 properties**.
+
+3.  If you want to create new properties that you want pinned, click `Add a property` under `Pinned properties`.
+
+4.  You can also open the dropdown next to `Backlinks` and choose whether you want to `Always show` backlinks, `Show on hover` only, or turn them `Off`. Learn more about backlinks [here →](https://www.notion.so/help/create-links-and-backlinks#backlinks)
+
+When you pin more properties than fit on screen, they appear in a horizontal scroller. Use the \> and \< arrows to scroll and see more.
+
+## [Main page](https://www.notion.com/help/layouts#main-page)
+
+Your main page area is the space underneath your page’s heading. It’s a large area ideal for storing properties with lots of information in them, like sub-items or text properties. Your `Property group` will be displayed here by default, but you can move it to your details panel on the side, or create new modules in your main page to highlight specific properties.
+
+## [Property group](https://www.notion.com/help/layouts#property-group)
+
+Your `Property group` shows you the properties of your database page and can be displayed in the main page or in the details panel. Each layout has one `Property group`.
+
+All of your properties are displayed here to start, but when you pin a property to your `Heading` or move a property into its own module in the main page or the details panel, it will no longer be shown in your `Property group`.
+
+If your database has many properties, use the search box at the top of the property list to quickly find what you need.
+
+Type any part of a property name to filter the list in real time. The search works across collapsed sections and hidden properties too. Search is not case-sensitive.
+
+To customize your `Property group`:
+
+1.  Click on the `Property group`. You’ll see a list of your database properties to the right of the screen.
+
+2.  You can show or hide specific properties by clicking `👁️` next to them.
+
+3.  You can organize your properties by clicking `Add section` at the top of your `Property group` settings. If you only have one section, all the properties in your `Property group` will fall under that section.
+
+4.  Create as many sections as you’d like, and give each section a name. When you have more than one section, you can drag properties into a section to organize them.
+
+You can also edit a property from directly inside the layout builder by clicking on its name in the property group settings.
+
+## [Details panel](https://www.notion.com/help/layouts#details-panel)
+
+The details panel on the right side of your database page can be opened and closed. To customize the details panel:
+
+1.  Click `Add to panel`.
+
+2.  You can create a new property to display here, or select an existing property.
+
+3.  You can also display the `Property group` or any other module you’ve created here.
+
+## [Page settings](https://www.notion.com/help/layouts#page-settings)
+
+Select `Page settings` at the top of the layout builder to make further adjustments to your page.
+
+### [Structure](https://www.notion.com/help/layouts#structure)
+
+Layouts can take on different structures:
+
+- The `Simple` layout structure shows your properties and page contents across the main page and the details panel.
+
+- The `Tabbed` layout structure allows you to organize your layout by tab. One tab is a `Content` tab that contains the page’s contents and layout modules, and you can add more tabs that contain views of other databases from your workspace. For example, if you’re in a project database, you can set up a tab that shows you all of the tasks associated with that project.
+
+### [Options](https://www.notion.com/help/layouts#options)
+
+There are a variety of options you can adjust:
+
+- You can decide if you’d like inline comments on your page to be displayed as they are by `Default` (with the comment visible alongside the commenter’s profile photo), or displayed in a `Minimal` way (with only the number of comments showing, which you can click to expand).
+
+- You can decide if you’d like your [page discussions](https://www.notion.so/help/comments-mentions-and-reminders), or comments that are added at the page level, to show or not show in your layout.
+
+- You can choose to show or hide `Property icons`. If you hide property icons, only property names will be visible in pages.
+
+- You can make your page `Full width`.
+
+## [Save & apply your layout](https://www.notion.com/help/layouts#save-&-apply-your-layout)
+
+Once you’re done customizing your layout, click `Apply to all pages` at the top. Every page in your database will have the same layout, and new pages you create will also have that layout.
+
+You can also reset a layout, meaning your database pages will look the way they did before any layouts were applied. To do this, open the dropdown next to `Apply to all pages` and select `Reset to original page layout`. No properties will be deleted.
+
+When you open a database page with a custom layout, you can open and close the details panel by selecting `View details` at the top of the page.
+
+## [Add a module](https://www.notion.com/help/layouts#add-a-module)
+
+You can highlight specific properties as their own modules in your database page. To do this:
+
+1.  Click `+` in your main page or details panel.
+
+2.  You can create a new property to display here, or select an existing property.
+
+## [Move modules](https://www.notion.com/help/layouts#move-modules)
+
+It’s easy to move different parts of your layout around to fit your needs. To do so, you can either:
+
+- Click and drag a module to your desired location.
+
+- Click `•••` at the top of a module and select `Move up`, `Move down`, `Move to panel`, or `Move to page`.
+
+To remove a module from the layout, click `•••` at the top of the section and select `Remove from layout`.
+
+**Note:**
+
+- You can’t move or remove a page’s `Heading`.
+
+- You can’t remove the `Property group`.
+
+- Some properties, like `Relation`, can’t be moved to the details panel.
+
+**Learn more**
+
+- [Database properties](https://www.notion.so/help/database-properties)
+
+- [Customize your database](https://www.notion.so/help/customize-your-database)
+
+- [Build the perfect workflow with customizable layouts](https://www.notion.so/help/guides/build-the-perfect-workflow-with-customizable-layouts)
+
+## Contents
+
+- [Build a layout](#build-a-layout)
+- [Heading & pinned properties](#heading-&-pinned-properties)
+- [Main page](#main-page)
+- [Property group](#property-group)
+- [Details panel](#details-panel)
+- [Page settings](#page-settings)
+- [Structure](#structure)
+- [Options](#options)
+- [Save & apply your layout](#save-&-apply-your-layout)
+- [Add a module](#add-a-module)
+- [Move modules](#move-modules)

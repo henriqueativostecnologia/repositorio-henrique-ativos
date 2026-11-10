@@ -1,0 +1,232 @@
+---
+fonte: https://www.notion.com/help/notion-ai-faqs
+baixado: 2026-11-10
+---
+
+# What is Notion AI?
+
+In this help doc
+
+## Notion AI is integrated into your Notion workspace so that you can unlock knowledge and complete tasks with one click.
+
+[Jump to FAQs](https://www.notion.com/help/notion-ai-faqs#faq)
+
+------------------------------------------------------------------------
+
+- Notion AI is available on Business and Enterprise Plans.
+
+- High credit consumption models spend [Notion credits](https://www.notion.com/help/what-are-notion-credits), and a workspace owner has to turn them on first. Business trials may not have access to the model picker.
+
+- Users on the Free and Plus Plans get a limited number of [complimentary AI responses](https://notion.com/help/complimentary-ai-responses) so they can try Notion AI features out.
+
+Notion AI is your built-in, personalized teammate. No need to switch back and forth between Notion and your other tools — Notion AI lives in the same place as your project plans, tasks, and everything else you store in Notion, and it can even search information in your connected apps. It takes on all kinds of tasks, from helping you edit a report to building an entire task database for your team, so you have more time to dedicate to what’s most important.
+
+At a glance, Notion AI can do the following. We’ll dive into its features in more detail in this article.
+
+- Takes on entire tasks for you and chats with you via [Notion Agent](https://www.notion.com/help/notion-ai-faqs#personal-agent). Your Notion Agent can use context from your workspace and connected apps to create and edit pages and databases.
+
+- Searches your workspace and connected apps like Slack and Google Drive via [Enterprise Search](https://www.notion.com/help/notion-ai-faqs#enterprise-search) and Notion AI Connectors.
+
+- Transcribes, summarizes, and pulls insights from meetings via [AI Meeting Notes](https://www.notion.com/help/notion-ai-faqs#ai-meeting-notes-(beta)).
+
+- Helps you improve your writing inline on a page, or generate custom outputs in a page via [AI blocks](https://www.notion.com/help/notion-ai-faqs#notion-ai-inline).
+
+- [Translates pages](https://www.notion.com/help/notion-ai-faqs#notion-ai-inline) into other languages.
+
+- Creates [databases](https://www.notion.com/help/notion-ai-faqs#notion-ai-for-databases), auto-populates database properties via Autofill, and writes formulas in databases and automations.
+
+- Work with files and create files you can download and preview within Notion. Upload a file in chat, and Notion AI can read it and help you use it. If you need something more complex, like a report from a spreadsheet, Notion AI can handle the work and give you a download, like a spreadsheet, PDF, or slide deck.
+
+- For some requests, Notion AI may use a computer workspace to do the work, like reading a file or doing math. It still follows your workspace access rules and only uses information it has permission to see.
+
+## [Notion Agent](https://www.notion.com/help/notion-ai-faqs#notion-agent)
+
+Vídeo: https://www.youtube.com/watch?v=yasGTeAsV6s
+
+Your Notion Agent not only thinks for you — it actually does the work for you. It can take on tasks from beginning to end, looking at your workspace and connected apps, then even creating or editing content (pages, databases, charts, and much more) in your workspace on your behalf.
+
+You can [personalize your agent’s appearance](https://www.notion.com/help/notion-agent#personalize-your-agent), and use [instructions and skills](http://www.notion.com/help/customize-your-notion-agent-with-instructions-and-skills) to shape how it responds. Notion Agent is a customizable teammate built into your workspace, so you can teach it how to work with and for you.
+
+**Learn more about Notion Agent**
+
+- [Notion Agent](https://notion.com/help/personal-agent)
+
+- [Get started with your Notion Agent](https://www.notion.com/help/guides/get-started-with-your-personal-agent-in-notion)
+
+- [Use instructions and skills to customize your Notion Agent](http://www.notion.com/help/customize-your-notion-agent-with-instructions-and-skills)
+
+- [Review & approve plans before Notion AI runs](https://www.notion.com/help/review-and-approve-plans-before-notion-ai-runs)
+
+## [Enterprise Search](https://www.notion.com/help/notion-ai-faqs#enterprise-search)
+
+Notion AI is powerful because it’s able to find answers to your questions using a wide variety of information. This includes pages in your Notion workspace that you have access to; your [Notion AI Connectors](https://www.notion.com/help/notion-ai-connectors-beta), which connect to apps like Slack or Google Drive; and information from the web. You can even switch between the latest AI models.
+
+**Learn more about Enterprise Search**
+
+- [Enterprise Search](https://www.notion.com/help/enterprise-search)
+
+- [Find answers and generate reports with enterprise search](https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search)
+
+## [AI Meeting Notes (beta)](https://www.notion.com/help/notion-ai-faqs#ai-meeting-notes-(beta))
+
+Vídeo: https://www.youtube.com/watch?v=f4ZYEZO3Sq0
+
+Notion AI can transcribe your meetings and summarize your meeting notes. AI Meeting Notes work with any client, keep all your ideas and decisions in one place, and are searchable with Notion AI.
+
+**Learn more about AI Meeting Notes**
+
+- [AI Meeting Notes (beta)](https://www.notion.com/help/ai-meeting-notes)
+
+- [Preserve perfect meeting memory with AI Meeting Notes](https://www.notion.com/help/guides/preserve-perfect-meeting-memory-with-ai-meeting-notes)
+
+## [Generate an image with Notion AI](https://www.notion.com/help/notion-ai-faqs#generate-an-image-with-notion-ai)
+
+While in Beta, image generation has the following limits per user:
+
+- 10 image generations or edits per 24 hours
+
+- 30 image generations or edits per 30 days
+
+The limits reset on a rolling basis. If you see an error when creating or editing images, try again after the allotted window has passed.
+
+Create new images and edit existing ones using Notion AI. This is helpful for things like diagrams, flowcharts, and visual notes that you can refine with additional instructions.
+
+AI image generation is available on Business and Enterprise plans. Workspace owners and admins can also control whether it’s enabled.
+
+Learn more about how to create images with Notion AI in [this article](https://www.notion.com/help/create-and-edit-images-with-notion-ai).
+
+## [Notion AI inline](https://www.notion.com/help/notion-ai-faqs#notion-ai-inline)
+
+Whether you’re working on a first draft or making edits to existing pages, Notion AI can help. It can even generate content for you based on context from your workspace — just @-mention a specific page or person in your query.
+
+You can highlight text in a page or hit `space` in a page and have Notion AI:
+
+To edit a page with AI, select the text or blocks you want to change, then choose `Edit with AI`. Notion AI can:
+
+- Make edits to the page, like adding a summary or translating the page’s content.
+
+- Review and edit a particular section of the page by fixing grammar, making content longer or shorter, changing the tone, and more.
+
+- Create new content, like an outline, email draft, or table.
+
+- Brainstorm on a certain topic.
+
+When Notion AI creates or edits content for you, you'll have the option to accept or discard those changes, or have Notion AI try again.
+
+### [AI blocks](https://www.notion.com/help/notion-ai-faqs#ai-blocks)
+
+You can power an entire block with Notion AI. Type `/AI Block` into a page and give Notion AI a prompt for what it should generate. This could be a custom output, a summary of the page you’re in, or key points of the page you’re in.
+
+If you want a custom output, give Notion AI as much information as possible to describe the content it should generate. Use @-mentions to refer to people, pages, and dates. You can also click into the field under `Specified context` to select content from your Notion workspace and any connected apps that Notion AI should primarily use to generate content. Under `Search`, select any additional sources that you’d like Notion AI to consider to generate your content.
+
+Select `Done` → `Generate` on an AI block to generate content based on your selected output. You can continue to use the same AI block over time — just click `Generate` to refresh the content! You can also edit your AI block setup by selecting the slider icon inside the block.
+
+### [Translate a page](https://www.notion.com/help/notion-ai-faqs#translate-a-page)
+
+Go to `•••` at the top of the page, open `More`, and select → `Translate`. Notion AI will translate the page into your desired language. You can also open a chat with your Agent and select `Translate this page`.
+
+## [Notion AI for databases](https://www.notion.com/help/notion-ai-faqs#notion-ai-for-databases)
+
+Notion AI can help you create databases, complete with views and properties, including relations to other databases. Notion AI can then populate database pages with more context and information, like summaries, keywords, and more. If your database has a formula database property, Notion AI can help write or edit your formulas too.
+
+**Learn more about Notion AI for databases**
+
+- [Notion AI for databases](https://www.notion.com/help/autofill)
+
+- [Three key databases for teams, and how to use them](https://www.notion.com/help/guides/three-key-databases-for-teams-and-how-to-use-them#customize-databases-to-see-what-you-need-when-you-need-it)
+
+## [Notion AI settings](https://www.notion.com/help/notion-ai-faqs#notion-ai-settings)
+
+Workspace owners on any Notion plan can go to `Settings` → `Notion AI` and adjust the following settings:
+
+- **Share data to improve Notion AI:** Allow data from your workspace to be shared with Notion to help improve Notion AI.
+
+- **AI Connectors:** Set up [Notion AI Connectors](https://www.notion.com/help/notion-ai-connectors) for your various third-party apps.
+
+- **AI Web Search:**
+
+  - **Enable web search for workspace:** Turn this on if you want Notion AI to be able to search the web for information when answering questions.
+
+  - **Require confirmation for web requests:** Turn this on if you want Notion AI to request confirmation before looking at external websites.
+
+- **Personalization:** Give your Notion Agent a name, accessories, and instructions for how to behave.
+
+- **AI Meeting Notes:** Turn on various settings for AI Meeting Notes, including audio storage, transcript deletion, and more. Learn more about [AI Meeting Notes →](https://www.notion.com/help/ai-meeting-notes)
+
+- **Model controls:** Choose which AI providers your workspace can use and which models members can pick for Notion Agent and Custom Agents. High credit consumption models stay off until a workspace owner turns them on. Learn how to [manage AI models and member credit spend →](https://www.notion.com/help/manage-ai-models-and-member-credit-spend)
+
+- **Usage:** See how many [Standard and Select ](https://www.notion.com/help/standard-select-and-notion-credits-eligible-features)credits your team has used and when it refreshes. Set how many [Notion credits](https://www.notion.com/help/category/notion-credits) each member can spend, and give specific people a higher limit.
+
+If the workspace uses Notion AI features beyond their Standard or Select usage, you may see a temporary pause. Wait for access to refresh automatically, or workspace owners (Business or Enterprise plans) can let the team use [Notion credits](https://www.notion.com/help/category/notion-credits) to keep going right away. Learn more about [how to manage your AI credits → ](https://www.notion.com/help/manage-your-ai-credits)
+
+## [Notion AI keyboard shortcut](https://www.notion.com/help/notion-ai-faqs#notion-ai-keyboard-shortcut)
+
+By default, you can use the keyboard shortcut `shift` + `cmd/ctrl` + `J` to engage Notion AI whenever you need it, even when you’re not working in Notion. To customize this shortcut, go to `Settings` → `Preferences` and enter your desired shortcut next to `Keyboard shortcut for Notion AI`.
+
+## [Notion AI shortcuts on iOS](https://www.notion.com/help/notion-ai-faqs#notion-ai-shortcuts-on-ios)
+
+There are several ways to quickly access Notion AI on your iOS device:
+
+- Tell Siri to open Notion AI.
+
+- Search for Notion in [Spotlight](https://support.apple.com/en-my/guide/iphone/iph3c511548/ios).
+
+- Open the `Shortcuts` app on your device. Look for `Notion` and tap `AI` to ask your question. If you want to save the Notion AI shortcut to your home screen, hold down on `AI`, then tap `Add to Home Screen`.
+
+- If you have the iPhone 15 Pro, customize the [action button](https://support.apple.com/en-my/guide/iphone/iphe89d61d66/ios) so that it opens Notion AI.
+
+## [Data](https://www.notion.com/help/notion-ai-faqs#data)
+
+Keeping your data safe is important to us. Learn more about Notion AI security and privacy practices [here →](https://www.notion.so/help/notion-ai-security-practices)
+
+## [Give feedback on Notion AI](https://www.notion.com/help/notion-ai-faqs#give-feedback-on-notion-ai)
+
+Do you have feedback about Notion AI? Use the thumbs up and thumbs down in Notion AI to let us know how it’s doing. If you give Notion AI a thumbs down, you’ll also have the opportunity to provide us with more information about why.
+
+Your feedback isn’t used to train Notion AI. Instead, it’s shared with the Notion team to help us improve the experience. Read more about how we use your data [here →](https://www.notion.so/help/notion-ai-security-practices#how-is-my-data-protected)
+
+**Learn more**
+
+- [Notion AI Connectors](https://www.notion.so/help/notion-ai-connectors)
+
+- [Notion AI complimentary responses](https://notion.com/help/complimentary-ai-responses)
+
+- [Notion AI for databases](https://notion.so/help/autofill)
+
+- [Notion AI security & privacy practices](https://www.notion.so/help/notion-ai-security-practices)
+
+- [Enterprise Search security & privacy practices](https://www.notion.com/help/enterprise-search-security-and-privacy-practices)
+
+------------------------------------------------------------------------
+
+## FAQs
+
+Can I turn off web search for Notion AI?
+
+Yes — workspace owners can disable web search for Notion AI across their entire workspace. To do this, go to `Settings` → `Notion AI` and under `AI Web Search`, toggle off `Enable web search for workspace`.
+
+Why am I getting an error?
+
+You may have used up your Standard or Select usage for Notion AI. Learn more about [Standard and Select usage →](https://www.notion.com/help/standard-select-and-notion-credits-eligible-features)
+
+Do any AI models cost extra?
+
+Yes. High credit consumption models require Notion credits from the start, rather than using your Standard or Select credits. These models stay off until a workspace owner turns them on, and owners can set how many credits each person can spend.
+
+[Learn how to manage AI models and member credit spend →](https://www.notion.com/help/manage-ai-models-and-member-credit-spend)
+
+## Contents
+
+- [Notion Agent](#notion-agent)
+- [Enterprise Search](#enterprise-search)
+- [AI Meeting Notes (beta)](#ai-meeting-notes-(beta))
+- [Generate an image with Notion AI](#generate-an-image-with-notion-ai)
+- [Notion AI inline](#notion-ai-inline)
+- [AI blocks](#ai-blocks)
+- [Translate a page](#translate-a-page)
+- [Notion AI for databases](#notion-ai-for-databases)
+- [Notion AI settings](#notion-ai-settings)
+- [Notion AI keyboard shortcut](#notion-ai-keyboard-shortcut)
+- [Notion AI shortcuts on iOS](#notion-ai-shortcuts-on-ios)
+- [Data](#data)
+- [Give feedback on Notion AI](#give-feedback-on-notion-ai)

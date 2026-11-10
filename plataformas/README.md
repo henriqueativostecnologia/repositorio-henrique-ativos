@@ -1,45 +1,41 @@
 ---
 tipo: referência
 criado: 04/11/2026
+atualizado: 10/11/2026
 ---
 
 # Plataformas usadas pela ATIVOS
 
-Uma pasta por plataforma (Notion, Slack, Chatwoot etc.), com a documentação oficial e um resumo do que importa para a ATIVOS.
+Uma pasta por plataforma (Notion, Slack etc.), com a **documentação oficial completa**. Sem resumo: a fonte é sempre o texto oficial.
 
 ## Como funciona
 
-1. Antes de começarmos a usar uma plataforma nova, o Claude pede ao Henrique a **documentação oficial**.
-2. O Henrique baixa a documentação no site oficial e envia no chat.
-3. O Claude guarda o material na pasta da plataforma e escreve o `resumo.md`, por PR.
-4. Os chats futuros leem o `resumo.md` antes de trabalhar com a plataforma. A documentação original só é consultada quando o resumo não basta.
+1. Antes de começarmos a usar uma plataforma nova, o Claude garante a documentação oficial completa.
+2. **Documentação pública:** o próprio Claude baixa do site oficial, artigo por artigo, e converte em texto. Se o site estiver bloqueado na rede do ambiente, o Henrique libera o domínio (menu do ambiente › Editar › Acesso à rede).
+3. **Documentação com login ou material pago:** o Henrique envia.
+4. O Claude guarda tudo em `plataformas/<nome>/oficial/`, com um `README.md` de índice (título, link e data de cada artigo), por PR.
+5. Nos chats seguintes, o Claude **busca dentro** dos arquivos o trecho necessário; não lê tudo a cada vez.
 
 ## Estrutura de cada pasta
 
 ```
 plataformas/
   notion/
-    resumo.md     ← o que é, o que a ATIVOS usa, recursos úteis, limites, ideias
-    oficial/      ← documentação oficial como veio (PDF, Markdown ou texto)
+    oficial/
+      README.md   ← índice: título, link de origem e data de cada artigo
+      central/    ← artigos da Central de Ajuda (um arquivo por artigo)
+      guias/      ← guias oficiais
 ```
-
-## Modelo do resumo.md
-
-* **O que é** e para que a ATIVOS usa
-* **Onde é acessada** (app, site, conector do Claude, skill)
-* **Recursos úteis para a ATIVOS**, inclusive os que ainda não usamos
-* **Limites e cuidados** (plano, custos, permissões)
-* **Ideias de uso**
-* **Fonte**: link da documentação oficial e data do download
 
 ## Regras
 
 * Nada de senhas, chaves de acesso ou dados de clientes nesta pasta.
-* Documentação muito grande: guardar só as partes que usamos, e anotar no resumo o link do restante.
+* Cada arquivo traz no topo o link de origem e a data do download.
+* Para atualizar, o Claude baixa de novo e substitui (o histórico fica no git).
 
 ## Plataformas registradas
 
 | Plataforma | Pasta | Situação |
 |---|---|---|
-| Notion | — | Aguardando documentação |
-| Slack | — | Aguardando documentação |
+| Notion | `notion/oficial/` | ✅ Completa: 279 artigos da Central de Ajuda + 204 guias (10/11/2026) |
+| Slack | — | Pendente (baixar quando formos configurar) |

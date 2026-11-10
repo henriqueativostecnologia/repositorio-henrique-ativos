@@ -1,0 +1,78 @@
+---
+fonte: https://www.notion.com/help/ai-safety
+baixado: 2026-11-10
+---
+
+# Notion’s commitment to AI safety
+
+In this help doc
+
+## Read about Notion’s approach to AI safety.
+
+------------------------------------------------------------------------
+
+Notion develops Notion AI in a responsible and secure manner with the goal of building beautiful tools for your life’s work. Notion continuously assesses its AI safety practices as the industry evolves, to ensure we are doing the best we can to protect our customers' Notion workspaces and related customer data.
+
+## [How Notion AI works](https://www.notion.com/help/ai-safety#how-notion-ai-works)
+
+Notion AI lives in your workspace and helps you search, chat, and write, allowing you to do your best work, faster. See [this article](https://www.notion.com/help/notion-ai-faqs) for more information.
+
+## [Notion's core AI safety pillars](https://www.notion.com/help/ai-safety#notion's-core-ai-safety-pillars)
+
+### [Transparency](https://www.notion.com/help/ai-safety#transparency)
+
+Notion is committed to transparency, keeping users informed about how Notion AI is developed, deployed, and used. We regularly update customers about which AI models are in use (such as those by OpenAI and Anthropic) and strive to provide accessible disclosures about Notion and our subprocessors that help provide Notion AI capabilities.
+
+### [Model development and usage](https://www.notion.com/help/ai-safety#model-development-and-usage)
+
+- Notion leverages models developed by its subprocessors, organizations such as OpenAI and Anthropic, to serve Notion AI to our customers.
+
+- These models follow their providing organizations' safety practices, such as those at [OpenAI](https://openai.com/safety/) and [Anthropic](https://www.anthropic.com/news/core-views-on-ai-safety).
+
+- Our models and AI tools are not designed to make automated decisions on individuals; They are designed to support our customers in doing their work, faster.
+
+### [End user privacy and safety](https://www.notion.com/help/ai-safety#end-user-privacy-and-safety)
+
+- By default, we do not use your workspace data or personal information to train our models.
+
+  - For interested customers, Notion offers the [AI LEAP Program](https://www.notion.com/help/notion-ai-leap-program-faqs), which allows for sharing of workspace data to improve underlying models in exchange for front-of-line access to future AI improvements and features.
+
+- Any information used to power Notion AI will be shared with AI subprocessors for the sole purpose of providing you with the Notion AI features. We require all subprocessors to agree to contractual obligations that prohibit any use of customer data to train their models. [Learn more about Notion AI security and privacy practices here →](https://www.notion.so/help/notion-ai-security-practices)
+
+- We deploy safety controls to the end user to ensure interactions with models and model outputs are safe, such as OpenAI's [moderation endpoint](https://platform.openai.com/docs/guides/moderation).
+
+- We partner with organizations like [ROOST](http://roost.tools) (Robust Open Online Safety Tools) to leverage and support open source AI trust tooling to make our platform safer for our customers.
+
+### [Internal testing and controls](https://www.notion.com/help/ai-safety#internal-testing-and-controls)
+
+- We rigorously test our models internally before deployment to our customers to promote accuracy and reliability for our users.
+
+- Notion maintains a comprehensive security and privacy program, including numerous [certifications](https://www.notion.com/help/security-and-privacy?g-exp=may_13_pricing_updates--on#compliance) to protect the processing of your data (e.g., SOC 2 Type 2, ISO).
+
+- We perform thorough reviews on vendors like OpenAI that process customer data to ensure they meet our standards and our customers' expectations in how we treat their data.
+
+### [Continuous improvement](https://www.notion.com/help/ai-safety#continuous-improvement)
+
+- Notion is constantly updating and deploying new models to better serve our customers by reviewing model and product effectiveness and iterating to improve.
+
+- Notion regularly evaluates and selects third-party models based on how well they serve user needs, and continually reviews existing and new model performance so that users are never locked into underperforming technologies.⁠
+
+**Learn more**
+
+- [What is Notion AI?](https://www.notion.com/help/notion-ai-faqs)
+
+- [Notion AI security & privacy practices](https://www.notion.com/help/notion-ai-security-practices)
+
+- [Security practices](https://www.notion.com/help/security-and-privacy)
+
+- [Privacy practices](https://www.notion.com/help/privacy)
+
+## Contents
+
+- [How Notion AI works](#how-notion-ai-works)
+- [Notion's core AI safety pillars](#notion's-core-ai-safety-pillars)
+- [Transparency](#transparency)
+- [Model development and usage](#model-development-and-usage)
+- [End user privacy and safety](#end-user-privacy-and-safety)
+- [Internal testing and controls](#internal-testing-and-controls)
+- [Continuous improvement](#continuous-improvement)

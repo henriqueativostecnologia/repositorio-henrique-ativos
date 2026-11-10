@@ -1,0 +1,334 @@
+---
+fonte: https://www.notion.com/help/custom-agents-sharing-and-permissions
+baixado: 2026-11-10
+---
+
+# Custom Agents sharing & permissions
+
+In this help doc
+
+## Learn how Custom Agent permissions work in Notion, and how they differ from Notion AI.
+
+[Jump to FAQs](https://www.notion.com/help/custom-agents-sharing-and-permissions#faq)
+
+------------------------------------------------------------------------
+
+Custom Agents automate work across your Notion workspace and connected tools. Understanding how permissions work helps you safely share agents while keeping your data secure.
+
+**Key difference from Notion Agent:**
+
+- **Notion AI** acts as you and respects your *personal* permissions. It only sees what you can see.
+
+- **Custom Agents** act as specialized team members with their *own* permissions. They have access to specific resources you grant them.
+
+## [How Custom Agent permissions work](https://www.notion.com/help/custom-agents-sharing-and-permissions#how-custom-agent-permissions-work)
+
+Custom Agents have two types of permissions that work together:
+
+1.  **What the agent can access:** The specific Notion pages, databases, and connected apps you grant the agent permission to use.
+
+2.  **Who can access the agent:** The people you share the agent with and what they can do with it.
+
+**Note:** Custom Agents have their own permissions. When you share a Custom Agent, you're giving your team access to everything the agent can see. Agent users can retrieve information from resources they lack access to, or make edits if the agent has read and write permissions to those resources.
+
+Learn how to monitor Custom Agents usage with the [Notion credits dashboard](https://www.notion.com/help/notion-credits-dashboard).
+
+**Example:**
+
+Your finance team creates a Custom Agent called **BudgetBot** to help answer questions about spending and budget approvals.
+
+- The finance team gives **BudgetBot** access to private pages like budget templates, approval workflows, and department spending guidelines.
+
+- The finance team gives department leads `Can view and interact `permissions to **BudgetBot**.
+
+- Department leads with access to **BudgetBot** can now ask it questions and get answers using the finance team’s internal docs, even though the leads don't have direct access to those pages.
+
+This empowers department leads to make informed decisions faster. They can ask BudgetBot for any budget information, from quick summaries to full document content, without needing direct access to every finance team page.
+
+## [What your Custom Agent can access](https://www.notion.com/help/custom-agents-sharing-and-permissions#what-your-custom-agent-can-access)
+
+When you create a Custom Agent, you explicitly choose what it can access in the **Tools and Access** settings. Custom Agents can access:
+
+- **Notion pages and databases** - Select specific pages or databases.
+
+- **Connected apps** - Select Slack channels, MCP, Calendar, Mail.
+
+- **Permission levels** - Can view, Can comment, Can edit.
+
+You can also give a Custom Agent access to a page from the page itself. Open the page, click `Share`, search for the agent by name, and add it just like you would add a person. The agent will then appear in that page's share menu.
+
+By default, new agents have no access to all pages in the workspace. Creators must explicitly enable this and accept the warning modal. Enterprise workspace admins can control who can create a Custom Agent, see all agents in a workspace, and disable triggers or override permissions on any agent.
+
+The agent can **only** access resources you explicitly give it permission to use. It can't access anything else in your workspace. There are no inherited permissions from anyone (whether the creator or the user of the agent).
+
+This also includes database row permissions. A Custom Agent responds using *the agent’s own access*, not the permissions of the person who triggered it. So if the agent can see more rows than the end user, the agent may expose information the end user can’t access directly.
+
+## [Permission-level requirements](https://www.notion.com/help/custom-agents-sharing-and-permissions#permission-level-requirements)
+
+- To grant **view access** to a Notion resource, you must have at least view access on that resource.
+
+- To grant any **greater level of access** beyond view, you must have **Full Access** to share that resource.
+
+**Note:** Give agents access to only the specific resources they need for their job. Avoid granting workspace-wide access. There isn’t a way to grant higher than “Can View” to all pages in a workspace.
+
+## [Who can access your Custom Agent and its resources](https://www.notion.com/help/custom-agents-sharing-and-permissions#who-can-access-your-custom-agent-and-its-resources)
+
+Share your Custom Agent with your team just like a Notion page by clicking `Share` at the top of the page. Custom Agents have three permission levels that determine who can use and edit them.
+
+#### Can view and interact
+
+- Use the agent to ask questions or run tasks.
+
+- See the agent's answers and results.
+
+- View agent settings and instructions in read-only mode.
+
+#### Can edit
+
+- Everything in `Can view and interact`.
+
+- View and modify agent instructions.
+
+- View all chats users have had with the Custom Agent.
+
+- Add or remove Notion pages and databases.
+
+- Ability to edit settings and instructions, with the exception of third-party connections others enabled.
+
+#### Full access
+
+- Everything in `Can edit`.
+
+- Share the agent with others.
+
+- Delete the agent.
+
+## [How Memories work with Custom Agent permissions](https://www.notion.com/help/custom-agents-sharing-and-permissions#how-memories-work-with-custom-agent-permissions)
+
+If a Custom Agent has Memories turned on, it keeps what it learns in a short summary and a collection of memory notes. Memories follow the agent's own access, the same way its other settings do.
+
+- Custom Agent Memories follow the agent's sharing permissions. If everyone in your company can view the agent, they can also view its Memories. If the agent is private to you, its Memories are only visible to you.
+
+- Anyone with `Can view and interact` access can read the agent's memories. `Can edit` and `Full access` work the same way they do for the rest of the agent.
+
+- If you delete the agent, its memories are deleted too. Restore the agent and its memories come back.
+
+- One Custom Agent can’t find another agent’s Memories.
+
+Memories are off by default for each Custom Agent. Anyone with `Can edit` or `Full access` to the agent can [switch them on](https://www.notion.com/help/custom-agents#turn-memories-on-for-a-custom-agent).
+
+## [Duplicate a Custom Agent](https://www.notion.com/help/custom-agents-sharing-and-permissions#duplicate-a-custom-agent)
+
+You can duplicate a Custom Agent to create a private copy you can adapt for your own workflow. The duplicate is private by default. Only you have access until you share it.
+
+When you duplicate a Custom Agent, Notion checks your own permissions — not the original agent’s — to decide what the duplicate includes:
+
+- **Resources (pages, databases):** Only resources you have access to are kept. Resources you can’t access are dropped from the duplicate.
+
+- **Triggers:** Triggers that rely on resources you don’t have access to (for example, a private Slack channel) are dropped.
+
+- **Tools like Slack:** Not carried over automatically. You’ll need to re-authenticate any third-party connections on the duplicate.
+
+- **Instructions:** Cloned as a new page. References to pages you can’t access appear as no-access chips and are not added to the duplicate’s Tools and Access.
+
+## [Multiple users can collaborate to build and maintain a Custom Agent](https://www.notion.com/help/custom-agents-sharing-and-permissions#multiple-users-can-collaborate-to-build-and-maintain-a-custom-agent)
+
+For integrations, Notion validates that anyone configuring the agent has access to the resource they're editing. For example, if you set up a Slack channel that only you can access, other editors can't edit or view that resource—they can only delete it or set up a new one.
+
+## [Guest and restricted member access](https://www.notion.com/help/custom-agents-sharing-and-permissions#guest-and-restricted-member-access)
+
+#### **What guests and restricted members can do:**
+
+- View the output agents have produced in Notion pages or databases that are shared with them.
+
+- Make edits to pages or databases which may trigger already configured Custom Agents to run.
+
+#### **What guests and restricted members cannot do:**
+
+- Create Custom Agents.
+
+- Edit agent settings (unless explicitly given
+
+  `Can edit `permission).
+
+- Ask questions and receive answers based on what the agent can access.
+
+**Note:** Before sharing widely, review what resources your agent accesses in Tools and Access and consider whether everyone you’re sharing with should see that information.
+
+## [Workspace admin controls](https://www.notion.com/help/custom-agents-sharing-and-permissions#workspace-admin-controls)
+
+Workspace admins can manage Custom Agents across the organization using the following tools and controls.
+
+**Note:** Admins should regularly review agents using these tools, remove unnecessary access, and archive unused agents.
+
+Owners can view credit usage, set a credit limit, and pause a Custom Agent they don't have access to, including private agents. Opening an agent, changing its permissions, deleting it, or transferring ownership requires the Enterprise plan.
+
+On the Enterprise Plan, admins can also manage Custom Agents from their own tools using the [Admin API](https://www.notion.com/help/manage-custom-agents-with-the-admin-api). See the Admin API section below.
+
+In `Settings` → `Notion AI`, admins on Business and Enterprise plans can review and manage agent spend for the workspace. The `Overview` tab lists each agent with its owner, type, model, runs, and credits used, and you can change the model an agent uses right from that table. To set credit limits, open the `Credits` tab, where you can set a limit for one agent or a default for all of them.
+
+For a tour of these tabs, see [Notion AI settings overview →](https://www.notion.com/help/notion-ai-settings-overview)
+
+To keep a business-critical agent from pausing, set its credit limit to `Unlimited`, which removes the per-agent cap. The agent can still be limited by the credits your workspace has available. An agent uses its owner's Select credits by default, then workspace Notion credits if you allow it, and you can change an agent's funding from its `Credits` tab.
+
+[Learn how AI credits work for Custom Agents →](https://www.notion.com/help/how-ai-credits-work-for-custom-agents)
+
+### [Agent Directory](https://www.notion.com/help/custom-agents-sharing-and-permissions#agent-directory)
+
+- Search and view all Custom Agents in your workspace.
+
+- See who created each agent and when it was last active.
+
+- Disable and re-enable agent editing, chatting, and triggers to stop automated runs.
+
+- **Business and Enterprise plans:** If you're a workspace owner, view an agent's credit usage, set a credit limit, and pause any agent, even one you don't have access to.
+
+- **Enterprise only:** Change permissions and delete any agent, even if you don't have access to it.
+
+The agent list also shows each agent's model, runs completed, and credits used, and you can change the model an agent uses right from the table. An agent that has never been published shows as `Draft`, since a draft can't run.
+
+To access the **Agent Directory**, go to `Settings`, select `Notion AI` from the sidebar, enter the `Overview` tab. Browse or search for agents in your workspace.
+
+### [Creation controls](https://www.notion.com/help/custom-agents-sharing-and-permissions#creation-controls)
+
+Restrict who can create Custom Agents:
+
+1.  Go to `Settings `\> `Notion AI`.
+
+2.  Enter `Controls `tabs and go to `Control who can create agents`.
+
+3.  Choose who can create agents: `All workspace members `(default), `Workspace owners only`, or `Workspace owners + added groups only.`
+
+## [Enterprise plan controls](https://www.notion.com/help/custom-agents-sharing-and-permissions#enterprise-plan-controls)
+
+### [Content Admin Search](https://www.notion.com/help/custom-agents-sharing-and-permissions#content-admin-search)
+
+- See what pages and databases each Custom Agent can access.
+
+- Manage agent permissions on specific resources.
+
+- Remove agents from accessing sensitive content.
+
+To access Content search, go to `Settings` \> `Content search` and use the Shared with filter to select a Custom Agent.
+
+**Note:** Any page or database owner can remove an agent from their resource—even if they don't have access to the agent itself.
+
+### [Audit Log](https://www.notion.com/help/custom-agents-sharing-and-permissions#audit-log)
+
+- Full history of all Custom Agent actions.
+
+- Filter by agent, user, date, or action type.
+
+To access the Audit Log, go to `Settings` \> `Audit log` and filter for Custom Agent events by choosing the agent from the `Users/Agents` dropdown.
+
+### [AI Analytics](https://www.notion.com/help/custom-agents-sharing-and-permissions#ai-analytics)
+
+- Identify most-used and unused agents.
+
+- Monitor adoption and value.
+
+To access AI Analytics Go to `Settings` \> `Analytics` and enter the `AI` **tab.**
+
+### [Transfer ownership](https://www.notion.com/help/custom-agents-sharing-and-permissions#transfer-ownership)
+
+Transferring ownership ensures business-critical agents continue running when users leave the workspace. After 7 days of no ownership, the agent stops running.
+
+1.  Go to `Settings` \> `Members` and enter the `Recently Left `tab.
+
+2.  Recently left users will have agents show up as "private agents" in the content re-provisioning flow.
+
+3.  Choose the new owner and confirm the transfer.
+
+Transferring ownership is also supported via Public API.
+
+### [Admin API](https://www.notion.com/help/custom-agents-sharing-and-permissions#admin-api)
+
+Manage Custom Agents from your own tools and scripts:
+
+- See every Custom Agent in your workspace, including who created it, whether it's active, which model it uses, when it last ran, and what it can access.
+
+- See credit usage for each agent, and set credit limits for one agent or the whole workspace.
+
+- Set who can create agents, turn agents off and on, and delete agents.
+
+The Admin API is helpful when you manage many agents or want to bring usage data into your own reporting. Learn more about [managing Custom Agents with the Admin API →](https://www.notion.com/help/manage-custom-agents-with-the-admin-api)
+
+------------------------------------------------------------------------
+
+## FAQs
+
+What's the difference between Custom Agents and Notion AI?
+
+**Notion AI** acts as you—it respects your personal permissions and only sees what you can see.
+
+**Custom Agents** act as specialized team members with their own permissions. They have access to specific resources you grant them, and anyone who uses the agent can benefit from that access.
+
+Notion AI is on-demand, whereas Custom Agents are **autonomous** and can run automatically in the background.
+
+Learn more about pricing and [how Custom Agents use Notion credits](https://www.notion.com/help/custom-agent-pricing#how-custom-agents-use-notion-credits).
+
+Can a Custom Agent access something I can't see?
+
+Yes. If someone shares a Custom Agent with you, that agent might have access to resources you don't personally have access to. You only see information the agent includes in its responses. This is by design, allowing agents to coordinate work across permission boundaries.
+
+However, if read and write access is enabled for the resource, the agent can edit those resources on your behalf. This means you can instruct the agent to make changes, not just retrieve information.
+
+What happens if I remove someone from a private page that a Custom Agent can access?
+
+The person will lose direct access to that page, but if they can still use the Custom Agent, they might be able to get information from that page through the agent.
+
+If you want to fully prevent access, either remove the page from the agent's access, or remove that person's access to the agent.
+
+Can I see what resources a Custom Agent has access to before using it?
+
+Anyone with `Can view and interact` permission can see the agent's settings page, which shows all connected resources.
+
+To view an agent's settings, open the Custom Agent page, go to the **Settings** tab, and review the **Tools and access** section.
+
+What if I accidentally give an agent too much access?
+
+You can remove resources from an agent's **Tools and Access** settings at any time. The changes take effect immediately.
+
+**If you own a page or database:** Remove the agent from that resource directly through the share menu—even if you don't have access to the agent itself.
+
+**If you're an Enterprise workspace owner:** Use the Agent Directory to modify any agent's permissions, even if you didn't create it.
+
+Can I stop a Custom Agent from accessing my content?
+
+Yes. As a page or database owner, you can remove any Custom Agent from your resource through the share menu.
+
+To remove an agent, open the page or database, click `Share`, find the Custom Agent in the list, and click the `X` to remove it.
+
+If you change your mind, you can add the agent back from the same share menu at any time.
+
+How do I know if an agent is accessing my content?
+
+Custom Agents appear in the share menu of any page or database they have access to (just like people do).
+
+To check, open the page or database, click `Share`, and look for Custom Agents in the list.
+
+You can also add a Custom Agent to a page or database from the same menu. Click `Share`, search for the agent by name, and select it to give it access.
+
+Can I control what a Custom Agent spends if it isn't shared with me?
+
+If you're a workspace owner, yes. On Business and Enterprise plans, you can view an agent's credit usage, set a credit limit, and pause it, even for a private agent you can't open.
+
+## Contents
+
+- [How Custom Agent permissions work](#how-custom-agent-permissions-work)
+- [What your Custom Agent can access](#what-your-custom-agent-can-access)
+- [Permission-level requirements](#permission-level-requirements)
+- [Who can access your Custom Agent and its resources](#who-can-access-your-custom-agent-and-its-resources)
+- [How Memories work with Custom Agent permissions](#how-memories-work-with-custom-agent-permissions)
+- [Duplicate a Custom Agent](#duplicate-a-custom-agent)
+- [Multiple users can collaborate to build and maintain a Custom Agent](#multiple-users-can-collaborate-to-build-and-maintain-a-custom-agent)
+- [Guest and restricted member access](#guest-and-restricted-member-access)
+- [Workspace admin controls](#workspace-admin-controls)
+- [Agent Directory](#agent-directory)
+- [Creation controls](#creation-controls)
+- [Enterprise plan controls](#enterprise-plan-controls)
+- [Content Admin Search](#content-admin-search)
+- [Audit Log](#audit-log)
+- [AI Analytics](#ai-analytics)
+- [Transfer ownership](#transfer-ownership)
+- [Admin API](#admin-api)

@@ -1,0 +1,26 @@
+---
+fonte: https://www.notion.com/help/record-har-files-for-troubleshooting
+baixado: 2026-11-10
+---
+
+# Record HAR files for troubleshooting
+
+In this help doc
+
+## Find out how you can record HAR files to help Notion troubleshoot your issue.
+
+------------------------------------------------------------------------
+
+Check our [status page](https://www.notion-status.com/) for live updates on any known issues.
+
+HAR is an archive file format that records information about your Notion session. It might be helpful to record and share a HAR file with our support team so they can help you troubleshoot your issue.
+
+Find more information on how you can record HAR files on various browsers:
+
+- [Chrome](https://support.google.com/admanager/answer/10358597?hl=en) (also applicable to desktop users)
+
+- [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#opening-the-network-monitor)
+
+- [Safari](https://developer.apple.com/safari/tools/#current)
+
+- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/network/)

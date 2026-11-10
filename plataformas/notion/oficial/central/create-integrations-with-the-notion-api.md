@@ -1,0 +1,145 @@
+---
+fonte: https://www.notion.com/help/create-integrations-with-the-notion-api
+baixado: 2026-11-10
+---
+
+# Notion API connections
+
+In this help doc
+
+## With Notion's API, you'll be able to create custom internal connections. Some of our partners may also require an internal connection token in order to link their platform to your Notion workspace - below, we'll walk you through how to set this up.
+
+------------------------------------------------------------------------
+
+You can manage personal access tokens from Notion. Turn on Developer Mode from `Settings`, then open personal access tokens from the developer section in your sidebar. Visit our [developer hub](http://developers.notion.com/) for documentation, resources, and connection management tools.
+
+**Note:** Workspace owners manage all connections in a workspace. Learn more about [enterprise connection settings →](https://www.notion.so/help/enterprise-connection-settings)
+
+Looking for admin tokens? The tokens on this page work inside one workspace and handle page content. If you need to run organization admin work like exports, legal holds, or logging users out, see [Admin APIs for Enterprise organizations](https://www.notion.com/help/admin-apis-for-enterprise-organizations).
+
+## [Create an internal connection](https://www.notion.com/help/create-integrations-with-the-notion-api#create-an-internal-connection)
+
+1.  In your left sidebar, navigate to `Settings` and then the `Connections` tab.
+
+2.  Only Workspace owners will be able to access the `Connections` tab and create integrations. If you are not an admin, please contact your Workspace admin or use a different workspace.
+
+3.  Turn on [Developer Mode](https://www.notion.com/help/turn-on-developer-mode-to-use-developer-tools-in-notion), then open personal access tokens from the developer section in your sidebar.
+
+4.  Click `+ New connection`.
+
+5.  Provide a `Name` for your connection. Optionally, you can also upload an image to use as a `Logo`.
+
+6.  Use the dropdown menu to specify which `Associated workspace` you would like to use this connection with.
+
+    **Note:** Make sure you're logged into Notion on your web session with the same account that you used on desktop. Otherwise, you will not see the correct account and workspaces!
+
+7.  Your internal connection has been added successfully! You'll now be able to see it in your workspace, in the `Settings` menu → `Connections`.
+
+8.  Click the `•••` next to the internal connection to retrieve the internal connection token. You'll need this token for any API-based automations or workflows your team creates, or to link your workspace to some partner platforms.
+
+**Note:** Internal connections are workspace-specific, so to change the associated workspace, you'll have to create a new connection.
+
+## [Create a public connection](https://www.notion.com/help/create-integrations-with-the-notion-api#create-a-public-connection)
+
+All newly added connections are internal initially. If you're a developer working on a public connection, first use the above instructions to create an internal connection.
+
+Then, follow the instructions in our [developer guide](https://developers.notion.com/docs/authorization) to convert it to a public connection.
+
+### [Choose where your public connection can be installed](https://www.notion.com/help/create-integrations-with-the-notion-api#choose-where-your-public-connection-can-be-installed)
+
+When you create a public connection, you choose who can install it:
+
+- `Any workspace`: anyone can install your connection in their own Notion workspace.
+
+- `Selected workspaces`: only the workspaces you list can install your connection.
+
+Pick `Selected workspaces` when you are building something just for your own company and you do not want other organizations to install it.
+
+Notion checks this every time someone installs your connection. If their workspace is not on your list, the install stops and they see an error.
+
+Only connections that anyone can install can be listed in the connections gallery. A connection that is limited to selected workspaces will not show up there.
+
+**Note**: You choose this when you create the connection. If you need a different setting later, create a new connection.
+
+A connection you own shows up in the developer portal for every workspace that is allowed to install it, already has it installed, or is the workspace where you built it.
+
+### [Change the workspace where you build a public connection](https://www.notion.com/help/create-integrations-with-the-notion-api#change-the-workspace-where-you-build-a-public-connection)
+
+Every public connection has one workspace where you build and test it. You can switch to a different one without starting over.
+
+1.  Open your connection in the developer portal.
+
+2.  Go to the connection's settings.
+
+3.  Pick the workspace you want to build in.
+
+Notion connects your connection to the workspace you picked. You do not need to create a new connection.
+
+## [Granular connection permissions](https://www.notion.com/help/create-integrations-with-the-notion-api#granular-connection-permissions)
+
+During the app setup process, developers will be able to choose the access level required from the user.
+
+- Content capabilities:
+
+  - Read content only
+
+  - Write content only
+
+  - Insert content
+
+- User capabilities
+
+  - No user information
+
+  - Read user info (not including user's email address)
+
+  - Read user info (including email)
+
+When users install connections, this access level will be displayed. It will also show in the `Share` menu of any pages that the connection that has been added to. [Learn more about installing connections in a workspace →](https://www.notion.so/help/add-and-manage-connections-with-the-api)
+
+## [Connection webhooks](https://www.notion.com/help/create-integrations-with-the-notion-api#connection-webhooks)
+
+Connection webhooks enable connections to monitor and respond to changes in Notion workspaces in real-time.
+
+When changes occur in pages or databases shared with your [connection](https://www.notion.com/integrations/all), Notion automatically sends notifications to your webhook endpoint, allowing your connection to instantly update other tools, run automated tasks, or display the latest changes.
+
+### [Set up connection webhooks](https://www.notion.com/help/create-integrations-with-the-notion-api#set-up-connection-webhooks)
+
+For instructions, please visit our [developer docs](https://developers.notion.com/reference/webhooks).
+
+**Connection webhooks currently do not support notifications for:**
+
+- User changes (including workspace membership changes, email/name updates, and permission modifications).
+
+- Workspace and teamspace settings changes.
+
+For these types of notifications, use the [audit log](https://www.notion.com/help/audit-log) instead.
+
+### [Webhook actions vs. connection webhooks](https://www.notion.com/help/create-integrations-with-the-notion-api#webhook-actions-vs.-connection-webhooks)
+
+[Webhook actions](https://www.notion.com/help/webhook-actions#webhooks-limitations) and connection webhooks share some similarities—both have triggers and can send events to third-party services. However, connection webhooks offer broader capabilities:
+
+- They can monitor activity across multiple workspaces.
+
+- They can handle an unlimited number of actions.
+
+In contrast, webhook actions are designed for simpler use cases and are configured through database automations with a limited set of triggers.
+
+**Learn more**
+
+- [Notion API](http://developers.notion.com/)
+
+- [File upload API](https://developers.notion.com/reference/file-upload)
+
+- [Best practices for handling API keys](https://developers.notion.com/docs/best-practices-for-handling-api-keys)
+
+## Contents
+
+- [Create an internal connection](#create-an-internal-connection)
+- [Create a public connection](#create-a-public-connection)
+- [Choose where your public connection can be installed](#choose-where-your-public-connection-can-be-installed)
+- [Change the workspace where you build a public connection](#change-the-workspace-where-you-build-a-public-connection)
+- [Granular connection permissions](#granular-connection-permissions)
+- [Connection webhooks](#connection-webhooks)
+- [Set up connection webhooks](#set-up-connection-webhooks)
+- [Webhook actions vs. connection webhooks](#webhook-actions-vs.-connection-webhooks)

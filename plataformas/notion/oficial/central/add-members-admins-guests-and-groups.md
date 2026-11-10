@@ -1,0 +1,290 @@
+---
+fonte: https://www.notion.com/help/add-members-admins-guests-and-groups
+baixado: 2026-11-10
+---
+
+# Manage members & guests
+
+Vídeo: https://www.youtube.com/watch?v=2DNoq4dmmh8
+
+In this help doc
+
+## It's easy to work with others in Notion. Add members to collaborate with you in your workspace, or invite guests to view, comment on, or edit specific pages.
+
+[Jump to FAQs](https://www.notion.com/help/add-members-admins-guests-and-groups#faq)
+
+------------------------------------------------------------------------
+
+**Note:** If you're on the Enterprise plan, the images in this article might look a little different from what you see in Notion. Thanks for your understanding!
+
+**Learn more about different types of people in a workspace**
+
+- [Who’s who in a workspace](https://notion.com/help/whos-who-in-a-workspace)
+
+- [Who should be a workspace member, and who should be a guest?](https://www.notion.com/help/guides/Who-should-be-a-workspace-member-who-should-be-a-guest)
+
+- Want to add someone to a group? See [Create & manage groups →](https://www.notion.com/help/create-and-manage-groups)
+
+## [Add a member](https://www.notion.com/help/add-members-admins-guests-and-groups#add-a-member)
+
+**Note:** On paid plans, you'll be charged per member in your workspace. For more information on plans, [go here →](https://www.notion.so/pricing)
+
+### [With email](https://www.notion.com/help/add-members-admins-guests-and-groups#with-email)
+
+To add a member using their email:
+
+1.  Go to `Settings` → `People` or `Members` (depending on your plan).
+
+2.  Go to the `Members` tab.
+
+3.  Select `Add members` and type the email address of the person you want to add. If you don't have invite access, you will instead have the option to request to add a member.
+
+4.  Select whether to add them as a `Workspace owner`, `Membership admin`, or `Member` from the dropdown, then press `Invite`.
+
+5.  They'll receive an email with a link to sign in and join your workspace.
+
+### [Using a link](https://www.notion.com/help/add-members-admins-guests-and-groups#using-a-link)
+
+To add a member via a link:
+
+1.  Go to `Settings` → `People` or `Members` (depending on your plan).
+
+2.  Go to the `Members` tab.
+
+3.  Select `Copy link` to copy the secret link to your clipboard, and share with anyone you’d like to invite to work with you.
+
+4.  When an invited user clicks on the secret link, they'll be able to join your workspace automatically as a paid member, without you having to add their email address manually.
+
+5.  If you don’t want to be able to invite people to your workspace with a link, turn off the toggle next to `Invite link`.
+
+### [With an allowed domain](https://www.notion.com/help/add-members-admins-guests-and-groups#with-an-allowed-domain)
+
+If you're using Notion at your company, you can make it easy for anyone to automatically join your workspace as a member when they sign in with their work email.
+
+Steps to set this up:
+
+1.  Navigate to the Notion workspace you'd like to update.
+
+2.  Select your workspace name in the workspace switcher, select `Settings`., then select `General`.
+
+3.  Under `Allowed email domains`, enter any email domain that you want to grant access to automatically, like your company's email domain. You can add multiple allowed domains in this field, but you'll only be able to add domains that workspace members' accounts are under.
+
+Now, whenever someone signs into Notion with an email that has one of those domains, they'll see the option to join your workspace during onboarding. If the user joins your workspace, they will become a member of your workspace and you will be billed accordingly. People who use one of your organization's domains are added as members, not guests, whether they join here or you share a page with them.
+
+### [Change a member's role](https://www.notion.com/help/add-members-admins-guests-and-groups#change-a-member's-role)
+
+To change a member's role in the workspace:
+
+1.  Go to `Settings` → `People` or `Members` (depending on your plan).
+
+2.  Go to the `Members` tab.
+
+3.  Select the dropdown for a member’s role, then select `Workspace owner`, `Membership admin`, or `Member`.
+
+## [Add a temporary member](https://www.notion.com/help/add-members-admins-guests-and-groups#add-a-temporary-member)
+
+If you work with a Notion Marketplace consultant, you can grant them time-limited access to your workspace as a temporary member. They get member-level access until their expiration date, then lose access automatically. Temporary members don’t use a paid seat.
+
+To add a temporary member:
+
+1.  Go to `Settings` → `People` or `Members` (depending on your plan).
+
+2.  Go to the `Members` tab.
+
+3.  Select `Add members` and type the email address of your consultant.
+
+4.  Select `Temporary member` from the role dropdown.
+
+5.  Set an expiration date (up to one year from today).
+
+6.  Press `Invite`.
+
+They'll receive an email with a link to join your workspace. Once they accept, they'll appear in your member list with their expiration date shown.
+
+**Pending requests**
+
+After you send an invite, it will show as pending until the consultant accepts. You can view and manage pending invites in Settings → Members.
+
+**Extend or remove access**
+
+Admins can update a temporary member's expiration date or remove their access at any time:
+
+1.  Go to `Settings` → `People `or `Members`.
+
+2.  Find the temporary member in the list.
+
+3.  Select` •••` next to their name.
+
+4.  Choose `Edit expiration date` or `Remove from workspace`.
+
+## [Add a guest](https://www.notion.com/help/add-members-admins-guests-and-groups#add-a-guest)
+
+Guests are people outside your organization. Anyone with an email on one of your organization's domains is added as a member.
+
+Learn more about the [difference between guests and members →](https://www.notion.com/help/whos-who-in-a-workspace?_gl=1*17fzg5t*_gcl_au*OTc2NTQ2MTQ5LjE3ODgyODc2NTYuOTA0OTk5ODMyLjE3OTIxMTQ0NTAuMTc5MjExNDQ1Ny4xNjcxMDE5ODM5LjE3OTIxMTQ0NTAuMTc5MjExNDQ1Nw..*_ga*NTg5OTEwNzMyLjE3NzkyMTU0NDk.*_ga_9ZJ8CB186L*czE3OTI2MDA3NzAkbzEzMCRnMSR0MTc5MjYwMDgyNyRqMyRsMCRoMA..#guests)
+
+### [From a page](https://www.notion.com/help/add-members-admins-guests-and-groups#from-a-page)
+
+Remember that guests can be added to individual pages, not to an entire workspace. To share a page with a guest:
+
+1.  Go to Share at the top right of the page.
+
+2.  Enter the email address of the guest you want to invite.
+
+3.  Select a level of access for that guest from the dropdown and press `Invite`.
+
+4.  Select `Skip for now` to make sure you’re adding them as a guest and not a member.
+
+Your guest will receive an email with a link to the page. If they don't already use Notion, they’ll need to sign up to access your page.
+
+**Note:**
+
+- 
+
+### [From a guest's request](https://www.notion.com/help/add-members-admins-guests-and-groups#from-a-guest's-request)
+
+To make it easier for you to add guests to your workspace, Notion also allows people outside of your workspace to request access to certain pages in your workspace. This feature is available and turned on by default for all plans except Enterprise.
+
+If you’re on a Plus or Business Plan, you can turn this setting off. Unfortunately, Free plans will not be able to turn this feature off. To do this:
+
+1.  Open `Settings` → `Security`.
+
+2.  Toggle off `Allow page access requests from non-members`.
+
+Once the guest submits a request to access a page, a notification will be sent to the inbox of the page’s creator. The page creator can approve the request as well as adjust the level of access for that guest, or they can ignore the request.
+
+**Note:** When you add someone to a page, they can automatically access all of its sub-pages by default. That being said, you can restrict or expand sub-page permissions!
+
+## [Request to add a guest](https://www.notion.com/help/add-members-admins-guests-and-groups#request-to-add-a-guest)
+
+Members of a workspace can request to add guests to it. This feature is available on Enterprise Plans only, and only workspace owners can enable or disable it.
+
+### [Enable guest addition and guest requests](https://www.notion.com/help/add-members-admins-guests-and-groups#enable-guest-addition-and-guest-requests)
+
+To allow members to directly add guests to workspace pages, workspace owners can:
+
+1.  Go to `Settings` → `Security`.
+
+2.  In the `Members & guests` tab, turn on `Allow members to invite guests to pages`.
+
+To allow members to request adding a guest to workspace pages, workspace owners can:
+
+1.  Go to `Settings` → `Security`.
+
+2.  In the `Members & guests` tab, turn on `Allow members to request adding guests`.
+
+Once this is turned on, members and workspace admins will have to submit a request before they can invite a guest. Workspace owners are exempt and can continue to invite guests directly.
+
+**Note:**
+
+- When `Allow members to invite guests to pages` is turned off, **nobody except workspace owners** can invite guests. **Members and workspace admins** won’t be able to invite guests, and can instead request to add guests if their workspace allows it.
+
+- `Allow members to request adding guests` is a workspace level setting, and will override any teamspace level guest setting. This means if a teamspace allows guests, but the workspace has enabled guest requests, members will have to submit guest invite requests to add guests to pages in the teamspace.
+
+### [Request to invite a guest](https://www.notion.com/help/add-members-admins-guests-and-groups#request-to-invite-a-guest)
+
+If you're a workspace owner, **you can** **invite guests directly**.
+
+If you're a member:
+
+1.  Navigate to the page you want to invite a guest to. Just like with regular sharing, you must have full access permissions on the page to request to invite a guest.
+
+2.  Select `Share` and type the name of the guest you want to invite.
+
+3.  Select the role you want the guest to have.
+
+4.  Select `Invite`.
+
+5.  A notification will be sent to your workspace owner about your request, along with the page, role and email of the guest you requested. You will also receive confirmation that your workspace owner has been notified.
+
+### [Approve a guest](https://www.notion.com/help/add-members-admins-guests-and-groups#approve-a-guest)
+
+**Guest invite requests must be approved on a per page, per guest basis.** Only workspace owners can view and approve guest requests. Each request will have the email of the guest, the member who requested it, the role that was requested, and the name of the page.
+
+A workspace owner can approve or reject a request to invite a guest directly from the notification they receive, or by going to by going to `Settings` → `Members` → `Guests` and finding the requests at the top. Once a workspace owner responds to a request, the member who submitted will be notified of the decision.
+
+## [Turn guests into members](https://www.notion.com/help/add-members-admins-guests-and-groups#turn-guests-into-members)
+
+Give any guest the ability to access your entire workspace by turning them into a member. On paid plans, you'll be charged for each additional member. To turn a guest into a member:
+
+1.  Go to `Settings` → `People` or `Members` (depending on your plan) → `Guests`.
+
+2.  Check the box next to the guests you want to upgrade.
+
+3.  Select `Upgrade {#} guest(s) to member`.
+
+4.  Once they become a member, you can find them in your member list and change their role.
+
+On non-Enterprise Plans, we’ll also suggest some guests who might benefit from becoming members in your workspace. To see who these guests are, go to `Settings` → `Members` → `Suggestions`. You can select `Upgrade` to turn someone into a workspace member.
+
+## [Remove a user](https://www.notion.com/help/add-members-admins-guests-and-groups#remove-a-user)
+
+**Note:** Trying to remove a member from a teamspace? [Read this instead!](https://www.notion.com/help/intro-to-teamspaces)
+
+To remove a member or guest from a workspace, a workspace owner or a membership admin can:
+
+1.  Go to `Settings` → `People` or `Members` (depending on the plan).
+
+2.  Go to the `Members` tab or the `Guests` tab.
+
+3.  Depending on the plan and who you’re trying to remove:
+
+    - Open the dropdown for a member’s role or access level, then select `Remove from workspace`.
+
+    - Open the dropdown for a guest’s pages or select `•••` next to a guest, then select `Remove` or `Remove from workspace`.
+
+**Note:**
+
+- When you remove a member from a workspace, that person will instantly lose access to the workspace, and pages from the `Private` section of their left sidebar will be hidden from view. If you invite that member back to the workspace, their private pages will be unhidden.
+
+- If a user has left and rejoined a workspace within the last 30 days, their private pages, shared pages, group membership, and teamspace membership will be restored upon rejoining the workspace.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+Is there a limit to how many guests I can add?
+
+Guest limits vary by plan. See the guest limit for your plan on [our pricing page →](https://www.notion.com/pricing)
+
+People who use one of your organization's email domains are added as paid members, not guests, whether you're above or below your plan's guest limit. These domains include an [allowed email domain](https://www.notion.so/help/workspace-settings#allowed-email-domains), an email domain that matches the workspace owner's domain, or one of your workspace's [verified domains](https://www.notion.so/help/domain-management#domain-verification). To add someone as a guest, use an email address outside these domains, like a contractor's or client's own email.
+
+I clicked the Join or create workspace button, but it will only let me create a workspace. How do I join a workspace?
+
+You can only join a workspace via the `Join or create workspace` button if that workspace has the `Allowed Email Domains` setting enabled to allow users with your email domain join the workspace automatically.
+
+Otherwise, you'll need to ask an admin from the workspace to send you an invite.
+
+How can groups be used instead of multiple separate workspaces?
+
+We've seen people create multiple workspaces instead of groups to set granular permissions. For instance, they create separate workspaces for Design, Marketing, and their executive team so these groups can't access, edit, or get distracted by each other's work. There's a quick workaround for this using groups:
+
+- Disable `Workspace access`. That way pages won't show for people and groups who aren't specifically granted access.
+
+- On every page, grant different levels of access per group. Those access levels will hold true for all the sub-pages on that page.
+
+- So, for example, you could have a section of your workspace just for the engineering team. Create a group of all your engineers, then on the top-level page for that team, turn on `Full access` for only that group. Nest pages inside that page, and only the engineering team can access them, too!
+
+How can I allow members in my workspace to request guests for approval?
+
+As a workspace owner, you can disable guests for your workspace in your [workspace security settings](https://www.notion.so/help/workspace-settings), but still allow members to send guest invite requests for review by the workspace owners. This provides a standardized way for guests to get access to content within your workspace, without being an all or nothing approach.
+
+Still have more questions? Message support
+
+## Contents
+
+- [Add a member](#add-a-member)
+- [With email](#with-email)
+- [Using a link](#using-a-link)
+- [With an allowed domain](#with-an-allowed-domain)
+- [Change a member's role](#change-a-member's-role)
+- [Add a temporary member](#add-a-temporary-member)
+- [Add a guest](#add-a-guest)
+- [From a page](#from-a-page)
+- [From a guest's request](#from-a-guest's-request)
+- [Request to add a guest](#request-to-add-a-guest)
+- [Enable guest addition and guest requests](#enable-guest-addition-and-guest-requests)
+- [Request to invite a guest](#request-to-invite-a-guest)
+- [Approve a guest](#approve-a-guest)
+- [Turn guests into members](#turn-guests-into-members)
+- [Remove a user](#remove-a-user)

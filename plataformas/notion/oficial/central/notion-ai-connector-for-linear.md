@@ -1,0 +1,116 @@
+---
+fonte: https://www.notion.com/help/notion-ai-connector-for-linear
+baixado: 2026-11-10
+---
+
+# Linear AI Connector
+
+In this help doc
+
+## Connect Notion AI with your Linear workspace to bring in information from your projects, issues, and comments.
+
+[Jump to FAQs](https://www.notion.com/help/notion-ai-connector-for-linear#faq)
+
+------------------------------------------------------------------------
+
+## [Connect Linear to Notion AI](https://www.notion.com/help/notion-ai-connector-for-linear#c)
+
+**Who can connect Linear to Notion AI?**
+
+- You must be a Linear workspace admin.
+
+- You must be a Notion workspace owner.
+
+- Your workspace must be on the Business or Enterprise Plan.
+
+**How do I connect Linear?**
+
+To connect Linear to your Notion workspace:
+
+1.  In Notion, navigate to the Linear AI Connector by going to `Settings` → `Notion AI` → `Linear` in the AI Connectors section.
+
+2.  Click on `Linear` and follow the instructions in Notion to start the connection. **Keep Notion open during this process!**
+
+3.  You will be redirected to Linear to select team access. Click `Authorize`.
+
+4.  Click through the installation. If successful, you'll be redirected to Notion and see a modal on your screen indicating that you’re done! If not, navigate back to Notion and click Check connection to complete your setup.
+
+5.  You're done!
+
+    - The connection can take up to 36 hours.
+
+    - You can manage the connection in Notion AI settings by clicking the gear icon on `Linear` at any time.
+
+------------------------------------------------------------------------
+
+## FAQs
+
+What data does Notion AI get access to?
+
+Notion AI can read all projects and issues details including the title, assignee, creator and all issue comments. However, project progress, and milestones are not supported at this time.
+
+Who can use this integration?
+
+Individuals who are both a Linear member and a Notion workspace member can use this integration.
+
+Does Notion AI respect my Linear permissions?
+
+Notion AI strictly follows existing permissions as outlined in our [Notion AI Security Practices](https://www.notion.so/help/notion-ai-security-practices). Users can only access and generate content for resources they have permission to view.
+
+Notion AI will honor permissions according to their role in Linear. Users will not be able to generate content or receive responses based on resources they do not have access to.
+
+How are permissions mapped?
+
+Notion AI will honor permissions according to their role in Linear. Users will not be able to generate content or receive responses based on resources they do not have access to.
+
+Notion AI automatically maps Linear members to their corresponding Notion accounts by email address.
+
+Notion AI conducts ongoing checks for changes to permissions and access levels that would impact the Linear content surfaced in Notion AI for each individual. The system syncs permission changes every hour.
+
+How long does it take for the integration to complete and how far back does it look?
+
+Depending on the workspace size, the integration can take up to 36 hours to complete.
+
+Once the integration is set up, Notion AI will only be able to reference:
+
+- Issues updated within the last year.
+
+- The latest 50 comments and labels.
+
+- The last 10 cycles for each team.
+
+- The 5 most updates for each project.
+
+- The 5 most recent comments for each project.
+
+Subsequent comments, labels and project updates will be updated immediately after.
+
+Are attachments and documents ingested by Notion AI?
+
+Not at this time.
+
+How do I change my teams selection? How long does it take to reflect the changes?
+
+Change your team selection directly in Linear settings or navigate to the Linear AI Connector by going to `Settings` → `Notion AI `→ `Linear` in the AI Connectors section. Click on the `⚙️` icon and this will re-direct you into the settings page in Linear to edit application settings.
+
+Changes should be reflected within the hour.
+
+How long does it take for Notion AI to read updates in Linear?
+
+New updates may take up to 3 hours to be indexed through webhooks. Larger data volumes may take additional time.
+
+How can I disconnect Linear from Notion?
+
+Workspace owners can disconnect Linear by going to `Settings` → `Notion AI `→` `the `⚙️` icon on Linear, then clicking `Disconnect`.
+
+Linear admins can disconnect in Linear by navigating to `Settings` → `Applications` → Select app → `Revoke access`.
+
+How do the permission settings work?
+
+Individuals who are both a Linear member and a Notion workspace member can use this integration.
+
+Notion AI maps Linear members to Notion members through emails and conducts ongoing checks for changes to permissions and access levels that would impact the Linear content surfaced in Notion AI for each individual.
+
+## Contents
+
+- [C](#c)

@@ -1,0 +1,152 @@
+---
+fonte: https://www.notion.com/help/web-clipper
+baixado: 2026-11-10
+---
+
+# Web Clipper
+
+Vídeo: https://www.youtube.com/watch?v=nzHBSxiWGIw
+
+In this help doc
+
+## The Web Clipper lets you save any web page off the internet to your workspace so you can read or edit it later. You can add this web content to a workspace or page of your choosing, making it easy to build a reading list, collect references and more.
+
+[Jump to FAQs](https://www.notion.com/help/web-clipper#faq)
+
+------------------------------------------------------------------------
+
+## [On desktop](https://www.notion.com/help/web-clipper#on-desktop)
+
+Our desktop [Web Clipper](https://www.notion.so/web-clipper) is a browser extension available for Chrome and Safari.
+
+### [Install the extension](https://www.notion.com/help/web-clipper#install-the-extension)
+
+- [Download](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk?hl=en) the Chrome extension 🌈
+
+- Get the Safari extension from [notion.com/web-clipper](https://www.notion.com/help/notion.com/web-clipper) 🧭
+
+**Already have the Safari extension from the App Store?** The new version won't replace it on its own. To switch over cleanly, follow these steps:
+
+1.  **Remove the current app.**
+
+    - Quit Notion Web Clipper if it's running (menu bar → `Quit`).
+
+    - Open Finder → `Applications` and drag Notion Web Clipper to the Trash.
+
+    - Empty the Trash.
+
+2.  **Clear the Safari extension.**
+
+    - Open Safari → `Settings` → `Extensions`.
+
+    - Find Notion Web Clipper and click `Uninstall` if it still shows up.
+
+3.  **Install the new version.**
+
+    - Go to [notion.com/web-clipper](https://www.notion.com/help/notion.com/web-clipper) and click `Install for Safari`.
+
+4.  Open the downloaded DMG and drag Notion Web Clipper to `Applications`.
+
+5.  Launch the app. Safari will ask you to turn on the extension in `Settings` → `Extensions`.
+
+Once you've downloaded and installed the Web Clipper, you'll see a small Notion button appear just to the right of your browser search bar.
+
+### [Use the clipper](https://www.notion.com/help/web-clipper#use-the-clipper)
+
+1.  Log into Notion on your browser with the account you want to clip into.
+
+2.  Click the Notion icon to the right of your browser search bar.
+
+3.  A small window will pop up asking which workspace and Notion page (or database) you want to add the web page into.
+
+    - You can create a new database to save your web pages into by clicking `+ New links database` in the `Add to` menu. You can change the name of the page in the text box.
+
+    - If you'd like to clip into a page or database that already exists, it might not be included in the default list. You can search for it!
+
+4.  Press `Save page` or `enter`.
+
+5.  You'll have the option to `Open in Notion` to go right to the page you just saved.
+
+6.  When you clip a web page into a database, a URL property will automatically be added to capture the address of the original page (even if there wasn't one before)!
+
+7.  You can also add tags, other properties, comments, and edits to the pages you clip. Here's what a clipped article looks like in a Notion database:
+
+## [On mobile](https://www.notion.com/help/web-clipper#on-mobile)
+
+Our mobile Web Clipper uses native share sheet functionality on both iOS and Android.
+
+**Note:** You'll need iOS version 13.0 or above to use Web Clipper on iPhone or iPad. For Android, you'll need version 7.0 or above.
+
+### [Clip on iOS](https://www.notion.com/help/web-clipper#clip-on-ios)
+
+1.  Open Safari or Chrome on your device and tap the `Share` icon on any page you want to save. (It looks like a box with an upward arrow in the center.)
+
+2.  This will bring up your device's mobile share sheet. Scroll through the apps that appear to select `••• More`.
+
+3.  From that menu, turn on Notion access.
+
+4.  From now on, Notion will appear on your mobile share sheet.
+
+5.  Tap the Notion icon, title the page you're saving, choose which workspace and page you want to add it to, and tap `Save`.
+
+6.  Go to the page you chose to see your clipping, comment on it, add properties, etc.!
+
+### [Clip on Android](https://www.notion.com/help/web-clipper#clip-on-android)
+
+Notion will be added automatically to your browser's sharing options, no extra steps required!
+
+1.  Open Chrome, and on any page you want to save, click the share icon.
+
+2.  This will bring up the mobile share sheet, which will already include Notion.
+
+3.  Tap the Notion icon, title the page you're saving, choose which workspace and page/database you want to add it to, and tap `Save`.
+
+4.  Go to the page you chose to see your clipping, comment on it, add properties, etc.!
+
+### [Clip images & local files on your phone](https://www.notion.com/help/web-clipper#clip-images-&-local-files-on-your-phone)
+
+Want to add the photos you take on your phone to your Notion workspace? You can do that in just a few steps:
+
+1.  Select the photos you want to copy into Notion.
+
+2.  Tap the `Share` icon at the bottom of your screen.
+
+3.  Tap on `Notion` if it's already an option in the share menu that pops up. (Or, on iPhone, scroll to tap `••• More` and turn Notion on as an option.)
+
+4.  Create a title for the image, select the Notion workspace you want, and tap `Add to` to choose the exact page/database you want to add the image to.
+
+5.  When you clip local files to a database, no URL will be added.
+
+**Note:** Websites are built in all kinds of ways, so they can't all be parsed the same way. Formatting in Notion will vary. We've made sure clips from top sites like Pinterest, Netflix, Wikipedia, etc. look great, and we're always improving!
+
+------------------------------------------------------------------------
+
+## FAQs
+
+I tried using the web clipper on mobile, but got an error message This app is not supported.
+
+Unfortunately, Notion Web Clipper only works for entire pages from your web browser, or photos from your photo roll. It doesn't support other apps yet, like the Twitter app or the iOS Notes app. Definitely possible in the future though!
+
+I tried clipping a web page with the Web Clipper, but some of the page content is missing.
+
+Oops, sorry about that 🙈 If you wouldn't mind sharing the URL with us at [\[email protected\]](/cdn-cgi/l/email-protection#4c38292d210c212d2729222338252322622f2321), we'd be happy to flag to our engineering team so they can tweak the clipper accordingly.
+
+Can you add tags to a web page while clipping it?
+
+Not at the moment, unfortunately. Definitely possible for a future iteration though ✂️
+
+For the time being, you'll need to open the clipped page in a Notion database to add and edit any tags or other database properties.
+
+I can't find the Notion Web Clipper in the App Store.
+
+The Safari Web Clipper is no longer in the Apple App Store. To add it to Safari, go to [notion.com/web-clipper](https://www.notion.com/web-clipper) and follow the install steps. Once it's installed, the clipper works the same as before.
+
+## Contents
+
+- [On desktop](#on-desktop)
+- [Install the extension](#install-the-extension)
+- [Use the clipper](#use-the-clipper)
+- [On mobile](#on-mobile)
+- [Clip on iOS](#clip-on-ios)
+- [Clip on Android](#clip-on-android)
+- [Clip images & local files on your phone](#clip-images-&-local-files-on-your-phone)
