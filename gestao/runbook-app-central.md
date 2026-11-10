@@ -99,6 +99,42 @@ Views (ícone de celular) › + ao lado de Primary navigation › Create a new v
 ```
 **Resultado esperado:** quem abre vê só as suas tarefas; menu ☰ › Settings › Pessoa = Todos mostra a equipe (testado em 10/11/2026: Atrasadas do Henrique = T-097; Todos = 4 tarefas; Por status sem o bloco Cancelada).
 
+### Passo 9: tarefa nova pré-preenchida e código automático
+```
+Data › Columns › lápis da coluna › Auto Compute › Initial value:
+- Código: CONCATENATE("T-", RIGHT(CONCATENATE("000", NUMBER(MID(INDEX(SORT(Tarefas[Código], TRUE), 1), 3, 4)) + 1), 3))
+- Responsável: IF(USERSETTINGS("Pessoa") = "Todos", "", USERSETTINGS("Pessoa"))
+- Status: "Backlog"
+```
+**Resultado esperado:** o + do app abre a tarefa com o próximo código (testado: T-232), o nome de quem cria e Backlog.
+**Atenção:** a partir da T-999 o código passa a ter 4 dígitos; rever a fórmula nessa época.
+
+### Passo 10: botões rápidos "Concluir" e "Começar"
+```
+Behavior › Actions › + New Action (uma por vez):
+
+CONCLUIR
+- Action name: Concluir
+- For a record of this table: Tarefas
+- Do this: Data: set the values of some columns in this row
+- Set these columns: Status = "Feito"; Concluída em = TODAY()
+- Position: Prominent (botão no topo da tarefa aberta)
+- Display name: vazio · Action icon: check
+- Behavior › Only if this condition is true: NOT(IN([Status], LIST("Feito", "Cancelada")))
+
+COMEÇAR
+- Action name: Começar
+- For a record of this table: Tarefas
+- Do this: Data: set the values of some columns in this row
+- Set these columns: Status = "Fazendo"
+- Position: Prominent · Display name: vazio · Action icon: play
+- Behavior › Only if this condition is true: IN([Status], LIST("Backlog", "A fazer", "Aguardando"))
+
+SAVE.
+```
+**Resultado esperado:** tarefa aberta mostra os botões só quando faz sentido (tarefa Cancelada ou Feita não mostra Concluir).
+**Position:** Primary = botão flutuante; Prominent = topo da tarefa (o que usamos); Inline = ao lado de uma coluna; Hide = escondido.
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
