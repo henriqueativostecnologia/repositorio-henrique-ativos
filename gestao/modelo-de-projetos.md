@@ -1,6 +1,6 @@
 ---
 tipo: modelo de gestão
-atualizado: 05/11/2026
+atualizado: 10/11/2026
 situacao: versão inicial aprovada; será ajustada com a experiência dos 3 primeiros clientes e as lições aprendidas
 ---
 
@@ -29,7 +29,7 @@ PORTFÓLIO (todos os projetos)
 |---|---|---|
 | 1 | Modelo | Híbrido: fases e portões no macro, sprints no micro |
 | 2 | Sprint | 1 semana, de segunda a sexta. Código da semana: `2026-S45` |
-| 3 | Rituais | Planejamento na segunda (30 min) · atualização diária por escrito no Slack · revisão e retrospectiva na sexta (30 min) |
+| 3 | Rituais | Planejamento na segunda (30 min) · atualização diária por escrito no Google Chat · revisão e retrospectiva na sexta (30 min) |
 | 4 | Status | Backlog · A fazer · Fazendo · Aguardando (cliente ou terceiro) · Revisão · Feito |
 | 5 | Limite | No máximo 3 tarefas em "Fazendo" por pessoa |
 | 6 | Tamanho | Uma tarefa cabe em até 1 dia; se for maior, divide |
@@ -48,7 +48,7 @@ PORTFÓLIO (todos os projetos)
 ## Onde ficam as tarefas
 
 * **Agora:** planilha **Quadro de tarefas ATIVOS**, no Drive em `00 Geral › 03 Gestão de tarefas` (https://docs.google.com/spreadsheets/d/1g7cFgksYnu7_YpPCewVUtGThya8i46XQOdmxkVNVbl4/edit). Abas: Como usar · Tarefas (lista única, a única que se edita) · uma aba por sócio (automática) · Visão geral (automática) · Projetos · Listas.
-* **Depois:** quadro no Notion (T-014), importando a planilha.
+* **Decisão de 10/11/2026:** a planilha passa a ser a central oficial (ferramentas só Google: Sheets, Chat e Drive). Próximos passos visuais: Linha do tempo (Inserir › Linha do tempo), depois Looker Studio e AppSheet se fizer falta. Notion fica como opção futura.
 
 ## Visões
 
@@ -67,10 +67,10 @@ PORTFÓLIO (todos os projetos)
 | Planejamento de segunda | capacity-plan |
 | Pedido fora do escopo | change-request |
 | Revisão de sexta | status-report |
-| Atualização diária | standup (Slack) |
+| Atualização diária | mensagem no Google Chat (a skill standup é do Slack; não serve por enquanto) |
 
 ## A medir para ajustar o modelo
 
-* Tempo real de cada tipo de tarefa contra a estimativa (base para os prazos padrão de cada serviço).
+* Tempo real de cada tipo de tarefa contra a estimativa (coluna O "Tempo real (h)" da planilha; base para os prazos padrão de cada serviço).
 * Tarefas que ficaram em "Aguardando" e por quanto tempo (atraso causado pelo cliente).
 * Lições aprendidas de cada projeto, registradas no encerramento.

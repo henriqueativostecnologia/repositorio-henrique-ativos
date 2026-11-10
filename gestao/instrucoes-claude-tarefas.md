@@ -1,7 +1,7 @@
 ---
 tipo: instrução para o Claude (de qualquer sócio)
-atualizado: 05/11/2026
-situacao: versão 1; copiada em 05/11/2026 para a aba "Como usar" da planilha (seção "Instruções para o Claude")
+atualizado: 10/11/2026
+situacao: versão 2; copiada em 10/11/2026 para a aba "Como usar" da planilha (seção "Instruções para o Claude")
 ---
 
 # Instruções para o Claude: cadastrar e atualizar tarefas no Quadro de tarefas ATIVOS
@@ -14,7 +14,7 @@ Estas instruções valem para o Claude de **qualquer sócio** da ATIVOS (Henriqu
 
 ## Quem edita o quê (atualizado em 09/11/2026)
 
-A planilha é o **esboço da central de tarefas** (até o Notion). Para ser prático para todos:
+A planilha é a **central de tarefas oficial** (decisão de 10/11/2026: ferramentas só Google). Para ser prático para todos:
 
 * **Cada sócio cadastra e atualiza as suas tarefas livremente**, do jeito mais prático (texto livre, sem se preocupar com o padrão). As listas de seleção só sugerem valores; não bloqueiam.
 * **O Claude do Henrique padroniza depois**, quando o Henrique pedir, **sem alterar o conteúdo**.
@@ -41,7 +41,9 @@ Prioridade: Alta / Média / Baixa
 Prazo: (se tiver)
 ```
 
-**Proteções (só aviso, não bloqueiam):** colunas auxiliares O a R da aba Tarefas, abas automáticas (pessoas e Visão geral), Projetos e Listas. As colunas A a N da aba Tarefas são livres.
+**Proteções (só aviso, não bloqueiam):** abas automáticas (pessoas e Visão geral), Projetos e Listas. Todas as colunas da aba Tarefas (A a O) são livres.
+
+**Capacidade e visual (10/11/2026):** aba Tarefas com 2.000 linhas (formatada como Tabela), Status e Prioridade em etiquetas coloridas, abas pessoais sem limite de linhas e Visão geral com 2 gráficos (pessoa × status e % concluído por projeto). Nunca use o funil do cabeçalho: ele muda a visão de todos; use os modos de filtro (links na aba Como usar).
 
 ## Como o sócio pede
 
@@ -52,7 +54,7 @@ Basta colar no chat do Claude:
 ## O que o Claude deve fazer
 
 1. **Ler antes de escrever.** Leia as abas Como usar, Listas e Projetos, e a coluna A da aba Tarefas.
-2. **Escrever só na aba Tarefas, colunas A a N.** Nunca altere as colunas O a R (auxiliares), as abas com nome de pessoa, a Visão geral, a Projetos nem a Listas.
+2. **Escrever só na aba Tarefas, colunas A a O.** Nunca altere as abas com nome de pessoa, a Visão geral, a Projetos nem a Listas.
 3. **Nunca apagar linhas nem mudar o código de uma tarefa existente.** Tarefa cancelada: Status = Feito e "Cancelada: motivo" em Link ou observação.
 4. **Código:** o próximo número livre depois do maior código da coluna A (ex.: se o maior é T-066, a próxima é T-067). Nunca reaproveitar.
 5. **Linha:** a primeira linha vazia da aba Tarefas (coluna B vazia).
@@ -74,6 +76,7 @@ Basta colar no chat do Claude:
 | L Link ou observação | Link do Drive ou observação curta. Status Aguardando: diga de quem |
 | M Criada em | Data de hoje (DD/MM/AAAA) |
 | N Concluída em | Só quando Status = Feito |
+| O Tempo real (h) | Horas gastas de verdade, ao concluir (ex.: 1,5). Só com a informação do sócio; não invente |
 
 7. **Tamanho:** cada tarefa cabe em até 1 dia. Se o pedido for maior, proponha dividir em tarefas menores antes de cadastrar.
 8. **Faltou informação obrigatória** (Responsável, Projeto, Prioridade)? Pergunte ao sócio. Não adivinhe.
@@ -84,5 +87,5 @@ Basta colar no chat do Claude:
 ## Atualizar uma tarefa existente
 
 * Mudar status, prazo, estimativa, semana ou observação: altere só a célula pedida, na linha do código informado.
-* Concluir: Status = Feito e Concluída em = data de hoje.
+* Concluir: Status = Feito, Concluída em = data de hoje e, se o sócio informar, Tempo real (h).
 * Mudar o responsável: só com o pedido do próprio responsável ou do Henrique/Igor; registre em observação "Repassada de X para Y em DD/MM".
