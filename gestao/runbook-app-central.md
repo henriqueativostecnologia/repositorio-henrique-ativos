@@ -58,6 +58,15 @@ Drive › 00 Geral › 03 Gestão de tarefas › cópia da planilha com o nome "
 **Resultado esperado:** sem erros (sinal verde no topo).
 **Se falhar:** opção faltando numa lista = adicionar em Values, escrita igual à aba Listas.
 
+### Passo 5: testar ida e volta (app ↔ planilha)
+```
+1. Antes: em Criada em e Concluída em, desligar Require (tarefas antigas não têm essas datas). Criada em mantém Initial value TODAY(); Concluída em fica sem Initial value.
+2. No app: abrir uma tarefa › lápis › mudar o Status › Save. Conferir na planilha (o Claude confere pela planilha).
+3. Na planilha: mudar o Status de volta. No app: botão de sincronizar (seta circular) › conferir.
+```
+**Resultado esperado:** a mudança aparece dos dois lados (testado em 10/11/2026 com a T-015: ida e volta OK).
+**Se falhar:** "This entry is required" ao salvar = alguma coluna está com Require ligado sem precisar (desligar em Data › coluna › Data Validity › Require?).
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
