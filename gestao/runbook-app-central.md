@@ -205,6 +205,17 @@ Views › Calendário: Start date = Prazo · End date = Prazo · Start time e En
 ```
 **Resultado esperado:** as tarefas aparecem na faixa de dia inteiro, no topo, em Day, Week e Month. A grade de horas fica vazia de propósito, porque tarefa não tem hora.
 
+### Passo 18: coluna "Feito (semana)" no lugar de "Revisão"
+Decisão de 10/11/2026 (análise de processo): manter Aguardando (espera pelo cliente fica visível), tirar Revisão do Quadro (aprovações já são tarefas na EAP) e mostrar o que foi concluído na semana.
+```
+1. Data › Tarefas › Add slice: Col Feito semana
+   AND([Status] = "Feito", ISNOTBLANK([Concluída em]), [Concluída em] >= TODAY() - 7, OR(USERSETTINGS("Pessoa") = "Todos", [Responsável] = USERSETTINGS("Pessoa")))
+2. Views › New view: Feito (semana) · Col Feito semana · deck · ref · Sort Concluída em Descending · Group Responsável · Summary Concluída em
+3. Quadro › View entries: tirar Revisão, adicionar Feito (semana) em Tall. Ordem: A fazer, Fazendo, Aguardando, Feito (semana)
+```
+A tela Revisão fica escondida (ref), para voltar atrás se preciso. O status Revisão continua durante o teste.
+Combinados do Quadro: em Aguardando, escrever na Observação quem e o quê; no máximo 3 cartões em Fazendo por pessoa (confirmar com os sócios).
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
