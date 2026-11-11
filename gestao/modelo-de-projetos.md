@@ -35,7 +35,17 @@ PORTFÓLIO (todos os projetos)
 | 6 | Tamanho | Uma tarefa cabe em até 1 dia; se for maior, divide |
 | 7 | Estimativa | P (até 2h) · M (até 4h) · G (até 1 dia) |
 | 8 | Portões | **G0:** contrato, acessos e briefing completos · **Aceite:** cliente aprova por escrito. A Infraestrutura de Dados mantém os seus 7 portões |
-| 9 | Códigos | Projeto de cliente `CLI-001-SIGLA Nome` (ex.: `CLI-002-PAC Lucas Melo`) (PAC pacote, POS posicionamento, TRA tráfego, AUT automação, DAD dados) · interno `INT-00X` · tarefa `T-XXX`, nunca reaproveitado |
+| 9 | Códigos | Projeto de cliente `CLI-001-SIGLA Nome` (ex.: `CLI-002-PAC Lucas Melo`) (PAC pacote, POS posicionamento, TRA tráfego, AUT automação, DAD dados) · interno `INT-00X` · campanha comercial `COM-00X Nicho` (ex.: `COM-001 Comércio local`) · tarefa `T-XXX`, nunca reaproveitado |
+
+## Tipos de projeto
+
+| Tipo | Para quê | Exemplo |
+|---|---|---|
+| CLI (cliente) | Entregar o que o cliente comprou | CLI-001-PAC Dr. Felipe |
+| COM (comercial) | Conquistar clientes: um nicho, uma oferta e um jeito de abordar. Cada cliente que fechar vira um projeto CLI | COM-001 Comércio local (Posicionamento Digital com visitas presenciais) |
+| INT (interno) | Estruturar a própria ATIVOS | INT-001 Estruturação da ATIVOS |
+
+Decisão de 11/11/2026: o antigo INT-003 (prospecção presencial de comércios locais) virou COM-001 Comércio local. Material de venda de uma campanha vai na campanha (COM); material que serve para todas fica no INT-000.
 
 ## Projetos internos fixos
 
