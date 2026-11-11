@@ -46,7 +46,7 @@ O **00** fica no topo porque guarda o que vale para o Drive inteiro: este manual
 | **10 Comercial** | 11 Prospecção · 12 Propostas enviadas · 13 Modelos de proposta e contrato · 14 Material de venda por nicho |
 | **20 Clientes** | Uma pasta por cliente, com código fixo (item 4) · CLI-000 Modelo, para copiar |
 | **30 Projetos internos** | Projetos da própria ATIVOS: marca, Instagram, landing page |
-| **40 Processos** | 41 Catálogo de serviços · 42 Fluxos dos serviços · 43 POPs · 44 Instruções de trabalho · 45 Checklists e modelos · 49 Sugestões e rascunhos |
+| **40 Processos** | 41 Catálogo de serviços · 42 Fluxos dos serviços · 43 POPs · 44 Instruções de trabalho · 45 Checklists e modelos · 46 Modelos e ferramentas técnicas (templates de site, automações padrão, infraestrutura; setor ATIVOS · Operacional) · 49 Sugestões e rascunhos |
 | **50 Financeiro** | 51 Contas a receber e notas emitidas · 52 Contas a pagar · 53 Extratos e conciliação · 54 Fechamentos e relatórios · 55 Impostos e contabilidade |
 | **60 Administrativo e societário** | Contrato social, documentos da empresa, ferramentas e assinaturas |
 | **70 Marca e marketing da ATIVOS** | Identidade visual e materiais da ATIVOS, com atalho para o Drive "Conteúdos" |
