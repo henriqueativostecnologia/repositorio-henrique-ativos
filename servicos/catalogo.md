@@ -50,3 +50,17 @@ Consulte antes de montar propostas e de abrir projetos.
 * **Público:** construtoras, imobiliárias, advocacia (previdenciária e trabalhista), compra e venda de veículos, estética automotiva; no futuro, clínicas.
 * **Inclui:** os blocos dos serviços 1, 2 e 3, mais site (benchmarking e wireframe; copy com SEO, GEO, AEO e blog; design system, deploy e apontamento) e infraestrutura de dados (Tag Manager, Analytics, BigQuery e GCP; dashboard). Decidido em 05/11/2026: os 3 primeiros clientes têm Infraestrutura de Dados; qualificação de leads também vale para os 3.
 * **Primeiros clientes:** ver `clientes/indice.md`.
+
+## Pontos em aberto (12/11/2026)
+
+Aguardando a documentação do fechamento do comercial (Henrique e Igor). Depois, validar contra `pacote/eap-padrao.md` e gerar a versão 2 do modelo de serviços.
+
+| # | Ponto | Recomendação registrada |
+|---|---|---|
+| 1 | Duração do pacote: o EAP diz cerca de 3 semanas, mas a sequência site (15 d.u.) + dados (7 d.u.) dá cerca de 22 d.u. | Prometer 5 semanas, com folga |
+| 2 | Tarefas comuns a todo serviço: início (contrato, kickoff, checklist de acessos, T-213) e encerramento (entrega, aceite por escrito, pedido de depoimento) | Criar os blocos padrão "0 · Início" e "Fim · Entrega" |
+| 3 | Posicionamento Digital avulso: só o Rankeamento? Inclui a plaquinha NFC? Tem acompanhamento mensal? | Fechar depois do curso (T-218 e T-015) |
+| 4 | Tráfego: acompanhamento recorrente (frequência, relatório, quem faz) | Semanal (P) e relatório mensal (M) como tarefas fixas |
+| 5 | Automação avulsa: tem manutenção mensal? | Definir se haverá mensalidade (afeta o financeiro) |
+| 6 | Site avulso: é vendido fora do pacote? | Decidir com os sócios |
+| 7 | Rastreamento de Dados: prazos e quebra em tarefas | Validar com o Igor |

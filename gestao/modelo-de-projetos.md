@@ -15,7 +15,7 @@ situacao: versão inicial aprovada; será ajustada com a experiência dos 3 prim
 
 ```
 PORTFÓLIO (todos os projetos)
- └─ PROJETO       CLI-001-PAC · INT-001…            fases e portões
+ └─ PROJETO       CLI-001-PAC · Campanha · ATIVOS · Setor            fases e portões
      └─ ENTREGA   Site · Rankeamento · Tráfego…      EAP padrão do serviço
          └─ TAREFA   T-024 "Criar wireframe da home" cabe em 1 dia
              └─ checklist dentro da tarefa
@@ -35,15 +35,34 @@ PORTFÓLIO (todos os projetos)
 | 6 | Tamanho | Uma tarefa cabe em até 1 dia; se for maior, divide |
 | 7 | Estimativa | P (até 2h) · M (até 4h) · G (até 1 dia) |
 | 8 | Portões | **G0:** contrato, acessos e briefing completos · **Aceite:** cliente aprova por escrito. A Infraestrutura de Dados mantém os seus 7 portões |
-| 9 | Códigos | Projeto de cliente `CLI-001-SIGLA Nome` (ex.: `CLI-002-PAC Lucas Melo`) (PAC pacote, POS posicionamento, TRA tráfego, AUT automação, DAD dados) · interno `INT-00X` · tarefa `T-XXX`, nunca reaproveitado |
+| 9 | Códigos | Projeto de cliente `CLI-001-SIGLA Nome` (ex.: `CLI-002-PAC Lucas Melo`) (PAC pacote, POS posicionamento, TRA tráfego, AUT automação, DAD dados) · campanha `Campanha · Nicho` · setor da empresa `ATIVOS · Setor` · tarefa `T-XXX`, nunca reaproveitado |
 
-## Projetos internos fixos
+## Tipos de projeto
 
-| Código | Projeto |
-|---|---|
-| INT-000 | Rotina e administrativo (o que não pertence a nenhum projeto) |
-| INT-001 | Estruturação da ATIVOS (organização, Drive, processos, ferramentas, gestão) |
-| INT-002 | Posicionamento digital da ATIVOS (marca, design system, Instagram, landing page) |
+Decisão de 11/11/2026: nomes legíveis, sem código para decorar. Substitui INT-000, INT-001, INT-002, INT-003 e COM-001.
+
+| Tipo | Para quê | Formato do nome | Exemplo |
+|---|---|---|---|
+| Cliente | Entregar o que o cliente comprou | `CLI-00X-SIGLA Nome` (PAC pacote, POS posicionamento, TRA tráfego, AUT automação, DAD dados) | CLI-001-PAC Dr. Felipe |
+| Campanha | Abordar um nicho com uma oferta, com começo, meio e fim. Cada comércio ou empresa que fechar vira um projeto de Cliente | `Campanha · Nicho` | Campanha · Comércio local (cliente que fechar: CLI-004-POS Nome) |
+| ATIVOS (setor) | O trabalho da própria empresa | `ATIVOS · Setor` (só os 8 abaixo) | ATIVOS · Financeiro |
+
+## Setores da ATIVOS
+
+Os nomes seguem as áreas do Drive, para a tarefa e o arquivo ficarem no mesmo lugar.
+
+| Projeto | O que entra | Pasta do Drive |
+|---|---|---|
+| ATIVOS · Gestão | Como a empresa se organiza: Drive, central de tarefas, ferramentas, rituais, documentos de gestão de projetos | 00 Geral |
+| ATIVOS · Comercial | Prospecção do dia a dia, propostas, fechamento do comercial, material de venda | 10 Comercial |
+| ATIVOS · Processos | Como entregamos, documentado (pergunta "como?"): catálogo, POPs, checklists, EAP padrão, onboarding | 40 Processos |
+| ATIVOS · Operacional | Com o que entregamos, construído e mantido (pergunta "com o quê?"): templates, automações padrão, infraestrutura, testes de ferramentas, landing pages de demonstração | 40 Processos › 46 Modelos e ferramentas técnicas |
+| ATIVOS · Financeiro | Dinheiro entrando e saindo: contas, notas, cobrança, conciliação, fechamento, sistema financeiro | 50 Financeiro |
+| ATIVOS · Administrativo | Empresa regularizada: societário, documentos, contratos com fornecedores, assinaturas. Também as demandas avulsas que não se encaixam em outro setor (quem é o dono diz o campo Responsável; não criar projeto por pessoa) | 60 Administrativo e societário |
+| ATIVOS · Marketing | O marketing da própria ATIVOS: marca, design system, Instagram, landing page | 70 Marca e marketing da ATIVOS |
+| ATIVOS · Treinamentos | Cursos e estudos dos sócios | 80 Treinamentos |
+
+Regra de fronteira entre Financeiro e Administrativo: envolve dinheiro entrando ou saindo, é Financeiro; envolve documento, cadastro ou obrigação da empresa, é Administrativo.
 
 ## Onde ficam as tarefas
 

@@ -46,10 +46,10 @@ O **00** fica no topo porque guarda o que vale para o Drive inteiro: este manual
 | **10 Comercial** | 11 Prospecção · 12 Propostas enviadas · 13 Modelos de proposta e contrato · 14 Material de venda por nicho |
 | **20 Clientes** | Uma pasta por cliente, com código fixo (item 4) · CLI-000 Modelo, para copiar |
 | **30 Projetos internos** | Projetos da própria ATIVOS: marca, Instagram, landing page |
-| **40 Processos** | 41 Catálogo de serviços · 42 Fluxos dos serviços · 43 POPs · 44 Instruções de trabalho · 45 Checklists e modelos · 49 Sugestões e rascunhos |
+| **40 Processos** | 41 Catálogo de serviços · 42 Fluxos dos serviços · 43 POPs · 44 Instruções de trabalho · 45 Checklists e modelos · 46 Modelos e ferramentas técnicas (templates de site, automações padrão, infraestrutura; setor ATIVOS · Operacional) · 49 Sugestões e rascunhos |
 | **50 Financeiro** | 51 Contas a receber e notas emitidas · 52 Contas a pagar · 53 Extratos e conciliação · 54 Fechamentos e relatórios · 55 Impostos e contabilidade |
 | **60 Administrativo e societário** | Contrato social, documentos da empresa, ferramentas e assinaturas |
-| **70 Marca e marketing da ATIVOS** | Identidade visual e materiais da ATIVOS, com atalho para o Drive "Conteúdos" |
+| **70 Marca e marketing da ATIVOS** | 71 Identidade visual e Design System · 72 Conteúdos da ATIVOS (Reels e Carrosséis) · 73 Banco de imagens e vídeos |
 | **80 Treinamentos** | Cursos comprados e materiais de estudo |
 | **90 Arquivo** | Clientes encerrados e projetos concluídos |
 
@@ -174,7 +174,7 @@ R = executa · A = responde pelo resultado · C = é consultado · I = é inform
 | Cliente que volta depois de encerrado | Mantém o mesmo código. A pasta volta de 90 Arquivo para 20 Clientes |
 | O cliente mandou senha por e-mail ou WhatsApp | Coloque no gerenciador de senhas e apague a mensagem. Nunca salve no Drive |
 | Arquivo pessoal salvo por engano no Drive ATIVOS | Mova para o seu "Meu Drive" |
-| Material de produção de conteúdo (vídeos brutos, artes) | Fica no Drive "Conteúdos". O entregável final vai para a pasta do cliente |
+| Material de produção de conteúdo (vídeos brutos, artes) | Da ATIVOS: 70 › 73 Banco de imagens e vídeos. De cliente: pasta do cliente › 02 (material bruto) ou 03 Entregas (demonstrações e entregáveis). O Drive "Conteúdos" foi desativado em 12/11/2026 |
 | Alguém de fora dos sócios precisa de acesso | Compartilhe só a pasta necessária. Se for frequente, criamos um Drive separado para o Financeiro |
 
 ## 10. Como saber se está funcionando

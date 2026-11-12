@@ -135,6 +135,87 @@ SAVE.
 **Resultado esperado:** tarefa aberta mostra os botões só quando faz sentido (tarefa Cancelada ou Feita não mostra Concluir).
 **Position:** Primary = botão flutuante; Prominent = topo da tarefa (o que usamos); Inline = ao lado de uma coluna; Hide = escondido.
 
+### Passo 11: trocar a planilha de TESTE pela oficial
+```
+Data › Tables › cartão Tarefas › Storage › Source Path: escolher "Quadro de tarefas ATIVOS" (a oficial) · Worksheet Name/Qualifier: Tarefas · SAVE.
+NÃO clicar em "Copy Data to New Source" (copia os dados para outro lugar).
+```
+**Resultado esperado:** Source Id muda para o endereço da planilha oficial (DocId=1g7cFgks…). Telas, filtros e botões continuam funcionando, porque a estrutura das duas planilhas é igual (feito em 10/11/2026).
+
+### Passo 12: publicar (deploy)
+```
+Manage › Deploy › Deployment Check › Run deployment check › se estiver tudo OK: Move app to deployed state.
+```
+(artigos 10104495 Deploy: The Essentials e 10104389 Perform a deployment check)
+
+### Passo 13: painel "Quadro" (colunas lado a lado)
+```
+1. Data › Slices: Col A fazer, Col Fazendo, Col Aguardando, Col Revisao
+   AND([Status] = "<status>", OR(USERSETTINGS("Pessoa") = "Todos", [Responsável] = USERSETTINGS("Pessoa")))
+2. UX › Views › New View (uma por coluna): A fazer, Fazendo, Aguardando, Revisão · For this data = slice da coluna · deck · Position ref · Sort Prazo · Group Responsável.
+3. Tela "Por status" › Position menu (para caber o Quadro na barra de baixo).
+4. New View: Quadro · dashboard · Position last · View entries: A fazer, Fazendo, Aguardando, Revisão, todas em Tall · Use tabs in mobile view ligado.
+```
+**Resultado esperado:** no computador, 4 colunas lado a lado; no celular, 4 abas no topo (artigo 10106384 Dashboard view type: tamanhos Large, Small, Tall, Wide; no celular o tamanho é ignorado).
+
+### Passo 14: cores nos cartões (Format Rules)
+```
+UX › Format Rules › New Format Rule:
+- Atrasada: For this data Tarefas · condição AND(ISNOTBLANK([Prazo]), [Prazo] < TODAY(), NOT(IN([Status], LIST("Feito", "Cancelada")))) · colunas Código e Tarefa · ícone exclamation (⚠) · texto vermelho
+- Alta: For this data Tarefas · condição [Prioridade] = "Alta" · coluna Código · ícone flag · texto laranja · Bold
+Highlight color: deixar sem cor (fundo colorido polui o quadro).
+```
+
+### Passo 14e: prazo à direita nos cartões
+```
+UX › Views › A fazer, Fazendo, Aguardando, Revisão › Summary column = Prazo
+Calendário › Description = Tarefa (sem isso o calendário mostra só o código)
+```
+
+### Passo 14f: cor por pessoa no calendário
+```
+Data › Tarefas › Add Virtual Column:
+- Nome: Cor · Type: Color
+- App formula: SWITCH([Responsável], "Henrique", "Green", "Igor", "Blue", "Hugo", "Orange", "Bernardo", "Purple", "Black")
+- Type Details › Values: Green, Blue, Orange, Purple, Black (obrigatório: sem a lista o app não roda)
+UX › Views › Calendário › Category = Cor
+```
+**Resultado esperado:** Henrique verde, Igor azul, Hugo laranja, Bernardo roxo, sem responsável preto.
+
+### Passo 15: marca da ATIVOS (Theme & Brand)
+```
+Settings › Theme & Brand (ou UX › Brand):
+- Theme: Light
+- Primary color: Custom #1F2329 (grafite da marca; alternativa: azul do brilho #2F6FDE)
+- App logo: símbolo "A" quadrado, até 196 x 196 px e 500 KB
+- Launch image: símbolo grande, mínimo 600 x 600 px
+```
+Fonte: artigo 10106612 (Style: The Essentials). O arquivo do logo não fica no repositório.
+
+### Passo 16: ícones do menu
+```
+Views › cada tela › Display › Icon (só ícones da lista do AppSheet; ícone próprio não é aceito):
+Hoje calendar-day · Atrasadas exclamation-triangle · Amanhã sun · Esta semana calendar-week · Quadro columns ·
+Calendário calendar-alt · Ontem history · Por status tasks · Próxima semana forward
+```
+
+### Passo 17: calendário com início e fim
+```
+Views › Calendário: Start date = Prazo · End date = Prazo · Start time e End time vazios · Default view = Month
+```
+**Resultado esperado:** as tarefas aparecem na faixa de dia inteiro, no topo, em Day, Week e Month. A grade de horas fica vazia de propósito, porque tarefa não tem hora.
+
+### Passo 18: coluna "Feito (semana)" no lugar de "Revisão"
+Decisão de 10/11/2026 (análise de processo): manter Aguardando (espera pelo cliente fica visível), tirar Revisão do Quadro (aprovações já são tarefas na EAP) e mostrar o que foi concluído na semana.
+```
+1. Data › Tarefas › Add slice: Col Feito semana
+   AND([Status] = "Feito", ISNOTBLANK([Concluída em]), [Concluída em] >= TODAY() - 7, OR(USERSETTINGS("Pessoa") = "Todos", [Responsável] = USERSETTINGS("Pessoa")))
+2. Views › New view: Feito (semana) · Col Feito semana · deck · ref · Sort Concluída em Descending · Group Responsável · Summary Concluída em
+3. Quadro › View entries: tirar Revisão, adicionar Feito (semana) em Tall. Ordem: A fazer, Fazendo, Aguardando, Feito (semana)
+```
+A tela Revisão fica escondida (ref), para voltar atrás se preciso. O status Revisão continua durante o teste.
+Combinados do Quadro: em Aguardando, escrever na Observação quem e o quê; no máximo 3 cartões em Fazendo por pessoa (confirmar com os sócios).
+
 ### Passos seguintes
 A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, telas (views), filtros por pessoa, ações de mudar status e sincronização imediata ("Delayed Sync" desligado, artigo 10108301).
 
@@ -148,6 +229,10 @@ A preencher durante a montagem: escolher só a aba Tarefas, tipos das colunas, t
 |---|---|---|
 | Error "app did not load" no celular simulado | Erro de configuração pendente | Clicar no círculo vermelho do topo, ler a mensagem e corrigir |
 | App mostra o texto da aba "Como usar" | O AppSheet pegou a 1ª aba da planilha | Passo 3 |
+| "version ... is not runnable" e erro "Column Type 'Color' must have a list of allowed values" | Coluna Cor sem a lista de cores | Passo 14f: preencher Values |
+| Cores das pessoas trocadas no calendário | Fórmula da coluna Cor desatualizada | Colar de novo a fórmula do passo 14f |
+| Calendário vazio no modo Day | End date não preenchido | Passo 17 |
+| Aviso amarelo "Changes to user settings will require immediate sync" | Normal com User Settings | Ignorar (é aviso, não erro) |
 | Lixeiras aparecendo nas tarefas | Deletes ficou marcado | Data › Tarefas › configurações da tabela: desmarcar Deletes |
 
 ## Como desfazer

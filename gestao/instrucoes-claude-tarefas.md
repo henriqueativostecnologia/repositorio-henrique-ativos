@@ -65,7 +65,7 @@ Basta colar no chat do Claude:
 | A Código | T-XXX, conforme o item 4 |
 | B Tarefa | Começa com verbo no infinitivo e diz o resultado. Ex.: "Criar wireframe da home do site" |
 | C Responsável | Exatamente um valor da lista: Henrique, Igor, Hugo ou Bernardo |
-| D Projeto | Exatamente um valor da aba Projetos (cliente com código e nome, ex.: CLI-002-PAC Lucas Melo). Sem projeto: INT-000 |
+| D Projeto | Exatamente um valor da aba Projetos (cliente: CLI-002-PAC Lucas Melo; campanha: Campanha · Comércio local; setor: ATIVOS · Gestão, Comercial, Processos, Operacional, Financeiro, Administrativo, Marketing ou Treinamentos; tabela em `gestao/modelo-de-projetos.md`). Demanda avulsa sem setor claro: ATIVOS · Administrativo |
 | E Entrega ou área | Exatamente um valor da coluna "Entrega ou área" da aba Listas |
 | F Prioridade | Alta (trava cliente ou outras tarefas), Média ou Baixa |
 | G Status | Backlog, A fazer, Fazendo, Aguardando, Revisão, Feito ou Cancelada. Tarefa nova: A fazer (se for para esta semana) ou Backlog |
