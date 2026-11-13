@@ -1,6 +1,6 @@
 ---
 tipo: referência
-atualizado: 04/11/2026
+atualizado: 13/11/2026
 ---
 
 # Skills e plugins instalados na conta do Henrique
@@ -87,6 +87,26 @@ Situação: **instaladas em 04/11/2026.** Na lista de skills aparecem com o pref
 | invoice-chase | Lembretes de cobrança no tom certo; só envia com o seu "pode enviar" | "Quem está em atraso? Prepare as cobranças" | ✅ |
 | proposal-builder | Proposta comercial com escopo, preço e prazo; não inventa preço | "Monte a proposta de tráfego pago para a imobiliária X" | ✅ |
 
+## 6. Design de interface — para o app da Central ATIVOS e outras páginas
+
+Situação: **instaladas em 13/11/2026**, do catálogo oficial (Anthropic Directory). Uso principal: otimizar o design e as funcionalidades do app da central.
+Os servidores extras que vêm junto (UXKIN, Figma, Linear, Intercom) não conectam na rede deste ambiente; as skills funcionam sem eles.
+
+| Skill | O que é / para que serve | Quando usar (exemplo) | |
+|---|---|---|---|
+| frontend-design (Anthropic) | Direção visual para telas novas ou redesenhadas: tipografia, cores, layout, sem cara de modelo pronto | "Deixe o app mais moderno e com a cara da ATIVOS" | ✅ |
+| design:design-critique (Anthropic) | Crítica estruturada: usabilidade, hierarquia, consistência | "O que você acha desta tela?" | ✅ |
+| design:accessibility-review (Anthropic) | Auditoria de acessibilidade (contraste, teclado, tamanho de toque, leitor de tela) | "O app está acessível?" | ✅ |
+| design:ux-copy (Anthropic) | Textos da interface: botões, mensagens de erro, estados vazios | "Revise os textos dos botões e avisos" | ✅ |
+| design:design-system (Anthropic) | Organizar e documentar o design system (cores, fontes, componentes) | "Documente o design system do app" | ✅ |
+| design:design-handoff, user-research, research-synthesis (Anthropic) | Especificação para desenvolvedor, pesquisa com usuários e síntese | "Monte um roteiro para ouvir os sócios sobre o app" | ⚠️ Uso pontual |
+| ui-design-review:ui-review (UXKIN) | Revisão como designer sênior, olhando o app no celular e no computador, com a lista do que corrigir em ordem de importância | "Revise o app e diga o que melhorar primeiro" | ✅ |
+| ui-design-review:ui-polish (UXKIN) | Corrige os problemas escolhidos da revisão, no estilo do próprio app, e confere o resultado | "Aplique as correções 1, 2 e 4" | ✅ |
+| ui-design-review:ui-compare (UXKIN) | Compara uma tela com a forma como produtos reais resolvem o mesmo problema | "Como o Linear e o Asana fazem o quadro?" | ✅ |
+| dashboard-design:dashboard-layout (UXKIN) | Montar ou refazer um painel: números principais no topo, grade, filtros, estados vazios e de erro | "Refaça a aba Painel" | ✅ |
+| dashboard-design:dashboard-review (UXKIN) | Revisão de um painel existente, com a lista do que corrigir | "Revise a aba Painel" | ✅ |
+| dashboard-design:data-display (UXKIN) | Escolher o gráfico, número ou tabela certo para cada dado | "Qual o melhor gráfico para a carga por pessoa?" | ✅ |
+
 ## Qual usar (desempate)
 
 | Pedido | Usar | Não usar |
@@ -115,4 +135,8 @@ Situação: **instaladas em 04/11/2026.** Na lista de skills aparecem com o pref
 | Criar ou mexer em pasta e arquivo no Drive | google-workspace | — |
 | Planilha para baixar | xlsx | — |
 | Apresentação | pptx | — |
+| Revisar ou melhorar o visual de uma tela, app ou página | ui-design-review (ui-review, depois ui-polish) | — |
+| Criar ou redesenhar a cara de uma tela | frontend-design | — |
+| Painel, dashboard, KPIs | dashboard-design (dashboard-layout / dashboard-review) | dataviz só para o gráfico em si |
+| Textos de botões, avisos e mensagens do app | design:ux-copy | — |
 | Criar ou melhorar uma skill própria da ATIVOS | skill-creator | — |
