@@ -119,6 +119,22 @@ Gancho padrão: **"a busca por IA mudou quem aparece"** (SEO, GEO e AEO). Cada s
 * WhatsApp: asteriscos simples para destaque, hífens para listas, sem tabelas.
 * Volume baixo e manual no começo (Instagram, LinkedIn e WhatsApp bloqueiam automação em massa).
 
+## Registro de cada negócio (campos da planilha ou CRM)
+
+| Grupo | Campos |
+|---|---|
+| Identificação | place_id, nome, endereço, bairro, telefone, site, nota, nº de avaliações |
+| Diagnóstico | site (sem site, defasado, ok, com motivos e nota de velocidade), GMN (posição, distância do 1º do mapa), Instagram (perfil, atividade, se anuncia), cenário |
+| Decisor | nome, Instagram, LinkedIn, grau de confiança (alto, médio, baixo) |
+| Contato | WhatsApp, e-mail validado, telefone (celular ou fixo), canal preferido, descadastro |
+| Prioridade | nota de prioridade, bairro, rota, data prevista da visita |
+| Aquecimento | seguiu, interagiu, conexão (enviada, aceita, ignorada), sinal (frio, morno, quente), data da última reação |
+| Visita | decisor alcançado, desfecho, objeções ouvidas, gancho usado, interesse (baixo, médio, alto) |
+| Reforço | WhatsApp enviado (data, hora, número), resposta (avançar, dúvida, visualizou, sem retorno) |
+| E-mail | enviado, aberto, clicou, respondeu, descadastrou, com data |
+| Ligação | tentativas (data, hora, quem atendeu, melhor horário), desfecho, reunião confirmada |
+| Nutrição e indicação | segmento (retorno em data, sem resposta, objeção de preço ou momento, pausa longa), reativado, origem (inclui "indicação"), quem indicou |
+
 ## Métricas
 
 | Métrica | Etapa | Meta |
