@@ -1,6 +1,6 @@
 # Passo 4: separa planejadas e opcionais, monta os blocos de visita e os alertas de cada loja.
 # Uso: python3 4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json [dados/visitas.xlsx]
-# Planejada = 10+ avaliações (qualquer nota) ou ficha sem dono. Opcional = menos de 10 avaliações (presas à planejada mais próxima: 12a, 12b...).
+# Planejada = 10+ avaliações (qualquer nota) ou ficha sem dono, menos o cenário D. Opcional = menos de 10 avaliações ou cenário D (presas à planejada mais próxima: 12a, 12b...).
 # Cenário A-D, sinais, oferta e case a levar: regras de 16/11/2026 (limites na configuração, campo "cenario").
 # Blocos de até 10 planejadas, do mais perto para o mais longe do ponto de saída.
 import json, math, sys, re, string, unicodedata, os
@@ -34,10 +34,51 @@ FORA = [norm(x) for x in C['fora_do_roteiro']]; CONF = [norm(x) for x in C['conf
 L = [l for l in J['linhas'] if not any(x in norm(l['nome']) for x in FORA)]
 # segmentos só para mapear (ainda não abordar): ficam fora do roteiro, numa aba própria da planilha
 SM = set(C.get('so_mapear', [])); SO_MAPEAR = [l for l in L if l['seg'] in SM]; L = [l for l in L if l['seg'] not in SM]
+# ---- Cenário A-D (regras de 16/11/2026) ----
+# A = sem site próprio; B = site próprio que falha em 1+ teste (sem HTTPS, não se adapta ao celular, PageSpeed no celular
+# abaixo do limite, fora do ar; ano antigo no rodapé só como apoio); C = site ok e Google fraco; D = o resto.
+# Os testes do site vêm de um arquivo (campo "testes_sites" da configuração): {url: {https, celular, pagespeed, fora_do_ar, ano}}.
+CE = C.get('cenario', {}); LIM_NOTA = CE.get('nota_minima', 4.0); LIM_AV = CE.get('avaliacoes_minimas', 10)
+LIM_PS = CE.get('pagespeed_minimo', 50); LIM_ANO = CE.get('ano_antigo', 2023)
+TS = {}
+if C.get('testes_sites') and os.path.exists(C['testes_sites']): TS = json.load(open(C['testes_sites']))
+OFERTA = {'A': 'Google Meu Negócio + site novo', 'B': 'Google Meu Negócio + reforma do site',
+          'C': 'Google Meu Negócio (+ ajuste leve no site)', 'D': 'Baixa prioridade (outro serviço ou diagnóstico de cortesia)',
+          'B ou C': 'Google Meu Negócio (+ site: reforma ou ajuste leve, ver no teste)', 'B ou D': 'Definir depois do teste do site'}
+CASES = C.get('cases', {})
+def fmtn(v): return format(v, '.1f').replace('.', ',')
+for l in L:
+    g = []  # sinais do Google
+    if l['nota'] is not None and l['nota'] < LIM_NOTA: g.append(f"nota {fmtn(l['nota'])} com {l['aval'] or 0} avaliações")
+    if (l['aval'] or 0) < LIM_AV: g.append('sem avaliações' if not l['aval'] else f"só {l['aval']} avaliações")
+    if l['sem_dono']: g.append('ficha sem dono')
+    if l.get('horario') is False: g.append('sem horário na ficha')
+    if l['sit'] != 'site próprio':
+        cen, s = 'A', [l['sit']] + g
+    else:
+        t_ = TS.get(l['site'])
+        if not t_:  # sem o teste do site não dá para separar B de C/D; os dois casos ficam planejados até o teste
+            cen, s = ('B ou C' if g else 'B ou D'), ['site não testado'] + g
+        else:
+            f = []
+            if t_.get('fora_do_ar'): f.append('site fora do ar')
+            else:
+                if t_.get('https') is False: f.append('sem HTTPS')
+                if t_.get('celular') is False: f.append('não se adapta ao celular')
+                if t_.get('pagespeed') is not None and t_['pagespeed'] < LIM_PS: f.append(f"PageSpeed no celular {t_['pagespeed']}")
+            if f:
+                if t_.get('ano') and t_['ano'] <= LIM_ANO: f.append(f"rodapé de {t_['ano']}")
+                cen, s = 'B', f + g
+            elif g: cen, s = 'C', g
+            else: cen, s = 'D', []
+    l['cenario'] = cen; l['sinais'] = '; '.join(s); l['oferta'] = OFERTA[cen]
+    l['case'] = CASES.get(l['seg'], '')
+print('cenários:', dict(Counter(l['cenario'] for l in L)), '| sites testados:', len(TS))
 for l in L:
     l['p'] = (l['gps']['latitude'], l['gps']['longitude'])
     # regra de 16/11/2026: planejada = 10+ avaliações (com qualquer nota) ou ficha sem dono; opcional = menos de 10 avaliações
-    l['plan'] = bool(l['sem_dono']) or (l['aval'] or 0) >= 10
+    # + cenário D (site ok e Google ok) vira opcional, mesmo com 10+ avaliações (16/11/2026)
+    l['plan'] = (bool(l['sem_dono']) or (l['aval'] or 0) >= 10) and l['cenario'] != 'D'
     l['grupo2'] = 'com site' if l['grupo'] == 'Com site' else 'sem site'
     l['dup_de'] = None
 # mesma marca: a de melhor avaliação fica normal; as outras recebem o alerta
@@ -118,46 +159,6 @@ for k, ini, pts in rotas:
 for l in L:
     for k in ('ancora', 'dup_de'): l.pop(k, None)
 for l in L: l['visita'] = VIS.get(l['link'], {})
-# ---- Cenário A-D (regras de 16/11/2026) ----
-# A = sem site próprio; B = site próprio que falha em 1+ teste (sem HTTPS, não se adapta ao celular, PageSpeed no celular
-# abaixo do limite, fora do ar; ano antigo no rodapé só como apoio); C = site ok e Google fraco; D = o resto.
-# Os testes do site vêm de um arquivo (campo "testes_sites" da configuração): {url: {https, celular, pagespeed, fora_do_ar, ano}}.
-CE = C.get('cenario', {}); LIM_NOTA = CE.get('nota_minima', 4.0); LIM_AV = CE.get('avaliacoes_minimas', 10)
-LIM_PS = CE.get('pagespeed_minimo', 50); LIM_ANO = CE.get('ano_antigo', 2023)
-TS = {}
-if C.get('testes_sites') and os.path.exists(C['testes_sites']): TS = json.load(open(C['testes_sites']))
-OFERTA = {'A': 'Google Meu Negócio + site novo', 'B': 'Google Meu Negócio + reforma do site',
-          'C': 'Google Meu Negócio (+ ajuste leve no site)', 'D': 'Baixa prioridade (outro serviço ou diagnóstico de cortesia)',
-          '?': 'Definir depois do teste do site'}
-CASES = C.get('cases', {})
-def fmtn(v): return format(v, '.1f').replace('.', ',')
-for l in L:
-    g = []  # sinais do Google
-    if l['nota'] is not None and l['nota'] < LIM_NOTA: g.append(f"nota {fmtn(l['nota'])} com {l['aval'] or 0} avaliações")
-    if (l['aval'] or 0) < LIM_AV: g.append('sem avaliações' if not l['aval'] else f"só {l['aval']} avaliações")
-    if l['sem_dono']: g.append('ficha sem dono')
-    if l.get('horario') is False: g.append('sem horário na ficha')
-    if l['sit'] != 'site próprio':
-        cen, s = 'A', [l['sit']] + g
-    else:
-        t_ = TS.get(l['site'])
-        if not t_:
-            cen, s = '?', ['site não testado'] + g
-        else:
-            f = []
-            if t_.get('fora_do_ar'): f.append('site fora do ar')
-            else:
-                if t_.get('https') is False: f.append('sem HTTPS')
-                if t_.get('celular') is False: f.append('não se adapta ao celular')
-                if t_.get('pagespeed') is not None and t_['pagespeed'] < LIM_PS: f.append(f"PageSpeed no celular {t_['pagespeed']}")
-            if f:
-                if t_.get('ano') and t_['ano'] <= LIM_ANO: f.append(f"rodapé de {t_['ano']}")
-                cen, s = 'B', f + g
-            elif g: cen, s = 'C', g
-            else: cen, s = 'D', []
-    l['cenario'] = cen; l['sinais'] = '; '.join(s); l['oferta'] = OFERTA[cen]
-    l['case'] = CASES.get(l['seg'], '')
-print('cenários:', dict(Counter(l['cenario'] for l in L)), '| sites testados:', len(TS))
 json.dump(dict(L=L, O=O, rotas=LINKS, config=C, so_mapear=SO_MAPEAR), open(OUT, 'w'), ensure_ascii=False)
 print('só mapear (fora do roteiro):', len(SO_MAPEAR))
 print('visitas trazidas da planilha:', sum(1 for l in L if l['visita']), 'de', len(VIS))
