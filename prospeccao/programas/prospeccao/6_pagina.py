@@ -1,4 +1,5 @@
 # Passo 6: página para o celular (mapa, filtros e cartões com alertas e botões "Ver no Maps").
+# Lojas visitadas: ficam em cinza com ✓ (pela planilha, passo 4, ou pelo botão "Marcar visitada", salvo no aparelho).
 # Uso: python3 6_pagina.py dados/roteiro.json dados/Roteiro_CIDADE_DATA.html --leaflet dados/leaflet
 # Tem dados reais: o arquivo gerado nunca entra no repositório.
 # Funciona offline, aberta como arquivo no celular: o Leaflet vai embutido (pasta com leaflet.js e leaflet.css da versão 1.9.4)
@@ -23,7 +24,8 @@ D = []
 for l in L:
     D.append(dict(p=l['parada'], b=l['bloco'], n=l['nome'], s=l['seg'], ba=l['bairro'], g=l['grupo2'], pl=1 if l['plan'] else 0,
                   sd=1 if l['sem_dono'] else 0, nt=l['nota'], av=l['aval'], al=l['alertas'], sit=l['sit'], w=l['site'], wc=canal(l['site']),
-                  t=l['tel'], e=l['end'], m=l['link'], la=l['gps']['latitude'], lo=l['gps']['longitude']))
+                  t=l['tel'], e=l['end'], m=l['link'], la=l['gps']['latitude'], lo=l['gps']['longitude'],
+                  id=l['pid'], vr=(l.get('visita') or {}).get('r', ''), vd=(l.get('visita') or {}).get('d', '')))
 ROT = [dict(k=r['k'], nome=r['nome'], links=r['links'], km=round(r['km'], 1), n=r['n'], nop=r['nop']) for r in R['rotas']]
 segs = sorted({d['s'] for d in D})
 npl = sum(d['pl'] for d in D)
@@ -62,18 +64,25 @@ h3{margin:0;font-size:1rem;color:var(--tinta)}.tag{display:inline-block;font-siz
 .pin{width:28px;height:28px;border-radius:50%;color:#fff;display:grid;place-items:center;font:700 10px system-ui,sans-serif;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
 .pin.sd{outline:3px solid var(--sd);outline-offset:1px}.pin.op{width:20px;height:20px;font-size:8px;opacity:.9}
 .casa{background:#1D2B27;color:#fff;border-radius:6px;padding:2px 6px;font:700 11px system-ui,sans-serif;white-space:nowrap;border:2px solid #fff}
+article.vis{opacity:.72}article.vis h3::after{content:" ✓";color:var(--sem)}
+.visita{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--linha)}
+.visita select{font:inherit;padding:7px;border:1px solid var(--linha);border-radius:8px;background:var(--papel);color:var(--tinta);flex:1 1 160px;min-height:38px}
+.visita .marcar{border:1px solid var(--sem);color:var(--sem);background:transparent;padding:8px 12px;border-radius:8px;font:600 .88rem system-ui,sans-serif;cursor:pointer;min-height:38px}
+.visita .selo{font-size:.82rem;font-weight:700;color:var(--sem)}
+.pin.vis{background:#7C8A85!important;opacity:.85;position:relative}.pin.vis::after{content:"✓";position:absolute;top:-6px;right:-6px;background:var(--sem);color:#fff;border-radius:50%;width:14px;height:14px;font-size:9px;display:grid;place-items:center}
+#copiado{white-space:pre-wrap;font:12px ui-monospace,monospace;background:var(--papel);border:1px solid var(--linha);border-radius:8px;padding:8px;margin-top:8px;max-height:160px;overflow:auto}
 #vazio{display:none}button:focus-visible,a:focus-visible{outline:3px solid var(--sd);outline-offset:2px}
 </style></head><body>
 <header><h1>Roteiro de visitas · __TITULO__</h1><p>__NPL__ planejadas · __NOP__ opcionais · __NB__ blocos · saída: __SAIDA__</p></header>
 <main>
 <div class="filtros">
- <div class="linha" role="group" aria-label="Grupo"><button class="chip" data-gr="todos" aria-pressed="true">Todos</button><button class="chip" data-gr="com site" aria-pressed="false"><i style="background:var(--com)"></i>Com site</button><button class="chip" data-gr="sem site" aria-pressed="false"><i style="background:var(--sem)"></i>Sem site</button><button class="chip" id="sd" aria-pressed="false"><i style="background:var(--sd)"></i>Só ficha sem dono</button><button class="chip" id="op" aria-pressed="true">Mostrar opcionais</button></div>
+ <div class="linha" role="group" aria-label="Grupo"><button class="chip" data-gr="todos" aria-pressed="true">Todos</button><button class="chip" data-gr="com site" aria-pressed="false"><i style="background:var(--com)"></i>Com site</button><button class="chip" data-gr="sem site" aria-pressed="false"><i style="background:var(--sem)"></i>Sem site</button><button class="chip" id="sd" aria-pressed="false"><i style="background:var(--sd)"></i>Só ficha sem dono</button><button class="chip" id="op" aria-pressed="true">Mostrar opcionais</button><button class="chip" id="ev" aria-pressed="false">Esconder visitadas</button><button class="chip" id="cp" type="button">Copiar visitas</button></div>
  <div class="linha" role="group" aria-label="Segmento"><button class="chip" data-sg="" aria-pressed="true">Todos os segmentos</button>__SEGS__</div>
- <div class="resumo">Mostrando <b id="tot"></b> lojas. Toque em mais de um segmento para juntar.</div>
+ <div class="resumo">Mostrando <b id="tot"></b> lojas · <b id="nvis">0</b> de __NPL__ planejadas visitadas. Toque em mais de um segmento para juntar.</div><div id="copiado" hidden></div>
 </div>
 <div id="mapa" role="region" aria-label="Mapa das paradas"></div>
-<div class="leg"><span><i style="background:var(--com)"></i>Com site</span><span><i style="background:var(--sem)"></i>Sem site</span><span><i style="background:var(--op)"></i>Opcional</span><span><i style="background:transparent;outline:3px solid var(--sd)"></i>Ficha sem dono</span></div>
-<div class="dica"><b>Como usar:</b> visite todas as planejadas na ordem dos números. As opcionais (cinza, ex.: 12a) ficam perto da parada de mesmo número: entre se der tempo. Depois de cada visita, preencha a coluna "Resultado" na planilha.</div>
+<div class="leg"><span><i style="background:#7C8A85"></i>Visitada ✓</span><span><i style="background:var(--com)"></i>Com site</span><span><i style="background:var(--sem)"></i>Sem site</span><span><i style="background:var(--op)"></i>Opcional</span><span><i style="background:transparent;outline:3px solid var(--sd)"></i>Ficha sem dono</span></div>
+<div class="dica"><b>Como usar:</b> visite todas as planejadas na ordem dos números. As opcionais (cinza, ex.: 12a) ficam perto da parada de mesmo número: entre se der tempo. Depois de cada visita, toque em <b>Marcar visitada</b> no cartão (fica salvo neste aparelho) e preencha a coluna "Resultado" na planilha, que é o registro oficial. A loja visitada não some: fica em cinza com ✓. "Copiar visitas" copia a lista para você colar na planilha ou mandar para o Claude.</div>
 <p id="vazio" class="dica">Nenhuma loja com esses filtros. Toque em "Todos".</p>
 __BLOCOS__
 <p class="meta" style="margin-top:20px">Fonte: __FONTE__. Distâncias em linha reta; de carro o caminho é maior. Mapa © colaboradores do OpenStreetMap.</p>
@@ -81,7 +90,11 @@ __BLOCOS__
 <script>__LEAFLET_JS__</script>
 <script>
 const D=__DADOS__, O=__O__;
-const st={gr:'todos',sg:new Set(),sd:false,op:true};
+const st={gr:'todos',sg:new Set(),sd:false,op:true,ev:false};
+const CHAVE='ativos-visitas-'+document.title;
+let VL={}; try{VL=JSON.parse(localStorage.getItem(CHAVE)||'{}')||{}}catch(e){VL={}}
+function salvar(){try{localStorage.setItem(CHAVE,JSON.stringify(VL))}catch(e){}}
+function visita(d){const x=VL[d.id]; if(x) return x; return d.vr?{r:d.vr,d:d.vd,planilha:1}:null}
 let map=null, mk={}, linha=null;
 try{
  map=L.map('mapa',{tap:true}).setView(O,14);
@@ -91,31 +104,51 @@ try{
  D.forEach(d=>{
   const cls=d.pl?(d.g==='com site'?'com':'sem'):'op';
   const cor=getComputedStyle(document.documentElement).getPropertyValue('--'+cls);
-  const m=L.marker([d.la,d.lo],{icon:L.divIcon({className:'',html:`<div class="pin ${d.pl?'':'op'} ${d.sd?'sd':''}" style="background:${cor}">${d.p}</div>`,iconSize:d.pl?[28,28]:[20,20],iconAnchor:d.pl?[14,14]:[10,10]})});
+  d.cor=cor; const m=L.marker([d.la,d.lo],{icon:icone(d)});
   m.bindPopup(`<b>${d.p}. ${esc(d.n)}</b><br>${esc(d.s)} · ${d.g}<br><a href="${d.m}" target="_blank" rel="noopener">Ver no Maps</a> · <a href="#c${d.p}">Ver cartão</a>`);
   mk[d.p]=m;
  });
 }catch(e){ map=null; document.getElementById('mapa').innerHTML='<p class="dica" style="margin:12px">O mapa precisa de internet para carregar. Os cartões abaixo funcionam sem ele.</p>'; }
+function icone(d){return L.divIcon({className:'',html:`<div class="pin ${d.pl?'':'op'} ${d.sd?'sd':''} ${visita(d)?'vis':''}" style="background:${d.cor}">${d.p}</div>`,iconSize:d.pl?[28,28]:[20,20],iconAnchor:d.pl?[14,14]:[10,10]})}
 function esc(t){return String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
-function vis(d){return (st.gr==='todos'||d.g===st.gr)&&(st.sg.size===0||st.sg.has(d.s))&&(!st.sd||d.sd)&&(st.op||d.pl)}
+function vis(d){return (st.gr==='todos'||d.g===st.gr)&&(st.sg.size===0||st.sg.has(d.s))&&(!st.sd||d.sd)&&(st.op||d.pl)&&!(st.ev&&visita(d))}
+function pintar(d){const v=visita(d), el=document.getElementById('c'+d.p); el.classList.toggle('vis',!!v);
+ const s=el.querySelector('.selo'), b=el.querySelector('.marcar'), sel=el.querySelector('select');
+ s.textContent=v?('✓ Visitada'+(v.d?' em '+v.d:'')+(v.planilha?' (planilha)':'')):''; b.textContent=v?(v.planilha?'Registrada na planilha':'Desmarcar'):'Marcar visitada'; b.disabled=!!(v&&v.planilha); sel.value=v?(v.r||''):sel.value;
+ if(map&&mk[d.p]) mk[d.p].setIcon(icone(d));}
 function aplicar(){
  const pts=[O]; let n=0;
  D.forEach(d=>{const v=vis(d); document.getElementById('c'+d.p).hidden=!v; n+=v;
   if(map){ if(v){mk[d.p].addTo(map); if(d.pl) pts.push([d.la,d.lo]);} else map.removeLayer(mk[d.p]); }});
  document.querySelectorAll('section.bloco').forEach(s=>{s.hidden=!s.querySelector('article:not([hidden])')});
- document.getElementById('tot').textContent=n; document.getElementById('vazio').style.display=n?'none':'block';
+ document.getElementById('tot').textContent=n; document.getElementById('nvis').textContent=D.filter(d=>d.pl&&visita(d)).length; document.getElementById('vazio').style.display=n?'none':'block';
  if(map){ linha.setLatLngs(pts); const b=D.filter(vis).map(d=>[d.la,d.lo]).concat([O]); if(b.length>1) map.fitBounds(b,{padding:[20,20]}); }
  document.querySelectorAll('[data-gr]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.gr===st.gr));
  document.querySelectorAll('[data-sg]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.sg===''?st.sg.size===0:st.sg.has(c.dataset.sg)));
- document.getElementById('sd').setAttribute('aria-pressed',st.sd); document.getElementById('op').setAttribute('aria-pressed',st.op);
+ document.getElementById('sd').setAttribute('aria-pressed',st.sd); document.getElementById('op').setAttribute('aria-pressed',st.op); document.getElementById('ev').setAttribute('aria-pressed',st.ev);
 }
 document.querySelectorAll('[data-gr]').forEach(c=>c.onclick=()=>{st.gr=c.dataset.gr;aplicar()});
 document.querySelectorAll('[data-sg]').forEach(c=>c.onclick=()=>{const s=c.dataset.sg; if(!s) st.sg.clear(); else st.sg.has(s)?st.sg.delete(s):st.sg.add(s); aplicar()});
 document.getElementById('sd').onclick=()=>{st.sd=!st.sd;aplicar()};
 document.getElementById('op').onclick=()=>{st.op=!st.op;aplicar()};
+document.getElementById('ev').onclick=()=>{st.ev=!st.ev;aplicar()};
+const hoje=()=>new Date().toLocaleDateString('pt-BR');
+D.forEach(d=>{const el=document.getElementById('c'+d.p), b=el.querySelector('.marcar'), sel=el.querySelector('select');
+ b.onclick=()=>{ if(VL[d.id]) delete VL[d.id]; else if(!d.vr) VL[d.id]={r:sel.value,d:hoje()}; else return; salvar(); pintar(d); aplicar(); };
+ sel.onchange=()=>{ if(VL[d.id]){VL[d.id].r=sel.value;} else if(sel.value){VL[d.id]={r:sel.value,d:hoje()};} salvar(); pintar(d); aplicar(); };
+ pintar(d);});
+document.getElementById('cp').onclick=()=>{
+ const linhas=D.filter(d=>VL[d.id]).map(d=>[d.p,d.n,VL[d.id].r||'(sem resultado)',VL[d.id].d,d.m].join(' | '));
+ const txt=linhas.length?('Parada | Loja | Resultado | Data | Link do Maps\\n'+linhas.join('\\n')):'Nenhuma visita marcada neste aparelho.';
+ const box=document.getElementById('copiado'); box.hidden=false; box.textContent=txt;
+ const ok=()=>{box.textContent='Copiado ('+linhas.length+' visitas). Cole na planilha ou mande para o Claude.\\n\\n'+txt};
+ try{navigator.clipboard.writeText(txt).then(ok,()=>{})}catch(e){}
+ const r=document.createRange(); r.selectNodeContents(box); const s=getSelection(); s.removeAllRanges(); s.addRange(r);};
 document.querySelectorAll('.vermapa').forEach(b=>b.onclick=()=>{ if(!map) return; const m=mk[b.dataset.p]; document.getElementById('mapa').scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(()=>{map.setView(m.getLatLng(),17);m.openPopup()},350)});
 aplicar();
 </script></body></html>'''
+RES = ['Não falei com quem decide', 'Sem interesse', 'Talvez', 'Interessado', 'Fechou']
+OPCOES = '<option value="">Resultado…</option>' + ''.join(f'<option>{E(x)}</option>' for x in RES)
 cards = []
 for r in ROT:
     bl = [d for d in D if d['b'] == r['k']]
@@ -128,7 +161,8 @@ for r in ROT:
         canal = f'<a href="{E(d["w"])}" target="_blank" rel="noopener">{E(d["wc"])}</a>' if d['w'] else ''
         cards.append(f'''<article id="c{E(d["p"])}" class="{'op' if not d['pl'] else ''}"><div class="top"><span class="n {cls}">{E(d["p"])}</span><div><h3>{E(d["n"])}{' <span class="tag">opcional</span>' if not d['pl'] else ''}</h3>
 <p class="meta">{E(d["s"])} · {E(d["ba"])} · {nota}</p><p class="meta">{'Com site' if d['g'] == 'com site' else 'Sem site'} ({E(d["sit"])})</p>{f'<p class="meta">Tel.: <span class="tel">{E(d["t"])}</span></p>' if d['t'] else ''}</div></div>
-{f'<ul class="alertas">{al}</ul>' if al else ''}<div class="btns"><a href="{E(d["m"])}" target="_blank" rel="noopener">Ver no Maps</a>{canal}<button type="button" class="vermapa" data-p="{E(d["p"])}">No mapa</button></div></article>''')
+{f'<ul class="alertas">{al}</ul>' if al else ''}<div class="btns"><a href="{E(d["m"])}" target="_blank" rel="noopener">Ver no Maps</a>{canal}<button type="button" class="vermapa" data-p="{E(d["p"])}">No mapa</button></div>
+<div class="visita"><button type="button" class="marcar">Marcar visitada</button><select aria-label="Resultado da visita">{OPCOES}</select><span class="selo"></span></div></article>''')
     cards.append('</section>')
 segchips = ''.join(f'<button class="chip" data-sg="{E(s)}" aria-pressed="false">{E(s)}</button>' for s in segs)
 if CF.get('fundo_mapa'):

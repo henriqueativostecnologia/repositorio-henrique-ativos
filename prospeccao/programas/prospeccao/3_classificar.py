@@ -80,6 +80,13 @@ def segmento(x):
         if est and auto: return 'Estética / detalhamento', ''
         if auto and 'lava' not in t: return 'Estética / detalhamento', 'conferir'
         if auto and 'lava' in t and 'lava-rápido' not in qs: return 'Estética / detalhamento', 'conferir'
+    # segmentos do Comércio Local acrescentados em 16/11/2026 (antes de restaurante e bar, que também acham alguns deles)
+    if 'barbearia' in qs and any(k in t for k in ('barbear', 'barber')): return 'Barbearia', ''
+    if 'hamburgueria' in qs and any(k in t for k in ('hamburg', 'burger', 'smash')): return 'Hamburgueria', ''
+    if 'assistência técnica de celular' in qs and any(k in t for k in ('celular', 'smartphone', 'iphone', 'assistencia tecnica', 'telefone', 'eletronic')): return 'Manutenção de celular', ''
+    if 'distribuidora de bebidas' in qs and any(k in t for k in ('distribuidora', 'bebida', 'adega', 'deposito de bebidas', 'cervej')): return 'Distribuidora de bebidas', ''
+    if 'estúdio de tatuagem' in qs and any(k in t for k in ('tatu', 'tattoo', 'ink', 'piercing')): return 'Tatuagem', ''
+    if 'ar condicionado' in qs and any(k in t for k in ('ar condicionado', 'climatiz', 'refrigera')): return 'Climatização', ''
     if 'lava-rápido' in qs and ('lava' in t or 'lavagem' in t):
         return 'Lava-jato', ''
     if 'compra e venda de veículos' in qs and any(k in t for k in ('carro', 'veicul', 'automov', 'concession', 'revend', 'seminov', 'moto')): return 'Compra e venda de veículos', ''

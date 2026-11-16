@@ -1,10 +1,28 @@
 # Passo 4: separa planejadas e opcionais, monta os blocos de visita e os alertas de cada loja.
-# Uso: python3 4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json
+# Uso: python3 4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json [dados/visitas.xlsx]
 # Planejada = 10+ avaliações e nota >= 4,0, ou ficha sem dono. Opcional = as demais (presas à planejada mais próxima: 12a, 12b...).
 # Blocos de até 10 planejadas, do mais perto para o mais longe do ponto de saída.
 import json, math, sys, re, string, unicodedata
 from collections import Counter, defaultdict
 C = json.load(open(sys.argv[1])); J = json.load(open(sys.argv[2])); OUT = sys.argv[3]
+# Opcional: 4º argumento = planilha de visitas (aba Lojas, .xlsx ou .csv). As visitas já registradas
+# (Resultado, data, com quem falou, objeção, próximo passo) voltam para as mesmas lojas, pelo "Link do Maps".
+VIS = {}
+if len(sys.argv) > 4:
+    f = sys.argv[4]
+    if f.lower().endswith('.csv'):
+        import csv
+        rows = list(csv.reader(open(f, encoding='utf-8-sig')))
+    else:
+        import openpyxl
+        wb_ = openpyxl.load_workbook(f, read_only=True, data_only=True)
+        rows = [list(r) for r in (wb_['Lojas'] if 'Lojas' in wb_.sheetnames else wb_.active).iter_rows(values_only=True)]
+    h = {str(x).strip(): i for i, x in enumerate(rows[0]) if x}
+    campos = {'r': 'Resultado', 'd': 'Data da visita', 'quem': 'Falou com quem', 'obj': 'Objeção', 'prox': 'Próximo passo'}
+    for r in rows[1:]:
+        lk = r[h['Link do Maps']] if 'Link do Maps' in h and h['Link do Maps'] < len(r) else None
+        v = {k: (str(r[h[c]]).strip() if c in h and h[c] < len(r) and r[h[c]] not in (None, '') else '') for k, c in campos.items()}
+        if lk and any(v.values()): VIS[str(lk).strip()] = v
 O = (C['ponto_saida']['lat'], C['ponto_saida']['lon'])
 def km(a, b):
     R = 6371.0088; p1, p2 = math.radians(a[0]), math.radians(b[0]); dp = p2 - p1; dl = math.radians(b[1] - a[1])
@@ -95,7 +113,9 @@ for k, ini, pts in rotas:
                       nop=sum(len(op[x['parada']]) for x in blocos[k - 1])))
 for l in L:
     for k in ('ancora', 'dup_de'): l.pop(k, None)
+for l in L: l['visita'] = VIS.get(l['link'], {})
 json.dump(dict(L=L, O=O, rotas=LINKS, config=C), open(OUT, 'w'), ensure_ascii=False)
+print('visitas trazidas da planilha:', sum(1 for l in L if l['visita']), 'de', len(VIS))
 print('lojas', len(L), '| planejadas', len(P), '| opcionais', len(L) - len(P), '| blocos', len(blocos), [len(b) for b in blocos])
 print(Counter((l['grupo2'], l['plan']) for l in L))
 for r in LINKS: print(r['nome'], '|', r['n'], 'planejadas +', r['nop'], 'opcionais |', round(r['km'], 1), 'km |', round(km(O, blocos[r['k'] - 1][0]['p']), 2), 'km da avenida até a 1ª parada')

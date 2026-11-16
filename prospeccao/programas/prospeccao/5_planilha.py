@@ -22,7 +22,7 @@ for l in L:
     ws.append([l['parada'] + (' (opcional)' if op else ''), l['bloco_nome'], 'Opcional' if op else 'Planejada', l['grupo2'], l['seg'], l['nome'], l['bairro'],
                l['end'], l['tel'], '; '.join(l['alertas']), l['nota'], l['aval'], 'Sim' if l['sem_dono'] else 'Não', l['sit'], l['site'],
                'Sim' if l['rede'] else '', l['gourmet'], l['pos'], l['fnota'], l['faval'], round(l['dist'], 2), l['tipo'], ', '.join(l['qs']), l['link'],
-               None, None, None, None, None])
+               *[(l.get('visita') or {}).get(k) or None for k in ('r', 'd', 'quem', 'obj', 'prox')]])
     n = ws.max_row
     for c in ws[n]:
         c.alignment = Alignment(vertical='top', wrap_text=c.column_letter in (col('Nome'), col('Endereço'), col('Alertas'), col('Bloco')))

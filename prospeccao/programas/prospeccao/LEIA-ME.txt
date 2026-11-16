@@ -41,6 +41,12 @@ c) Confira antes de usar: desenha as lojas sobre a imagem.
    Abra o PNG: lojas conhecidas (um shopping, uma avenida principal) devem cair no lugar certo. Se caírem deslocadas,
    o zoom do passo b está errado.
 d) Na página, o mapa fica preso à imagem (setMaxBounds) e o zoom vai de 13 a 16.
+Lojas visitadas (não somem do mapa: ficam em cinza com ✓)
+- No campo: botão "Marcar visitada" + Resultado em cada cartão da página. Fica salvo no aparelho; "Copiar visitas" copia a lista.
+- Registro oficial: coluna Resultado da planilha (Google Sheets no Drive, 10 Comercial › 11 Prospecção).
+- Ao gerar de novo (lojas novas), baixe a planilha como .xlsx (ou .csv da aba Lojas) e passe no passo 4:
+  python3 programas/prospeccao/4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json dados/visitas.xlsx
+  As visitas voltam para as mesmas lojas pelo "Link do Maps", na planilha e no mapa.
 Os arquivos dos passos 5 e 6 têm dados reais: são entregues para baixar e nunca entram no repositório.
 
 Exemplo (de dentro da pasta do repositório, com dados/ ao lado):
