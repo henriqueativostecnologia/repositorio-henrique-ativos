@@ -3,7 +3,7 @@ tipo: segmento comercial
 segmento: Comércio Local (nome decidido em 16/11/2026)
 documento: playbook a fazer (Henrique e Igor)
 atualizado: 16/11/2026
-situacao: esqueleto com ficha modelo de nicho
+situacao: esqueleto com as mesmas seções do Jurídico e ficha modelo de nicho; playbook previsto para 16/11/2026
 ---
 
 # Segmento Comércio Local
@@ -21,15 +21,75 @@ Projeto na planilha: `Campanha · Comércio local`. Landing pages de demonstraç
 * Use o mesmo nome de nicho do índice de landing pages (ex.: "Restaurantes e café").
 * Se um nicho crescer muito ou tiver regras próprias, ele vira arquivo próprio (como o Jurídico).
 
-## O que vale para todo o Comércio Local (a preencher)
+## O que vale para todo o Comércio Local
 
-| Campo | Conteúdo |
+Mesmas seções do Jurídico, valendo para todos os nichos. O que muda por nicho vai na ficha de nicho.
+
+## Confirmado
+
+*A preencher com o playbook do segmento:* produtos e combos, contrato, ordem de implantação, abre-carteira.
+
+## Público (hipótese)
+
+*A preencher:* porte, decisor, perfil ideal, quando entrar com cada produto.
+
+**Mensagem central:** *a preencher.*
+
+## Persona (hipótese)
+
+| Dimensão | O que a hipótese diz |
 |---|---|
-| Decisor | *A preencher* (em geral o dono, no próprio balcão) |
-| Abre-carteira | *A preencher* |
-| Produtos e combos | *A preencher* |
-| Gancho geral | *A preencher* |
-| Particularidades da visita | *A preencher* (evitar horário de pico) |
+| O que vê | *A preencher* |
+| O que ouve | *A preencher* |
+| O que pensa e sente | *A preencher* |
+| O que fala e faz | *A preencher* |
+| Dores | *A preencher* |
+| Ganhos desejados | *A preencher* |
+
+**Perguntas de descoberta na visita:** *a preencher.*
+
+## Cenários no segmento (hipótese)
+
+Partir dos cenários comuns da base e adaptar; incluir os cenários próprios do segmento.
+
+| Cenário | Como ele se sente | Gancho de abertura | Pergunta de diagnóstico | Prova na hora | Produto e próximo passo |
+|---|---|---|---|---|---|
+| *A preencher* | | | | | |
+
+### Cenários combinados
+
+| Combinação | Leitura | Sequência sugerida |
+|---|---|---|
+| *A preencher* | | |
+
+## Objeções esperadas (hipótese)
+
+*A preencher.*
+
+## Conteúdo de nutrição (Etapa 7)
+
+*A preencher.*
+
+## Particularidades por etapa
+
+| Tema | No segmento |
+|---|---|
+| Gancho | *A preencher* |
+| Cenário próprio | *A preencher* |
+| Produto próprio | *A preencher* |
+| Aquecimento | *A preencher* |
+| Visita | *A preencher* |
+| Achar o decisor | *A preencher* |
+| Regras do setor | *A preencher* |
+| Indicação | *A preencher* |
+
+## Divergências com os nossos modelos (a validar)
+
+*A preencher ao comparar o playbook com `servicos/catalogo.md` e `servicos/pacote/eap-padrao.md`.*
+
+## Em aberto (só do segmento)
+
+*A preencher.*
 
 ## Ficha modelo de nicho (copiar para cada nicho novo)
 
