@@ -1,10 +1,29 @@
 # Passo 4: separa planejadas e opcionais, monta os blocos de visita e os alertas de cada loja.
-# Uso: python3 4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json
-# Planejada = 10+ avaliações e nota >= 4,0, ou ficha sem dono. Opcional = as demais (presas à planejada mais próxima: 12a, 12b...).
+# Uso: python3 4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json [dados/visitas.xlsx]
+# Planejada = cenários A, B e C (e "B ou C" / "B ou D" até o teste do site). Opcional = só o cenário D (presas à planejada mais próxima: 12a, 12b...).
+# Cenário A-D, sinais, oferta e case a levar: regras de 16/11/2026 (limites na configuração, campo "cenario").
 # Blocos de até 10 planejadas, do mais perto para o mais longe do ponto de saída.
-import json, math, sys, re, string, unicodedata
+import json, math, sys, re, string, unicodedata, os
 from collections import Counter, defaultdict
 C = json.load(open(sys.argv[1])); J = json.load(open(sys.argv[2])); OUT = sys.argv[3]
+# Opcional: 4º argumento = planilha de visitas (aba Lojas, .xlsx ou .csv). As visitas já registradas
+# (Resultado, data, com quem falou, objeção, próximo passo) voltam para as mesmas lojas, pelo "Link do Maps".
+VIS = {}
+if len(sys.argv) > 4:
+    f = sys.argv[4]
+    if f.lower().endswith('.csv'):
+        import csv
+        rows = list(csv.reader(open(f, encoding='utf-8-sig')))
+    else:
+        import openpyxl
+        wb_ = openpyxl.load_workbook(f, read_only=True, data_only=True)
+        rows = [list(r) for r in (wb_['Lojas'] if 'Lojas' in wb_.sheetnames else wb_.active).iter_rows(values_only=True)]
+    h = {str(x).strip(): i for i, x in enumerate(rows[0]) if x}
+    campos = {'r': 'Resultado', 'd': 'Data da visita', 'quem': 'Falou com quem', 'obj': 'Objeção', 'prox': 'Próximo passo'}
+    for r in rows[1:]:
+        lk = r[h['Link do Maps']] if 'Link do Maps' in h and h['Link do Maps'] < len(r) else None
+        v = {k: (str(r[h[c]]).strip() if c in h and h[c] < len(r) and r[h[c]] not in (None, '') else '') for k, c in campos.items()}
+        if lk and any(v.values()): VIS[str(lk).strip()] = v
 O = (C['ponto_saida']['lat'], C['ponto_saida']['lon'])
 def km(a, b):
     R = 6371.0088; p1, p2 = math.radians(a[0]), math.radians(b[0]); dp = p2 - p1; dl = math.radians(b[1] - a[1])
@@ -13,9 +32,53 @@ def norm(s): return unicodedata.normalize('NFKD', s or '').encode('ascii', 'igno
 
 FORA = [norm(x) for x in C['fora_do_roteiro']]; CONF = [norm(x) for x in C['conferir_segmento']]
 L = [l for l in J['linhas'] if not any(x in norm(l['nome']) for x in FORA)]
+# segmentos só para mapear (ainda não abordar): ficam fora do roteiro, numa aba própria da planilha
+SM = set(C.get('so_mapear', [])); SO_MAPEAR = [l for l in L if l['seg'] in SM]; L = [l for l in L if l['seg'] not in SM]
+# ---- Cenário A-D (regras de 16/11/2026) ----
+# A = sem site próprio; B = site próprio que falha em 1+ teste (sem HTTPS, não se adapta ao celular, PageSpeed no celular
+# abaixo do limite, fora do ar; ano antigo no rodapé só como apoio); C = site ok e Google fraco; D = o resto.
+# Os testes do site vêm de um arquivo (campo "testes_sites" da configuração): {url: {https, celular, pagespeed, fora_do_ar, ano}}.
+CE = C.get('cenario', {}); LIM_NOTA = CE.get('nota_minima', 4.0); LIM_AV = CE.get('avaliacoes_minimas', 10)
+LIM_PS = CE.get('pagespeed_minimo', 50); LIM_ANO = CE.get('ano_antigo', 2023)
+TS = {}
+if C.get('testes_sites') and os.path.exists(C['testes_sites']): TS = json.load(open(C['testes_sites']))
+OFERTA = {'A': 'Google Meu Negócio + site novo', 'B': 'Google Meu Negócio + reforma do site',
+          'C': 'Google Meu Negócio (+ ajuste leve no site)', 'D': 'Baixa prioridade (outro serviço ou diagnóstico de cortesia)',
+          'B ou C': 'Google Meu Negócio (+ site: reforma ou ajuste leve, ver no teste)', 'B ou D': 'Definir depois do teste do site'}
+CASES = C.get('cases', {})
+def fmtn(v): return format(v, '.1f').replace('.', ',')
+for l in L:
+    g = []  # sinais do Google
+    if l['nota'] is not None and l['nota'] < LIM_NOTA: g.append(f"nota {fmtn(l['nota'])} com {l['aval'] or 0} avaliações")
+    if (l['aval'] or 0) < LIM_AV: g.append('sem avaliações' if not l['aval'] else f"só {l['aval']} avaliações")
+    if l['sem_dono']: g.append('ficha sem dono')
+    if l.get('horario') is False: g.append('sem horário na ficha')
+    if l['sit'] != 'site próprio':
+        cen, s = 'A', [l['sit']] + g
+    else:
+        t_ = TS.get(l['site'])
+        if not t_:  # sem o teste do site não dá para separar B de C/D; os dois casos ficam planejados até o teste
+            cen, s = ('B ou C' if g else 'B ou D'), ['site não testado'] + g
+        else:
+            f = []
+            if t_.get('fora_do_ar'): f.append('site fora do ar')
+            else:
+                if t_.get('https') is False: f.append('sem HTTPS')
+                if t_.get('celular') is False: f.append('não se adapta ao celular')
+                if t_.get('pagespeed') is not None and t_['pagespeed'] < LIM_PS: f.append(f"PageSpeed no celular {t_['pagespeed']}")
+            if f:
+                if t_.get('ano') and t_['ano'] <= LIM_ANO: f.append(f"rodapé de {t_['ano']}")
+                cen, s = 'B', f + g
+            elif g: cen, s = 'C', g
+            else: cen, s = 'D', []
+    l['cenario'] = cen; l['sinais'] = '; '.join(s); l['oferta'] = OFERTA[cen]
+    l['case'] = CASES.get(l['seg'], '')
+print('cenários:', dict(Counter(l['cenario'] for l in L)), '| sites testados:', len(TS))
 for l in L:
     l['p'] = (l['gps']['latitude'], l['gps']['longitude'])
-    l['plan'] = bool(l['sem_dono']) or ((l['aval'] or 0) >= 10 and l['nota'] is not None and l['nota'] >= 4.0)
+    # regra de 16/11/2026: planejada = 10+ avaliações (com qualquer nota) ou ficha sem dono; opcional = menos de 10 avaliações
+    # regra de 16/11/2026: só o cenário D (site ok e Google ok) é opcional; poucas avaliações também é bom alvo
+    l['plan'] = l['cenario'] != 'D'
     l['grupo2'] = 'com site' if l['grupo'] == 'Com site' else 'sem site'
     l['dup_de'] = None
 # mesma marca: a de melhor avaliação fica normal; as outras recebem o alerta
@@ -95,7 +158,10 @@ for k, ini, pts in rotas:
                       nop=sum(len(op[x['parada']]) for x in blocos[k - 1])))
 for l in L:
     for k in ('ancora', 'dup_de'): l.pop(k, None)
-json.dump(dict(L=L, O=O, rotas=LINKS, config=C), open(OUT, 'w'), ensure_ascii=False)
+for l in L: l['visita'] = VIS.get(l['link'], {})
+json.dump(dict(L=L, O=O, rotas=LINKS, config=C, so_mapear=SO_MAPEAR), open(OUT, 'w'), ensure_ascii=False)
+print('só mapear (fora do roteiro):', len(SO_MAPEAR))
+print('visitas trazidas da planilha:', sum(1 for l in L if l['visita']), 'de', len(VIS))
 print('lojas', len(L), '| planejadas', len(P), '| opcionais', len(L) - len(P), '| blocos', len(blocos), [len(b) for b in blocos])
 print(Counter((l['grupo2'], l['plan']) for l in L))
 for r in LINKS: print(r['nome'], '|', r['n'], 'planejadas +', r['nop'], 'opcionais |', round(r['km'], 1), 'km |', round(km(O, blocos[r['k'] - 1][0]['p']), 2), 'km da avenida até a 1ª parada')
