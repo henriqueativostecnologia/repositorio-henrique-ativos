@@ -69,6 +69,17 @@ for f in glob.glob(f'{D}/raw/*.json'):
 # segmento
 AUTO = ('automotiv', 'carro', 'auto ', 'autos', 'veicul', 'car ', 'car studio', 'detail', 'lava', 'motor', 'moto')
 EST = ('estetica', 'detalhamento', 'detailing', 'polimento', 'vitrificacao', 'car studio', 'ppf', 'insulfilm', 'pelicula', 'envelopamento', 'higienizacao')
+BELEZA = ('salao', 'beleza', 'cabeleire', 'manicure', 'unha', 'sobrancelha', 'maquiag', 'depila', 'estetica', 'esmalter', 'cilios', 'spa', 'nail')
+CLINICA = ('clinica', 'medic', 'odont', 'dentist', 'consultorio', 'fisioter', 'psicolog', 'laborat', 'saude', 'pediatr', 'ortoped', 'dermat', 'oftalm', 'nutri')
+RESTAURANTES = {'restaurante', 'hamburgueria', 'restaurante japonês', 'restaurante italiano'}
+# Restaurante separado por tipo: cada tipo usa um case diferente na visita
+def tipo_restaurante(t):
+    if any(k in t for k in ('hamburg', 'burger', 'smash')): return 'Hamburgueria'
+    if any(k in t for k in ('japon', 'sushi', 'temaki', 'oriental', 'poke')): return 'Restaurante japonês'
+    if any(k in t for k in ('italian', 'pizza', 'massa', 'cantina', 'trattoria', 'ristorante')): return 'Restaurante italiano / pizzaria'
+    if any(k in t for k in ('self service', 'self-service', 'marmit', 'quentinha', 'a quilo', 'por quilo', 'buffet', 'churrasc', 'comida caseira', 'caseir')): return 'Restaurante self-service / marmita'
+    if any(k in t for k in ('restaurante', 'comida', 'lanchonete', 'bistro', 'cozinha', 'grill', 'galeteria', 'culinaria')): return 'Restaurante (outros)'
+    return None
 def segmento(x):
     r = x['r']; t = norm(' '.join([r.get('title', ''), r.get('type') or '', ' '.join(r.get('types') or [])])); qs = x['qs']
     tp = norm(r.get('type'))
@@ -80,11 +91,12 @@ def segmento(x):
         if est and auto: return 'Estética / detalhamento', ''
         if auto and 'lava' not in t: return 'Estética / detalhamento', 'conferir'
         if auto and 'lava' in t and 'lava-rápido' not in qs: return 'Estética / detalhamento', 'conferir'
-    # segmentos do Comércio Local acrescentados em 16/11/2026 (antes de restaurante e bar, que também acham alguns deles)
+    # segmentos do Comércio Local confirmados em 16/11/2026 (antes de restaurante e bar, que também acham alguns deles)
     if 'barbearia' in qs and any(k in t for k in ('barbear', 'barber')): return 'Barbearia', ''
-    if 'hamburgueria' in qs and any(k in t for k in ('hamburg', 'burger', 'smash')): return 'Hamburgueria', ''
-    if 'assistência técnica de celular' in qs and any(k in t for k in ('celular', 'smartphone', 'iphone', 'assistencia tecnica', 'telefone', 'eletronic')): return 'Manutenção de celular', ''
-    if 'distribuidora de bebidas' in qs and any(k in t for k in ('distribuidora', 'bebida', 'adega', 'deposito de bebidas', 'cervej')): return 'Distribuidora de bebidas', ''
+    if qs & {'salão de beleza', 'clínica de estética'} and any(k in t for k in BELEZA): return 'Beleza', ''
+    if 'clínica' in qs and any(k in t for k in CLINICA): return 'Clínica (só mapear)', ''
+    if qs & {'assistência técnica de celular', 'loja de celular'} and any(k in t for k in ('celular', 'smartphone', 'iphone', 'assistencia tecnica', 'telefone', 'eletronic', 'apple')): return 'Celular (manutenção e venda)', ''
+    if qs & {'distribuidora de bebidas', 'adega'} and any(k in t for k in ('distribuidora', 'bebida', 'adega', 'deposito de bebidas', 'cervej', 'conveniencia')): return 'Distribuidora de bebidas / adega', ''
     if 'estúdio de tatuagem' in qs and any(k in t for k in ('tatu', 'tattoo', 'ink', 'piercing')): return 'Tatuagem', ''
     if 'ar condicionado' in qs and any(k in t for k in ('ar condicionado', 'climatiz', 'refrigera')): return 'Climatização', ''
     if 'lava-rápido' in qs and ('lava' in t or 'lavagem' in t):
@@ -95,7 +107,10 @@ def segmento(x):
     if 'cafeteria' in qs and ('cafe' in t or 'coffee' in t or 'cafeteria' in t or 'espresso' in t): return 'Cafeteria', ''
     if 'empório' in qs and any(k in t for k in ('empori', 'mercearia', 'armazem', 'produtos naturais', 'gourmet', 'delicat', 'queij', 'organic')): return 'Empório', ''
     if 'bar' in qs and any(k in t for k in ('bar', 'pub', 'boteco', 'botequim', 'choperia', 'cervej', 'petisc')): return 'Bar', ''
-    if 'restaurante' in qs and any(k in t for k in ('restaurante', 'churrasc', 'pizzaria', 'comida', 'lanchonete', 'hamburg', 'self', 'bistro', 'cozinha', 'sushi', 'japon', 'grill', 'galeteria', 'marmit')): return 'Restaurante', ''
+    # restaurante por último, como antes: quem também é bar, cafeteria ou empório continua nesses segmentos
+    if qs & RESTAURANTES:
+        s = tipo_restaurante(t)
+        if s: return s, ''
     return None, ''
 
 FORTE = ('especial', 'specialty', 'coffee', 'torrefa', 'barista', 'graos', 'espresso', 'coado', 'v60', 'metodos', 'artesanal', 'cafe gourmet', 'gourmet')

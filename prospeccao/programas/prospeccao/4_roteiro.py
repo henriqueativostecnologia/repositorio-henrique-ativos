@@ -31,6 +31,8 @@ def norm(s): return unicodedata.normalize('NFKD', s or '').encode('ascii', 'igno
 
 FORA = [norm(x) for x in C['fora_do_roteiro']]; CONF = [norm(x) for x in C['conferir_segmento']]
 L = [l for l in J['linhas'] if not any(x in norm(l['nome']) for x in FORA)]
+# segmentos só para mapear (ainda não abordar): ficam fora do roteiro, numa aba própria da planilha
+SM = set(C.get('so_mapear', [])); SO_MAPEAR = [l for l in L if l['seg'] in SM]; L = [l for l in L if l['seg'] not in SM]
 for l in L:
     l['p'] = (l['gps']['latitude'], l['gps']['longitude'])
     l['plan'] = bool(l['sem_dono']) or ((l['aval'] or 0) >= 10 and l['nota'] is not None and l['nota'] >= 4.0)
@@ -114,7 +116,8 @@ for k, ini, pts in rotas:
 for l in L:
     for k in ('ancora', 'dup_de'): l.pop(k, None)
 for l in L: l['visita'] = VIS.get(l['link'], {})
-json.dump(dict(L=L, O=O, rotas=LINKS, config=C), open(OUT, 'w'), ensure_ascii=False)
+json.dump(dict(L=L, O=O, rotas=LINKS, config=C, so_mapear=SO_MAPEAR), open(OUT, 'w'), ensure_ascii=False)
+print('só mapear (fora do roteiro):', len(SO_MAPEAR))
 print('visitas trazidas da planilha:', sum(1 for l in L if l['visita']), 'de', len(VIS))
 print('lojas', len(L), '| planejadas', len(P), '| opcionais', len(L) - len(P), '| blocos', len(blocos), [len(b) for b in blocos])
 print(Counter((l['grupo2'], l['plan']) for l in L))

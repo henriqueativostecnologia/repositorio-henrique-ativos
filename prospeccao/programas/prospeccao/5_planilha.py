@@ -38,6 +38,16 @@ dv = DataValidation(type='list', formula1='"' + ','.join(RES) + '"', allow_blank
                     errorTitle='Resultado', error='Escolha um item da lista.')
 ws.add_data_validation(dv); dv.add(f"{col('Resultado')}2:{col('Resultado')}{last}")
 # rotas
+if R.get('so_mapear'):
+    Sm = wb.create_sheet('Só mapear (não abordar)')
+    Sm.append(['Segmento', 'Nome', 'Bairro', 'Endereço', 'Telefone', 'Grupo: com site / sem site', 'Situação do site', 'Site atual', 'Nota', 'Avaliações', 'Ficha sem dono', 'Tipo no Google', 'Link do Maps'])
+    for l in sorted(R['so_mapear'], key=lambda l: (l['seg'], l['bairro'], l['nome'])):
+        Sm.append([l['seg'], l['nome'], l['bairro'], l['end'], l['tel'], 'com site' if l['grupo'] == 'Com site' else 'sem site', l['sit'], l['site'],
+                   l['nota'], l['aval'], 'Sim' if l['sem_dono'] else 'Não', l['tipo'], l['link']])
+        Sm.cell(Sm.max_row, 13).hyperlink = l['link']
+    for c in Sm[1]: c.font = Font(bold=True, color='FFFFFF'); c.fill = CAB; c.alignment = Alignment(wrap_text=True)
+    for i, w in enumerate([22, 30, 18, 38, 16, 11, 18, 26, 6, 10, 9, 22, 26], 1): Sm.column_dimensions[CL(i)].width = w
+    Sm.freeze_panes = 'C2'; Sm.auto_filter.ref = Sm.dimensions
 Rt = wb.create_sheet('Rotas no Maps'); Rt.append(['Bloco', 'Planejadas', 'Opcionais perto', 'Km do bloco (linha reta)', 'Rota no Google Maps (sai de onde você está e passa pelas planejadas em ordem)'])
 for r in R['rotas']:
     Rt.append([r['nome'], r['n'], r['nop'], round(r['km'], 1)] + r['links'])
