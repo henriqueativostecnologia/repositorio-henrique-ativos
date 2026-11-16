@@ -1,6 +1,6 @@
 # Passo 4: separa planejadas e opcionais, monta os blocos de visita e os alertas de cada loja.
 # Uso: python3 4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json [dados/visitas.xlsx]
-# Planejada = 10+ avaliações (qualquer nota) ou ficha sem dono, menos o cenário D. Opcional = menos de 10 avaliações ou cenário D (presas à planejada mais próxima: 12a, 12b...).
+# Planejada = cenários A, B e C (e "B ou C" / "B ou D" até o teste do site). Opcional = só o cenário D (presas à planejada mais próxima: 12a, 12b...).
 # Cenário A-D, sinais, oferta e case a levar: regras de 16/11/2026 (limites na configuração, campo "cenario").
 # Blocos de até 10 planejadas, do mais perto para o mais longe do ponto de saída.
 import json, math, sys, re, string, unicodedata, os
@@ -77,8 +77,8 @@ print('cenários:', dict(Counter(l['cenario'] for l in L)), '| sites testados:',
 for l in L:
     l['p'] = (l['gps']['latitude'], l['gps']['longitude'])
     # regra de 16/11/2026: planejada = 10+ avaliações (com qualquer nota) ou ficha sem dono; opcional = menos de 10 avaliações
-    # + cenário D (site ok e Google ok) vira opcional, mesmo com 10+ avaliações (16/11/2026)
-    l['plan'] = (bool(l['sem_dono']) or (l['aval'] or 0) >= 10) and l['cenario'] != 'D'
+    # regra de 16/11/2026: só o cenário D (site ok e Google ok) é opcional; poucas avaliações também é bom alvo
+    l['plan'] = l['cenario'] != 'D'
     l['grupo2'] = 'com site' if l['grupo'] == 'Com site' else 'sem site'
     l['dup_de'] = None
 # mesma marca: a de melhor avaliação fica normal; as outras recebem o alerta
