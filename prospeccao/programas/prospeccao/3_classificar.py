@@ -141,7 +141,7 @@ for pid, x in L.items():
     linhas.append(dict(pid=pid, nome=r['title'], seg=s, obs=obs, bairro=b, grupo=g, sit=sit, site=r.get('website'), tel=r.get('phone'),
                        end=r.get('address'), nota=r.get('rating'), aval=r.get('reviews'), tipo=r.get('type'), tipos=r.get('types'),
                        sem_dono='Sim' if r.get('unclaimed_listing') else '', pos=x['pos'], qs=sorted(x['qs']),
-                       gourmet=gourmet(r) if s == 'Cafeteria' else '', gps=r.get('gps_coordinates'),
+                       gourmet=gourmet(r) if s == 'Cafeteria' else '', gps=r.get('gps_coordinates'), horario=bool(r.get('operating_hours') or r.get('hours')),
                        rede='', link=f"https://www.google.com/maps/place/?q=place_id:{pid}"))
 for l in linhas:
     nn = norm(l['nome']) + ' ' + norm(l['site'])

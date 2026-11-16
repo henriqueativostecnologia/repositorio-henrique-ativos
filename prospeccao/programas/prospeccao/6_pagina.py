@@ -5,7 +5,7 @@
 # Funciona offline, aberta como arquivo no celular: o Leaflet vai embutido (pasta com leaflet.js e leaflet.css da versão 1.9.4)
 # e o fundo do mapa é uma imagem embutida (fundo_mapa e limites_fundo na configuração; ver LEIA-ME, "gerar o fundo do mapa").
 # Sem fundo_mapa na configuração, a página usa os quadradinhos do OpenStreetMap, que só carregam com a página publicada na internet.
-import json, sys, html, math, base64, os, argparse
+import json, sys, html, math, base64, os, argparse, re
 ap = argparse.ArgumentParser(); ap.add_argument('roteiro'); ap.add_argument('saida'); ap.add_argument('--leaflet', required=True, help='pasta com leaflet.js e leaflet.css (Leaflet 1.9.4)')
 a = ap.parse_args(); sys.argv = [sys.argv[0], a.roteiro, a.saida]
 R = json.load(open(sys.argv[1])); L = R['L']; O = R['O']; OUT = sys.argv[2]; CF = R['config']
@@ -25,7 +25,8 @@ for l in L:
     D.append(dict(p=l['parada'], b=l['bloco'], n=l['nome'], s=l['seg'], ba=l['bairro'], g=l['grupo2'], pl=1 if l['plan'] else 0,
                   sd=1 if l['sem_dono'] else 0, nt=l['nota'], av=l['aval'], al=l['alertas'], sit=l['sit'], w=l['site'], wc=canal(l['site']),
                   t=l['tel'], e=l['end'], m=l['link'], la=l['gps']['latitude'], lo=l['gps']['longitude'],
-                  id=l['pid'], vr=(l.get('visita') or {}).get('r', ''), vd=(l.get('visita') or {}).get('d', '')))
+                  id=l['pid'], vr=(l.get('visita') or {}).get('r', ''), vd=(l.get('visita') or {}).get('d', ''),
+                  ce=l.get('cenario', ''), si=l.get('sinais', ''), of=l.get('oferta', ''), cs=l.get('case', '')))
 ROT = [dict(k=r['k'], nome=r['nome'], links=r['links'], km=round(r['km'], 1), n=r['n'], nop=r['nop']) for r in R['rotas']]
 segs = sorted({d['s'] for d in D})
 npl = sum(d['pl'] for d in D)
@@ -71,6 +72,7 @@ article.vis{opacity:.72}article.vis h3::after{content:" ✓";color:var(--sem)}
 .visita .selo{font-size:.82rem;font-weight:700;color:var(--sem)}
 .pin.vis{background:#7C8A85!important;opacity:.85;position:relative}.pin.vis::after{content:"✓";position:absolute;top:-6px;right:-6px;background:var(--sem);color:#fff;border-radius:50%;width:14px;height:14px;font-size:9px;display:grid;place-items:center}
 #copiado{white-space:pre-wrap;font:12px ui-monospace,monospace;background:var(--papel);border:1px solid var(--linha);border-radius:8px;padding:8px;margin-top:8px;max-height:160px;overflow:auto}
+.oferta{margin:8px 0 0;font-size:.88rem}.oferta .cen{display:inline-block;font-weight:700;font-size:.78rem;border-radius:6px;padding:1px 7px;background:var(--tinta);color:var(--bg);margin-right:4px}.oferta a{color:var(--com);font-weight:600}
 #vazio{display:none}button:focus-visible,a:focus-visible{outline:3px solid var(--sd);outline-offset:2px}
 </style></head><body>
 <header><h1>Roteiro de visitas · __TITULO__</h1><p>__NPL__ planejadas · __NOP__ opcionais · __NB__ blocos · saída: __SAIDA__</p></header>
@@ -149,6 +151,13 @@ aplicar();
 </script></body></html>'''
 RES = ['Não falei com quem decide', 'Sem interesse', 'Talvez', 'Interessado', 'Fechou']
 OPCOES = '<option value="">Resultado…</option>' + ''.join(f'<option>{E(x)}</option>' for x in RES)
+def oferta_html(d):
+    if not d['ce']: return ''
+    m = re.search(r'https?://\S+', d['cs'] or ''); nome = (d['cs'] or '').split(' - http')[0].strip()
+    case = (f'<a href="{E(m.group(0))}" target="_blank" rel="noopener">{E(nome)}</a>' if m else E(nome)) if d['cs'] else ''
+    return (f'<div class="oferta"><span class="cen">Cenário {E(d["ce"])}</span> {E(d["of"])}'
+            + (f'<br><span class="meta">Sinais: {E(d["si"])}</span>' if d['si'] else '')
+            + (f'<br><span class="meta">Case a levar: {case}</span>' if case else '') + '</div>')
 cards = []
 for r in ROT:
     bl = [d for d in D if d['b'] == r['k']]
@@ -161,7 +170,7 @@ for r in ROT:
         canal = f'<a href="{E(d["w"])}" target="_blank" rel="noopener">{E(d["wc"])}</a>' if d['w'] else ''
         cards.append(f'''<article id="c{E(d["p"])}" class="{'op' if not d['pl'] else ''}"><div class="top"><span class="n {cls}">{E(d["p"])}</span><div><h3>{E(d["n"])}{' <span class="tag">opcional</span>' if not d['pl'] else ''}</h3>
 <p class="meta">{E(d["s"])} · {E(d["ba"])} · {nota}</p><p class="meta">{'Com site' if d['g'] == 'com site' else 'Sem site'} ({E(d["sit"])})</p>{f'<p class="meta">Tel.: <span class="tel">{E(d["t"])}</span></p>' if d['t'] else ''}</div></div>
-{f'<ul class="alertas">{al}</ul>' if al else ''}<div class="btns"><a href="{E(d["m"])}" target="_blank" rel="noopener">Ver no Maps</a>{canal}<button type="button" class="vermapa" data-p="{E(d["p"])}">No mapa</button></div>
+{oferta_html(d)}{f'<ul class="alertas">{al}</ul>' if al else ''}<div class="btns"><a href="{E(d["m"])}" target="_blank" rel="noopener">Ver no Maps</a>{canal}<button type="button" class="vermapa" data-p="{E(d["p"])}">No mapa</button></div>
 <div class="visita"><button type="button" class="marcar">Marcar visitada</button><select aria-label="Resultado da visita">{OPCOES}</select><span class="selo"></span></div></article>''')
     cards.append('</section>')
 segchips = ''.join(f'<button class="chip" data-sg="{E(s)}" aria-pressed="false">{E(s)}</button>' for s in segs)

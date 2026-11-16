@@ -30,8 +30,7 @@
     "restaurante japonês",
     "barbearia",
     "salão de beleza",
-    "assistência técnica de celular",
-    "clínica"
+    "assistência técnica de celular"
   ],
   "termos_raros": [
     "detalhamento automotivo",
@@ -75,5 +74,36 @@
   },
   "so_mapear": [
     "Clínica (só mapear)"
-  ]
+  ],
+  "cenario": {
+    "nota_minima": 4.0,
+    "avaliacoes_minimas": 10,
+    "pagespeed_minimo": 50,
+    "ano_antigo": 2023
+  },
+  "testes_sites": "dados/testes_sites.json",
+  "cases": {
+    "Cafeteria": "Case Exemplo A - https://exemplo-a.exemplo",
+    "Empório": "Case Exemplo A - https://exemplo-a.exemplo",
+    "Hamburgueria": "Case Exemplo B - https://exemplo-b.exemplo",
+    "Restaurante self-service / marmita": "Case Exemplo C - https://exemplo-c.exemplo",
+    "Restaurante italiano / pizzaria": "Case Exemplo D - https://exemplo-d.exemplo",
+    "Restaurante japonês": "Case Exemplo E - https://exemplo-e.exemplo",
+    "Restaurante (outros)": "O de alimentação mais parecido: Case Exemplo C ou Case Exemplo B",
+    "Bar": "O de alimentação mais parecido: Case Exemplo C ou Case Exemplo B",
+    "Distribuidora de bebidas / adega": "Case Exemplo F - https://exemplo-f.exemplo",
+    "Estética / detalhamento": "Case Exemplo G - https://exemplo-g.exemplo",
+    "Lava-jato": "Case Exemplo G - https://exemplo-g.exemplo",
+    "Climatização": "Case Exemplo H - https://exemplo-h.exemplo",
+    "Tatuagem": "Case Exemplo I - https://exemplo-i.exemplo",
+    "Barbearia": "Sem case próprio (usar o de serviço mais próximo e avisar o cliente)",
+    "Celular (manutenção e venda)": "Sem case próprio (usar o de serviço mais próximo e avisar o cliente)",
+    "Beleza": "Sem case próprio (usar o de serviço mais próximo e avisar o cliente)",
+    "Advocacia previdenciária": "Sem case (segmento com playbook próprio)",
+    "Advocacia trabalhista": "Sem case (segmento com playbook próprio)",
+    "Advocacia (trabalhista e previdenciária)": "Sem case (segmento com playbook próprio)",
+    "Imobiliária": "Sem case (segmento com playbook próprio)",
+    "Construtora": "Sem case (segmento com playbook próprio)",
+    "Compra e venda de veículos": "Sem case (segmento com playbook próprio)"
+  }
 }

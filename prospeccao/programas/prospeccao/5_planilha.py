@@ -11,6 +11,7 @@ RES = ['Não falei com quem decide', 'Sem interesse', 'Talvez', 'Interessado', '
 H = ['Parada', 'Bloco', 'Tipo de parada', 'Grupo: com site / sem site', 'Segmento', 'Nome', 'Bairro', 'Endereço', 'Telefone', 'Alertas',
      'Nota', 'Avaliações', 'Ficha sem dono', 'Situação do site', 'Site atual', 'Rede/franquia', 'Gourmet (só informação)', 'Melhor posição (só informação)',
      'Faixa de nota', 'Faixa de avaliações', 'Km desde a parada anterior (linha reta)', 'Tipo no Google', 'Achada pelos termos', 'Link do Maps',
+     'Cenário', 'Sinais encontrados', 'Oferta indicada', 'Case a levar',
      'Resultado', 'Data da visita', 'Falou com quem', 'Objeção', 'Próximo passo']
 C = {h: i + 1 for i, h in enumerate(H)}; col = lambda h: CL(C[h])
 wb = Workbook(); ws = wb.active; ws.title = 'Lojas'; ws.append(H)
@@ -22,6 +23,7 @@ for l in L:
     ws.append([l['parada'] + (' (opcional)' if op else ''), l['bloco_nome'], 'Opcional' if op else 'Planejada', l['grupo2'], l['seg'], l['nome'], l['bairro'],
                l['end'], l['tel'], '; '.join(l['alertas']), l['nota'], l['aval'], 'Sim' if l['sem_dono'] else 'Não', l['sit'], l['site'],
                'Sim' if l['rede'] else '', l['gourmet'], l['pos'], l['fnota'], l['faval'], round(l['dist'], 2), l['tipo'], ', '.join(l['qs']), l['link'],
+               l.get('cenario'), l.get('sinais'), l.get('oferta'), l.get('case'),
                *[(l.get('visita') or {}).get(k) or None for k in ('r', 'd', 'quem', 'obj', 'prox')]])
     n = ws.max_row
     for c in ws[n]:
@@ -30,7 +32,7 @@ for l in L:
         if l['bloco'] % 2 == 0 and c.column <= C['Link do Maps']: c.fill = BL
     ws.cell(n, C['Link do Maps']).hyperlink = l['link']
     ws.cell(n, C['Nota']).number_format = '0.0'; ws.cell(n, C['Avaliações']).number_format = '#,##0'; ws.cell(n, C['Km desde a parada anterior (linha reta)']).number_format = '0.00'
-W = [11, 26, 10, 11, 22, 30, 18, 38, 16, 34, 6, 10, 9, 18, 26, 8, 10, 10, 12, 12, 10, 22, 22, 26, 22, 11, 16, 24, 24]
+W = [11, 26, 10, 11, 22, 30, 18, 38, 16, 34, 6, 10, 9, 18, 26, 8, 10, 10, 12, 12, 10, 22, 22, 26, 9, 36, 30, 34, 22, 11, 16, 24, 24]
 for i, w in enumerate(W, 1): ws.column_dimensions[CL(i)].width = w
 ws.freeze_panes = 'G2'; ws.auto_filter.ref = ws.dimensions
 last = ws.max_row
@@ -77,18 +79,22 @@ bloco('Ficha sem dono', 'Ficha sem dono', ['Sim', 'Não'])
 bloco('Faixa de nota', 'Faixa de nota', ['4,5 a 5,0', '4,0 a 4,4', 'abaixo de 4,0', 'sem nota'])
 bloco('Faixa de avaliações', 'Faixa de avaliações', ['200 ou mais', '50 a 199', '10 a 49', 'menos de 10'])
 bloco('Tipo de parada', 'Tipo de parada', ['Planejada', 'Opcional'])
+bloco('Cenário', 'Cenário', ['A', 'B', 'C', 'D', '?'])
 for i, w in enumerate([20, 38, 9, 12, 14, 14, 9, 22], 1): S.column_dimensions[CL(i)].width = w
 S.freeze_panes = 'A2'
 # como ler
 T = wb.create_sheet('Como ler')
 for t in [f"Prospecção {CF['titulo']}: {CF['area_descricao']}. Fonte: {CF['fonte']}.",
           'Objetivo: vender. O teste com site × sem site vai embutido: nenhuma loja foi cortada para igualar os grupos; o resumo compara a % de "Interessado + Fechou" de cada grupo.',
-          'Planejada = 10 ou mais avaliações e nota 4,0 ou mais, ou ficha sem dono. Opcional = as demais (cinza). Visite todas as planejadas na ordem; as opcionais têm o número da planejada mais próxima com uma letra (ex.: 12a).',
+          'Planejada = 10 ou mais avaliações (com qualquer nota; nota abaixo de 4,0 leva o alerta "Nota baixa: conversa sobre reputação") ou ficha sem dono. Opcional = menos de 10 avaliações, salvo ficha sem dono (cinza). Visite todas as planejadas na ordem; as opcionais têm o número da planejada mais próxima com uma letra (ex.: 12a).',
           f'Blocos: até 10 planejadas, do mais perto para o mais longe do ponto de saída ({CF['ponto_saida']['nome']}, ponto aproximado, sem número). A aba "Rotas no Maps" abre cada bloco no Google Maps saindo de onde você está, com as 10 planejadas em ordem (as opcionais não entram na rota); a distância em linha reta é menor que a de carro.',
           'Grupo "sem site" inclui quem não tem site ou cujo "site" na ficha é só Instagram, Facebook, WhatsApp, iFood, página de links ou link encurtado (coluna "Situação do site").',
           'Alertas: "Ficha sem dono: mostrar no celular" (o Google mostra "Reivindicar esta empresa"); "Poucas avaliações: confirme que está aberta"; "Nota baixa: conversa sobre reputação"; "Rede: perguntar quem decide o marketing"; "Conferir se é do segmento"; "Conferir se é a mesma loja da parada X" (duas fichas da mesma marca).',
           'Resultado: escolha na lista (Não falei com quem decide · Sem interesse · Talvez · Interessado · Fechou). A aba "Resumo do teste" calcula sozinha; a % considera só as visitas em que você falou com quem decide.',
           'Fora da lista: ' + (', '.join(CF['fora_do_roteiro']) or 'nenhuma loja') + '. Gourmet e Melhor posição são só informação.',
+          'Cenário (regras de 16/11/2026, nesta ordem): A = sem site próprio (sem site, só Instagram, Facebook, WhatsApp, iFood ou página de links). B = tem site próprio e falha em 1 ou mais testes: sem HTTPS, não se adapta ao celular, PageSpeed no celular abaixo de 50 ou fora do ar (ano antigo no rodapé só como apoio). C = site ok e Google fraco: nota abaixo de 4,0, menos de 10 avaliações, ficha sem dono ou sem horário na ficha. D = site ok e Google ok. "?" = tem site próprio ainda não testado.',
+          'Fotos da ficha: a busca não traz a quantidade de fotos, por isso "poucas fotos" ainda não entra no Cenário C. Confira na visita.',
+          'Oferta indicada: A = Google Meu Negócio + site novo · B = Google Meu Negócio + reforma do site · C = Google Meu Negócio (+ ajuste leve no site) · D = baixa prioridade (outro serviço ou diagnóstico de cortesia). Case a levar: pelo segmento. Os limites (4,0, 10 avaliações, PageSpeed 50, ano 2023) são proposta inicial.',
           'Dados reais: este arquivo não vai para o repositório.']:
     T.append([t]); T.cell(T.max_row, 1).alignment = Alignment(wrap_text=True, vertical='top')
 T.column_dimensions['A'].width = 130
