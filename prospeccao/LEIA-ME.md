@@ -2,6 +2,7 @@
 
 Programas de busca de comércios locais (SerpApi) e de roteiro de visitas. Situação: a prospecção ainda não foi feita. Existem buscas e roteiros prontos (BH e Nova Iguaçu); nenhuma visita aconteceu.
 
+- **`PADRAO-MAPA.md`: o padrão do mapa** (o que tem, o que muda por cidade e o que nunca muda). Leia antes de criar o mapa de uma cidade nova.
 - `programas/prospeccao/`: versão atual (do mapa da área ao roteiro de visitas). Leia o `LEIA-ME.txt` de lá.
 - `programas/busca/` e `programas/roteiro/`: versões antigas, como referência da prospecção de BH.
 
