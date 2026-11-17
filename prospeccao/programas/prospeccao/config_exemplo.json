@@ -106,9 +106,5 @@
     "Construtora": "Sem case (segmento com playbook próprio)",
     "Compra e venda de veículos": "Sem case (segmento com playbook próprio)"
   },
-  "aguardando_case": [
-    "Barbearia",
-    "Celular (manutenção e venda)",
-    "Beleza"
-  ]
+  "aguardando_case": []
 }
