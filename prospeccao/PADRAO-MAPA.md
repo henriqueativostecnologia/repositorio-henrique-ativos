@@ -92,7 +92,7 @@ Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, v
 
 ### 7. Drive
 * **Onde:** `10 Comercial › 11 Prospecção`. Planilha como **Google Sheets** ("Roteiro <Cidade> <Área> - visitas") e mapa como `Roteiro_<Cidade>_<Area>_<AAAA-MM-DD>.html`.
-* **Versões antigas:** renomear com "(substituído)", nunca apagar.
+* **Só a versão mais nova fica na pasta** (decisão de 17/11/2026). Ao gerar de novo: a **planilha** é atualizada no mesmo arquivo do Google Sheets (o link não muda e o que já foi preenchido nas colunas de visita é mantido); o **mapa** novo entra e o anterior vai para a lixeira do Drive. Guardar uma versão específica só quando o sócio pedir.
 * **Nunca** no GitHub: planilhas, respostas das buscas, testes dos sites e a configuração com nomes de redes.
 
 ### 8. Visitas
