@@ -43,7 +43,13 @@ SOCIAL = {'instagram.com': 'só Instagram', 'facebook.com': 'só Facebook', 'fb.
           'anota.ai': 'só cardápio online', 'goomer': 'só cardápio online', 'cardapio': 'só cardápio online',
           'g.page': 'só link da ficha do Google', 'g.co/': 'só link da ficha do Google', 'business.site': 'só site grátis do Google',
           'bit.ly': 'link encurtado', 'tinyurl': 'link encurtado', 'jusbrasil': 'só perfil no Jusbrasil', 'olx.com': 'só anúncio na OLX',
-          'webmotors': 'só anúncio em portal', 'icarros': 'só anúncio em portal', 'mercadolivre': 'só anúncio em portal'}
+          'webmotors': 'só anúncio em portal', 'icarros': 'só anúncio em portal', 'mercadolivre': 'só anúncio em portal',
+          # páginas de plataforma que não são site da loja (achadas nos testes de 16/11/2026)
+          'linkme.bio': 'só página de links', 'canva.site': 'só página de links', 'pedir.to': 'só cardápio online',
+          'neemo': 'só cardápio online', 'menudino': 'só cardápio online', 'jotaja': 'só cardápio online', 'yooga': 'só cardápio online',
+          'appbarber': 'só página de agendamento', 'trinks.com': 'só página de agendamento', 'lojalocal': 'só página de plataforma',
+          'inforempresa': 'só página de plataforma', 'reclameaqui': 'só página de plataforma', 'keepo.': 'só página de links',
+          'smartpos': 'só cardápio online'}
 def site(w):
     wl = (w or '').lower()
     if not wl: return 'Sem site', 'sem site'

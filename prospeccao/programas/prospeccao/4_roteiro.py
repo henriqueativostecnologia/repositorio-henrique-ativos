@@ -1,6 +1,6 @@
 # Passo 4: separa planejadas e opcionais, monta os blocos de visita e os alertas de cada loja.
 # Uso: python3 4_roteiro.py dados/config.json dados/lojas.json dados/roteiro.json [dados/visitas.xlsx]
-# Planejada = cenários A, B e C (e "B ou C" / "B ou D" até o teste do site). Opcional = só o cenário D (presas à planejada mais próxima: 12a, 12b...).
+# Planejada = cenários A, B e C (e "B ou C" / "B ou D" até o teste do site). Opcional = cenário D ou segmento ainda sem case (presas à planejada mais próxima: 12a, 12b...).
 # Cenário A-D, sinais, oferta e case a levar: regras de 16/11/2026 (limites na configuração, campo "cenario").
 # Blocos de até 10 planejadas, do mais perto para o mais longe do ponto de saída.
 import json, math, sys, re, string, unicodedata, os
@@ -78,7 +78,9 @@ for l in L:
     l['p'] = (l['gps']['latitude'], l['gps']['longitude'])
     # regra de 16/11/2026: planejada = 10+ avaliações (com qualquer nota) ou ficha sem dono; opcional = menos de 10 avaliações
     # regra de 16/11/2026: só o cenário D (site ok e Google ok) é opcional; poucas avaliações também é bom alvo
-    l['plan'] = l['cenario'] != 'D'
+    # e segmento que ainda não tem case só é visitado quando o case estiver pronto (campo "aguardando_case")
+    l['sem_case'] = l['seg'] in set(C.get('aguardando_case', []))
+    l['plan'] = l['cenario'] != 'D' and not l['sem_case']
     l['grupo2'] = 'com site' if l['grupo'] == 'Com site' else 'sem site'
     l['dup_de'] = None
 # mesma marca: a de melhor avaliação fica normal; as outras recebem o alerta
@@ -138,6 +140,7 @@ for l in L:
     if l['sem_dono']: a.append('Ficha sem dono: mostrar no celular')
     if (l['aval'] or 0) < 10: a.append('Poucas avaliações: confirme que está aberta')
     if l['nota'] is not None and l['nota'] < 4.0: a.append('Nota baixa: conversa sobre reputação')
+    if l.get('sem_case'): a.append('Sem case ainda: visitar só quando o case estiver pronto')
     if l['rede']: a.append('Rede: perguntar quem decide o marketing')
     if any(x in norm(l['nome']) for x in CONF): a.append('Conferir se é do segmento')
     if l['dup_de']: a.append(f"Conferir se é a mesma loja da parada {l['dup_de']['parada']}")
