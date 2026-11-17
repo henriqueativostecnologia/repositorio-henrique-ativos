@@ -50,7 +50,9 @@ main{max-width:1400px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-right
 .barra .abre{border:1px solid var(--tinta);background:var(--tinta);color:var(--bg);border-radius:999px;padding:7px 14px;font:700 .88rem system-ui,sans-serif;cursor:pointer;min-height:44px}
 .bloco-sel{display:inline-flex;align-items:center;gap:6px;font:700 .88rem system-ui,sans-serif}.bloco-sel select{font:600 .9rem system-ui,sans-serif;padding:7px 8px;border:1px solid var(--tinta);border-radius:999px;background:var(--papel);color:var(--tinta);min-height:44px;max-width:34vw}
 @media (max-width:899px){.bloco-sel .rot{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.barra{gap:6px}.bloco-sel select{font-size:.82rem;padding:7px 4px}.barra .abre{padding:7px 11px}}
-#painel{padding:10px 0;border-bottom:1px solid var(--linha);max-height:60vh;overflow:auto}#painel .titulo{font-size:.78rem;font-weight:700;color:var(--suave);margin:6px 0 4px;text-transform:uppercase;letter-spacing:.04em}
+#guia{padding:10px 0;border-bottom:1px solid var(--linha);max-height:65vh;overflow:auto;font-size:.9rem}.guia-l{margin:4px 0 8px;padding-left:20px}.guia-l li{margin:3px 0}.guia-p{margin:4px 0 8px}.pt{display:inline-block;width:11px;height:11px;border-radius:50%;margin:0 4px 0 2px;vertical-align:-1px}
+.topo{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.guia-bt{flex:none;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--bg);background:transparent;color:var(--bg);font:700 .9rem system-ui,sans-serif;cursor:pointer}
+#painel{padding:10px 0;border-bottom:1px solid var(--linha);max-height:60vh;overflow:auto}#painel .titulo,#guia .titulo{font-size:.78rem;font-weight:700;color:var(--suave);margin:6px 0 4px;text-transform:uppercase;letter-spacing:.04em}
 .linha{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.linha::-webkit-scrollbar{display:none}
 @media (min-width:700px),(pointer:fine){.linha{flex-wrap:wrap;overflow-x:visible}}
 .chip{flex:none;border:1px solid var(--linha);background:var(--papel);color:var(--tinta);border-radius:999px;padding:7px 12px;font:600 .85rem system-ui,sans-serif;min-height:44px;cursor:pointer;white-space:nowrap}
@@ -88,9 +90,32 @@ section.bloco{scroll-margin-top:70px}
 .btns a.case{flex-basis:100%;background:var(--com);color:var(--papel);border-color:var(--com)}
 #vazio{display:none}button:focus-visible,a:focus-visible{outline:3px solid var(--sd);outline-offset:2px}
 </style></head><body>
-<header><h1>Roteiro de visitas · __TITULO__</h1><p>__NPL__ planejadas · __NOP__ opcionais · __NB__ blocos · saída: __SAIDA__</p></header>
+<header><div class="topo"><h1>Roteiro de visitas · __TITULO__</h1><button type="button" class="guia-bt" id="abreguia" aria-expanded="false" aria-controls="guia">Guia</button></div><p>__NPL__ planejadas · __NOP__ opcionais · __NB__ blocos · saída: __SAIDA__</p></header>
 <main>
 <div class="barra"><label class="bloco-sel"><span class="rot">Grupo</span> <select id="gr" aria-label="Grupo"><option value="todos">Com/sem site</option><option value="com site">Com site</option><option value="sem site">Sem site</option></select></label><label class="bloco-sel"><span class="rot">Bloco</span> <select id="bl" aria-label="Mostrar só um bloco">__BLOPT__</select></label><button type="button" class="abre" id="abre" aria-expanded="false" aria-controls="painel">Filtros <span id="nf"></span></button><span class="resumo">Mostrando <b id="tot"></b> lojas · <b id="nvis">0</b> de __NPL__ planejadas visitadas</span></div>
+<div id="guia" hidden>
+<div class="titulo">Cenários: o que oferecer</div>
+<ul class="guia-l">
+<li><b>A · Sem site.</b> Só Instagram, WhatsApp ou nada. Oferta: Google Meu Negócio + site novo.</li>
+<li><b>B · Site com falha.</b> Fora do ar, sem cadeado (HTTPS) ou ruim no celular. Oferta: Google Meu Negócio + reforma do site.</li>
+<li><b>C · Google fraco.</b> Site ok, mas nota baixa, poucas avaliações, ficha sem dono ou sem horário. Oferta: Google Meu Negócio (+ ajuste leve no site).</li>
+<li><b>D · Tudo ok.</b> Baixa prioridade: visite só se der tempo (fica como opcional).</li>
+<li><b>Site sem teste.</b> Confira o site na visita para saber se é B, C ou D.</li>
+</ul>
+<div class="titulo">Cores do mapa</div>
+<p class="guia-p"><span class="pt" style="background:var(--com)"></span>Azul: com site · <span class="pt" style="background:var(--sem)"></span>Verde: sem site · <span class="pt" style="background:var(--op)"></span>Cinza: opcional · <span class="pt" style="background:var(--vis)"></span>Roxo com ✓: visitada · <span class="pt" style="background:transparent;outline:2px solid var(--sd)"></span>Contorno laranja: ficha sem dono</p>
+<div class="titulo">Alertas</div>
+<ul class="guia-l">
+<li><b>Ficha sem dono:</b> mostre no celular que ninguém controla a ficha do Google.</li>
+<li><b>Poucas avaliações:</b> confirme que a loja está aberta.</li>
+<li><b>Nota baixa:</b> comece pela reputação.</li>
+<li><b>Rede:</b> pergunte quem decide o marketing.</li>
+</ul>
+<div class="titulo">Na rota</div>
+<p class="guia-p">Escolha o bloco do momento em "Blocos" e siga os números. As opcionais (cinza, ex.: 12a) ficam perto da parada de mesmo número: entre se der tempo.</p>
+<div class="titulo">Depois de cada visita</div>
+<ol class="guia-l"><li>No cartão, escolha o <b>Resultado da visita</b> (a loja fica roxa com ✓).</li><li>Mande o <b>áudio</b> no chat do Claude com a checklist, dizendo o resultado. O que você marca aqui fica só neste aparelho; o registro oficial é a planilha.</li></ol>
+</div>
 <div id="painel" hidden>
 <div class="titulo">Mostrar</div>
  <div class="linha" role="group" aria-label="Mostrar"><button class="chip" id="sd" aria-pressed="false"><i style="background:var(--sd)"></i>Só ficha sem dono</button><button class="chip" id="op" aria-pressed="true">Mostrar opcionais</button><button class="chip" id="ev" aria-pressed="false">Esconder visitadas</button><button class="chip" id="cp" type="button">Copiar visitas</button></div>
@@ -102,7 +127,6 @@ section.bloco{scroll-margin-top:70px}
 </div>
 <div class="layout"><div class="col-mapa"><div id="mapa" role="region" aria-label="Mapa das paradas"></div>
 <div class="leg"><span><i style="background:var(--vis)"></i>Visitada ✓</span><span><i style="background:var(--com)"></i>Com site</span><span><i style="background:var(--sem)"></i>Sem site</span><span><i style="background:var(--op)"></i>Opcional</span><span><i style="background:transparent;outline:3px solid var(--sd)"></i>Sem dono</span></div></div><div class="col-lista">
-<div class="dica"><b>Como usar:</b> escolha o bloco do momento em "Blocos" e visite as planejadas na ordem dos números. As opcionais (cinza, ex.: 12a) ficam perto da parada de mesmo número: entre se der tempo. <b>Depois de cada visita:</b> 1) no cartão, escolha o <b>Resultado da visita</b> (a loja fica em roxo com ✓ e não some do mapa); 2) mande o <b>áudio</b> no chat do Claude respondendo à checklist de feedback, dizendo também o resultado. O que você marca aqui fica salvo só neste aparelho; o registro oficial é a planilha, que o Claude preenche pelo áudio.</div>
 <p id="vazio" class="dica">Nenhuma loja com esses filtros. Toque em "Todos".</p>
 __BLOCOS__
 </div></div>
@@ -159,8 +183,9 @@ document.getElementById('op').onclick=()=>{st.op=!st.op;aplicar()};
 document.getElementById('ev').onclick=()=>{st.ev=!st.ev;aplicar()};
 document.getElementById('bl').value=String(st.bl);
 document.getElementById('bl').onchange=e=>{st.bl=+e.target.value; try{localStorage.setItem(CHB,st.bl)}catch(_){} aplicar(); if(st.bl&&matchMedia('(min-width:900px)').matches){const s=document.getElementById('b'+st.bl); if(s) s.scrollIntoView({block:'start'})}};
-const ab=document.getElementById('abre'), pn=document.getElementById('painel');
-ab.onclick=()=>{pn.hidden=!pn.hidden; ab.setAttribute('aria-expanded',!pn.hidden)};
+const ab=document.getElementById('abre'), pn=document.getElementById('painel'), ag=document.getElementById('abreguia'), gu=document.getElementById('guia');
+ab.onclick=()=>{pn.hidden=!pn.hidden; gu.hidden=true; ab.setAttribute('aria-expanded',!pn.hidden); ag.setAttribute('aria-expanded',false)};
+ag.onclick=()=>{gu.hidden=!gu.hidden; pn.hidden=true; ag.setAttribute('aria-expanded',!gu.hidden); ab.setAttribute('aria-expanded',false); if(!gu.hidden) document.querySelector('.barra').scrollIntoView({block:'start'})};
 addEventListener('resize',()=>{ if(map) map.invalidateSize() });
 const hoje=()=>new Date().toLocaleDateString('pt-BR');
 D.forEach(d=>{const el=document.getElementById('c'+d.p), b=el.querySelector('.marcar'), sel=el.querySelector('select');
@@ -183,7 +208,9 @@ def oferta_html(d):
     if not d['ce']: return ''
     m = re.search(r'https?://\S+', d['cs'] or ''); nome = (d['cs'] or '').split(' - http')[0].strip()
     case = (f'<a href="{E(m.group(0))}" target="_blank" rel="noopener">{E(nome)}</a>' if m else E(nome)) if d['cs'] else ''
-    return (f'<div class="oferta"><span class="cen">Cenário {E(d["ce"])}</span> {E(d["of"])}'
+    rot = {'A': 'A · Sem site', 'B': 'B · Site com falha', 'C': 'C · Google fraco', 'D': 'D · Tudo ok',
+           'B ou C': 'Site sem teste · Google fraco', 'B ou D': 'Site sem teste'}.get(d['ce'], d['ce'])
+    return (f'<div class="oferta"><span class="cen">{E(rot)}</span> Oferta: {E(d["of"])}'
             + (f'<br><span class="meta">Sinais: {E(d["si"])}</span>' if d['si'] else '')
             + (f'<br><span class="meta">Case a levar: {case}</span>' if case else '') + '</div>')
 def case_btn(d):  # o case é o que se mostra ao cliente: vira botão de destaque no cartão
