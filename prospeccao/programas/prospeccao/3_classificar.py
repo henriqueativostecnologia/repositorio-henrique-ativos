@@ -141,8 +141,8 @@ for pid, x in L.items():
     if not b: fora['fora da área'] += 1; continue
     s, obs = segmento(x)
     if not s: fora['não é do segmento'] += 1; continue
-    LJ = C['lava_jato_minimo']
-    if s == 'Lava-jato' and not ((r.get('rating') or 0) >= LJ['nota'] and (r.get('reviews') or 0) >= LJ['avaliacoes']): lava_fora += 1; continue
+    LJ = C.get('lava_jato_minimo')  # opcional; desde 17/11/2026 o padrão não corta lava-jato (nota baixa também é oportunidade)
+    if LJ and s == 'Lava-jato' and not ((r.get('rating') or 0) >= LJ['nota'] and (r.get('reviews') or 0) >= LJ['avaliacoes']): lava_fora += 1; continue
     g, sit = site(r.get('website'))
     linhas.append(dict(pid=pid, nome=r['title'], seg=s, obs=obs, bairro=b, grupo=g, sit=sit, site=r.get('website'), tel=r.get('phone'),
                        end=r.get('address'), nota=r.get('rating'), aval=r.get('reviews'), tipo=r.get('type'), tipos=r.get('types'),

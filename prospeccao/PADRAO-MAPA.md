@@ -26,7 +26,7 @@ Qualquer sócio cria o mapa de uma cidade ou bairro novo **idêntico** ao de Nov
 | Bairros da área e bairros sem contorno (`bairros_sem_contorno`) | Regras de segmento, grupo, cenário, oferta e planejada/opcional |
 | Ponto de saída (`ponto_saida`) | Colunas da planilha e abas |
 | Fundo do mapa e seus limites (`fundo_mapa`, `limites_fundo`) | Campos do cartão, filtros, cores e alertas da página |
-| Lista de redes da região (`redes`, `fora_do_roteiro`, `conferir_segmento`) | Limites: nota 4,0, 10 avaliações, PageSpeed 50, ano 2023 |
+| Lista de redes da região (`redes`, `fora_do_roteiro`, `conferir_segmento`) | Limites dos **sinais** (nota 4,0, 10 avaliações, PageSpeed 50, ano 2023): **não cortam lojas**, só definem alertas e cenário |
 | Fonte e descrição da área (`fonte`, `area_descricao`) | Cases por segmento (`cases`), iguais em todas as cidades |
 
 Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, valendo para todas as cidades.
@@ -103,7 +103,7 @@ Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, v
 
 **Grupo:** "com site" = site próprio. "Sem site" = sem site, ou "site" que é só Instagram, Facebook, WhatsApp, iFood, Linktree, página de links, cardápio online, página de agendamento, página de plataforma, anúncio em portal, perfil no Jusbrasil, site grátis do Google ou link encurtado.
 
-**Segmentos (22):** Advocacia previdenciária · Advocacia trabalhista · Advocacia (trabalhista e previdenciária) · Imobiliária · Construtora · Compra e venda de veículos · Estética / detalhamento · Lava-jato (só nota 4,5+ e 10+ avaliações) · Cafeteria · Empório · Bar · Hamburgueria · Restaurante japonês · Restaurante italiano / pizzaria · Restaurante self-service / marmita · Restaurante (outros) · Distribuidora de bebidas / adega · Barbearia · Beleza · Celular (manutenção e venda) · Climatização · Tatuagem. Clínica fica em aba própria ("só mapear").
+**Segmentos (22):** Advocacia previdenciária · Advocacia trabalhista · Advocacia (trabalhista e previdenciária) · Imobiliária · Construtora · Compra e venda de veículos · Estética / detalhamento · Lava-jato · Cafeteria · Empório · Bar · Hamburgueria · Restaurante japonês · Restaurante italiano / pizzaria · Restaurante self-service / marmita · Restaurante (outros) · Distribuidora de bebidas / adega · Barbearia · Beleza · Celular (manutenção e venda) · Climatização · Tatuagem. Clínica fica em aba própria ("só mapear").
 
 **Cenário (nesta ordem):**
 
@@ -114,6 +114,8 @@ Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, v
 | C | Site ok e Google fraco: nota abaixo de 4,0, menos de 10 avaliações, ficha sem dono ou sem horário | Google Meu Negócio (+ ajuste leve no site) |
 | D | Site ok e Google ok | Baixa prioridade (outro serviço ou diagnóstico de cortesia) |
 | B ou C / B ou D | Site ainda sem teste | Definir depois do teste |
+
+**Nenhuma loja é cortada por nota ou por avaliações** (decisão de 17/11/2026, que também tirou o antigo corte do lava-jato). Nota baixa e poucas avaliações são oportunidade: a loja entra planejada, com o alerta correspondente.
 
 **Planejada / opcional:** planejada = cenários A, B e C (e "B ou C"/"B ou D" até o teste). **Opcional = só o Cenário D.** Poucas avaliações continua planejada. A regra "segmento sem case fica opcional" existe no programa (`aguardando_case`), mas hoje está vazia.
 
