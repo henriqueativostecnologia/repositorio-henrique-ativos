@@ -48,7 +48,8 @@ SOCIAL = {'instagram.com': 'só Instagram', 'facebook.com': 'só Facebook', 'fb.
           'linkme.bio': 'só página de links', 'canva.site': 'só página de links', 'pedir.to': 'só cardápio online',
           'neemo': 'só cardápio online', 'menudino': 'só cardápio online', 'jotaja': 'só cardápio online', 'yooga': 'só cardápio online',
           'appbarber': 'só página de agendamento', 'trinks.com': 'só página de agendamento', 'lojalocal': 'só página de plataforma',
-          'inforempresa': 'só página de plataforma'}
+          'inforempresa': 'só página de plataforma', 'reclameaqui': 'só página de plataforma', 'keepo.': 'só página de links',
+          'smartpos': 'só cardápio online'}
 def site(w):
     wl = (w or '').lower()
     if not wl: return 'Sem site', 'sem site'
