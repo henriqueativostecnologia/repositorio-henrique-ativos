@@ -47,12 +47,35 @@ OFERTA = {'A': 'Google Meu Negócio + site novo', 'B': 'Google Meu Negócio + re
           'B ou C': 'Google Meu Negócio (+ site: reforma ou ajuste leve, ver no teste)', 'B ou D': 'Definir depois do teste do site'}
 CASES = C.get('cases', {})
 def fmtn(v): return format(v, '.1f').replace('.', ',')
+# ---- Força no Google (0 a 100), proposta inicial de 17/11/2026, baseada nos critérios do GBP Check ----
+# (ficha verificada, avaliações perto da média do segmento, nota, posição na busca, categorias, ficha completa).
+# Pesos e faixas na configuração (campo "forca_google"); Fraco/Médio contam como "Google fraco" no cenário.
+FG = C.get('forca_google', {})
+PESO = {'verificada': 20, 'avaliacoes': 20, 'nota': 15, 'posicao': 20, 'categorias': 10, 'horario': 5, 'telefone': 5, 'site': 5}
+PESO.update(FG.get('pesos', {}))
+FX_FRACO, FX_FORTE = FG.get('fraco_abaixo_de', 40), FG.get('forte_a_partir_de', 70)
+import statistics as _st
+_med = {}
+for l in L: _med.setdefault(l['seg'], []).append(l['aval'] or 0)
+_med = {k: (_st.median(v) or 1) for k, v in _med.items()}
+def forca(l):
+    a = l['aval'] or 0; m = _med[l['seg']]; n = l['nota']; p = l['pos']
+    s = (0 if l['sem_dono'] else PESO['verificada'])
+    s += PESO['avaliacoes'] if a >= m else (PESO['avaliacoes'] / 2 if a >= m / 2 else 0)
+    s += 0 if n is None else (PESO['nota'] if n >= 4.5 else (PESO['nota'] * 2 / 3 if n >= 4.0 else 0))
+    s += PESO['posicao'] if p <= 3 else (PESO['posicao'] * .6 if p <= 10 else (PESO['posicao'] * .3 if p <= 20 else 0))
+    s += PESO['categorias'] if len(l.get('tipos') or []) >= 2 else 0
+    s += (PESO['horario'] if l.get('horario') else 0) + (PESO['telefone'] if l.get('tel') else 0) + (PESO['site'] if l.get('site') else 0)
+    return round(s)
+for l in L:
+    l['forca'] = forca(l); l['forca_faixa'] = 'Fraco' if l['forca'] < FX_FRACO else ('Médio' if l['forca'] < FX_FORTE else 'Forte')
 for l in L:
     g = []  # sinais do Google
     if l['nota'] is not None and l['nota'] < LIM_NOTA: g.append(f"nota {fmtn(l['nota'])} com {l['aval'] or 0} avaliações")
     if (l['aval'] or 0) < LIM_AV: g.append('sem avaliações' if not l['aval'] else f"só {l['aval']} avaliações")
     if l['sem_dono']: g.append('ficha sem dono')
     if l.get('horario') is False: g.append('sem horário na ficha')
+    if l['forca_faixa'] != 'Forte': g.append(f"Google {l['forca_faixa'].lower()} ({l['forca']})")
     if l['sit'] != 'site próprio':
         cen, s = 'A', [l['sit']] + g
     else:
