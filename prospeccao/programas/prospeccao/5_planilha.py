@@ -11,7 +11,7 @@ RES = ['Não falei com quem decide', 'Sem interesse', 'Talvez', 'Interessado', '
 H = ['Parada', 'Bloco', 'Tipo de parada', 'Grupo: com site / sem site', 'Segmento', 'Nome', 'Bairro', 'Endereço', 'Telefone', 'Alertas',
      'Nota', 'Avaliações', 'Ficha sem dono', 'Situação do site', 'Site atual', 'Rede/franquia', 'Gourmet (só informação)', 'Melhor posição (só informação)',
      'Faixa de nota', 'Faixa de avaliações', 'Km desde a parada anterior (linha reta)', 'Tipo no Google', 'Achada pelos termos', 'Link do Maps',
-     'Cenário', 'Sinais encontrados', 'Oferta indicada', 'Case a levar',
+     'Força no Google (0-100)', 'Google (faixa)', 'Cenário', 'Sinais encontrados', 'Oferta indicada', 'Case a levar',
      'Resultado', 'Data da visita', 'Falou com quem', 'Objeção', 'Próximo passo']
 C = {h: i + 1 for i, h in enumerate(H)}; col = lambda h: CL(C[h])
 wb = Workbook(); ws = wb.active; ws.title = 'Lojas'; ws.append(H)
@@ -23,7 +23,7 @@ for l in L:
     ws.append([l['parada'] + (' (opcional)' if op else ''), l['bloco_nome'], 'Opcional' if op else 'Planejada', l['grupo2'], l['seg'], l['nome'], l['bairro'],
                l['end'], l['tel'], '; '.join(l['alertas']), l['nota'], l['aval'], 'Sim' if l['sem_dono'] else 'Não', l['sit'], l['site'],
                'Sim' if l['rede'] else '', l['gourmet'], l['pos'], l['fnota'], l['faval'], round(l['dist'], 2), l['tipo'], ', '.join(l['qs']), l['link'],
-               l.get('cenario'), l.get('sinais'), l.get('oferta'), l.get('case'),
+               l.get('forca'), l.get('forca_faixa'), l.get('cenario'), l.get('sinais'), l.get('oferta'), l.get('case'),
                *[(l.get('visita') or {}).get(k) or None for k in ('r', 'd', 'quem', 'obj', 'prox')]])
     n = ws.max_row
     for c in ws[n]:
@@ -32,7 +32,7 @@ for l in L:
         if l['bloco'] % 2 == 0 and c.column <= C['Link do Maps']: c.fill = BL
     ws.cell(n, C['Link do Maps']).hyperlink = l['link']
     ws.cell(n, C['Nota']).number_format = '0.0'; ws.cell(n, C['Avaliações']).number_format = '#,##0'; ws.cell(n, C['Km desde a parada anterior (linha reta)']).number_format = '0.00'
-W = [11, 26, 10, 11, 22, 30, 18, 38, 16, 34, 6, 10, 9, 18, 26, 8, 10, 10, 12, 12, 10, 22, 22, 26, 9, 36, 30, 34, 22, 11, 16, 24, 24]
+W = [11, 26, 10, 11, 22, 30, 18, 38, 16, 34, 6, 10, 9, 18, 26, 8, 10, 10, 12, 12, 10, 22, 22, 26, 10, 10, 9, 36, 30, 34, 22, 11, 16, 24, 24]
 for i, w in enumerate(W, 1): ws.column_dimensions[CL(i)].width = w
 ws.freeze_panes = 'G2'; ws.auto_filter.ref = ws.dimensions
 last = ws.max_row
@@ -79,6 +79,7 @@ bloco('Ficha sem dono', 'Ficha sem dono', ['Sim', 'Não'])
 bloco('Faixa de nota', 'Faixa de nota', ['4,5 a 5,0', '4,0 a 4,4', 'abaixo de 4,0', 'sem nota'])
 bloco('Faixa de avaliações', 'Faixa de avaliações', ['200 ou mais', '50 a 199', '10 a 49', 'menos de 10'])
 bloco('Tipo de parada', 'Tipo de parada', ['Planejada', 'Opcional'])
+bloco('Google (faixa)', 'Google (faixa)', ['Forte', 'Médio', 'Fraco'])
 bloco('Cenário', 'Cenário', ['A', 'B', 'C', 'D', 'B ou C', 'B ou D'])
 for i, w in enumerate([20, 38, 9, 12, 14, 14, 9, 22], 1): S.column_dimensions[CL(i)].width = w
 S.freeze_panes = 'A2'
@@ -93,6 +94,7 @@ for t in [f"Prospecção {CF['titulo']}: {CF['area_descricao']}. Fonte: {CF['fon
           'Resultado: escolha na lista (Não falei com quem decide · Sem interesse · Talvez · Interessado · Fechou). A aba "Resumo do teste" calcula sozinha; a % considera só as visitas em que você falou com quem decide.',
           'Fora da lista: ' + (', '.join(CF['fora_do_roteiro']) or 'nenhuma loja') + '. Gourmet e Melhor posição são só informação.',
           'Cenário (regras de 16/11/2026, nesta ordem): A = sem site próprio (sem site, só Instagram, Facebook, WhatsApp, iFood ou página de links). B = tem site próprio e falha em 1 ou mais testes: sem HTTPS, não se adapta ao celular, PageSpeed no celular abaixo de 50 ou fora do ar (ano antigo no rodapé só como apoio). C = site ok e Google fraco: nota abaixo de 4,0, menos de 10 avaliações, ficha sem dono ou sem horário na ficha. D = site ok e Google ok. Sem o teste do site: "B ou C" (tem site e Google fraco) e "B ou D" (tem site e Google ok); os dois ficam planejados até o teste.',
+          'Força no Google (0 a 100, proposta inicial de 17/11/2026, a partir dos critérios do GBP Check): ficha verificada 20; avaliações na média do segmento ou acima 20 (metade: 10); nota 4,5+ 15 (4,0 a 4,4: 10); posição na busca top 3 20 (4ª a 10ª: 12; 11ª a 20ª: 6); mais de uma categoria 10; horário, telefone e site na ficha 5 cada. Faixas: Fraco abaixo de 40, Médio de 40 a 69, Forte 70+. Fraco e Médio contam como Google fraco no cenário. Ainda não mede fotos, postagens e respostas às avaliações (use o GBP Check).',
           'Fotos da ficha: a busca não traz a quantidade de fotos, por isso "poucas fotos" ainda não entra no Cenário C. Confira na visita.',
           'Oferta indicada: A = Google Meu Negócio + site novo · B = Google Meu Negócio + reforma do site · C = Google Meu Negócio (+ ajuste leve no site) · D = baixa prioridade (outro serviço ou diagnóstico de cortesia). Case a levar: pelo segmento. Os limites (4,0, 10 avaliações, PageSpeed 50, ano 2023) são proposta inicial.',
           'Dados reais: este arquivo não vai para o repositório.']:

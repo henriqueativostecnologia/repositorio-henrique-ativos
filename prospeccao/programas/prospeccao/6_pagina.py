@@ -26,7 +26,7 @@ for l in L:
                   sd=1 if l['sem_dono'] else 0, nt=l['nota'], av=l['aval'], al=l['alertas'], sit=l['sit'], w=l['site'], wc=canal(l['site']),
                   t=l['tel'], e=l['end'], m=l['link'], la=l['gps']['latitude'], lo=l['gps']['longitude'],
                   id=l['pid'], vr=(l.get('visita') or {}).get('r', ''), vd=(l.get('visita') or {}).get('d', ''),
-                  ce=l.get('cenario', ''), si=l.get('sinais', ''), of=l.get('oferta', ''), cs=l.get('case', '')))
+                  fg=l.get('forca'), ff=l.get('forca_faixa', ''), ce=l.get('cenario', ''), si=l.get('sinais', ''), of=l.get('oferta', ''), cs=l.get('case', '')))
 ROT = [dict(k=r['k'], nome=r['nome'], links=r['links'], km=round(r['km'], 1), n=r['n'], nop=r['nop']) for r in R['rotas']]
 segs = sorted({d['s'] for d in D})
 from collections import Counter as _C
@@ -98,10 +98,12 @@ section.bloco{scroll-margin-top:70px}
 <ul class="guia-l">
 <li><b>A · Sem site.</b> Só Instagram, WhatsApp ou nada. Oferta: Google Meu Negócio + site novo.</li>
 <li><b>B · Site com falha.</b> Fora do ar, sem cadeado (HTTPS) ou ruim no celular. Oferta: Google Meu Negócio + reforma do site.</li>
-<li><b>C · Google fraco.</b> Site ok, mas nota baixa, poucas avaliações, ficha sem dono ou sem horário. Oferta: Google Meu Negócio (+ ajuste leve no site).</li>
+<li><b>C · Google fraco.</b> Site ok, mas Força no Google fraca ou média, nota baixa, poucas avaliações, ficha sem dono ou sem horário. Oferta: Google Meu Negócio (+ ajuste leve no site).</li>
 <li><b>D · Tudo ok.</b> Baixa prioridade: visite só se der tempo (fica como opcional).</li>
 <li><b>Site sem teste.</b> Confira o site na visita para saber se é B, C ou D.</li>
 </ul>
+<div class="titulo">Força no Google (0 a 100)</div>
+<p class="guia-p">Nota superficial da ficha: dono verificado, avaliações perto da média do segmento, nota, posição na busca, categorias, horário, telefone e site. <b>Fraco</b> (abaixo de 40) e <b>Médio</b> (40 a 69) contam como Google fraco; <b>Forte</b> é 70 ou mais. Não mede fotos e postagens: para isso, use o GBP Check.</p>
 <div class="titulo">Cores do mapa</div>
 <p class="guia-p"><span class="pt" style="background:var(--com)"></span>Azul: com site · <span class="pt" style="background:var(--sem)"></span>Verde: sem site · <span class="pt" style="background:var(--op)"></span>Cinza: opcional · <span class="pt" style="background:var(--vis)"></span>Roxo com ✓: visitada · <span class="pt" style="background:transparent;outline:2px solid var(--sd)"></span>Contorno laranja: ficha sem dono</p>
 <div class="titulo">Alertas</div>
@@ -119,6 +121,8 @@ section.bloco{scroll-margin-top:70px}
 <div id="painel" hidden>
 <div class="titulo">Mostrar</div>
  <div class="linha" role="group" aria-label="Mostrar"><button class="chip" id="sd" aria-pressed="false"><i style="background:var(--sd)"></i>Só ficha sem dono</button><button class="chip" id="op" aria-pressed="true">Mostrar opcionais</button><button class="chip" id="ev" aria-pressed="false">Esconder visitadas</button><button class="chip" id="cp" type="button">Copiar visitas</button></div>
+<div class="titulo">Força no Google</div>
+ <div class="linha" role="group" aria-label="Força no Google"><button class="chip" data-fg="" aria-pressed="true">Todas</button><button class="chip" data-fg="Fraco" aria-pressed="false">Fraco</button><button class="chip" data-fg="Médio" aria-pressed="false">Médio</button><button class="chip" data-fg="Forte" aria-pressed="false">Forte</button></div>
 <div class="titulo">Segmentos (toque em mais de um para juntar)</div>
  <div class="linha" role="group" aria-label="Segmento"><button class="chip" data-sg="" aria-pressed="true">Todos os segmentos</button>__SEGS__</div>
 <div class="titulo">Bairros (toque em mais de um para juntar)</div>
@@ -135,7 +139,7 @@ __BLOCOS__
 <script>__LEAFLET_JS__</script>
 <script>
 const D=__DADOS__, O=__O__;
-const st={gr:'todos',sg:new Set(),br:new Set(),sd:false,op:true,ev:false,bl:0};
+const st={gr:'todos',fg:new Set(),sg:new Set(),br:new Set(),sd:false,op:true,ev:false,bl:0};
 const CHB='ativos-bloco-'+document.title; try{st.bl=+(localStorage.getItem(CHB)||0)||0}catch(e){}
 const CHAVE='ativos-visitas-'+document.title;
 let VL={}; try{VL=JSON.parse(localStorage.getItem(CHAVE)||'{}')||{}}catch(e){VL={}}
@@ -157,7 +161,7 @@ try{
 }catch(e){ map=null; document.getElementById('mapa').innerHTML='<p class="dica" style="margin:12px">O mapa precisa de internet para carregar. Os cartões abaixo funcionam sem ele.</p>'; }
 function icone(d){return L.divIcon({className:'',html:`<div class="pin ${d.pl?'':'op'} ${d.sd?'sd':''} ${visita(d)?'vis':''}" style="background:${d.cor}">${d.p}</div>`,iconSize:d.pl?[24,24]:[18,18],iconAnchor:d.pl?[12,12]:[9,9]})}
 function esc(t){return String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
-function vis(d){return (st.gr==='todos'||d.g===st.gr)&&(st.sg.size===0||st.sg.has(d.s))&&(st.br.size===0||st.br.has(d.br))&&(!st.sd||d.sd)&&(st.op||d.pl)&&!(st.ev&&visita(d))&&(!st.bl||d.b===st.bl)}
+function vis(d){return (st.gr==='todos'||d.g===st.gr)&&(st.sg.size===0||st.sg.has(d.s))&&(st.br.size===0||st.br.has(d.br))&&(st.fg.size===0||st.fg.has(d.ff))&&(!st.sd||d.sd)&&(st.op||d.pl)&&!(st.ev&&visita(d))&&(!st.bl||d.b===st.bl)}
 function pintar(d){const v=visita(d), el=document.getElementById('c'+d.p); el.classList.toggle('vis',!!v);
  const s=el.querySelector('.selo'), b=el.querySelector('.marcar'), sel=el.querySelector('select');
  s.textContent=v?('✓ Visitada'+(v.d?' em '+v.d:'')+(v.planilha?' (planilha)':'')):''; b.hidden=!(v&&!v.planilha); sel.value=v?(v.r||''):sel.value;
@@ -172,11 +176,13 @@ function aplicar(){
  document.getElementById('gr').value=st.gr;
  document.querySelectorAll('[data-sg]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.sg===''?st.sg.size===0:st.sg.has(c.dataset.sg)));
  document.querySelectorAll('[data-br]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.br===''?st.br.size===0:st.br.has(c.dataset.br)));
- const nf=(st.sg.size>0?st.sg.size:0)+st.br.size+st.sd+(!st.op)+st.ev; document.getElementById('nf').textContent=nf?'('+nf+')':'';
+ document.querySelectorAll('[data-fg]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.fg===''?st.fg.size===0:st.fg.has(c.dataset.fg)));
+ const nf=(st.sg.size>0?st.sg.size:0)+st.br.size+st.fg.size+st.sd+(!st.op)+st.ev; document.getElementById('nf').textContent=nf?'('+nf+')':'';
  document.getElementById('sd').setAttribute('aria-pressed',st.sd); document.getElementById('op').setAttribute('aria-pressed',st.op); document.getElementById('ev').setAttribute('aria-pressed',st.ev);
 }
 document.getElementById('gr').onchange=e=>{st.gr=e.target.value;aplicar()};
 document.querySelectorAll('[data-sg]').forEach(c=>c.onclick=()=>{const s=c.dataset.sg; if(!s) st.sg.clear(); else st.sg.has(s)?st.sg.delete(s):st.sg.add(s); aplicar()});
+document.querySelectorAll('[data-fg]').forEach(c=>c.onclick=()=>{const s=c.dataset.fg; if(!s) st.fg.clear(); else st.fg.has(s)?st.fg.delete(s):st.fg.add(s); aplicar()});
 document.querySelectorAll('[data-br]').forEach(c=>c.onclick=()=>{const s=c.dataset.br; if(!s) st.br.clear(); else st.br.has(s)?st.br.delete(s):st.br.add(s); aplicar()});
 document.getElementById('sd').onclick=()=>{st.sd=!st.sd;aplicar()};
 document.getElementById('op').onclick=()=>{st.op=!st.op;aplicar()};
@@ -227,7 +233,7 @@ for r in ROT:
         al = ''.join(f'<li>{E(a)}</li>' for a in d['al'])
         canal = f'<a href="{E(d["w"])}" target="_blank" rel="noopener">{E(d["wc"])}</a>' if d['w'] else ''
         cards.append(f'''<article id="c{E(d["p"])}" class="{'op' if not d['pl'] else ''}"><div class="top"><span class="n {cls}">{E(d["p"])}</span><div><h3>{E(d["n"])}{' <span class="tag">opcional</span>' if not d['pl'] else ''}</h3>
-<p class="meta">{E(d["s"])} · {E(d["ba"])} · {nota}</p><p class="meta">{'Com site' if d['g'] == 'com site' else ('Sem site' if d['sit'] == 'sem site' else 'Sem site · ' + E(d['sit']))}</p>{f'<p class="meta">Tel.: <span class="tel">{E(d["t"])}</span></p>' if d['t'] else ''}</div></div>
+<p class="meta">{E(d["s"])} · {E(d["ba"])} · {nota}</p>{f'<p class="meta">Google: <b>{E(d["ff"])}</b> · {d["fg"]} de 100</p>' if d['ff'] else ''}<p class="meta">{'Com site' if d['g'] == 'com site' else ('Sem site' if d['sit'] == 'sem site' else 'Sem site · ' + E(d['sit']))}</p>{f'<p class="meta">Tel.: <span class="tel">{E(d["t"])}</span></p>' if d['t'] else ''}</div></div>
 {oferta_html(d)}{f'<ul class="alertas">{al}</ul>' if al else ''}<div class="btns">{case_btn(d)}<a href="{E(d["m"])}" target="_blank" rel="noopener">Ver no Maps</a>{canal}{f'<a href="tel:+55{re.sub(chr(92)+"D","",d["t"])}">Ligar</a>' if d['t'] else ''}<button type="button" class="vermapa" data-p="{E(d["p"])}">No mapa</button></div>
 <div class="visita"><select aria-label="Resultado da visita">{OPCOES}</select><button type="button" class="marcar" hidden>Desfazer</button><span class="selo"></span></div></article>''')
     cards.append('</section>')
