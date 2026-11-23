@@ -111,11 +111,24 @@ Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, v
 |---|---|---|
 | A | Sem site próprio | Google Meu Negócio + site novo |
 | B | Site próprio com falha: sem HTTPS, não se adapta ao celular, fora do ar (ou PageSpeed abaixo de 50, quando houver) | Google Meu Negócio + reforma do site |
-| C | Site ok e Google fraco: nota abaixo de 4,0, menos de 10 avaliações, ficha sem dono ou sem horário | Google Meu Negócio (+ ajuste leve no site) |
+| C | Site ok e Google fraco: **Força no Google** fraca ou média, nota abaixo de 4,0, menos de 10 avaliações, ficha sem dono ou sem horário | Google Meu Negócio (+ ajuste leve no site) |
 | D | Site ok e Google ok | Baixa prioridade (outro serviço ou diagnóstico de cortesia) |
 | B ou C / B ou D | Site ainda sem teste | Definir depois do teste |
 
 **Nenhuma loja é cortada por nota ou por avaliações** (decisão de 17/11/2026, que também tirou o antigo corte do lava-jato). Nota baixa e poucas avaliações são oportunidade: a loja entra planejada, com o alerta correspondente.
+
+**Força no Google (0 a 100):** nota superficial da ficha, com os critérios do GBP Check (`plataformas/gbp-check/`), a partir dos dados da busca. Proposta inicial de 17/11/2026, a ajustar depois do curso de SEO; pesos na configuração (`forca_google`).
+
+| Item | Pontos |
+|---|---|
+| Ficha verificada (tem dono) | 20 |
+| Avaliações na média do segmento na área ou acima (metade da média: 10) | 20 |
+| Nota 4,5+ (4,0 a 4,4: 10) | 15 |
+| Posição na busca: top 3 (4ª a 10ª: 12; 11ª a 20ª: 6) | 20 |
+| Mais de uma categoria | 10 |
+| Horário, telefone e site na ficha | 5 cada |
+
+Faixas: **Fraco** abaixo de 40 · **Médio** 40 a 69 · **Forte** 70+. Fraco e Médio contam como "Google fraco" no cenário. Não mede fotos, postagens e respostas às avaliações: para os leads quentes, rodar a Pré Análise do GBP Check.
 
 **Planejada / opcional:** planejada = cenários A, B e C (e "B ou C"/"B ou D" até o teste). **Opcional = só o Cenário D.** Poucas avaliações continua planejada. A regra "segmento sem case fica opcional" existe no programa (`aguardando_case`), mas hoje está vazia.
 
@@ -132,7 +145,7 @@ Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, v
 
 ## Informações por comércio
 
-**Planilha, aba "Lojas" (33 colunas, nesta ordem):** Parada · Bloco · Tipo de parada · Grupo: com site / sem site · Segmento · Nome · Bairro · Endereço · Telefone · Alertas · Nota · Avaliações · Ficha sem dono · Situação do site · Site atual · Rede/franquia · Gourmet (só informação) · Melhor posição (só informação) · Faixa de nota · Faixa de avaliações · Km desde a parada anterior · Tipo no Google · Achada pelos termos · Link do Maps · Cenário · Sinais encontrados · Oferta indicada · Case a levar · **Resultado** (lista: Não falei com quem decide, Sem interesse, Talvez, Interessado, Fechou) · Data da visita · Falou com quem · Objeção · Próximo passo.
+**Planilha, aba "Lojas" (35 colunas, nesta ordem):** Parada · Bloco · Tipo de parada · Grupo: com site / sem site · Segmento · Nome · Bairro · Endereço · Telefone · Alertas · Nota · Avaliações · Ficha sem dono · Situação do site · Site atual · Rede/franquia · Gourmet (só informação) · Melhor posição (só informação) · Faixa de nota · Faixa de avaliações · Km desde a parada anterior · Tipo no Google · Achada pelos termos · Link do Maps · Força no Google (0-100) · Google (faixa) · Cenário · Sinais encontrados · Oferta indicada · Case a levar · **Resultado** (lista: Não falei com quem decide, Sem interesse, Talvez, Interessado, Fechou) · Data da visita · Falou com quem · Objeção · Próximo passo.
 
 **Outras abas:** Rotas no Maps (link de cada bloco) · Resumo do teste (% de "Interessado + Fechou" por total, grupo, segmento, ficha sem dono, faixa de nota, faixa de avaliações, tipo de parada e cenário) · Só mapear (não abordar) · Como ler.
 
@@ -141,7 +154,8 @@ Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, v
 ## Página do mapa
 
 * **Barra fixa:** Com/sem site · Bloco (lembrado no aparelho) · Filtros · "Mostrando X lojas · Y de Z planejadas visitadas".
-* **Painel Filtros:** Só ficha sem dono · Mostrar opcionais · Esconder visitadas · Copiar visitas · Segmentos (vários) · Bairros (vários).
+* **Botão Guia (cabeçalho):** cenários e ofertas, força no Google, cores, alertas, rota e o que fazer depois da visita.
+* **Painel Filtros:** Só ficha sem dono · Mostrar opcionais · Esconder visitadas · Copiar visitas · Força no Google (Fraco/Médio/Forte) · Segmentos (vários) · Bairros (vários).
 * **Mapa:** fundo embutido (OpenStreetMap), linha tracejada da rota, ponto "Saída", zoom de 13 a 16.
 * **Por bloco:** nome dos bairros, planejadas, opcionais, km em linha reta e botão "Abrir rota do bloco no Maps".
 
@@ -163,6 +177,24 @@ Qualquer mudança na coluna da direita é decisão do Henrique e entra por PR, v
 | Buscas por loja na área | Até ~0,5 | Buscas usadas ÷ lojas na planilha |
 | Planejadas visitadas | Todas as do bloco do dia | Contador da página / coluna Resultado |
 | % Interessado + Fechou | A definir depois das primeiras visitas | Aba "Resumo do teste" |
+
+## Decisões (o que mudou e quando)
+
+Registro para este chat e o outro chat do Claude acompanharem as mudanças um do outro: nenhum deles vê a conversa do outro, só o repositório e o Drive.
+
+**Fonte oficial das regras comerciais** (cenários, Força no Google, regra do case, oferta, cadência, ficha padrão): a pasta `comercial/` (`comercial/posicionamento-digital-base.md` e `comercial/segmentos/comercio-local.md`). Antes de mudar uma regra do mapa: `git pull` e ler esses arquivos. Se o mapa mudar uma regra de lá, avisar o Henrique para atualizar `comercial/` por PR. Enquanto `comercio-local.md` não tiver a regra, vale a desta página.
+
+| Data | Decisão |
+|---|---|
+| 22/10/2026 | Área de Nova Iguaçu: 16 bairros da URG Centro (sem Juscelino, hoje de Mesquita; com Diana). Pontos a cada 2 km; termos raros em 4 pontos |
+| 16/11/2026 | Segmentos novos (hamburgueria, japonês, italiano, distribuidora/adega, barbearia, climatização, celular, tatuagem, beleza); restaurante separado por tipo; clínicas só mapear |
+| 16/11/2026 | Cenários A-D, oferta indicada e case a levar; só o Cenário D é opcional |
+| 17/11/2026 | Barbearia, celular e beleza entram no roteiro como os demais (landing pages em produção) |
+| 17/11/2026 | Nenhuma loja é cortada por nota ou avaliações (fim do corte do lava-jato) |
+| 17/11/2026 | Depois da visita: Resultado no mapa + áudio com a checklist no chat do Claude |
+| 17/11/2026 | Drive: só a versão mais nova do mapa e da planilha, sem cópias |
+| 17/11/2026 | Força no Google (0 a 100); Fraco e Médio contam como Google fraco no cenário |
+| 18/11/2026 | Regras comerciais fechadas passam a ter a pasta `comercial/` como fonte oficial (regra de sincronia entre chats) |
 
 ## Documentos relacionados
 

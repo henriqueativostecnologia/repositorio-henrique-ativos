@@ -102,5 +102,19 @@
     "Construtora": "Sem case (segmento com playbook próprio)",
     "Compra e venda de veículos": "Sem case (segmento com playbook próprio)"
   },
-  "aguardando_case": []
+  "aguardando_case": [],
+  "forca_google": {
+    "pesos": {
+      "verificada": 20,
+      "avaliacoes": 20,
+      "nota": 15,
+      "posicao": 20,
+      "categorias": 10,
+      "horario": 5,
+      "telefone": 5,
+      "site": 5
+    },
+    "fraco_abaixo_de": 40,
+    "forte_a_partir_de": 70
+  }
 }
