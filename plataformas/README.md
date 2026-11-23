@@ -46,5 +46,5 @@ plataformas/
 | Google Agenda | `google-agenda/oficial/` | ✅ Completa: 112 artigos (10/11/2026) |
 | Google Sites | `google-sites/oficial/` | ✅ Completa: 23 artigos (10/11/2026) |
 | Asana | `asana/oficial/` | ✅ Completa: 546 artigos da Central de Ajuda (10/11/2026) |
-| GBP Check | `gbp-check/oficial/` | ⚠ Quase completa: 26 páginas do site + 58 de 63 artigos da Central de Ajuda (17/11/2026). Faltam 5 artigos (lista no índice) |
+| GBP Check | `gbp-check/oficial/` | ✅ Completa: 26 páginas do site + 63 artigos da Central de Ajuda (17 e 23/11/2026) |
 | Slack | — | Opção futura (decisão de 10/11/2026: conversas no Google Chat) |
