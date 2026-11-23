@@ -2,12 +2,12 @@
 tipo: índice da documentação oficial
 plataforma: GBP Check
 baixado: 17/11/2026
-artigos: 84
+artigos: 89
 ---
 
 # GBP Check: documentação oficial completa
 
-Cópia integral (texto) do site oficial do GBP Check em português, baixada em 17/11/2026 de https://www.gbpcheck.com/pt/, mais 58 artigos da Central de Ajuda pública (https://help.gbpcheck.com/pt-br/).
+Cópia integral (texto) do site oficial do GBP Check em português, baixada em 17/11/2026 de https://www.gbpcheck.com/pt/, mais os 63 artigos da Central de Ajuda pública (58 em 17/11 e 5 em 23/11/2026) (https://help.gbpcheck.com/pt-br/).
 Cada arquivo traz no topo o título, o link de origem e a data. Imagens e vídeos não foram copiados; os links ficam no texto (quando a imagem tinha conteúdo relevante, fica uma nota "(imagem no artigo original)").
 Foram retirados só os elementos repetidos de navegação: menu do topo, rodapé, botões "Anterior / Próximo" dos carrosséis e o widget "Este artigo foi útil?" da Central de Ajuda. Links que o site embrulhava em `google.com/url?q=` foram trocados pelo link direto.
 
@@ -67,9 +67,9 @@ Sem resumo, por decisão do Henrique: a fonte é sempre o texto oficial completo
 - [Política de Privacidade](site/politica-de-privacidade.md) · https://www.gbpcheck.com/pt-br/politica-de-privacidade
 - [Termos de Uso](site/termos-de-uso.md) · https://www.gbpcheck.com/pt-br/termos-de-uso/
 
-## Suporte (artigos) – Central de Ajuda (58 de 63 artigos) · pasta `suporte/`
+## Suporte (artigos) – Central de Ajuda (63 de 63 artigos) · pasta `suporte/`
 
-A Central de Ajuda (https://help.gbpcheck.com/pt-br/) tem 63 artigos públicos (lista tirada do sitemap oficial). Foram copiados 58; 5 não puderam ser baixados (lista no fim desta seção).
+A Central de Ajuda (https://help.gbpcheck.com/pt-br/) tem 63 artigos públicos (lista tirada do sitemap oficial). Todos foram copiados.
 
 ### Visão geral e conta
 
@@ -128,6 +128,8 @@ A Central de Ajuda (https://help.gbpcheck.com/pt-br/) tem 63 artigos públicos (
 - [Perfil 100% Completo no GBP Check altera o ranking no Google?](suporte/perfil-100-completo-no-gbp-check-altera-o-ranking-no-google.md) · https://help.gbpcheck.com/pt-br/article/perfil-100-completo-no-gbp-check-altera-o-ranking-no-google-1o3fe72/
 - [Por que a análise de ranking pode ser diferente da busca no Google?](suporte/por-que-a-analise-de-ranking-pode-ser-diferente-da-busca-no-google.md) · https://help.gbpcheck.com/pt-br/article/por-que-a-analise-de-ranking-pode-ser-diferente-da-busca-no-google-11nzgps/
 
+- [Devo responder avaliações antigas de clientes ?](suporte/devo-responder-avaliacoes-antigas-de-clientes.md) · https://help.gbpcheck.com/pt-br/article/devo-responder-avaliacoes-antigas-de-clientes-5ol8mc/
+
 ### Pré Análise e análises da extensão: dúvidas
 
 - [Ranking de Avaliações e TOP 10 Empresas não aparecem na Pré Análise](suporte/ranking-de-avaliacoes-e-top-10-empresas-nao-aparecem-na-pre-analise.md) · https://help.gbpcheck.com/pt-br/article/ranking-de-avaliacoes-e-top-10-empresas-nao-aparecem-na-pre-analise-1at1i3w/
@@ -136,6 +138,10 @@ A Central de Ajuda (https://help.gbpcheck.com/pt-br/) tem 63 artigos públicos (
 - [Como fazer uma pesquisa sem apresentar o Gerenciador de Perfis do Google (só vídeo)](suporte/como-fazer-uma-pesquisa-sem-apresentar-o-gerenciador-de-perfis-do-google.md) · https://help.gbpcheck.com/pt-br/article/como-fazer-uma-pesquisa-sem-apresentar-o-gerenciador-de-perfis-do-google-vp25um/
 - [Imagem do Logotipo aparece como Pendente](suporte/imagem-do-logotipo-aparece-como-pendente.md) · https://help.gbpcheck.com/pt-br/article/imagem-do-logotipo-aparece-como-pendente-1642vh8/
 - [O negócio da barra superior muda quando entro em outro menu](suporte/o-negocio-da-barra-superior-muda-quando-entro-em-outro-menu.md) · https://help.gbpcheck.com/pt-br/article/o-negocio-da-barra-superior-muda-quando-entro-em-outro-menu-tkhk75/
+
+- [Pré Análise, Avaliações, Categorias ou Postagens travando ou não finaliza](suporte/pre-analise-avaliacoes-categorias-ou-postagens-travando-ou-nao-finaliza.md) · https://help.gbpcheck.com/pt-br/article/pre-analise-avaliacoes-categorias-ou-postagens-travando-ou-nao-finaliza-qnr9f6/
+- [Mapa de Locais e Mapa de Calor não aparecem na Pré Análise](suporte/mapa-de-locais-e-mapa-de-calor-nao-aparecem-na-pre-analise.md) · https://help.gbpcheck.com/pt-br/article/mapa-de-locais-e-mapa-de-calor-nao-aparecem-na-pre-analise-7eph3s/
+- [Divergências no Ranking de Avaliações e TOP 10 Empresas nos resultados da Pré Análise](suporte/divergencias-no-ranking-de-avaliacoes-e-top-10-empresas-nos-resultados-da-pre-analise.md) · https://help.gbpcheck.com/pt-br/article/divergencias-no-ranking-de-avaliacoes-e-top-10-empresas-nos-resultados-da-pre-analise-1vdd8ro/
 
 ### Análise Completa e gestão de perfis: dúvidas
 
@@ -152,16 +158,7 @@ A Central de Ajuda (https://help.gbpcheck.com/pt-br/) tem 63 artigos públicos (
 - [Análise de Ranking para Empresas de Áreas de Serviço](suporte/analise-de-ranking-para-empresas-de-areas-de-servico.md) · https://help.gbpcheck.com/pt-br/article/analise-de-ranking-para-empresas-de-areas-de-servico-6b8dgy/
 - [Ads influenciam nos resultados das Análises de Ranking ?](suporte/ads-influenciam-nos-resultados-das-analises-de-ranking.md) · https://help.gbpcheck.com/pt-br/article/ads-influenciam-nos-resultados-das-analises-de-ranking-hms7aj/
 - [Nome do local aparece diferente da pesquisa nos resultados de Análises de Ranking (só vídeo)](suporte/nome-do-local-aparece-diferente-da-pesquisa-nos-resultados-de-analises-de-ranking.md) · https://help.gbpcheck.com/pt-br/article/nome-do-local-aparece-diferente-da-pesquisa-nos-resultados-de-analises-de-ranking-1qfpcph/
-
-### Artigos da Central de Ajuda não baixados (5)
-
-O download destes 5 foi bloqueado pela checagem de permissões do ambiente (não por login nem por erro do site). Falta só o texto; as URLs são públicas:
-
-- https://help.gbpcheck.com/pt-br/article/pre-analise-avaliacoes-categorias-ou-postagens-travando-ou-nao-finaliza-qnr9f6/
-- https://help.gbpcheck.com/pt-br/article/mapa-de-locais-e-mapa-de-calor-nao-aparecem-na-pre-analise-7eph3s/
-- https://help.gbpcheck.com/pt-br/article/divergencias-no-ranking-de-avaliacoes-e-top-10-empresas-nos-resultados-da-pre-analise-1vdd8ro/
-- https://help.gbpcheck.com/pt-br/article/horario-de-funcionamento-e-sua-influencia-em-analises-de-ranking-pyh46z/
-- https://help.gbpcheck.com/pt-br/article/devo-responder-avaliacoes-antigas-de-clientes-5ol8mc/
+- [Horário de Funcionamento e sua influência em Análises de Ranking](suporte/horario-de-funcionamento-e-sua-influencia-em-analises-de-ranking.md) · https://help.gbpcheck.com/pt-br/article/horario-de-funcionamento-e-sua-influencia-em-analises-de-ranking-pyh46z/
 
 ## Vídeos oficiais (não copiados)
 
