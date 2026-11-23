@@ -107,6 +107,17 @@ Os servidores extras que vêm junto (UXKIN, Figma, Linear, Intercom) não conect
 | dashboard-design:dashboard-review (UXKIN) | Revisão de um painel existente, com a lista do que corrigir | "Revise a aba Painel" | ✅ |
 | dashboard-design:data-display (UXKIN) | Escolher o gráfico, número ou tabela certo para cada dado | "Qual o melhor gráfico para a carga por pessoa?" | ✅ |
 
+## 7. Diagramas — mapeamentos, processos, cronogramas e organização
+
+Situação: **instalada em 23/11/2026** como .zip (versão fixa 2.6.174), de fora do catálogo oficial. Passou pela checklist de `referencias/` em 23/11: autora conhecida (Cathryn Lavery), cerca de 71 mil estrelas no GitHub, licença MIT, grátis, sem conectores nem automações, não envia dados. Único ponto de atenção: os diagramas carregam as fontes do Google Fonts ao abrir (não envia o conteúdo; há opção sem internet).
+Repositório: https://github.com/cathrynlavery/diagram-design · Para atualizar: pedir ao Claude um .zip novo e passar de novo pela checklist.
+
+| Skill | O que é / para que serve | Quando usar (exemplo) | |
+|---|---|---|---|
+| diagram-design (Cathryn Lavery) | Desenha diagramas profissionais (52 tipos) como um arquivo HTML que abre no navegador, e exporta PNG/SVG. Os mais úteis aqui: árvore (EAP), swimlane (quem faz o quê), Gantt e linha do tempo (cronograma), processo e etapas, fluxograma de decisão, jornada e service blueprint, organograma, quadrante (impacto × esforço), kanban, espinha de peixe. Também redesenha arquivos de draw.io, Mermaid, Excalidraw e PlantUML | "Desenhe o onboarding do CLI-004 Guto Bebidas com uma raia por sócio" · "Faça a EAP do pacote em árvore" · "Monte o Gantt dos 15 dias" | ✅ |
+
+No primeiro diagrama a skill pergunta a identidade visual: usar a da ATIVOS (Drive, 70 › 71 Identidade visual e Design System) e salvar como perfil.
+
 ## Qual usar (desempate)
 
 | Pedido | Usar | Não usar |
@@ -138,5 +149,6 @@ Os servidores extras que vêm junto (UXKIN, Figma, Linear, Intercom) não conect
 | Revisar ou melhorar o visual de uma tela, app ou página | ui-design-review (ui-review, depois ui-polish) | — |
 | Criar ou redesenhar a cara de uma tela | frontend-design | — |
 | Painel, dashboard, KPIs | dashboard-design (dashboard-layout / dashboard-review) | dataviz só para o gráfico em si |
+| Diagrama: EAP, fluxo de processo, quem faz o quê, cronograma, organograma, jornada do cliente, mapa de ideias | diagram-design | dataviz (só para gráfico de números) |
 | Textos de botões, avisos e mensagens do app | design:ux-copy | — |
 | Criar ou melhorar uma skill própria da ATIVOS | skill-creator | — |
