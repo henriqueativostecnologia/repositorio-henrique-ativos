@@ -28,7 +28,8 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 
 ## Dados
 
-* **Nunca** coloque dados reais no repositório: valores, senhas, acessos, contratos e dados de contato ou documentos (CPF, CNPJ) de clientes. O repositório guarda métodos, regras e modelos.
+* **Nunca** coloque no repositório: senhas, acessos, contratos e dados de contato ou documentos (CPF, CNPJ) de clientes. O repositório guarda métodos, regras e modelos.
+* **Valores (regra de 23/11/2026):** podem ir para o repositório a **tabela oficial de preços** da ATIVOS (quando existir) e o **valor negociado de cada cliente**, sempre identificado como "valor negociado, não é tabela oficial" e nunca junto de CPF, CNPJ ou contato. Nunca use o valor negociado de um cliente como preço padrão em proposta.
 * **Clientes no repositório:** só **código e nome curto**, ex.: `CLI-001 Dr. Felipe (advocacia)`. O resto fica no Drive.
 * **Sempre cite o cliente com código e nome** (ex.: "CLI-002 Lucas Melo"), nunca só o número, no chat, na planilha e nos documentos. Projetos de cliente: `CLI-001-PAC Dr. Felipe`.
 * Documentos e arquivos reais ficam no **Drive compartilhado "ATIVOS"** (já conectado; pasta raiz: `0AE6MYs89GYdWUk9PVA`, https://drive.google.com/drive/folders/0AE6MYs89GYdWUk9PVA). Onde salvar cada coisa, numeração das pastas e nomes de arquivo: `organizacao/manual-drive.md`. Consulte antes de criar ou salvar algo no Drive.
@@ -36,13 +37,13 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
   1. no repositório (métodos, regras e modelos, sem dados reais);
   2. no Google Drive da ATIVOS (documentos e arquivos reais);
   3. só usar agora, sem guardar.
-* **Documento que serve de contexto** (método, regra, especificação, manual): além do original no Drive, guardar uma **cópia integral no repositório** (sem dados reais: preços, contatos, dados de clientes), por PR, para que todo chat use. Documento com preço ou dado real: no repositório fica só o método, como em `comercial/segmentos/`.
+* **Documento que serve de contexto** (método, regra, especificação, manual): além do original no Drive, guardar uma **cópia integral no repositório**, por PR, para que todo chat use. Retire da cópia só o que a regra acima proíbe (senhas, acessos, contatos, CPF, CNPJ).
 
 ## Histórico e pastas
 
 * Em 29/10/2026 o repositório foi zerado de propósito. **Não consulte o histórico do git anterior a essa data**; parta só dos arquivos atuais e do que eu disser.
 * `prospeccao/`: programas de busca, com chat próprio. **Não mexa nesta pasta** neste chat.
-* `comercial/`: método de venda do **Posicionamento Digital na rua** (sem preços; os playbooks originais ficam no Drive, 10 Comercial › 14). Base comum em `posicionamento-digital-base.md` e um arquivo por segmento em `segmentos/`: Jurídico (v0 de 13/11), Imobiliário, Automotivo e Comércio Local (com uma ficha por nicho). Leia a base + o segmento antes de definir tarefas comerciais, serviços ou roteiros de abordagem. Cópias integrais dos documentos do Igor usados como contexto (especificação e arquitetura da extração, manual do representante) em `comercial/referencias/`.
+* `comercial/`: método de venda do **Posicionamento Digital na rua** (sem preços; os playbooks originais ficam no Drive, 10 Comercial › 14). Base comum em `posicionamento-digital-base.md` e um arquivo por segmento em `segmentos/`: Jurídico (v0 de 13/11), Imobiliário, Automotivo e Comércio Local (com uma ficha por nicho). Leia a base + o segmento antes de definir tarefas comerciais, serviços ou roteiros de abordagem. Cópias integrais dos documentos do Igor usados como contexto (especificação e arquitetura da extração, manual do representante, Playbook Jurídico) em `comercial/referencias/`.
 * `servicos/`: modelos de cada serviço (fases, portões, prazos, responsáveis). Consulte ao planejar ou acompanhar um projeto de cliente. Hoje: `pacote/eap-padrao.md` (EAP e tempos padrão por tarefa, v1 de 09/11) e `infraestrutura-de-dados/fluxo-de-implantacao.md` (rascunho).
 * **Tarefas:** a lista oficial é a planilha **Quadro de tarefas ATIVOS** no Drive (`00 Geral › 03 Gestão de tarefas`, id `1g7cFgksYnu7_YpPCewVUtGThya8i46XQOdmxkVNVbl4`): é a central de tarefas oficial. Consulte no início de cada tema. Modelo de projetos e de tarefas: `gestao/modelo-de-projetos.md`. Regras para qualquer Claude cadastrar ou atualizar tarefas na planilha: `gestao/instrucoes-claude-tarefas.md` (siga sempre). O `gestao/tarefas.md` está aposentado.
 * `referencias/Checklist - Avaliar skill de fora.md`: usar sempre que for avaliar uma skill ou um plugin de fora do catálogo oficial.
