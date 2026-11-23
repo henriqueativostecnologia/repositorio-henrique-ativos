@@ -182,7 +182,7 @@ Faixas: **Fraco** abaixo de 40 · **Médio** 40 a 69 · **Forte** 70+. Fraco e M
 
 Registro para este chat e o outro chat do Claude acompanharem as mudanças um do outro: nenhum deles vê a conversa do outro, só o repositório e o Drive.
 
-**Fonte oficial das regras comerciais** (cenários, Força no Google, regra do case, oferta, cadência, ficha padrão): a pasta `comercial/` (`comercial/posicionamento-digital-base.md` e `comercial/segmentos/comercio-local.md`). Antes de mudar uma regra do mapa: `git pull` e ler esses arquivos. Se o mapa mudar uma regra de lá, avisar o Henrique para atualizar `comercial/` por PR. Enquanto `comercio-local.md` não tiver a regra, vale a desta página.
+**Fonte oficial das regras comerciais** (cenários, Força no Google, regra do case, oferta, cadência, ficha padrão): a pasta `comercial/` (`comercial/posicionamento-digital-base.md` e `comercial/segmentos/comercio-local.md`). Antes de mudar uma regra do mapa: `git pull` e ler esses arquivos. Se o mapa mudar uma regra de lá, avisar o Henrique para atualizar `comercial/` por PR. As regras de cenário, Força no Google, case e segmentos estão em `comercio-local.md`, seção "Regras do mapa de prospecção"; esta página diz como o mapa as aplica.
 
 | Data | Decisão |
 |---|---|
@@ -195,6 +195,7 @@ Registro para este chat e o outro chat do Claude acompanharem as mudanças um do
 | 17/11/2026 | Drive: só a versão mais nova do mapa e da planilha, sem cópias |
 | 17/11/2026 | Força no Google (0 a 100); Fraco e Médio contam como Google fraco no cenário |
 | 18/11/2026 | Regras comerciais fechadas passam a ter a pasta `comercial/` como fonte oficial (regra de sincronia entre chats) |
+| 23/11/2026 | Regras do mapa registradas em `comercial/segmentos/comercio-local.md`; self-service continua segmento separado |
 
 ## Documentos relacionados
 
