@@ -47,4 +47,5 @@ plataformas/
 | Google Sites | `google-sites/oficial/` | ✅ Completa: 23 artigos (10/11/2026) |
 | Asana | `asana/oficial/` | ✅ Completa: 546 artigos da Central de Ajuda (10/11/2026) |
 | GBP Check | `gbp-check/oficial/` | ✅ Completa: 26 páginas do site + 63 artigos da Central de Ajuda (17 e 23/11/2026) |
+| Perfil da Empresa no Google | `google-perfil-da-empresa/oficial/` | ⏳ Parcial: política de fotos, vídeos e posts + 2 artigos que ela incorpora (24/11/2026); Central de Ajuda completa pendente |
 | Slack | — | Opção futura (decisão de 10/11/2026: conversas no Google Chat) |
