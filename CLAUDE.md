@@ -19,6 +19,8 @@ Este arquivo é lido no início de cada chat. Aqui fica só o essencial; o detal
 * **Um passo por vez**: mostre o passo, espere eu executar e só então siga.
 * **Um tema por vez** quando houver uma lista de assuntos.
 * **Decisões em tabela**, com uma recomendação por item.
+* **Só com base em fonte ou caso concreto** (regra de 24/11/2026): ao afirmar risco ou regra, cite a fonte oficial ou o caso real; sem caso, diga "não encontrei".
+* **Pautas de reunião** (regra de 24/11/2026): cada ponto diz, em linguagem simples, o que é, por que estamos decidindo, as opções com o efeito de cada uma e o que exatamente precisa ser respondido. Nada de código solto (ex.: "D6") sem explicação. Equilíbrio: explicar sem deixar a pauta enorme.
 
 ## Mudanças no repositório (o "cofre")
 
