@@ -1,6 +1,6 @@
 ---
 tipo: catálogo de serviços
-atualizado: 04/11/2026
+atualizado: 24/11/2026
 situacao: rascunho; o escopo completo de cada serviço será detalhado com os sócios
 ---
 
@@ -8,6 +8,18 @@ situacao: rascunho; o escopo completo de cada serviço será detalhado com os s�
 
 Para cada serviço: **público**, **inclui** (entregas), **não inclui** (o que não prometer) e **depende do cliente** (o que precisamos receber dele).
 Consulte antes de montar propostas e de abrir projetos.
+
+## Preços em uso (24/11/2026)
+
+Definidos pelo Henrique em 24/11/2026: **já valem e devem ser usados** em propostas. Continuam na pauta com o Igor (preço de cada serviço e o que compõe cada pacote); se a decisão for diferente, esta tabela é atualizada.
+
+| Oferta | Setup | Mensal |
+|---|---|---|
+| Google Meu Negócio | R$ 800 | R$ 350 |
+| Pacote (composição a confirmar com o Igor) | R$ 1.500 | *a confirmar* |
+| Pacote (composição a confirmar com o Igor) | R$ 3.000 | *a confirmar* |
+
+Fonte: pesquisa de Operação padrão do Igor (`gestao/referencias/pesquisa-operacao-padrao-relatorio-v0.md`), que cita as reuniões de 08/10 e 23/11. Valor negociado de cada cliente: `clientes/indice.md` (não é tabela oficial).
 
 ## Vale para todos os serviços
 
