@@ -18,9 +18,9 @@ A central é a **planilha Quadro de tarefas ATIVOS** junto com o **app "Central 
 
 | Quem | Como alimenta | O quê |
 |---|---|---|
-| **Sócios (Igor, Hugo, Bernardo e o Henrique no dia a dia)** | **Só pelo app** | Atualizar o status das próprias tarefas e criar tarefas avulsas (uma por vez) |
+| **Sócios (Igor, Hugo, Bernardo e o Henrique no dia a dia)** | **Pelo app** (caminho principal) | Atualizar o status das próprias tarefas e criar tarefas avulsas (uma por vez) |
 | **Henrique, com o Claude dele** | Direto na planilha, seguindo estas instruções | Criar os **pacotes de tarefas** de cada cliente a partir das receitas (`servicos/README.md`), depois da **entrevista de onboarding** com o sócio que vendeu; padronizar linhas fora do padrão |
-| **Claude dos outros sócios** | **Não grava na central** | Pode ler e ajudar o sócio a pensar; a gravação é pelo app |
+| **Claude dos outros sócios** (opção B, escolhida em 25/11/2026) | Direto na planilha, **só dentro do projeto "Central ATIVOS"** configurado com `gestao/instrucoes-claude-socios.md` | Só as tarefas do próprio sócio: atualizar status e criar tarefas avulsas. **Não** cria pacotes de cliente, não mexe em tarefa de outro sócio |
 | **WhatsApp para o Henrique** | Só como exceção (ex.: sócio sem acesso ao app no momento) | O Henrique repassa ao Claude dele |
 
 **Hábitos:** cada um atualiza as suas tarefas **no fim do dia**; revisão semanal da central na **segunda-feira**.

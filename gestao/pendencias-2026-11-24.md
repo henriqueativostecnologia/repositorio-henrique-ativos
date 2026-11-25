@@ -25,7 +25,7 @@ uso: ponto de partida dos próximos chats. As tarefas oficiais continuam na cent
 | A3 | Ajustar as tarefas do CLI-004 Guto Bebidas e criar a aba "Modelo de projeto" (depois da reunião de equipe) | T-238 a T-327 |
 | A4 | ✅ Decidido em 24/11: o app é o único caminho dos sócios; o Henrique cria os pacotes de tarefas após a entrevista de onboarding; WhatsApp só como exceção. Regras em `gestao/instrucoes-claude-tarefas.md`. Falta copiar para a aba "Como usar" | nova |
 | A5 | 6 colunas novas na planilha: revisor, serviço, etapa e dia, aguardando quem e desde quando, critério de pronto, rodadas (decisão 18 do de-para) | nova |
-| A6 | ✅ App testado pelo Henrique em 25/11 e v2 guardada em `apps/central-ativos/`. Falta o teste com um dos outros sócios (conta Claude com o conector Google Sheets) | nova |
+| A6 | ✅ App testado pelo Henrique em 25/11 e v2 guardada em `apps/central-ativos/`. Falta o teste com um dos outros sócios (conta Claude com o conector Google Sheets). Opção B (25/11): o Claude de cada sócio também grava as tarefas dele; configurar com `gestao/instrucoes-claude-socios.md`, Hugo primeiro | nova |
 
 ## B. Reuniões
 
