@@ -1,7 +1,7 @@
 ---
 tipo: instrução para o Claude (de qualquer sócio)
-atualizado: 10/11/2026
-situacao: versão 2.1; copiada em 10/11/2026 para a aba "Como usar" da planilha (seção "Instruções para o Claude")
+atualizado: 25/11/2026
+situacao: versão 3 (regras de quem alimenta a central, decididas em 24/11 e testadas em 25/11). A aba "Como usar" da planilha ainda tem a versão 2.1; atualizar depois deste PR
 ---
 
 # Instruções para o Claude: cadastrar e atualizar tarefas no Quadro de tarefas ATIVOS
@@ -12,13 +12,26 @@ Estas instruções valem para o Claude de **qualquer sócio** da ATIVOS (Henriqu
 **Link:** https://docs.google.com/spreadsheets/d/1g7cFgksYnu7_YpPCewVUtGThya8i46XQOdmxkVNVbl4/edit
 **Precisa de:** conector Google Sheets ligado na conta Claude do sócio.
 
-## Quem edita o quê (atualizado em 09/11/2026)
+## Quem alimenta a central (decisão de 24/11/2026, testada em 25/11/2026)
 
-A planilha é a **central de tarefas oficial** (decisão de 10/11/2026: ferramentas só Google). Para ser prático para todos:
+A central é a **planilha Quadro de tarefas ATIVOS** junto com o **app "Central ATIVOS"** (artefato do Claude: https://claude.ai/artifact/3nioLxHECBdqzmUnnAHdD5; código salvo em `apps/central-ativos/`). O app lê e grava na planilha. **Não** é o AppSheet: o AppSheet foi testado (`gestao/runbook-app-central.md`) e não é o caminho em uso. A ferramenta definitiva ainda não está decidida; no futuro, a ideia é um software próprio.
 
-* **Cada sócio cadastra e atualiza as suas tarefas livremente**, do jeito mais prático (texto livre, sem se preocupar com o padrão). As listas de seleção só sugerem valores; não bloqueiam.
-* **O Claude do Henrique padroniza depois**, quando o Henrique pedir, **sem alterar o conteúdo**.
-* Tarefas também podem chegar pelo WhatsApp ao Henrique, que repassa ao Claude.
+| Quem | Como alimenta | O quê |
+|---|---|---|
+| **Sócios (Igor, Hugo, Bernardo e o Henrique no dia a dia)** | **Pelo app** (caminho principal) | Atualizar o status das próprias tarefas e criar tarefas avulsas (uma por vez) |
+| **Henrique, com o Claude dele** | Direto na planilha, seguindo estas instruções | Criar os **pacotes de tarefas** de cada cliente a partir das receitas (`servicos/README.md`), depois da **entrevista de onboarding** com o sócio que vendeu; padronizar linhas fora do padrão |
+| **Claude dos outros sócios** (opção B, escolhida em 25/11/2026) | Direto na planilha, **só dentro do projeto "Central ATIVOS"** configurado com `gestao/instrucoes-claude-socios.md` | Só as tarefas do próprio sócio: atualizar status e criar tarefas avulsas. **Não** cria pacotes de cliente, não mexe em tarefa de outro sócio |
+| **WhatsApp para o Henrique** | Só como exceção (ex.: sócio sem acesso ao app no momento) | O Henrique repassa ao Claude dele |
+
+**Hábitos:** cada um atualiza as suas tarefas **no fim do dia**; revisão semanal da central na **segunda-feira**.
+
+**Onboarding:** fica dentro do projeto de cada cliente (ex.: CLI-004-PAC Guto Bebidas), com a coluna E "Entrega ou área" = **Onboarding**. Não existe projeto separado de onboarding.
+
+**Para o app funcionar para cada sócio:** conta Claude com o conector Google Sheets ligado e o app compartilhado com ele (o app está compartilhado com a organização ATIVOS no claude.ai). Testado pelo Henrique em 25/11; falta testar com um dos outros sócios.
+
+**Excluir no app** não apaga a linha: marca Cancelada, anota "Excluída no app em DD/MM/AAAA (status anterior: X)" na observação e preenche Concluída em. Recuperar: Lista › Canceladas › abrir a tarefa › Restaurar tarefa.
+
+Linhas fora do padrão (texto livre, valores fora das listas) continuam sendo padronizadas pelo Claude do Henrique, como abaixo.
 
 ### Como padronizar (Claude do Henrique)
 
@@ -43,13 +56,13 @@ Prazo: (se tiver)
 
 **Proteções (só aviso, não bloqueiam):** abas automáticas (pessoas e Visão geral), Projetos e Listas. Todas as colunas da aba Tarefas (A a O) são livres.
 
-**Capacidade e visual (10/11/2026):** aba Tarefas com 2.000 linhas, **sem** o formato "Tabela" do Google (ele bloqueia o texto livre e atrapalha o app AppSheet, que pede cabeçalho na 1ª linha e nada por cima dos dados), Status e Prioridade em etiquetas coloridas e Visão geral com 2 gráficos. **Filtrar:** (1) aba de consulta de cada sócio (campos amarelos da linha 3: Responsável, Status, Projeto, Prazo até, Busca) ou (2) o modo de filtro geral de cada sócio na aba Tarefas (links na aba Como usar). Nunca use o funil sem estar num modo de filtro: ele muda a visão de todos.
+**Capacidade e visual (10/11/2026):** aba Tarefas com 2.000 linhas, **sem** o formato "Tabela" do Google (ele bloqueia o texto livre e atrapalha os apps, que precisam do cabeçalho na 1ª linha e de nada por cima dos dados), Status e Prioridade em etiquetas coloridas e Visão geral com 2 gráficos. **Filtrar:** (1) aba de consulta de cada sócio (campos amarelos da linha 3: Responsável, Status, Projeto, Prazo até, Busca) ou (2) o modo de filtro geral de cada sócio na aba Tarefas (links na aba Como usar). Nunca use o funil sem estar num modo de filtro: ele muda a visão de todos.
 
 ## Como o sócio pede
 
-Basta colar no chat do Claude:
+Os sócios usam o **app** (acima). No Claude do Henrique, basta colar:
 
-> Leia a aba "Como usar" da planilha Quadro de tarefas ATIVOS (link acima) e siga as "Instruções para o Claude". Quero atualizar estas tarefas: … (no Claude do Henrique, também cadastrar)
+> Leia a aba "Como usar" da planilha Quadro de tarefas ATIVOS (link acima) e siga as "Instruções para o Claude". Quero cadastrar ou atualizar estas tarefas: …
 
 ## O que o Claude deve fazer
 
@@ -57,7 +70,7 @@ Basta colar no chat do Claude:
 2. **Escrever só na aba Tarefas, colunas A a O.** Nunca altere as abas com nome de pessoa, a Visão geral, a Projetos nem a Listas.
 3. **Nunca apagar linhas nem mudar o código de uma tarefa existente.** Tarefa cancelada ou substituída (decisão de 10/11/2026): Status = **Cancelada**, "Cancelada: motivo" ou "Substituída por T-XXX" em Link ou observação e a data em Concluída em. Cancelada aparece cinza e riscada e não conta como aberta nem como feita.
 4. **Código:** o próximo número livre depois do maior código da coluna A (ex.: se o maior é T-066, a próxima é T-067). Nunca reaproveitar.
-5. **Linha:** a primeira linha vazia da aba Tarefas (coluna B vazia).
+5. **Linha:** a primeira linha vazia **depois da última tarefa** da aba Tarefas. Grave com `update_values` na linha exata (ex.: `Tarefas!A340:P340`), nunca com o "acrescentar" (`append_values`): em 25/11 ele inseriu uma tarefa no meio da lista e empurrou as outras uma linha para baixo. Hoje a tarefa T-N fica na linha N+1.
 6. **Preencher cada coluna assim:**
 
 | Coluna | Regra |

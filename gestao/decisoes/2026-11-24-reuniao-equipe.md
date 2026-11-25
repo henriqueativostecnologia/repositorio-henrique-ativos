@@ -60,7 +60,7 @@ Estas decisões valem sobre o que dizem as pesquisas e o de-para. As receitas de
 | Preço | Os valores serão definidos pelos sócios com base no valor-hora de mercado (entre pleno e sênior, `servicos/referencias/valor-hora-martech-dados-2026-11-24.md`) e em outras questões. Aguardar os valores enviados pelos sócios; não calcular preço só por essa tabela |
 | Rua e caixa | Henrique e Igor na rua pelo menos 2 dias por semana. Fechamento de caixa diário: Henrique |
 | Servidor | Um projeto no Coolify por cliente e uma VPS de backup, se necessário |
-| Ferramenta de tarefas | Sheets e AppSheet por enquanto; no futuro, um software próprio |
+| Ferramenta de tarefas | Sheets e o app da central por enquanto; no futuro, um software próprio. Correção do Henrique em 24/11: o app é o artefato do Claude "Central ATIVOS", não o AppSheet. A ferramenta definitiva ainda não está decidida |
 
 ## 6. CLI-004 Guto Bebidas
 
