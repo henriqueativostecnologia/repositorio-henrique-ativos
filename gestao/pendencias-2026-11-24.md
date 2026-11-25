@@ -23,9 +23,9 @@ uso: ponto de partida dos próximos chats. As tarefas oficiais continuam na cent
 | A1 | Entrevista com cada sócio (Hugo primeiro) para conferir as tarefas com a realidade | T-214 a T-217 |
 | A2 | Revisar as tarefas do CLI-001 Dr. Felipe, CLI-002 Lucas Melo e CLI-003 Raphael pelas receitas v2 (em 23/11: 158 abertas, 32 atrasadas, 16 do CLI-001) | T-068 a T-070, T-081 |
 | A3 | Ajustar as tarefas do CLI-004 Guto Bebidas e criar a aba "Modelo de projeto" (depois da reunião de equipe) | T-238 a T-327 |
-| A4 | Definir como os outros sócios adicionam tarefas: app (AppSheet), planilha direta, Claude de cada sócio ou WhatsApp para o Henrique | nova |
+| A4 | ✅ Decidido em 24/11: o app é o único caminho dos sócios; o Henrique cria os pacotes de tarefas após a entrevista de onboarding; WhatsApp só como exceção. Regras em `gestao/instrucoes-claude-tarefas.md`. Falta copiar para a aba "Como usar" | nova |
 | A5 | 6 colunas novas na planilha: revisor, serviço, etapa e dia, aguardando quem e desde quando, critério de pronto, rodadas (decisão 18 do de-para) | nova |
-| A6 | Testar o app v2 (AppSheet) e guardar em `apps/central-ativos/` por PR | nova |
+| A6 | ✅ App testado pelo Henrique em 25/11 e v2 guardada em `apps/central-ativos/`. Falta o teste com um dos outros sócios (conta Claude com o conector Google Sheets) | nova |
 
 ## B. Reuniões
 

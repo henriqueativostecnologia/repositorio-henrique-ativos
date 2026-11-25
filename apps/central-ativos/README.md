@@ -1,7 +1,7 @@
 ---
 tipo: código do app
 app: Central ATIVOS (app feito pelo Claude, publicado como artefato no claude.ai)
-atualizado: 13/11/2026
+atualizado: 25/11/2026
 ---
 
 # Central ATIVOS: versões salvas do app
@@ -16,9 +16,10 @@ O código não guarda dados de clientes: as tarefas são lidas da planilha na ho
 | Arquivo | Data | O que é |
 |---|---|---|
 | `central-ativos_v1_2026-11-13.html` | 13/11/2026 | **Versão aprovada pela equipe**, antes da otimização de design e funcionalidades. Abas Quadro, Agenda, Lista, Calendário (mês e dia com horários e reuniões), Projetos e Painel |
+| `central-ativos_v2_2026-11-25.html` | 25/11/2026 | **Versão testada pelo Henrique em 25/11** (é a que está no ar). Inclui o design otimizado de 13/11 e: (1) na Lista, "Ordenar por Prazo ou Código"; (2) Excluir marca a tarefa como Cancelada e anota na observação a data e o status anterior, preenchendo "Concluída em"; (3) "Desfazer" logo após excluir e "Restaurar tarefa" em Lista › Canceladas; (4) tarefa nova gravada sempre na primeira linha vazia depois da última, com conferência antes e depois (o "acrescentar" do Google inseriu a T-338 no meio da lista em 25/11; corrigido) |
 
 ## Como voltar para uma versão salva
 
-1. Peça ao Claude: "volte o app para a versão v1 de 13/11".
-2. O Claude publica este arquivo no mesmo link do app, com as mesmas permissões (Google Sheets: `get_values`, `update_values`, `append_values`; Google Calendar: `list_calendars`, `list_events`).
+1. Peça ao Claude: "volte o app para a versão v1 de 13/11" (ou v2 de 25/11).
+2. O Claude publica este arquivo no mesmo link do app, com as mesmas permissões (Google Sheets: `get_values`, `update_values`, `append_values` (a v2 não usa mais o `append_values`, mas a permissão continua declarada); Google Calendar: `list_calendars`, `list_events`).
 3. O link continua o mesmo. Os dados não mudam, porque ficam na planilha.

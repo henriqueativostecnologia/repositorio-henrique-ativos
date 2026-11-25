@@ -13,7 +13,7 @@ situacao: versão 1; cópia para a equipe no Drive em "00 Geral › 01 Comece po
 | Para quê | Ferramenta | Regra |
 |---|---|---|
 | **Porta de entrada** | Google Sites (Central ATIVOS) | Página com menu que leva a tudo. Comece sempre por aqui |
-| **Tarefas do dia a dia** (atrasadas, hoje, amanhã, ontem, semana, quadro) | App da central (AppSheet) | Onde cada um vê e atualiza as suas tarefas |
+| **Tarefas do dia a dia** (atrasadas, hoje, amanhã, ontem, semana, quadro) | App da central (artefato do Claude "Central ATIVOS") | Onde cada um vê e atualiza as suas tarefas. Único caminho dos sócios para gravar (decisão de 24/11/2026) |
 | **Base de dados das tarefas** | Planilha Quadro de tarefas ATIVOS | Guarda todas as tarefas. O app lê e grava nela |
 | **Conversas** | Google Chat | Um espaço por cliente e por tema. Recado e dúvida ficam aqui, não viram documento |
 | **Rituais** | Google Agenda | Segunda: planejamento (30 min). Sexta: revisão (30 min) |
@@ -40,6 +40,7 @@ situacao: versão 1; cópia para a equipe no Drive em "00 Geral › 01 Comece po
 ## Situação em 10/11/2026
 
 * ✅ Planilha, Chat, Agenda, Docs e Drive: prontos para usar.
-* 🛠️ App da central (AppSheet) e Sites: em montagem. Enquanto isso, use a planilha direto.
+* ✅ App da central (artefato do Claude): testado pelo Henrique em 25/11/2026; falta o teste com um dos outros sócios.
+* 🛠️ Sites: em montagem.
 
 Documentação oficial de cada ferramenta: `plataformas/` (índice em `plataformas/README.md`).

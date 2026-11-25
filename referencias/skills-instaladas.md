@@ -124,7 +124,7 @@ No primeiro diagrama a skill pergunta a identidade visual: usar a da ATIVOS (Dri
 |---|---|---|
 | Documento para ler, compartilhar ou assinar | docs | docx (só se pedir Word) |
 | Arquivo que fica no Google Drive | google-workspace | docs |
-| Tarefa, quadro, sprint, página de projeto | Planilha Quadro de tarefas (google-workspace) e app da central (AppSheet) | Notion (opção futura desde 10/11/2026) |
+| Tarefa, quadro, sprint, página de projeto | Planilha Quadro de tarefas (google-workspace) e app da central (artefato do Claude "Central ATIVOS", `apps/central-ativos/`) | Notion (opção futura desde 10/11/2026) |
 | Procedimento padrão (POP) ou responsabilidades (RACI) | process-doc | runbook |
 | Passo a passo técnico de uma tarefa repetitiva | runbook | process-doc |
 | Relatório de situação de projetos | status-report | — |
