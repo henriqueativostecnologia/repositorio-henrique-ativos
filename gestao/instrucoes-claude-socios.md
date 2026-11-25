@@ -61,7 +61,9 @@ Fonte oficial: Central de Ajuda do Claude, [How can I create and manage projects
 4. **Usar sempre dentro do projeto:** para falar de tarefas, abrir a conversa dentro do projeto Central ATIVOS. Fora dele, o Claude não recebe estas regras.
 5. **Teste:** pedir "quais são as minhas tarefas atrasadas?" e depois "mude o status da T-XXX para Fazendo". O Claude deve mostrar a tabela e esperar o "ok".
 
-**Projeto compartilhado:** a Central de Ajuda diz que compartilhar projeto com outros membros é só nos planos Team e Enterprise ([What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)). Se a ATIVOS estiver nesses planos, o Henrique cria um projeto só e compartilha como "Can view"; assim, uma mudança nas regras vale para todos de uma vez. Se cada sócio estiver no Pro individual, cada um cria o seu projeto e cola o texto; quando as regras mudarem, o Henrique manda o texto novo.
+**Plano de cada sócio (Igor, 25/11/2026):** "cada sócio vai ter um pequeno e o Bernardo um grande", ou seja, cada um tem o **seu plano individual**, não um plano de equipe (Team). Por isso, **cada sócio cria o próprio projeto "Central ATIVOS"** e cola o texto acima; quando as regras mudarem, o Henrique manda o texto novo.
+
+**Projeto compartilhado (só para referência futura):** a Central de Ajuda diz que compartilhar projeto com outros membros é só nos planos Team e Enterprise ([What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)). Se a ATIVOS estiver nesses planos, o Henrique cria um projeto só e compartilha como "Can view"; assim, uma mudança nas regras vale para todos de uma vez. Se cada sócio estiver no Pro individual, cada um cria o seu projeto e cola o texto; quando as regras mudarem, o Henrique manda o texto novo.
 
 ## Quando mudar estas regras
 
