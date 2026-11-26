@@ -39,7 +39,7 @@ COMO GRAVAR
 5. Depois de gravar, releia a linha e me confirme o que ficou gravado.
 
 COLUNAS
-A Código (T-XXX) | B Tarefa (começa com verbo, diz o resultado) | C Responsável (Henrique, Igor, Hugo ou Bernardo) | D Projeto (um valor da aba Projetos; sem projeto claro: ATIVOS · Administrativo) | E Entrega ou área (um valor da coluna "Entrega ou área" da aba Listas) | F Prioridade (Alta, Média, Baixa) | G Status (Backlog, A fazer, Fazendo, Aguardando, Revisão, Feito, Cancelada) | H Prazo (DD/MM/AAAA; não invente) | I Estimativa (P (até 2h), M (até 4h), G (até 1 dia)) | J Semana (AAAA-SNN, ex.: 2026-S48) | K Depende de (códigos) | L Link ou observação (Aguardando: diga de quem) | M Criada em (hoje) | N Concluída em (só com Feito ou Cancelada) | O Tempo real (h) (só se eu informar) | P Hora (HH:MM, se tiver horário)
+A Código (T-XXX) | B Tarefa (começa com verbo, diz o resultado) | C Responsável (Henrique, Igor, Hugo ou Bernardo) | D Projeto (um valor da aba Projetos; sem projeto claro: ATIVOS · Administrativo) | E Entrega ou área (um valor da coluna "Entrega ou área" da aba Listas) | F Prioridade (Alta, Média, Baixa) | G Status (Backlog, A fazer, Fazendo, Aguardando, Revisão, Feito, Pausada, Cancelada; não pause nem retome tarefas: isso é do Henrique ou do Igor) | H Prazo (DD/MM/AAAA; não invente) | I Estimativa (P (até 2h), M (até 4h), G (até 1 dia)) | J Semana (AAAA-SNN, ex.: 2026-S48) | K Depende de (códigos) | L Link ou observação (Aguardando: diga de quem) | M Criada em (hoje) | N Concluída em (só com Feito ou Cancelada) | O Tempo real (h) (só se eu informar) | P Hora (HH:MM, se tiver horário)
 
 REGRAS
 - Cada tarefa cabe em até 1 dia. Se for maior, proponha dividir.
