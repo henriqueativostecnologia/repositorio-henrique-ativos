@@ -67,7 +67,7 @@ Os sócios usam o **app** (acima). No Claude do Henrique, basta colar:
 ## O que o Claude deve fazer
 
 1. **Ler antes de escrever.** Leia as abas Como usar, Listas e Projetos, e a coluna A da aba Tarefas.
-2. **Escrever só na aba Tarefas, colunas A a O.** Nunca altere as abas com nome de pessoa, a Visão geral, a Projetos nem a Listas.
+2. **Escrever só na aba Tarefas, colunas A a R.** Nunca altere as abas com nome de pessoa, a Visão geral, a Projetos nem a Listas.
 3. **Nunca apagar linhas nem mudar o código de uma tarefa existente.** Tarefa cancelada ou substituída (decisão de 10/11/2026): Status = **Cancelada**, "Cancelada: motivo" ou "Substituída por T-XXX" em Link ou observação e a data em Concluída em. Cancelada aparece cinza e riscada e não conta como aberta nem como feita.
 4. **Código:** o próximo número livre depois do maior código da coluna A (ex.: se o maior é T-066, a próxima é T-067). Nunca reaproveitar.
 5. **Linha:** a primeira linha vazia **depois da última tarefa** da aba Tarefas. Grave com `update_values` na linha exata (ex.: `Tarefas!A340:P340`), nunca com o "acrescentar" (`append_values`): em 25/11 ele inseriu uma tarefa no meio da lista e empurrou as outras uma linha para baixo. Hoje a tarefa T-N fica na linha N+1.
@@ -90,6 +90,9 @@ Os sócios usam o **app** (acima). No Claude do Henrique, basta colar:
 | M Criada em | Data de hoje (DD/MM/AAAA) |
 | N Concluída em | Só quando Status = Feito ou Cancelada |
 | O Tempo real (h) | Horas gastas de verdade, ao concluir (ex.: 1,5). Só com a informação do sócio; não invente |
+| P Horário | HH:MM, se a tarefa tiver hora marcada |
+| Q Descrição (26/11/2026) | 1 ou 2 linhas: o que é a tarefa e como saber que está pronta. Obrigatória quando o nome não se explica sozinho (ex.: "ver receita" não basta). Quem lê a tarefa não precisa abrir a receita |
+| R Prazo original (26/11/2026) | O primeiro prazo da tarefa (linha de base). Gravado uma vez, quando a tarefa ganha a primeira data, e **nunca mais alterado**. Ao mudar o prazo, mude só a coluna H; a comparação "original × atual" é feita pelo app. Se a tarefa ganhar a primeira data direto na planilha, o app grava o prazo original sozinho |
 
 7. **Tamanho:** cada tarefa cabe em até 1 dia. Se o pedido for maior, proponha dividir em tarefas menores antes de cadastrar.
 8. **Faltou informação obrigatória** (Responsável, Projeto, Prioridade)? Pergunte ao sócio. Não adivinhe.
