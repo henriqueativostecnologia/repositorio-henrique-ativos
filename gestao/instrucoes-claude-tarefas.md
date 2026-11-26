@@ -81,7 +81,7 @@ Os sócios usam o **app** (acima). No Claude do Henrique, basta colar:
 | D Projeto | Exatamente um valor da aba Projetos (cliente: CLI-002-PAC Lucas Melo; campanha: Campanha · Comércio local; setor: ATIVOS · Gestão, Comercial, Processos, Operacional, Financeiro, Administrativo, Marketing ou Treinamentos; tabela em `gestao/modelo-de-projetos.md`). Demanda avulsa sem setor claro: ATIVOS · Administrativo |
 | E Entrega ou área | Exatamente um valor da coluna "Entrega ou área" da aba Listas |
 | F Prioridade | Alta (trava cliente ou outras tarefas), Média ou Baixa |
-| G Status | Backlog, A fazer, Fazendo, Aguardando, Revisão, Feito ou Cancelada. Tarefa nova: A fazer (se for para esta semana) ou Backlog |
+| G Status | Backlog, A fazer, Fazendo, Aguardando, Revisão, Feito, Pausada ou Cancelada. Tarefa nova: A fazer (se for para esta semana) ou Backlog (pode ficar sem prazo). **Pausada** (26/11/2026): parada por decisão do Henrique ou do Igor (ex.: cliente sem contato); prazo vazio, observação começa com "Pausada em DD/MM/AAAA: motivo."; não conta como aberta nem como feita; ao retomar, volta para Backlog ou A fazer e ganha prazo |
 | H Prazo | Data DD/MM/AAAA, se houver. Não invente prazo |
 | I Estimativa | P (até 2h), M (até 4h) ou G (até 1 dia), exatamente como na lista |
 | J Semana (sprint) | AAAA-SNN (semana do ano, ex.: 2026-S45) quando entrar na semana; senão, vazio |
