@@ -460,17 +460,14 @@ function horaNum(s){ const n=normHora(s); if(!n) return null; const [h,m]=n.spli
 function durOf(t){ return {P:2,M:4,G:8}[(t.est||"").trim().charAt(0)] || 1; }
 function daysBetween(a,b){ return Math.round((b-a)/86400000); }
 function slipDays(t){ return (t.orig&&t.prazo&&t.origStr!==t.prazoStr)?daysBetween(t.orig,t.prazo):0; }
-function origText(t){ if(!t.origStr) return ""; const n=slipDays(t); const parts=["Prazo original: "+t.origStr]; if(n) parts.push((n>0?"+":"")+n+" dias"); if(t.rem) parts.push("remarcada "+t.rem+(t.rem>1?" vezes":" vez")); return parts.join(" · "); }
+function origText(t){ if(!t.origStr) return ""; const n=slipDays(t); const parts=["Prazo original: "+t.origStr]; if(n) parts.push("prazo atual: "+t.prazoStr+" ("+(n>0?"+":"")+n+" dias)"); return parts.join(" · "); }
 let syncing=false;
-async function syncPrazos(){ // percebe prazo mudado direto na planilha e conta a remarcação
+async function syncPrazos(){ // tarefa que ganhou o primeiro prazo direto na planilha: grava o prazo original (não sobrescreve nunca)
   if(syncing) return; syncing=true;
   try{
-    const todo=tasks.filter(t=>t.prazoStr!==t.seen).slice(0,40);
+    const todo=tasks.filter(t=>!t.origStr&&t.prazoStr).slice(0,40);
     for(const t of todo){
-      const cells={T:t.prazoStr};
-      if(t.seen&&t.prazoStr){ t.rem=(t.rem||0)+1; cells.S=t.rem; }
-      if(!t.origStr&&t.prazoStr){ cells.R=t.prazoStr; t.origStr=t.prazoStr; t.orig=t.prazo; }
-      try{ await writeRow(t,cells); t.seen=t.prazoStr; }catch(e){ break; }
+      try{ await writeRow(t,{R:t.prazoStr}); t.origStr=t.prazoStr; t.orig=t.prazo; }catch(e){ break; }
     }
     if(todo.length) render();
   } finally { syncing=false; }
@@ -491,7 +488,7 @@ function rowsToTasks(values){
     if(i===0) return;
     const code=(r[0]||"").trim(); if(!/^T-\d+/.test(code)) return;
     out.push({row:i+1, code, tarefa:r[1]||"", resp:r[2]||"", proj:r[3]||"", ent:r[4]||"", prio:r[5]||"", status:r[6]||"Backlog",
-      prazo:parseBR(r[7]), est:r[8]||"", hora:normHora(r[15]), obs:r[11]||"", desc:r[16]||"", prazoStr:(r[7]||"").trim(), orig:parseBR(r[17]), origStr:(r[17]||"").trim(), rem:parseInt(r[18],10)||0, seen:(r[19]||"").trim(), criada:parseBR(r[12]), concl:parseBR(r[13])});
+      prazo:parseBR(r[7]), est:r[8]||"", hora:normHora(r[15]), obs:r[11]||"", desc:r[16]||"", prazoStr:(r[7]||"").trim(), orig:parseBR(r[17]), origStr:(r[17]||"").trim(), criada:parseBR(r[12]), concl:parseBR(r[13])});
   });
   return out;
 }
@@ -514,7 +511,7 @@ let lastRow=0;
 async function load(){
   setSync("Lendo a planilha…");
   try{
-    const res = await call("get_values",{spreadsheetId:SHEET_ID, range:"Tarefas!A1:T2000"});
+    const res = await call("get_values",{spreadsheetId:SHEET_ID, range:"Tarefas!A1:R2000"});
     const vals=payloadOf(res)?.values||[]; lastRow=vals.length; tasks = rowsToTasks(vals); loaded=true;
     try{
       const pr = await call("get_values",{spreadsheetId:SHEET_ID, range:"Projetos!A1:E60"});
@@ -552,9 +549,9 @@ async function checkRow(t){
 }
 async function writeRow(t, cells){ // cells: objeto coluna->valor, de B a N
   await checkRow(t);
-  const order="BCDEFGHIJKLMNOPQRST".split("");
+  const order="BCDEFGHIJKLMNOPQR".split("");
   const row = order.map(c=> c in cells ? cells[c] : null);
-  await call("update_values",{spreadsheetId:SHEET_ID, range:`Tarefas!B${t.row}:T${t.row}`, values:[row]});
+  await call("update_values",{spreadsheetId:SHEET_ID, range:`Tarefas!B${t.row}:R${t.row}`, values:[row]});
 }
 async function setHora(t, hora){
   hora=normHora(hora);
@@ -1009,8 +1006,9 @@ document.getElementById("dSave").addEventListener("click",async()=>{
     if(editing){
       if(!v.proj) v.proj="ATIVOS · Administrativo";
       const t=editing, cells={B:v.tarefa,C:v.resp,D:v.proj,E:v.ent,F:v.prio,G:v.status,H:toBR(v.prazo),I:v.est,L:v.obs,P:v.hora,Q:v.desc};
-      const nStr=toBR(v.prazo), oStr=t.prazoStr||"";
-      if(nStr!==oStr){ let rem=t.rem||0; if(oStr&&nStr) rem++; cells.S=rem; if(!t.origStr&&nStr){ cells.R=nStr; v.origStr=nStr; v.orig=v.prazo; } cells.T=nStr; v.rem=rem; v.seen=nStr; v.prazoStr=nStr; }
+      const nStr=toBR(v.prazo);
+      if(!t.origStr&&nStr){ cells.R=nStr; v.origStr=nStr; v.orig=v.prazo; }
+      v.prazoStr=nStr;
       let concl=t.concl;
       if(v.status==="Feito"&&t.status!=="Feito"){ concl=today(); cells.N=toBR(concl); }
       if(v.status!=="Feito"&&t.status==="Feito"){ concl=null; cells.N=""; }
@@ -1021,12 +1019,12 @@ document.getElementById("dSave").addEventListener("click",async()=>{
       if(!v.proj) v.proj="ATIVOS · Administrativo"; // sem projeto = demanda avulsa
       await load(); // pega o último código antes de criar
       const code=nextCode(), td=today();
-      const row=[code,v.tarefa,v.resp,v.proj,v.ent,v.prio,v.status,toBR(v.prazo),v.est,"","",v.obs,toBR(td),v.status==="Feito"?toBR(td):"","",v.hora,v.desc,toBR(v.prazo),0,toBR(v.prazo)];
+      const row=[code,v.tarefa,v.resp,v.proj,v.ent,v.prio,v.status,toBR(v.prazo),v.est,"","",v.obs,toBR(td),v.status==="Feito"?toBR(td):"","",v.hora,v.desc,toBR(v.prazo)];
       // grava sempre na primeira linha vazia depois da última (o append podia inserir no meio da lista)
       const target=lastRow+1;
-      const chk=await call("get_values",{spreadsheetId:SHEET_ID, range:`Tarefas!A${target}:T${target}`});
+      const chk=await call("get_values",{spreadsheetId:SHEET_ID, range:`Tarefas!A${target}:R${target}`});
       if((payloadOf(chk)?.values||[]).some(r=>r.some(c=>String(c).trim()))) throw Object.assign(new Error("A planilha mudou enquanto você criava a tarefa. Toque em Salvar de novo."),{code:"moved"});
-      await call("update_values",{spreadsheetId:SHEET_ID, range:`Tarefas!A${target}:T${target}`, values:[row]});
+      await call("update_values",{spreadsheetId:SHEET_ID, range:`Tarefas!A${target}:R${target}`, values:[row]});
       await load();
       if(tasks.some(t=>t.code===code)) toast(`${code} criada na planilha (linha ${target})`);
       else toast(`Não consegui confirmar ${code} na planilha. Toque em Atualizar e confira antes de criar de novo.`,true);
