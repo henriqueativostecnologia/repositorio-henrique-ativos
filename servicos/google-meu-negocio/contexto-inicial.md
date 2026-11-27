@@ -22,6 +22,7 @@ Fonte: `gestao/decisoes/2026-11-24-reuniao-equipe.md` (reunião de equipe de 24/
 | Palavras-chave | O **Igor** faz um relatório que atende landing, perfil e Google Ads (T-332). Ferramentas: **DataForSEO** e **SE Ranking** |
 | Preço em uso | Setup R$ 800 + mensalidade R$ 350 (`servicos/catalogo.md`, "Preços em uso"; ainda em revisão pelos sócios) |
 | Prazo | Entrega em 7 dias úteis: perfil preenchido e verificação pedida (`servicos/README.md`) |
+| Método de criação (27/11/2026, Henrique) | **O modelo do professor do curso.** Para o CLI-004 Guto Bebidas: (1) palavras-chave pelo **Planejador de palavras-chave do Google** (gratuito, conta Google Ads); o SE Ranking (pago) fica para depois; (2) entrevista no **GPT do curso** (ChatGPT, link do curso, "Criação do Perfil de GMN"), que pergunta e gera o relatório com os campos do perfil; (3) preencher o painel com o relatório. **Futuro:** trazer a entrevista para o Claude como skill da ATIVOS, no padrão do professor. A base já existe: a skill SKILL-1 (manual do perfil) e a versão turbinada estão na pasta Materiais e foram lidas (limpas). Antes de preencher, conferir o relatório contra os conflitos com o Google (seção 3) |
 | Autorização (regra do Google) | Autorização **por escrito** do cliente antes de criar e gerenciar (T-340). Nunca prometer posição |
 
 ## 2. Regras oficiais do Google (sempre valem mais que o curso)
